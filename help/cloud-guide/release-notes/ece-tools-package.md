@@ -2,10 +2,11 @@
 title: Versionsinformation för ECE-verktyg
 description: Se en lista över de senaste förbättringarna av ECE-verktygspaketet.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-10-07T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2024-02-06T00:00:00Z
+exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '2990'
+source-wordcount: '3022'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,16 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v2002.2.0 {#latest}
+## v2002.2.1 {#latest}
+
+
+Releasedatum: 6 februari 2024
+
+- ![ny ikon](../../assets/new.svg) **PHP 8.4** - Stöd för PHP 8.4 har lagts till.<!-- MCLOUD-13145	 - -->
+- ![korrigeringsikon](../../assets/fix.svg) **Valideraren för OpenSearch**-Korrigerade valideraren som gav upphov till ett missvisande meddelande om fel version av tjänsten.<!-- MCLOUD-13184	 - -->
+
+
+## v2002.2.0
 
 Releasedatum: 7 oktober 2024
 

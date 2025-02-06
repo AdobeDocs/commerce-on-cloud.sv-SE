@@ -2,10 +2,11 @@
 title: Molnkorrigeringar för Commerce
 description: Se en lista över de senaste förbättringarna av Cloud Patches-paketet.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-10-07T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2025-02-06T00:00:00Z
+exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2326'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,16 @@ Paketet `magento/magento-cloud-patches` använder följande versionssekvens: `<m
 
 <!--Add release notes below-->
 
-## v1.1.2 {#latest}
+## v1.1.3 {#latest}
+
+
+Releasedatum: 6 februari 2025
+
+- ![ny ikon](../../assets/new.svg) **PHP 8.4** - Stöd för PHP 8.4 har lagts till.<!-- MCLOUD-13149	 - -->
+
+
+
+## v1.1.2
 
 Releasedatum: 5 november 2024
 
