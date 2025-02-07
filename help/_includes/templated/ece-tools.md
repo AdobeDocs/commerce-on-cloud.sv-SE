@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 6a686858394e65dfbb665bb76332ee13348dad7e
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 0%
@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # ece-tools
 
-**Version**: 2002.2.0
+**Version**: 2002.2.1
 
 Referensen innehåller 34 kommandon som är tillgängliga via kommandoradsverktyget `ece-tools`.
 Den inledande listan genereras automatiskt med kommandot `ece-tools list` på Adobe Commerce i molninfrastrukturen.
@@ -453,7 +453,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 ece-tools cloud:config:create <configuration>
 ```
 
-Skapar en `.magento.env.yaml`-fil med den angivna variabelkonfigurationen för build, deploy och post-deploy. Skriver över befintlig `.magento,.env.yaml`-fil.
+Skapar en `.magento.env.yaml`-fil med den angivna variabelkonfigurationen för build, deploy och post-deploy. Skriver över befintlig `.magento.env.yaml`-fil.
 
 ### Argument
 
