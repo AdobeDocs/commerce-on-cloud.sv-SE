@@ -1,12 +1,12 @@
 ---
-user-guide-title: Commerce on Cloud-guide
+user-guide-title: Användarhandbok om Commerce i molnet
 user-guide-description: Lär dig hur du hanterar Adobe Commerce-programmet i molninfrastrukturen.
 product: magento
 feature: Cloud
 source-git-commit: 4e107bb8696c3c7cb76a0a702624aeb754648f70
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -134,7 +134,7 @@ ht-degree: 3%
       + [Elasticsearch](services/elasticsearch.md)
       + [MySQL](services/mysql.md)
       + [OpenSearch](services/opensearch.md)
-      + [RabbitMQ](services/rabbitmq.md)
+      + [KaninMQ](services/rabbitmq.md)
       + [Redis](services/redis.md)
 + Snabba tjänster {#cdn}
    + [Ökning](cdn/fastly.md)
