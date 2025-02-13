@@ -4,9 +4,9 @@ description: Se en lista över de senaste förbättringarna av Cloud Patches-pak
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-02-06T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -29,14 +29,17 @@ Paketet `magento/magento-cloud-patches` använder följande versionssekvens: `<m
 
 <!--Add release notes below-->
 
-## v1.1.3 {#latest}
+## v1.1.4 {#latest}
 
+Releasedatum: 13 februari 2025
+
+- ![ny ikon](../../assets/new.svg) **Lagt till patch för Commerce 2.4.4 till 2.4.7** - Uppdateringspatchar [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+
+## v1.1.3
 
 Releasedatum: 6 februari 2025
 
 - ![ny ikon](../../assets/new.svg) **PHP 8.4** - Stöd för PHP 8.4 har lagts till.<!-- MCLOUD-13149	 - -->
-
-
 
 ## v1.1.2
 
@@ -124,7 +127,7 @@ Releasedatum: 11 augusti 2022
 
 Viktig patch för Adobe Commerce 2.4.5:
 
-- **Problem med beställningar med Braintree-betalningar** - Den här korrigeringen åtgärdar ett kritiskt problem som förhindrar administratörer från att göra nya beställningar eller beställningar.<!-- MCLOUD-9137 -->
+- **Problem med beställningar med Braintree-betalningar** - Korrigeringen åtgärdar ett kritiskt problem som förhindrar administratörer från att göra nya beställningar eller beställningar.<!-- MCLOUD-9137 -->
 
 Se [Administratören kan inte skapa en order/ändra ordning när Braintree-betalning är aktiverad](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
 
@@ -142,7 +145,7 @@ Viktig patch för Adobe Commerce 2.3.3-p1 och senare:
 
 Uppdaterade patchar för att lösa en **kritisk** -sårbarhet som resulterar i oautentiserad fjärrexekvering av kod.<!-- MCLOUD-8479 -->
 
-Se [Säkerhetsbulletin för Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
+Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## v1.0.15
 
@@ -159,7 +162,7 @@ Viktig patch för Adobe Commerce 2.3.3-p1 och senare:
 
 En korrigering har lagts till för att åtgärda en **kritisk** -sårbarhet som resulterar i oautentiserad fjärrexekvering av kod.<!-- MCLOUD-8461 -->
 
-Se [Säkerhetsbulletin för Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
+Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## v1.0.13
 
@@ -261,7 +264,7 @@ Releasedatum: 12 maj 2020
 
 - **Platsens prestandaförbättring** - Korrigerar ett prestandaproblem med funktionen `Magento\Framework\App\DeploymentConfig\Reader::load` som periodvis har haft långa inläsningstider som påverkar platsens prestanda. <!--MCLOUD-5650-->
 
-- Korrigeringstilldelningen för betalningsmetodkorrigeringar har uppdaterats för betalningsmodulerna i stället för baspaketet Magento (magento/magento2-base) så att betalningskorrigeringarna bara tillämpas om betalningsmodulerna finns.<!--MCLOUD-5666-->
+- Korrigeringstilldelningen för betalningsmetodkorrigeringar har uppdaterats för betalningsmodulerna i stället för Magento baspaket (magento/magento2-base) så att betalningskorrigeringarna bara tillämpas om betalningsmodulerna finns.<!--MCLOUD-5666-->
 
 - Uppdaterade korrigeringar för kompatibilitet med Magento Open Source.<!--MCLOUD-5701-->
 
@@ -287,13 +290,13 @@ Den här versionen innehåller följande korrigeringar och viktiga korrigeringar
 
 - **Programdistributionskorrigering** - En korrigering har lagts till för att åtgärda ett problem som inaktiverade helsidescachen under distributionsprocessen. Den här programfixen gäller för Adobe Commerce 2.3.2 och senare versioner.
 
-- **Scope-parameter för Async/Bulk API** - Uppdaterade den här korrigeringen för att åtgärda ett syntaxfel i filen `composer.json`. Detta gäller Magento Open Source 2.3.1 och 2.3.2. Se hela patchbeskrivningen på sidan för hämtning av patchar.
+- **Scope-parameter för Async/Bulk API** - Uppdaterade den här korrigeringen för att åtgärda ett syntaxfel i filen `composer.json`. Den här programfixen gäller för Magento Open Source 2.3.1 och 2.3.2. Se hela patchbeskrivningen på sidan för hämtning av patchar.
 
 ## v1.0.1
 
 Releasedatum: 6 februari 2020
 
-Vi har tagit med alla Magento Open Source 2.x-patchar från programvarunedladdningssidan i utgåvan magento/magento-cloud-patches v1.0.1. Om du har kopierat korrigeringar till ditt projekt tidigare bör du ta bort dem för att undvika konflikter.
+Vi har tagit med alla Magento Open Source 2.x-patchar från programvarunedladdningssidan i magento/magento-cloud-patches v1.0.1. Om du har kopierat korrigeringar till ditt projekt tidigare bör du ta bort dem för att undvika konflikter.
 
 Den här versionen innehåller följande korrigeringar och viktiga korrigeringar:
 
@@ -303,9 +306,9 @@ Den här versionen innehåller följande korrigeringar och viktiga korrigeringar
 
    - Lägger till en _återförsöksåtgärd_ för att undvika dödläge under uppdateringar av data i tabellen `cron_schedule`.
 
-- **Uppdaterat `magento/magento-cloud-patches` för att inkludera alla tillgängliga korrigeringar för Magento Open Source 2.x** - Uppdaterat paketet magento/magento-cloud-patches så att det innehåller alla Magento Open Source 2.x-korrigeringar som finns på sidan för programhämtningar. Om du har kopierat några Magento Open Source-korrigeringar till ditt Adobe Commerce i molninfrastrukturprojekt tidigare tar du bort dem för att undvika konflikter.<!--MAGECLOUD-4606-->
+- **Uppdaterat `magento/magento-cloud-patches` för att inkludera alla tillgängliga patchar för Magento Open Source 2.x** - Uppdaterat paketet magento/magento-cloud-patches så att det innehåller alla Magento Open Source 2.x-patchar som finns på sidan för programhämtningar. Om du har kopierat några Magento Open Source-korrigeringar till ditt Adobe Commerce i ett molninfrastrukturprojekt tidigare bör du ta bort dem för att undvika konflikter.<!--MAGECLOUD-4606-->
 
-- **Elasticsearch-katalogsidnumreringskorrigering** - Ersatte Elasticsearch-katalogsidbrytningskorrigeringen som levererades i magento/magento-cloud-patches v1.0 med en mer effektiv korrigering.<!--MAGECLOUD-4847-->
+- **Elasticsearch katalogsidnumreringskorrigering** - Ersatte Elasticsearch katalogsidbrytningskorrigering som levererades i magento/magento-cloud-patches v1.0 med en mer effektiv korrigering.<!--MAGECLOUD-4847-->
 
 - **Page Builder-korrigeringar** - I Cloud-korrigeringar för Commerce 1.0.0 paketerade vi Page Builder-korrigeringar för en känd Page Builder-sårbarhet (RCE) för fjärrexekvering med den initiala korrigeringen som bygger på Adobe Commerce 2.3.3. Vi har uppdaterat dessa korrigeringsfiler med en stabilare implementering som baseras på Adobe Commerce 2.3.4, som innehåller flera optimeringar för att åtgärda problemet.<!--MAGECLOUD-4884-->
 
