@@ -2,9 +2,10 @@
 title: Hantering av säkerhetskopiering
 description: Lär dig hur du manuellt skapar och återställer en säkerhetskopia för ditt Adobe Commerce i molninfrastrukturprojekt.
 feature: Cloud, Paas, Snapshots, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
+source-git-commit: b5fa153b4eb0569fd16c78fb7bf47c54222752cd
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -14,6 +15,10 @@ ht-degree: 0%
 Du kan när som helst utföra en manuell säkerhetskopiering av aktiva startmiljöer med knappen **[!UICONTROL Backup]** i [!DNL Cloud Console] eller med kommandot `magento-cloud snapshot:create`.
 
 En säkerhetskopia eller _ögonblicksbild_ är en fullständig säkerhetskopia av miljödata som innehåller alla beständiga data från tjänster som körs (MySQL-databas) och alla filer som lagras på de monterade volymerna (var, pub/media, app/etc). Ögonblicksbilden innehåller _inte_ kod, eftersom koden redan lagras i den Git-baserade databasen. Du kan inte hämta en kopia av en ögonblicksbild.
+
+>[!WARNING]
+>
+>Säkerhetskopieringar innehåller vanligtvis innehållet i monterade kataloger, inklusive offentliga webbkataloger som `pub/media`, men flytta inte säkerhetskopierade utdatafiler till offentliga webbkataloger som `pub/media` eller `pub/static`.
 
 Säkerhetskopierings-/ögonblicksbildsfunktionen **gäller inte** för Pro Staging- och Production-miljöer, som får regelbundna säkerhetskopieringar för katastrofåterställning som standard. Mer information finns i [Pro Backup &amp; Disaster Recovery](../architecture/pro-architecture.md#backup-and-disaster-recovery). Till skillnad från automatiska direktsäkerhetskopieringar i Pro Staging- och Production-miljöerna är säkerhetskopieringarna **inte** automatiska. Det är _ditt_ ansvar att manuellt skapa en säkerhetskopia eller konfigurera ett cron-jobb för att regelbundet skapa en säkerhetskopia av dina integreringsmiljöer i Starter eller Pro.
 
