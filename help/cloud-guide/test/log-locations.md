@@ -2,7 +2,8 @@
 title: Visa och hantera loggar
 description: Förstå vilka typer av loggfiler som finns i molninfrastrukturen och var de finns.
 last-substantial-update: 2023-05-23T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
+source-git-commit: 7615347cd5b528406c2a0e72be3450350655eeb9
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -208,13 +209,13 @@ I Pro Staging- och Production-miljöer är loggarna Deploy, Post-deploy och Cron
 
 | Loggfil | Pro Staging | Pro Production |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| **Distribuera logg** | Endast den första noden:<br>`/var/log/platform/<project-ID>_stg/deploy.log` | Endast den första noden:<br>`/var/log/platform/<project-ID>/deploy.log` |
-| **Logg efter distribution** | Endast den första noden:<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | Endast den första noden:<br>`/var/log/platform/<project-ID>/post_deploy.log` |
-| **Kronlogg** | Endast den första noden:<br>`/var/log/platform/<project-ID>_stg/cron.log` | Endast den första noden:<br>`/var/log/platform/<project-ID>/cron.log` |
-| **Nginx-åtkomstlogg** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
-| **Inledande fellogg** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
-| **PHP-åtkomstlogg** | `/var/log/platform/<project-ID>_stg/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
-| **PHP FPM-logg** | `/var/log/platform/<project-ID>_stg/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
+| **Distribuera logg** | Endast den första noden:<br>`/var/log/platform/<project-ID>_stg*/deploy.log` | Endast den första noden:<br>`/var/log/platform/<project-ID>/deploy.log` |
+| **Logg efter distribution** | Endast den första noden:<br>`/var/log/platform/<project-ID>_stg*/post_deploy.log` | Endast den första noden:<br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **Kronlogg** | Endast den första noden:<br>`/var/log/platform/<project-ID>_stg*/cron.log` | Endast den första noden:<br>`/var/log/platform/<project-ID>/cron.log` |
+| **Nginx-åtkomstlogg** | `/var/log/platform/<project-ID>_stg*/access.log` | `/var/log/platform/<project-ID>/access.log` |
+| **Inledande fellogg** | `/var/log/platform/<project-ID>_stg*/error.log` | `/var/log/platform/<project-ID>/error.log` |
+| **PHP-åtkomstlogg** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
+| **PHP FPM-logg** | `/var/log/platform/<project-ID>_stg*/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
 
 ### Arkiverade loggfiler
 
@@ -234,7 +235,7 @@ De arkiverade loggfilerna sparas alltid i den katalog där originalfilen fanns f
 
 Eftersom varje tjänst körs i en separat behållare är inte tjänstloggarna tillgängliga i integreringsmiljön. Adobe Commerce i molninfrastruktur ger åtkomst till webbserverbehållaren endast i integreringsmiljön. Följande loggplatser är för Pro Production och Staging-miljöerna:
 
-- **Redis-logg**: `/var/log/platform/<project-ID>_stg/redis-server-<project-ID>_stg.log`
+- **Redis-logg**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
 - **Elasticsearch-logg**: `/var/log/elasticsearch/elasticsearch.log`
 - **Logg för skräpinsamling för Java**: `/var/log/elasticsearch/gc.log`
 - **E-postlogg**: `/var/log/mail.log`
