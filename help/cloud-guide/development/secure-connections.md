@@ -4,16 +4,17 @@ description: Lär dig hur du använder SSH-nycklar i ditt Adobe Commerce i molni
 role: Developer
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
+source-git-commit: c25e5b74ae8105995107860246ecb9ba45910bb1
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
 
 # Säkra anslutningar till fjärrmiljöer
 
-Secure Shell (SSH) är ett vanligt protokoll som används för att logga in på fjärrservrar och -system på ett säkert sätt. Du kan använda SSH för att komma åt fjärrmiljöer för att hantera Adobe Commerce-programmet och komma åt fjärrmiljöloggar. Adobe har endast stöd för säkra FTP-anslutningar (sFTP) med din offentliga SSH-nyckel. FTP-anslutningar stöds inte.
+Secure Shell (SSH) är ett vanligt protokoll som används för att logga in på fjärrservrar och -system på ett säkert sätt. Du kan använda SSH för att komma åt fjärrmiljöer för att hantera Adobe Commerce-programmet och komma åt fjärrmiljöloggar. Adobe har bara stöd för säkra FTP-anslutningar (sFTP) med din offentliga SSH-nyckel. FTP-anslutningar stöds inte.
 
 ## Generera ett SSH-nyckelpar
 
@@ -28,7 +29,7 @@ Skapa ett SSH-nyckelpar på alla datorer och arbetsytor som kräver åtkomst til
 
 ## Lägg till en offentlig SSH-nyckel till ditt konto
 
-När du har lagt till din offentliga SSH-nyckel till ditt Adobe Commerce-konto för molninfrastruktur ska du distribuera om alla aktiva miljöer på ditt konto för att installera nyckeln.
+När du har lagt till eller uppdaterat din offentliga SSH-nyckel till ditt Adobe Commerce-konto för molninfrastruktur kan du [omdistribuera alla aktiva miljöer](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) på ditt konto för att installera nyckeln.
 
 Du kan lägga till SSH-nycklar till ditt konto på något av följande sätt: Cloud CLI eller [!DNL Cloud Console].
 
