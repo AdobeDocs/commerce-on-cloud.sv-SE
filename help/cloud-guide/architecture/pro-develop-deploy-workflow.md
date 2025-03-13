@@ -2,9 +2,10 @@
 title: Arbetsflöde för Pro-projekt
 description: Lär dig använda arbetsflödena för Pro-utveckling och -distribution.
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efe41991-8940-4d5c-a720-80369274bee3
+source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ I följande bild visas arbetsflödet för Pro-utveckling och -distribution, som 
 
 ## Arbetsflöde för utveckling
 
-Integreringsmiljön tillhandahåller en enda `integration`-bas-gren som innehåller din Adobe Commerce på molninfrastrukturkoden. Du kan skapa ytterligare en aktiv miljögren. Detta tillåter upp till två aktiva grenar som distribueras till plattformsbehållare (PaaS). Det finns ingen gräns för antalet inaktiva miljöer.
+Integreringsmiljön tillhandahåller en enda `integration`-bas-gren som innehåller din Adobe Commerce på molninfrastrukturkoden. Du kan skapa ytterligare en aktiv miljögren. Detta tillåter upp till två aktiva grenar som distribueras till plattformsbehållare (PaaS). Det finns ingen gräns för hur många inaktiva miljöer det finns, men ju mer inaktiva miljöer det finns desto längre tid tar det för molnkonsolen att läsa in.
 
 {{enhanced-integration-envs}}
 
