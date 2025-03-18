@@ -2,9 +2,10 @@
 title: PHP-inställningar
 description: Läs om de optimala PHP-inställningarna för Commerce-programkonfiguration i molninfrastrukturen.
 feature: Cloud, Configuration, Extensions
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
+source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -66,10 +67,16 @@ Med de här inställningarna kan PHP-processer cachelagra sökvägar till filer 
 
 ### Kontrollera anpassade PHP-inställningar
 
-När du har överfört `php.ini`-ändringarna till molnmiljön kan du kontrollera att den anpassade PHP-konfigurationen har lagts till i din miljö. Använd till exempel SSH för att logga in i fjärrmiljön och visa filen med något som liknar följande:
+När du har överfört `php.ini`-ändringarna till molnmiljön kan du kontrollera att den anpassade PHP-konfigurationen har lagts till i din miljö. Använd till exempel SSH för att logga in på fjärrmiljön, visa PHP-konfigurationsinformation och filtrera efter direktivet `register_argc_argv`:
 
 ```bash
-cat /etc/php/<php-version>/fpm/php.ini
+php -i | grep register_argc_ar
+```
+
+Exempel:
+
+```text
+register_argc_argv => On => On
 ```
 
 >[!WARNING]
@@ -127,7 +134,7 @@ Om du till exempel vill konfigurera PHP så att bara SourceGuardian-skyddade skr
 sourceguardian.restrict_unencoded = "1"
 ```
 
-Se [avsnitt 3.5 i SourceGuardian-dokumentationen](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _Det här är en länk till PDF_.
+Se [avsnitt 3.5 i SourceGuardian-dokumentationen](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _Det här är en länk till en PDF_.
 
 [Skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ha hjälp med att installera dessa PHP-tillägg i alla produktionsmiljöer och Pro Staging-miljöer. Inkludera din uppdaterade `.magento/services.yaml`-fil, `.magento.app.yaml`-fil med den uppdaterade PHP-versionen och eventuella ytterligare PHP-tillägg. Om du vill ändra en produktionsmiljö måste du ange minst 48 timmars varsel. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt.
 
