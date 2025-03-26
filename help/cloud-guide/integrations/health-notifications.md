@@ -1,10 +1,11 @@
 ---
 title: Hälsoaviseringar
-description: Lär dig hur du konfigurerar Slack, e-post och PagerDuty-meddelanden för diskutrymmesanvändning i ditt Adobe Commerce i molninfrastrukturprojekt.
+description: Lär dig hur du konfigurerar Slack-, e-post- och PagerDuty-meddelanden för diskutrymmesanvändning i ditt Adobe Commerce i molninfrastrukturprojekt.
 feature: Cloud, Observability, Integration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
+source-git-commit: c3c708656e3d79c0893d1c02e60dcdf2ad8d7c7c
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -29,7 +30,7 @@ Integreringen av e-post för hälsa kräver en ursprungsadress och minst en mott
 magento-cloud integration:add --type health.email --from-address you@example.com --recipients them@example.com --recipients others@example.com
 ```
 
-## Meddelanden via Slack-kanal
+## Slack-kanalmeddelanden
 
 Slack är en extern tjänst som använder interaktiva appar som kallas bots för att publicera meddelanden i ett chattrum. Innan du kan ta emot hälsomeddelanden i Slack måste du skapa en anpassad [robotanvändare](https://api.slack.com/bot-users) för din Slack-grupp. När du har konfigurerat robotanvändaren för kanalen, eller kanalerna, sparar du den [robottoken](https://api.slack.com/docs/token-types#bot) som tillhandahålls av Slack för att registrera integreringen. I följande exempel registreras hälsomeddelanden i en Slack-kanal:
 
@@ -44,3 +45,13 @@ PagerDuty är en extern tjänst som kan meddela medlemmar i kontaktgruppen om vi
 ```bash
 magento-cloud integration:add --type health.pagerduty --routing-key PAGERDUTY_ROUTING_KEY
 ```
+
+## Logghantering
+
+Om du vill öka det tillgängliga diskutrymmet kan du korta av eller ta bort loggfiler från miljön. Om logrotate är aktiverat hämtar du först en säkerhetskopia av loggarna och tar sedan bort dem:
+
+```bash
+rm -rf some-log-file.log.gz
+```
+
+Du kan även korta av enskilda loggfiler för att minska deras storlek. Ett detaljerat exempel på trunkering av loggfiler finns i videosjälvstudien Truncate Log Files{target="_blank"}.
