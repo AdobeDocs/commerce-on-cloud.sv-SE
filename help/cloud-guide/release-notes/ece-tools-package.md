@@ -2,11 +2,11 @@
 title: Versionsinformation för ECE-verktyg
 description: Se en lista över de senaste förbättringarna av ECE-verktygspaketet.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-02-06T00:00:00Z
+last-substantial-update: 2024-04-03T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3059'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,14 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v2002.2.1 {#latest}
+## v2002.2.2 {#latest}
 
+Releasedatum: 3 april 2025
+
+- ![ny ikon](../../assets/new.svg) **Valkey** - Stöd har lagts till för en ny tjänst (Valkey), som ersätter Redis.<!-- MCLOUD-13455	 - -->
+- ![korrigeringsikon](../../assets/fix.svg) **OpenSearch2 for 2.4.4/2.4.5**—Added support for `opensearch2` in Adobe Commerce versions 2.4.4/2.4.5. <!-- MCLOUD-13493	 - -->
+
+## v2002.2.1
 
 Releasedatum: 6 februari 2024
 
@@ -79,7 +85,7 @@ Releasedatum: 31 juli 2023
 
 - ![korrigeringsikon](../../assets/fix.svg) **Felkoder** - Uppdaterat felkodsschema och dokumentgenerator för felkod.
 - ![korrigeringsikon](../../assets/fix.svg) **Validerare för anpassad Redis-modell**-Uppdaterade valideraren för anpassade Redis-backend-modeller. [Se exemplet för cachekonfiguration](../environment/variables-deploy.md#cache_configuration).
-- ![korrigeringsikon](../../assets/fix.svg) **Validerare för RabbitMQ**-tillagt stöd för RabbitMQ 3.11
+- ![korrigeringsikon](../../assets/fix.svg) **Validator för RabbitMQ**-Added support for RabbitMQ 3.11
 - ![korrigeringsikon](../../assets/fix.svg) **Korrigerade fel länk**-Korrigerade fel länk till startdokumentationen i välkomstmallen.
 
 ## v2002.1.14
@@ -128,7 +134,7 @@ Releasedatum: 10 mars 2022
 - ![korrigeringsikon](../../assets/fix.svg) **symfony/process** - Kompatibiliteten med symbolen/processen ^5.3 har lagts till.<!-- MCLOUD-8283 -->
 
 - ![ny ikon](../../assets/new.svg) **Användar flera processer** - Ett `multiple_processes`-alternativ har lagts till så att du kan ange antalet processer som ska anges för varje konsument. Se variabelbeskrivningen `CRON_CONSUMERS_RUNNER` i [Distribuera variabler](../environment/variables-deploy.md#cron_consumers_runner).<!-- MCLOUD-8295 -->
-- ![ny ikon](../../assets/new.svg) **OpenSearch-schema och fullständig värdsökväg** - Lagt till möjligheten att konfigurera ett Elasticsearch-schema och fullständig värdsökväg.
+- ![ny ikon](../../assets/new.svg) **OpenSearch-schema och fullständig värdsökväg** - har lagts till för att konfigurera ett Elasticsearch-schema och fullständig värdsökväg.
 - ![korrigeringsikon](../../assets/fix.svg) **AWS S3** - Metoden för aktivering av AWS S3 har ändrats.
 - ![korrigeringsikon](../../assets/fix.svg) **Korrigera drivrutinen_options-läsare** - Läste in driver_options-konfiguration för databasanslutning från `env.php`-filen av `ece-tools` för validerare.<!-- MCLOUD-8420 -->
 
@@ -159,13 +165,13 @@ Releasedatum: 20 april 2021
 
 - ![ny ikon](../../assets/new.svg) **Redis-autentiseringsuppgifter** - Lagt till möjlighet att läsa Redis-autentiseringsuppgifter från egenskapen `relationships` under distributionsfasen.<!--MCLOUD-7694-->
 
-- ![ny ikon](../../assets/new.svg) **autentiseringsuppgifter för Elasticsearch** - Lagt till möjligheten att läsa autentiseringsuppgifter för Elasticsearch från egenskapen `relationships` under distributionsfasen.<!--MCLOUD-7695-->
+- ![ny ikon](../../assets/new.svg) **Elasticsearch autentiseringsuppgifter** - Lagt till möjligheten att läsa Elasticsearch autentiseringsuppgifter från egenskapen `relationships` under distributionsfasen.<!--MCLOUD-7695-->
 
 - ![ny ikon](../../assets/new.svg) **Dedikerad sessionslagringstjänst** - Lagt till `redis-session` som ett andra alternativ för sessionslagring. Du kan använda tjänsten `redis-session` för att lagra sessionsinformation och använda tjänsten `redis` för att få bättre prestanda.<!--MCLOUD-7698-->
 
 - ![ny ikon](../../assets/new.svg) **Borttagna SPLIT_DB-meddelanden** - Valideringsvarning och viktiga meddelanden för det borttagna `SPLIT_DB`-alternativet för Adobe Commerce 2.4.2 och dess borttagning i Adobe Commerce 2.5.0 har lagts till.<!--MCLOUD-7806-->
 
-- ![korrigeringsikon](../../assets/fix.svg) **Elasticsearch version från relationer** - Tjänstvalideraren för att hämta rätt version av Elasticsearch från `relationships`-egenskaperna i Cloud Docker- och integreringsmiljöer har åtgärdats.<!--MCLOUD-7572-->
+- ![korrigeringsikon](../../assets/fix.svg) **Elasticsearch-version från relationer** - Korrigerad tjänstverifierare för att hämta rätt version av Elasticsearch från `relationships` -egenskaperna i Cloud Docker- och integreringsmiljöer.<!--MCLOUD-7572-->
 
 - ![korrigeringsikon](../../assets/fix.svg) **Flexibel Redis-portvalidering** - Redis kan nu validera porten i en anpassad cacheanslutning från URL:en `server`. Du kan t.ex. lägga till ditt portnummer till serverns URL enligt följande: `server: 'tcp://rfs-store-simple-page-cache:26379'`. Detta förhindrar valideringsfel där alternativet `port` antingen saknas eller är felaktigt.<!--MCLOUD-7722-->
 
@@ -217,9 +223,9 @@ Releasedatum: 9 november 2020
 
 - ![ny ikon](../../assets/new.svg) Lagt till sökmotorvalidering för att se till att `elasticsearch` är inställt för Adobe Commerce i molninfrastruktur 2.4 och senare. Om valideringen misslyckas stoppas distributionen med ett kritiskt felmeddelande som föreslår korrigeringar för problemet. Se [Allvarliga fel, Distribuera stadium](../dev-tools/error-reference.md#deploy-stage).<!--MCLOUD-6937-->
 
-- ![ny ikon](../../assets/new.svg) Elasticsearch har lagts till för att kontrollera kompatibiliteten mellan Elasticsearch-tjänstversionen och Adobe Commerce-versionen.<!--MCLOUD-7193-->
+- ![ny ikon](../../assets/new.svg) Lagt till Elasticsearch-validering för att kontrollera kompatibiliteten mellan Elasticsearch och Adobe Commerce-versionen.<!--MCLOUD-7193-->
 
-- ![ny ikon](../../assets/new.svg) Uppdaterade felmeddelandet om kompatibilitet för Elasticsearch för att visa de versioner av Elasticsearch som är kompatibla med modulen Adobe Commerce Elasticsearch. Felmeddelandet innehåller nu de specifika Elasticsearch-versionerna som ska installeras i din molninfrastruktur, så att den är kompatibel med Elasticsearch-modulen som används i din version av Adobe Commerce. Se [Varningsfel, Distribuera stadium](../dev-tools/error-reference.md#deploy-stage-1).<!--MCLOUD-6698-->
+- ![ny ikon](../../assets/new.svg) Uppdaterade felmeddelandet om Elasticsearch-kompatibilitet för att visa de versioner av Elasticsearch som är kompatibla med Adobe Commerce Elasticsearch-modulen. Felmeddelandet innehåller nu de specifika Elasticsearch-versioner som ska installeras i din molninfrastruktur, så att den är kompatibel med Elasticsearch-modulen som används i din version av Adobe Commerce. Se [Varningsfel, Distribuera stadium](../dev-tools/error-reference.md#deploy-stage-1).<!--MCLOUD-6698-->
 
 - ![ny ikon](../../assets/new.svg) Lagt till varningsfel `2026` och `2027` för ogiltig inställning för miljövariabel i `MAGE_MODE`. Det enda giltiga värdet är `production`. Före den här korrigeringen kunde `MAGE_MODE` anges till `developer` utan distributionsfel, så att fel bara uppstår senare när du försöker skriva till skrivskyddade filer. Se [Varningsfel](../dev-tools/error-reference.md#warning-errors).<!--MCLOUD-6708-->
 
@@ -253,7 +259,7 @@ Releasedatum: 5 augusti 2020
 
    - Felkod 102 - Ytterligare kontroller har lagts till för problem som inträffar när filen `env.php` inte är skrivbar <!--MCLOUD-6221-->
 
-- ![ny ikon](../../assets/new.svg) Lagt till miljövariabeln **QUALITY_PATCH** för att ange en eller flera kvalitetsuppdateringar som ska användas under distributionen. Se [Skapa variabler](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
+- ![ny ikon](../../assets/new.svg) Lagt till miljövariabeln **QUALITY_PATCHES** för att ange en eller flera kvalitetsuppdateringar som ska användas under distributionen. Se [Skapa variabler](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
 
 ## v2002.1.1
 
@@ -293,7 +299,7 @@ Releasedatum: 25 juni 2020
 
 - ![ny ikon](../../assets/new.svg) **Valideringsförbättringar**—
 
-   - ![ny ikon](../../assets/new.svg) **Kompatibilitetskontroller för Elasticsearch 7.x** - Elasticsearch-validering för kompatibilitetskontroller för Elasticsearch 7.x-program har uppdaterats.<!--MCLOUD-5542-->
+   - ![ny ikon](../../assets/new.svg) **Kompatibilitetskontroller för Elasticsearch 7.x** - Uppdaterad Elasticsearch-validering för kompatibilitetskontroller för Elasticsearch 7.x.<!--MCLOUD-5542-->
 
    - ![ny ikon](../../assets/new.svg) **Uppdaterad tjänstversion och EOL-valideringskontroller** - Uppdaterad validering för att kontrollera installerade tjänstversioner mot Adobe Commerce 2.4.0-kraven.<!--MCLOUD-6144-->
 
