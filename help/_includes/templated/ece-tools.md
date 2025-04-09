@@ -1,5 +1,5 @@
 ---
-source-git-commit: 6a686858394e65dfbb665bb76332ee13348dad7e
+source-git-commit: 9fbcca6f545276e7afedcdb6e6061a87dd8f2dd9
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 0%
@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # ece-tools
 
-**Version**: 2002.2.1
+**Version**: 2002.2.2
 
 Referensen innehåller 34 kommandon som är tillgängliga via kommandoradsverktyget `ece-tools`.
 Den inledande listan genereras automatiskt med kommandot `ece-tools list` på Adobe Commerce i molninfrastrukturen.
@@ -534,7 +534,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 ece-tools cron:enable
 ```
 
-Möjliggör Magento cron-processer.
+Möjliggör Magento kundprocesser.
 
 ### Alternativ
 
@@ -547,7 +547,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 ece-tools cron:kill
 ```
 
-Avslutar alla Magento cron-processer.
+Avslutar alla Magento kundprocesser.
 
 ### Alternativ
 
