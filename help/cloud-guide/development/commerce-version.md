@@ -2,7 +2,8 @@
 title: Uppgradera Commerce
 description: Lär dig hur du uppgraderar Adobe Commerce-versionen i molninfrastrukturprojektet.
 feature: Cloud, Upgrade
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 0%
@@ -64,7 +65,7 @@ När du uppgraderar från en äldre version måste du migrera filen `config.loca
 
 ### Verifiera Zend Framework Composer-beroenden
 
-När du uppgraderar till **2.3.x eller senare från 2.2.x** kontrollerar du att Zend Framework-beroenden har lagts till i `autoload` -egenskapen för `composer.json`-filen som stöder Laminas. Denna plugin stöder nya krav för Zend Framework, som har migrerat till Laminas-projektet. Se [Migrering av Zend Framework till Laminas Project](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251) på _Magento DevBlog_.
+När du uppgraderar till **2.3.x eller senare från 2.2.x** kontrollerar du att Zend Framework-beroenden har lagts till i `autoload` -egenskapen för `composer.json`-filen som stöder Laminas. Denna plugin stöder nya krav för Zend Framework, som har migrerat till Laminas-projektet. Se [Migrering av Zend Framework till Laminas Project](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251) i _Magento DevBlog_.
 
 **Så här kontrollerar du `auto-load:psr-4`-konfigurationen**:
 
@@ -123,7 +124,7 @@ Innan du uppgraderar programmet måste du uppdatera dina projektkonfigurationsfi
 
 ### .magento.app.yaml
 
-Granska alltid värdena i filen [.magento.app.yaml](../application/configure-app-yaml.md) för den installerade versionen, eftersom den styr hur programmet bygger och distribuerar till molninfrastrukturen. Följande exempel är för version 2.4.7 och använder Composer 2.7.2. Egenskapen `build: flavor:` används inte för Composer 2.x; se [Installera och använda Composer 2](../application/properties.md#installing-and-using-composer-2).
+Granska alltid värdena i filen [.magento.app.yaml](../application/configure-app-yaml.md) för den installerade versionen, eftersom den styr hur programmet bygger och distribuerar till molninfrastrukturen. Följande exempel är för version 2.4.8 och använder Composer 2.8.4. Egenskapen `build: flavor:` används inte för Composer 2.x; se [Installera och använda Composer 2](../application/properties.md#installing-and-using-composer-2).
 
 **Så här uppdaterar du `.magento.app.yaml`-filen**:
 
@@ -134,13 +135,13 @@ Granska alltid värdena i filen [.magento.app.yaml](../application/configure-app
 1. Uppdatera PHP-alternativen.
 
    ```yaml
-   type: php:8.3
+   type: php:8.4
    
    build:
        flavor: none
    dependencies:
        php:
-           composer/composer: '2.7.2'
+           composer/composer: '2.8.4'
    ```
 
 1. Ändra kommandona för `hooks`-egenskapen `build` och `deploy`.
@@ -383,7 +384,7 @@ Granska tillägg- och modulsidor från tredje part på Marketplace eller andra f
 
 1. Kör till mellanlagringsmiljön för att testa i en förproduktionsmiljö.
 
-Adobe rekommenderar starkt att du uppgraderar din produktionsmiljö _före_, inklusive de uppgraderade tilläggen i din webbplatsstartprocess.
+Adobe rekommenderar starkt att du uppgraderar din produktionsmiljö _före_, inklusive de uppgraderade tilläggen när du startar webbplatsen.
 
 >[!NOTE]
 >

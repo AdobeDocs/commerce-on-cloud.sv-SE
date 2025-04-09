@@ -2,7 +2,8 @@
 title: Egenskaper
 description: Använd egenskapslistan som referens när du konfigurerar programmet  [!DNL Commerce]  för att skapa och distribuera till molninfrastrukturen.
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -54,7 +55,7 @@ Egenskapen `build` avgör vad som händer som standard när projektet skapas. `f
 
 ```yaml
 # The toolstack used to build the application.
-type: php:8.3
+type: php:8.4
 build:
     flavor: none
 

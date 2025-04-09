@@ -5,7 +5,8 @@ role: Developer
 feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -20,7 +21,7 @@ Innan du förbereder din lokala arbetsyta bör du kontrollera att du har dina [i
 
 ## Obligatoriska paket
 
-Adobe Commerce i molninfrastruktur använder Composer för att hantera beroenden och uppgraderingar för projekt. För lokal utveckling måste du installera de PHP- och Composer-versioner som är kompatibla med ditt Cloud-projekt. Om du till exempel använder molnmallen [!DNL Commerce] 2.4.7 ser du att [`.magento.app.yaml`](https://github.com/magento/magento-cloud/blob/2.4.7/.magento.app.yaml)-konfigurationsfilen använder **PHP 8.3** och **Composer 2.7.2**.
+Adobe Commerce i molninfrastruktur använder Composer för att hantera beroenden och uppgraderingar för projekt. För lokal utveckling måste du installera de PHP- och Composer-versioner som är kompatibla med ditt Cloud-projekt. Om du till exempel använder molnmallen [!DNL Commerce] 2.4.8 ser du att [`.magento.app.yaml`](https://github.com/magento/magento-cloud/blob/2.4.8/.magento.app.yaml)-konfigurationsfilen använder **PHP 8.4** och **Composer 2.8.4**.
 
 Composer installerar nödvändiga bibliotek och beroenden för ditt projekt i katalogen `vendor`. Följande Composer-filer som krävs finns i projektets rotkatalog:
 
@@ -46,10 +47,10 @@ Adobe Commerce i molninfrastrukturen använder ett metapaket som kräver `magent
 >=current_version <next_version
 ```
 
-Om du till exempel vill använda den senaste Adobe Commerce-versionen, 2.4.7, anger du `2.4.7` som den&quot;aktuella&quot; versionen och `2.4.8` som&quot;nästa&quot; version i filen `composer.json`:
+Om du till exempel vill använda den senaste versionen av Adobe Commerce 2.4.9 anger du `2.4.8` som den&quot;aktuella&quot; versionen och `2.4.9` som&quot;nästa&quot; version i filen `composer.json`:
 
 ```text
-"magento/magento-cloud-metapackage": ">=2.4.7 <2.4.8"
+"magento/magento-cloud-metapackage": ">=2.4.8 <2.4.9"
 ```
 
 Huvudpaketen i det här metapaketet är följande:
