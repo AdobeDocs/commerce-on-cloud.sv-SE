@@ -2,11 +2,11 @@
 title: Molnkorrigeringar för Commerce
 description: Se en lista över de senaste förbättringarna av Cloud Patches-paketet.
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-02-06T00:00:00Z
+last-substantial-update: 2025-04-15T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
+source-git-commit: cebf68dfc1722a055a6217fa50552116d216d579
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2372'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Paketet `magento/magento-cloud-patches` använder följande versionssekvens: `<m
 
 <!--Add release notes below-->
 
-## v1.1.4 {#latest}
+## v1.1.5 {#latest}
+
+Releasedatum: 15 april 2025
+
+- ![ny ikon](../../assets/new.svg) **Lagt till patch för B2B 1.5.2** - Korrigera problemet AVS2E-3833 med B2B-modulen 1.5.2 och MariaDB 10.6<!-- MCLOUD-13605	-->
+
+## v1.1.4
 
 Releasedatum: 13 februari 2025
 
