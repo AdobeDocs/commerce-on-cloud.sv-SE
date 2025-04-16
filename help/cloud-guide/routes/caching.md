@@ -2,9 +2,10 @@
 title: Cachning
 description: Lär dig hur du aktiverar cachelagring för din Adobe Commerce i molnmiljöer.
 feature: Cloud, Cache, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73c36d6-9a58-45c0-9220-86074c1f46f0
+source-git-commit: a1ed2818cbaf5adf8b673df0ee9b9218e6f700a2
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
@@ -130,7 +131,7 @@ Det finns ett specialfall om nyckeln `cookies` har värdet `["*"]`. Detta värde
 
 Cookies har följande begränsningar:
 
-- Du kan ange maximalt **50 cookies** i systemet. Annars genereras ett `Unable to send the cookie. Maximum number of cookies would be exceeded`-undantag.
+- Det finns högst **50 cookies** i systemet. Annars genereras ett `Unable to send the cookie. Maximum number of cookies would be exceeded`-undantag. Om du vill öka antalet cookies till 200 använder du [MDVA-12304-korrigeringen](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html) med [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool).
 - En maximal cookie-storlek är **4096 byte**. Annars genereras ett `Unable to send the cookie. Size of '%name' is %size bytes`-undantag.
 
 ### `default_ttl`
