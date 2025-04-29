@@ -2,9 +2,10 @@
 title: Anpassa cachekonfigurationen
 description: Lär dig hur du granskar och anpassar inställningarna för cachekonfigurationen när tjänsten Snabbt har installerats.
 feature: Cloud, Configuration, Iaas, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
+source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -31,6 +32,8 @@ Om du vill slutföra gruppåtgärder som tar längre tid än 3 minuter ändrar d
 
 >[!NOTE]
 >
+>Om du har angett en anpassad Admin Path-slutpunkt i fältet **Anpassad administratörssökväg** i **Lager** > **Konfiguration** > **Avancerat** > **Admin** > **Admin Bas-URL** måste du också ange [ADMIN_URL-variabeln](../environment/variables-admin.md#change-the-admin-url) i -miljön till samma värde. Om inställningarna inte är samma kommer timeout-värdet inte att fungera.
+>
 >Mer information om hur du utökar parametrar för snabb timeout för andra än Admin i snabbgränssnittet finns i [Öka tidsgränser för långa jobb](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md).
 
 **Så här utökar du den snabba tidsgränsen för administratören**:
@@ -51,7 +54,7 @@ Hämtar snabbt Admin-sökvägen för generering av VCL-filen från konfiguration
 
 ## Konfigurera rensningsalternativ
 
-Du kan snabbt välja mellan flera olika typer av rensningsalternativ på Magento-cacheminnets hanteringssida, bland annat alternativ för att rensa produktkategori, produktresurser och innehåll. När det här alternativet är aktiverat letar programmet efter händelser som automatiskt tömmer cacheminnen. Om du inaktiverar ett rensningsalternativ kan du rensa bort cacheminnen manuellt när du har slutfört uppdateringarna via sidan Cachehantering.
+Du kan snabbt välja mellan flera olika typer av rensningsalternativ på sidan för hantering av Magento-cache, bland annat alternativ för att rensa produktkategori, produktresurser och innehåll. När det här alternativet är aktiverat letar programmet efter händelser som automatiskt tömmer cacheminnen. Om du inaktiverar ett rensningsalternativ kan du rensa bort cacheminnen manuellt när du har slutfört uppdateringarna via sidan Cachehantering.
 
 Rensningsalternativen är:
 
@@ -218,4 +221,4 @@ Använd alternativet _Underhållsläge_ om du vill tillåta administrativ åtkom
 
    När du har aktiverat underhållsläge blockeras all trafik utom förfrågningar från IP-adresserna i `maint_allowlist` ACL. Du kan uppdatera `maint_allowlist` om du vill ändra IP-adresserna i åtkomstkontrollistan.
 
-   Detaljerade konfigurationsinstruktioner finns i [underhållslägesguiden](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) i dokumentationen för snabbnätverket för Magento 2-modulen.
+   Detaljerade konfigurationsinstruktioner finns i [underhållslägesguiden](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) i dokumentationen för Fast CDN för Magento 2-modulen.
