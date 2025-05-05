@@ -33,7 +33,7 @@ Förgreningsstrategin använder ett gemensamt Git-arbetsflöde där du utvecklar
 
 Ditt konto har stöd för ett begränsat antal ![aktiva grenar](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"} (inaktiva) utvecklingsgrenar. Hantera aktiva och inaktiva grenar genom att lägga till eller ta bort en gren med endast [!DNL Cloud Console] eller molnbaserad CLI. Innan du kan ta bort en gren inaktiverar du grenen, som finns kvar i listan _Miljöer_ som _inaktiv_. Du kan återaktivera grenen senare eller så kan du [ta bort grenen](../dev-tools/cloud-cli-overview.md#) i miljöinställningarna eller använda molnet-CLI.
 
-Om du behöver ytterligare aktiva miljöer för utveckling skickar du en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
+Om du behöver ytterligare aktiva miljöer för utveckling skickar du en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket).
 
 **Lägga till en gren**:
 

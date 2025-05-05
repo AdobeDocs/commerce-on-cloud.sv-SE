@@ -55,7 +55,7 @@ Releasedatum: 10 mars 2023
 
 Releasedatum: 13 september 2022
 
-- ![korrigeringsikon](../../assets/fix.svg) **Fel vid varning** - Korrigerade ett fel som försökte [varma](../environment/variables-post-deploy.md#warm_up_pages) när sidsynligheten är inställd på [**Inte synlig enskilt**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) i administratören, vilket resulterade i `ERROR: Warming up failed: <link to page>` fel i distributionsloggen.<!-- MCLOUD-9134 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Fel vid varning** - Korrigerade ett fel som försökte [varma](../environment/variables-post-deploy.md#warm_up_pages) när sidsynligheten är inställd på [**Inte synlig enskilt**](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) i administratören, vilket resulterade i `ERROR: Warming up failed: <link to page>` fel i distributionsloggen.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

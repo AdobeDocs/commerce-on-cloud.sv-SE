@@ -23,7 +23,7 @@ I följande exempel visas hur du hanterar omdirigeringsregler på din Adobe Comm
 
 >[!WARNING]
 >
->Om du konfigurerar flera icke-regex-omdirigeringar och omskrivningar i filen `routes.yaml` för Adobe Commerce i molninfrastrukturprojekt kan det orsaka prestandaproblem. Om din `routes.yaml`-fil är 32 kB eller större kan du avlasta din icke-regex och omdirigera den till Fast. Se [Avlasta icke-regex-omdirigeringar till Fast istället för Nginx (vägar)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html) i _Adobe Commerce Help Center_.
+>Om du konfigurerar flera icke-regex-omdirigeringar och omskrivningar i filen `routes.yaml` för Adobe Commerce i molninfrastrukturprojekt kan det orsaka prestandaproblem. Om din `routes.yaml`-fil är 32 kB eller större kan du avlasta din icke-regex och omdirigera den till Fast. Se [Avlasta icke-regex-omdirigeringar till Fast istället för Nginx (vägar)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=sv-SE) i _Adobe Commerce Help Center_.
 
 ## Omdirigeringar i hela flödet
 

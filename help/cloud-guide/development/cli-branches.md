@@ -30,7 +30,7 @@ I följande instruktioner används en kombination av `magento-cloud` CLI-kommand
 
 **Så här klonar du ett projekt `master` miljö**:
 
-1. Logga in på din lokala arbetsstation med ett [ägarkonto](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) för filsystemet.
+1. Logga in på din lokala arbetsstation med ett [ägarkonto](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=sv-SE) för filsystemet.
 
 1. Byt till webbservern eller den virtuella värdkatalogen _docroot_.
 

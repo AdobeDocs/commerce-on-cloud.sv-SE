@@ -264,6 +264,6 @@ Om du tar bort plugin-posterna från `elasticsearch:` i `.magento/services.yaml`
 
 Se följande Adobe Commerce supportartiklar för hjälp med felsökning av Elasticsearch-problem:
 
-- [Elasticsearch 5 har konfigurerats, men söksidan läses inte in med &quot;FieldData is disabled...&quot;-fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html).
+- [Elasticsearch 5 har konfigurerats, men söksidan läses inte in med &quot;FieldData is disabled...&quot;-fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=sv-SE).
 - [Elasticsearch i Adobe Commerce felsökare](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
-- [Elasticsearch-indexstatus är `yellow` eller `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html)
+- [Elasticsearch-indexstatus är `yellow` eller `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=sv-SE)

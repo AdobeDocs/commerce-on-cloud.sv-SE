@@ -38,7 +38,7 @@ Med OpenSearch kan du hämta data från alla källor, alla format och söka och 
        disk: 1024
    ```
 
-   För Pro-projekt måste du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att kunna ändra OpenSearch-versionen i mellanlagrings- och produktionsmiljöer.
+   För Pro-projekt måste du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna ändra OpenSearch-versionen i mellanlagrings- och produktionsmiljöer.
 
 1. Ange eller verifiera egenskapen `relationships` i filen `.magento.app.yaml`.
 
@@ -91,7 +91,7 @@ När du installerar eller uppgraderar din Adobe Commerce i ett molninfrastruktur
 
 - **Projektuppgradering**-Kontrollera att PHP-klienten för OpenSearch i den nya programversionen är kompatibel med OpenSearch-tjänstversionen som är installerad i molninfrastrukturen.
 
-Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har testats och distribuerats i molninfrastrukturen, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. En lista över vilka versioner som stöds finns i [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _installationshandboken_.
+Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har testats och distribuerats i molninfrastrukturen, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. En lista över vilka versioner som stöds finns i [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _installationshandboken_.
 
 **Så här verifierar du OpenSearch-programkompatibilitet**:
 

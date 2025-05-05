@@ -137,7 +137,7 @@ Du måste ha [administratörsåtkomst](../project/user-access.md) till miljön. 
 
 ## Återställ en ögonblicksbild av Disaster Recovery
 
-[Importera databasdumpen direkt från servern](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3) om du vill återställa ögonblicksbilden av Disaster Recovery i Pro-miljöer för förproduktion och produktion.
+[Importera databasdumpen direkt från servern](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3) om du vill återställa ögonblicksbilden av Disaster Recovery i Pro-miljöer för förproduktion och produktion.
 
 ## Återställningskod
 

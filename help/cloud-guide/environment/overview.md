@@ -27,7 +27,7 @@ Du kan konfigurera programinställningar, anslutningsvägar, bygg- och distribut
 
 ## Konfigurationsuppdateringar för Pro-miljöer
 
-För Adobe Commerce i molninfrastrukturen Pro Staging and Production-miljöer kan du uppdatera många konfigurationsalternativ i din lokala utvecklingsmiljö och implementera ändringarna för dessa miljöer. Du måste dock [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att kunna uppdatera följande konfigurationsalternativ:
+För Adobe Commerce i molninfrastrukturen Pro Staging and Production-miljöer kan du uppdatera många konfigurationsalternativ i din lokala utvecklingsmiljö och implementera ändringarna för dessa miljöer. Du måste dock [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna uppdatera följande konfigurationsalternativ:
 
 - Installera eller uppdatera tjänster i filen `.magento/services.yaml`.
 - Ändra konfigurationen för egenskaperna `mounts` och `disk` i filen `.magento.app.yaml`.

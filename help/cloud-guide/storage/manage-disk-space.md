@@ -131,7 +131,7 @@ Två [konfigurationsfiler](../environment/overview.md) styr tilldelningen av dis
 
 >[!IMPORTANT]
 >
->För Pro Production- och mellanlagringsmiljöer måste du [skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ändra diskutrymme för allokering. En storleksökning av Pro Production- och Staging-miljöerna kan endast utföras med vissa intervall, så beroende på hur mycket diskutrymme du använder kan stödet rekommendera att du ökar diskutrymmet med minst 10 GB. Lagringsökningen för Pro-testning och -produktion kan inte återställas när den har tilldelats. Lagring kan inte omfördelas eller omfördelas mellan resurser. Minska diskutrymmet som tilldelats MySQL om du vill lägga till mer lagringsutrymme.
+>För Pro Production- och mellanlagringsmiljöer måste du [skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill ändra diskutrymme för allokering. En storleksökning av Pro Production- och Staging-miljöerna kan endast utföras med vissa intervall, så beroende på hur mycket diskutrymme du använder kan stödet rekommendera att du ökar diskutrymmet med minst 10 GB. Lagringsökningen för Pro-testning och -produktion kan inte återställas när den har tilldelats. Lagring kan inte omfördelas eller omfördelas mellan resurser. Minska diskutrymmet som tilldelats MySQL om du vill lägga till mer lagringsutrymme.
 
 ### Programdiskutrymme
 
@@ -187,7 +187,7 @@ Filen `.magento/services.yaml` styr vilket diskutrymme som är tillgängligt fö
 
 ## Övervaka diskutrymme
 
-I Pro Production-miljöer kan du övervaka diskutrymme och andra prestandaindikatorer med hjälp av varningspolicyn för Adobe Commerce för New Relic. Mer information finns i [Övervaka prestanda med hanterade aviseringar](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Mer vägledning finns i [Bästa tillvägagångssätt för att lösa databasprestandaproblem](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html).
+I Pro Production-miljöer kan du övervaka diskutrymme och andra prestandaindikatorer med hjälp av varningspolicyn för Adobe Commerce för New Relic. Mer information finns i [Övervaka prestanda med hanterade aviseringar](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Mer vägledning finns i [Bästa tillvägagångssätt för att lösa databasprestandaproblem](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=sv-SE).
 
 ## Inget utrymme kvar
 

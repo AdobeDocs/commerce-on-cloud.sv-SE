@@ -49,7 +49,7 @@ I det här avsnittet beskrivs hur du hämtar Composer-namnet och versionen av et
 
 ## Installera ett tillägg
 
-Adobe rekommenderar att du arbetar i en utvecklingsgren när du lägger till ett tillägg till implementeringen. När du installerar ett tillägg infogas tilläggets namn (`<VendorName>_<ComponentName>`) automatiskt i filen [`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html). Du behöver inte redigera filen direkt.
+Adobe rekommenderar att du arbetar i en utvecklingsgren när du lägger till ett tillägg till implementeringen. När du installerar ett tillägg infogas tilläggets namn (`<VendorName>_<ComponentName>`) automatiskt i filen [`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=sv-SE). Du behöver inte redigera filen direkt.
 
 **Så här installerar du ett tillägg**:
 
@@ -155,7 +155,7 @@ Aktivera eller inaktivera aldrig ett tillägg när du är inloggad i fjärrmilj�
 
 ## Uppgradera ett tillägg
 
-Innan du fortsätter behöver du namnet och versionen för dispositionen. Bekräfta också att tillägget är kompatibelt med ditt projekt och Adobe Commerce-versionen. [Kontrollera den PHP-version](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) som krävs innan du börjar.
+Innan du fortsätter behöver du namnet och versionen för dispositionen. Bekräfta också att tillägget är kompatibelt med ditt projekt och Adobe Commerce-versionen. [Kontrollera den PHP-version](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) som krävs innan du börjar.
 
 **Så här uppdaterar du ett tillägg**:
 
@@ -189,4 +189,4 @@ Innan du fortsätter behöver du namnet och versionen för dispositionen. Bekrä
    git push origin <branch-names>
    ```
 
-Om du råkar ut för fel kan du läsa [Återställa från komponentfel](../deploy/recover-failed-deployment.md). Mer information om hur du använder tillägg med Adobe Commerce finns i [Tillägg](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html) i _Admin Guide_.
+Om du råkar ut för fel kan du läsa [Återställa från komponentfel](../deploy/recover-failed-deployment.md). Mer information om hur du använder tillägg med Adobe Commerce finns i [Tillägg](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=sv-SE) i _Admin Guide_.

@@ -61,7 +61,7 @@ Granska de bästa metoderna och övervägandena för din distributionsprocess:
 
 - **Verifiera tjänstversioner och relationer och möjligheten att ansluta**
 
-  Kontrollera vilka tjänster som är tillgängliga för ditt program och se till att du använder den senaste kompatibla versionen. Se [Servicerelationer](../services/services-yaml.md#service-relationships) och [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _installationshandboken_ för rekommenderade versioner.
+  Kontrollera vilka tjänster som är tillgängliga för ditt program och se till att du använder den senaste kompatibla versionen. Se [Servicerelationer](../services/services-yaml.md#service-relationships) och [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _installationshandboken_ för rekommenderade versioner.
 
 - **Testa lokalt och i integreringsmiljön innan du distribuerar till Förproduktion och Produktion**
 
@@ -117,7 +117,7 @@ Den här fasen kör även `composer install` för att hämta beroenden.
 Den här fasen skapar kodbasen och kör kopplingar i avsnittet `build` i `.magento.app.yaml`. Standardbyggkroken är kommandot `php ./vendor/bin/ece-tools` och utför följande:
 
 - Tillämpar korrigeringar i `vendor/magento/ece-patches` och valfria, projektspecifika korrigeringar i `m2-hotfixes`
-- Återskapar kod och konfigurationen för [beroendeinjektionen](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) (d.v.s. katalogen `generated/` som innehåller `generated/code` och `generated/metapackage`) med `bin/magento setup:di:compile`.
+- Återskapar kod och konfigurationen för [beroendeinjektionen](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/glossary) (d.v.s. katalogen `generated/` som innehåller `generated/code` och `generated/metapackage`) med `bin/magento setup:di:compile`.
 - Kontrollerar om filen [`app/etc/config.php`](../store/store-settings.md) finns i kodbasen. Adobe Commerce genererar automatiskt den här filen om den inte upptäcks under byggfasen och innehåller en lista med moduler och tillägg. Om den finns fortsätter byggfasen som vanligt, statiska filer komprimeras med GZIP och distribueras, vilket minskar driftstoppen i distributionsfasen. Mer information om hur du anpassar eller inaktiverar filkomprimering finns i [byggalternativ](../environment/variables-build.md).
 
 >[!WARNING]
@@ -144,7 +144,7 @@ Instruktionsmarginalen innehåller alla filer och mappar **förutom följande** 
 
 ### Fas 4: Distribuera instruktionsmarginaler och kluster
 
-Dina program och alla [backend](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)-tjänster tillhandahålls enligt följande:
+Dina program och alla [backend](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/glossary)-tjänster tillhandahålls enligt följande:
 
 - Monterar varje tjänst i en behållare, till exempel webbserver, OpenSearch, [!DNL RabbitMQ]
 - Monterar filsystemet för läsbehörighet (monterat på ett distribuerat lagringsrutnät med hög tillgänglighet)
@@ -170,13 +170,13 @@ Om filen `app/etc/config.php` inte finns i kodbasen komprimeras statiska filer m
 
 Det finns två driftsättningskrokar. `pre-deploy.php`-kroken slutför nödvändig rensning och hämtning av resurser och kod som genererats i byggkroken. Haken `php ./vendor/bin/ece-tools deploy` kör en serie kommandon och skript:
 
-- Om Adobe Commerce **inte är installerat** installeras det med `bin/magento setup:install`, distributionskonfigurationen `app/etc/env.php` och databasen för den angivna miljön, till exempel Redis och URL-adresser för webbplatser, uppdateras. **Viktigt!** När du slutförde [Första distributionen](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html) under installationen installerades Adobe Commerce och distribuerades i alla miljöer.
+- Om Adobe Commerce **inte är installerat** installeras det med `bin/magento setup:install`, distributionskonfigurationen `app/etc/env.php` och databasen för den angivna miljön, till exempel Redis och URL-adresser för webbplatser, uppdateras. **Viktigt!** När du slutförde [Första distributionen](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=sv-SE) under installationen installerades Adobe Commerce och distribuerades i alla miljöer.
 
 - Om Adobe Commerce **är installerat** utför du alla nödvändiga uppgraderingar. Distributionsskriptet kör `bin/magento setup:upgrade` för att uppdatera databasschemat och data (vilket är nödvändigt efter tilläggs- eller kärnkodsuppdateringar) och även uppdaterar distributionskonfigurationen, `app/etc/env.php`, och databasen för din miljö. Distributionsskriptet rensar slutligen cacheminnet för Adobe Commerce.
 
 - Skriptet genererar eventuellt statiskt webbinnehåll med kommandot `magento setup:static-content:deploy`.
 
-- Använder omfattningar (`-s`-flagga i byggskript) med standardinställningen `quick` för statisk innehållsdistributionsstrategi. Du kan anpassa strategin med miljövariabeln [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy). Mer information om dessa alternativ och funktioner finns i [Distributionsstrategier för statiska filer](../deploy/static-content.md) och flaggan `-s` för [Distribuera statiska visningsfiler](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html).
+- Använder omfattningar (`-s`-flagga i byggskript) med standardinställningen `quick` för statisk innehållsdistributionsstrategi. Du kan anpassa strategin med miljövariabeln [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy). Mer information om dessa alternativ och funktioner finns i [Distributionsstrategier för statiska filer](../deploy/static-content.md) och flaggan `-s` för [Distribuera statiska visningsfiler](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=sv-SE).
 
 >[!NOTE]
 >

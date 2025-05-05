@@ -176,7 +176,7 @@ Adobe Commerce i molninfrastruktur använder en arkitektur med hög tillgänglig
 
 >[!NOTE]
 >
->De monterade volymerna innehåller/refererar endast till [skrivbara monteringar](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) och kommer inte att innehålla hela din `app/`-katalog. Liksom för de andra filerna skapas/genereras de av [bygg- och distributionsprocessen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow), och du måste också kontrollera din Git-databas för att se om det finns återstående filer.
+>De monterade volymerna innehåller/refererar endast till [skrivbara monteringar](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) och kommer inte att innehålla hela din `app/`-katalog. Liksom för de andra filerna skapas/genereras de av [bygg- och distributionsprocessen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow), och du måste också kontrollera din Git-databas för att se om det finns återstående filer.
 
 {{pro-backups}}
 
@@ -210,4 +210,4 @@ Pro-klusterstorleken och _beräkna_-konfigurationerna varierar beroende på den 
 
 Den redundanta arkitekturen gör att molninfrastrukturen i Adobe kan byggas ut utan driftstopp. Vid uppskalning roterar var och en av de tre instanserna till uppgraderingskapacitet utan att påverka webbplatsens funktion. Du kan till exempel lägga till extra webbservrar i ett befintligt kluster om gränsen är på PHP-nivå i stället för på databasnivå. Detta ger _vågrät skalning_ som komplement till den lodräta skalningen som tillhandahålls av extra processorer på databasnivån. Se [Skalad arkitektur](scaled-architecture.md).
 
-Om du förväntar dig en avsevärd ökning av trafiken för en händelse eller av någon annan anledning kan du begära en tillfällig kapacitetsökning. Se [Så här begär du en tillfällig storlek](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html) i _Commerce Help Center_.
+Om du förväntar dig en avsevärd ökning av trafiken för en händelse eller av någon annan anledning kan du begära en tillfällig kapacitetsökning. Se [Så här begär du en tillfällig storlek](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=sv-SE) i _Commerce Help Center_.

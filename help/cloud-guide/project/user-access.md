@@ -231,7 +231,7 @@ Instruktioner för hur du installerar autentiseringsprogrammet och aktiverar TFA
 
      >[!WARNING]
      >
-     >Om du förlorar åtkomsten till ett konto med TFA och inte har återställningskodlistan, måste du kontakta projektadministratören eller [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att återställa TFA-programmet.
+     >Om du förlorar åtkomsten till ett konto med TFA och inte har återställningskodlistan, måste du kontakta projektadministratören eller [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att återställa TFA-programmet.
 
 1. När du är klar med TFA-konfigurationen klickar du på **Spara** för att uppdatera ditt konto.
 

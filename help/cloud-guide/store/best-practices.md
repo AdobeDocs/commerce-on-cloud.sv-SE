@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för butikskonfiguration
 
-Mer information om hur du konfigurerar din butik, webbplatser och webbplatser finns i [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html). På den här sidan hittar du bästa praxis, användbar information och riktlinjer för hur du konfigurerar butiker, webbplatser med mera med ytterligare innehåll som ska publiceras över tid och över flera versioner.
+Mer information om hur du konfigurerar din butik, webbplatser och webbplatser finns i [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=sv-SE). På den här sidan hittar du bästa praxis, användbar information och riktlinjer för hur du konfigurerar butiker, webbplatser med mera med ytterligare innehåll som ska publiceras över tid och över flera versioner.
 
 ## Marknadsföringskampanjer och -kampanjer
 
 Den här informationen är användbar för Adobe Commerce om molninfrastruktur 2.1.X och 2.2.X.
 
-Om du vill skapa kampanjer och kampanjer skapar du alternativen och inställningarna i [Content Staging](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html). Med den här funktionen kan ni skapa och förhandsgranska era kampanjer innan de publiceras för kundförsäljning. Följande information är användbar. Exakta anvisningar finns i det länkade innehållet i Adobe Commerce Användarhandbok.
+Om du vill skapa kampanjer och kampanjer skapar du alternativen och inställningarna i [Content Staging](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=sv-SE). Med den här funktionen kan ni skapa och förhandsgranska era kampanjer innan de publiceras för kundförsäljning. Följande information är användbar. Exakta anvisningar finns i det länkade innehållet i Adobe Commerce Användarhandbok.
 
 _Kampanjer_ är marknadsföringshändelser för säsongsförsäljning, nya produktrader och mycket mer. Varje kampanj kan innehålla anpassade teman, innehållsblock, widgetar som styr och visar innehåll samt tillhörande kampanjer med prisregler. Eftersom en kampanj är så omfattande kan du skapa dem med ett start- och slutdatum via Content Staging.
 
-_Kampanjer_ ger rabatter, engångserbjudanden, kuponger, förstagångsrabatter med mera. Du skapar de här kampanjerna som _Prisregler_ som anger villkoren, rabatterna och alternativen för att uppmuntra kunderna att köpa. Du kan skapa prisregler på [kundvagnen](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html) eller [katalogen](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html), med ytterligare alternativ för banners, belöningspoäng med mera. Ni kan planera kampanjer för era kampanjer och tillämpa prisregler för större event som en ny produktlinje eller säsongsförsäljning.
+_Kampanjer_ ger rabatter, engångserbjudanden, kuponger, förstagångsrabatter med mera. Du skapar de här kampanjerna som _Prisregler_ som anger villkoren, rabatterna och alternativen för att uppmuntra kunderna att köpa. Du kan skapa prisregler på [kundvagnen](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=sv-SE) eller [katalogen](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=sv-SE), med ytterligare alternativ för banners, belöningspoäng med mera. Ni kan planera kampanjer för era kampanjer och tillämpa prisregler för större event som en ny produktlinje eller säsongsförsäljning.
 
 Här följer tips om hur du skapar, uppdaterar och hanterar kampanjer och kampanjer:
 
@@ -34,7 +34,7 @@ Här följer tips om hur du skapar, uppdaterar och hanterar kampanjer och kampan
 
 Den här informationen är användbar för Adobe Commerce om molninfrastruktur 2.1.X och 2.2.X.
 
-Vanligtvis kan du ange [Avancerade priser](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html) för produkter genom området **Produkter** > **Kataloger** i Admin. Med Mellanlagrat innehåll utför du några extra steg för att lägga till priset i en kampanj.
+Vanligtvis kan du ange [Avancerade priser](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=sv-SE) för produkter genom området **Produkter** > **Kataloger** i Admin. Med Mellanlagrat innehåll utför du några extra steg för att lägga till priset i en kampanj.
 
 Så här redigerar du avancerad prissättning och uppdaterar innehållsutjämning:
 
@@ -47,17 +47,17 @@ Så här redigerar du avancerad prissättning och uppdaterar innehållsutjämnin
 1. Spara erbjudandet. En inaktiv inledande kampanj skapas.
 1. Du kan förhandsgranska om du vill granska specialpriset, kampanjnamnet, det regelbundna priset och det schemalagda datumintervallet för kampanjen.
 
-För ytterligare steg kan du fortsätta med instruktioner med [Schemalägg ändringar för katalogens prisregler](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html). Klicka på **Nästa** för att gå igenom stegen.
+För ytterligare steg kan du fortsätta med instruktioner med [Schemalägg ändringar för katalogens prisregler](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=sv-SE). Klicka på **Nästa** för att gå igenom stegen.
 
 ## Prisregler
 
 Prisreglerna kan innehålla logik och villkor som är lika gränslösa som er marknadsföringsfantasi. Exempel på populära exempel är Köp en kostnadsfri, Köp en och få en 50 % rabatt, en 25 dollar på beställningar över 100 dollar och mycket mer.
 
-Om du vill skapa en prisregel läser du [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html).
+Om du vill skapa en prisregel läser du [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=sv-SE).
 
 Här nedan visas ett exempel på hur du skapar en prisregel för rabatt endast på första ordern. För den här rabatten vill du:
 
-* Skapa en prisregel med ett [kundsegment](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segment-price-rule) med ett villkor: Totalt antal order under 1
+* Skapa en prisregel med ett [kundsegment](https://experienceleague.adobe.com/sv/docs/commerce-admin/customers/segments/customer-segment-price-rule) med ett villkor: Totalt antal order under 1
 * Lägg till det här kundsegmentet som ett villkor i kundvagnsregeln
 * Valfritt - Lägg till villkor och regler för att tillämpa rabatterna på specifika SKU:er eller produktkategorier för fokuserade inköp
 

@@ -30,7 +30,7 @@ Alla insamlade data visar hur lång tid som har ägnats åt åtgärder som över
 
 >[!TIP]
 >
->Mer information om hur du använder dessa data för att felsöka programprestandaproblem finns i [Felsöka prestanda med New Relic](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html) i _Adobe Commerce Help Center_.
+>Mer information om hur du använder dessa data för att felsöka programprestandaproblem finns i [Felsöka prestanda med New Relic](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=sv-SE) i _Adobe Commerce Help Center_.
 
 ## Övervaka prestanda med hanterade aviseringar
 
@@ -46,7 +46,7 @@ Adobe tillhandahåller aviseringsprincipen _Hanterade aviseringar för Adobe Com
 | MariaDB-frågeinläsning | NRI | Pro |
 | Redis-minne | NRI | Pro |
 
-När webbplatsinfrastruktur eller programförhållanden utlöser ett tröskelvärde för avisering skickar New Relic varningsmeddelanden så att du kan åtgärda problemet proaktivt. Se [Hanterade aviseringar för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) i _Adobe Commerce Help Center_ för information om tröskelvärden för aviseringar och felsökningssteg för att lösa de problem som utlöste aviseringen.
+När webbplatsinfrastruktur eller programförhållanden utlöser ett tröskelvärde för avisering skickar New Relic varningsmeddelanden så att du kan åtgärda problemet proaktivt. Se [Hanterade aviseringar för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=sv-SE) i _Adobe Commerce Help Center_ för information om tröskelvärden för aviseringar och felsökningssteg för att lösa de problem som utlöste aviseringen.
 
 >[!TIP]
 >
@@ -76,7 +76,7 @@ När webbplatsinfrastruktur eller programförhållanden utlöser ett tröskelvä
 
      >[!NOTE]
      >
-     >Om principen _Managed Alerts for Adobe Commerce_ inte är tillgänglig kan du läsa [Managed Alerts for Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) i _Adobe Commerce Help Center_.
+     >Om principen _Managed Alerts for Adobe Commerce_ inte är tillgänglig kan du läsa [Managed Alerts for Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=sv-SE) i _Adobe Commerce Help Center_.
 
 1. Klicka på fliken **[!UICONTROL Alert conditions]** om du vill granska de varningsvillkor som definierats i profilen.
 

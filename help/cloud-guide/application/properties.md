@@ -140,7 +140,7 @@ Den minsta rekommenderade diskstorleken är 256 MB. Om felet `UserError: Error b
 
 >[!NOTE]
 >
->För Pro Staging- och Production-miljöer måste du [skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att uppdatera konfigurationen `mounts` och `disk` för ditt program. När du skickar biljetten anger du de konfigurationsändringar som krävs och inkluderar en uppdaterad version av din `.magento.app.yaml`-fil.
+>För Pro Staging- och Production-miljöer måste du [skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att uppdatera konfigurationen `mounts` och `disk` för ditt program. När du skickar biljetten anger du de konfigurationsändringar som krävs och inkluderar en uppdaterad version av din `.magento.app.yaml`-fil.
 >
 >Det går inte att tillfälligt öka diskutrymmet i Förproduktion eller Produktion. Den här processen går inte att ångra.
 
@@ -191,7 +191,7 @@ Formatet för att lägga till din montering i den här listan är följande:
 
 >[!NOTE]
 >
->För Pro Staging- och Production-miljöer måste du [skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att uppdatera konfigurationen `mounts` och `disk` för ditt program. När du skickar biljetten anger du de konfigurationsändringar som krävs och inkluderar en uppdaterad version av din `.magento.app.yaml`-fil.
+>För Pro Staging- och Production-miljöer måste du [skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att uppdatera konfigurationen `mounts` och `disk` för ditt program. När du skickar biljetten anger du de konfigurationsändringar som krävs och inkluderar en uppdaterad version av din `.magento.app.yaml`-fil.
 
 Du kan göra monteringen webbtillgänglig genom att lägga till den i [`web`](web-property.md)-blocket med platser.
 

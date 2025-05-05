@@ -26,7 +26,7 @@ Om du uppdaterar egenskapsvärdet `enable_smtp` med [kommandorad](#enable-emails
 
 Använd växlingsknappen **[!UICONTROL Outgoing emails]** i vyn _Konfigurera miljö_ om du vill aktivera eller inaktivera e-poststöd.
 
-Om utgående e-post måste inaktiveras eller återaktiveras i Pro Production- eller Staging-miljöer kan du skicka en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
+Om utgående e-post måste inaktiveras eller återaktiveras i Pro Production- eller Staging-miljöer kan du skicka en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
 
 >[!TIP]
 >

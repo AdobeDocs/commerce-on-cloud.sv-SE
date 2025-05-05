@@ -177,7 +177,7 @@ stage:
 - **Standard**—_Inte angivet_
 - **Version** - Adobe Commerce 2.1.4 och senare
 
-Använd variabeln `X_FRAME_CONFIGURATION` för att ändra rubrikkonfigurationen för [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html) för din Adobe Commerce-webbplats. Den här konfigurationen styr hur webbläsaren återger en sida i en `<frame>`, `<iframe>` eller `<object>`. Använd något av följande alternativ:
+Använd variabeln `X_FRAME_CONFIGURATION` för att ändra rubrikkonfigurationen för [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=sv-SE) för din Adobe Commerce-webbplats. Den här konfigurationen styr hur webbläsaren återger en sida i en `<frame>`, `<iframe>` eller `<object>`. Använd något av följande alternativ:
 
 - `DENY` - Det går inte att visa sidan i en ram.
 - `SAMEORIGIN`—(Standardinställningen för Adobe Commerce.) Sidan kan bara visas i en ram med samma ursprung som sidan.

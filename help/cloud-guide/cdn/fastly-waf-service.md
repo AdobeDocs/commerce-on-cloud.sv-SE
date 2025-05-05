@@ -50,7 +50,7 @@ När WAF-tjänsten är aktiverad undersöker den all webb- och administratörstr
 
 Du kan anpassa den här felsvarssidan från Admin. Se [Anpassa WAF svarssida](fastly-custom-response.md#customize-the-waf-error-page).
 
-Om din Adobe Commerce-administratörssida eller butik returnerar en `403 Forbidden`-felsida som svar på en giltig URL-begäran, skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case). Kopiera referens-ID:t från felsvarssidan och klistra in det i biljettbeskrivningen.
+Om din Adobe Commerce-administratörssida eller butik returnerar en `403 Forbidden`-felsida som svar på en giltig URL-begäran, skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case). Kopiera referens-ID:t från felsvarssidan och klistra in det i biljettbeskrivningen.
 
 Om du vill identifiera WAF svar på en viss begäran med New Relic kan du läsa följande:
 

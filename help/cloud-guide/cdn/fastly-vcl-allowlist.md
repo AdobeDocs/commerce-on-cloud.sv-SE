@@ -74,7 +74,7 @@ Följande anpassade VCL-kodfragment (JSON-format) visar logiken för att filtrer
 }
 ```
 
-Innan du [skapar ett anpassat fragment](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet) från det här exemplet bör du kontrollera värdena för att avgöra om du behöver göra några ändringar. Ange sedan varje värde i respektive fält, till exempel `type`, i fältet Typ `content` i fältet Innehåll.
+Innan du [skapar ett anpassat fragment](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=sv-SE#add-the-custom-vcl-snippet) från det här exemplet bör du kontrollera värdena för att avgöra om du behöver göra några ändringar. Ange sedan varje värde i respektive fält, till exempel `type`, i fältet Typ `content` i fältet Innehåll.
 
 - `name` - VCL-fragmentets namn. I det här exemplet: `allowlist`.
 

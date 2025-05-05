@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [Redis](https://redis.io) är en valfri serverdelscachelösning som ersätter Zend Framework Zend_Cache_Backend_File, som Adobe Commerce använder som standard.
 
-Se [Konfigurera Redis](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html) i _Konfigurationsguiden_.
+Se [Konfigurera Redis](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html?lang=sv-SE) i _Konfigurationsguiden_.
 
 {{service-instruction}}
 
@@ -128,7 +128,7 @@ Exempelsvar:
 
 Se följande Adobe Commerce supportartiklar för hjälp med felsökning av Redis-problem:
 
-- [Återvisa fördröjning av problem Administratörsinloggning eller utcheckning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
-- [Implementering av utökat Redis-cache, Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html)
-- [Hanterade aviseringar på Adobe Commerce: Redis Memory-varning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html)
-- [Hanterade aviseringar på Adobe Commerce: Redis memory critical alert](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html)
+- [Återvisa fördröjning av problem Administratörsinloggning eller utcheckning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html?lang=sv-SE)
+- [Implementering av utökat Redis-cache, Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=sv-SE)
+- [Hanterade aviseringar på Adobe Commerce: Redis Memory-varning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=sv-SE)
+- [Hanterade aviseringar på Adobe Commerce: Redis memory critical alert](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=sv-SE)

@@ -31,7 +31,7 @@ Miljövariabler som är specifika för Adobe Commerce i molninfrastrukturen anv�
 
 >[!WARNING]
 >
->Om du vill lägga till miljövariabler i [åsidosätta konfigurationsinställningar](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html) med [[!DNL Cloud Console]](../project/overview.md) måste du lägga till `env:` som i följande exempel som prefix för variabelnamnet:
+>Om du vill lägga till miljövariabler i [åsidosätta konfigurationsinställningar](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=sv-SE) med [[!DNL Cloud Console]](../project/overview.md) måste du lägga till `env:` som i följande exempel som prefix för variabelnamnet:
 >
 >![Exempel på miljövariabel](../../assets/set-env-variable-ui.png)
 

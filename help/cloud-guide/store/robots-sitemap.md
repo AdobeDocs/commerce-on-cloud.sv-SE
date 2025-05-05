@@ -48,7 +48,7 @@ För detta krävs ECE-Tools version 2002.0.12 och senare med en uppdaterad `.mag
 
 >[!NOTE]
 >
->Om filen `<domain.your.project>/robots.txt` genererar en `404 error`, [skickar du en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att ta bort omdirigeringen från `/robots.txt` till `/media/robots.txt`.
+>Om filen `<domain.your.project>/robots.txt` genererar en `404 error`, [skickar du en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att ta bort omdirigeringen från `/robots.txt` till `/media/robots.txt`.
 
 ## Skriv om med snabbVCL-kodfragment
 

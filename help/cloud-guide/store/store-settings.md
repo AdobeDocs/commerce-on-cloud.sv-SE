@@ -15,14 +15,14 @@ Standardkonfigurationerna för din butik lagras i en `config.xml` för rätt mod
 
 Lagringsinställningarna, som refererar till konfigurationerna i avsnittet Admin **Stores** > **Settings** > **Configuration** , lagras i distributionskonfigurationsfilerna baserat på typen av konfiguration:
 
-- `app/etc/config.php` - konfigurationsinställningar för butiker, webbplatser, moduler eller tillägg, statisk filoptimering och systemvärden för statisk innehållsdistribution. Se referensen [config.php](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html) i _konfigurationshandboken_.
-- `app/etc/env.php` - värden för systemspecifika åsidosättningar och känsliga inställningar som _INTE_ ska lagras i källkontrollen. Se referensen [env.php](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html) i _konfigurationshandboken_.
+- `app/etc/config.php` - konfigurationsinställningar för butiker, webbplatser, moduler eller tillägg, statisk filoptimering och systemvärden för statisk innehållsdistribution. Se referensen [config.php](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=sv-SE) i _konfigurationshandboken_.
+- `app/etc/env.php` - värden för systemspecifika åsidosättningar och känsliga inställningar som _INTE_ ska lagras i källkontrollen. Se referensen [env.php](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=sv-SE) i _konfigurationshandboken_.
 
 >[!NOTE]
 >
 >Eftersom Adobe Commerce i molninfrastrukturen endast stöder produktions- och underhållslägen är **Avancerat** > **Utvecklare** inte tillgängligt i Admin. Du måste ha [systemadministratörsbehörighet](../project/user-access.md) för att kunna slutföra konfigurationshanteringsuppgifter. Du kan konfigurera ytterligare inställningar med [miljövariabler](../environment/configure-env-yaml.md).
 
-Konfigurationshantering är ett sätt att driftsätta enhetliga lagringsinställningar i alla miljöer med minimalt antal driftavbrott med hjälp av driftsättning i pipeline. Adobe Commerce i molninfrastrukturprojektet innehåller byggservern, bygg och distribuera skript och distributionsmiljöer som utformats med [pipeline-distributionsstrategin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html) i åtanke.
+Konfigurationshantering är ett sätt att driftsätta enhetliga lagringsinställningar i alla miljöer med minimalt antal driftavbrott med hjälp av driftsättning i pipeline. Adobe Commerce i molninfrastrukturprojektet innehåller byggservern, bygg och distribuera skript och distributionsmiljöer som utformats med [pipeline-distributionsstrategin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=sv-SE) i åtanke.
 
 ## Schema för åsidosättning av konfiguration
 
@@ -36,7 +36,7 @@ Sammanfattningsvis åsidosätter miljövariabler alla andra värden.
 
 >[!TIP]
 >
->Se [Konfigurationshantering](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html) i _Konfigurationsguiden_ för mer information om åsidosättningsschemat för pipeline-distribution.
+>Se [Konfigurationshantering](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=sv-SE) i _Konfigurationsguiden_ för mer information om åsidosättningsschemat för pipeline-distribution.
 
 Om samma inställning är konfigurerad på flera platser använder programmet följande konfigurationshierarki för att avgöra vilket värde som ska användas i miljön:
 
@@ -69,7 +69,7 @@ Data&quot;dumpade&quot; till filen `app/etc/config.php` blir _låsta_, vilket in
 
 Alla känsliga konfigurationer exporteras till filen `app/etc/env.php` när du använder kommandot `bin/magento app:config:dump`. Du kan ange känsliga värden med CLI-kommandot: `bin/magento config:sensitive:set`. Mer information om hur du anger konfigurationsinställningar som känsliga eller systemspecifika finns i [Känsliga och miljöspecifika inställningar](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/) i guiden _Commerce PHP-tillägg_ .
 
-Se en lista med [känsliga eller systemspecifika inställningar](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html) i _konfigurationshandboken_.
+Se en lista med [känsliga eller systemspecifika inställningar](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=sv-SE) i _konfigurationshandboken_.
 
 ### SCD-prestanda
 

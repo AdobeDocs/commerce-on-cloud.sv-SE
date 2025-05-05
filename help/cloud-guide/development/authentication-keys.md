@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Du måste ha en autentiseringsnyckel för att få tillgång till Adobe Commerce-databasen och för att kunna aktivera installations- och uppdateringskommandon för ditt Adobe Commerce i molninfrastrukturprojekt. Det finns två metoder för att ange autentiseringsuppgifter för Composer-autentisering.
 
-- **autentiseringsfil** - En fil som innehåller dina Adobe Commerce [autentiseringsuppgifter](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html) i din Adobe Commerce i molninfrastrukturens rotkatalog.
+- **autentiseringsfil** - En fil som innehåller dina Adobe Commerce [autentiseringsuppgifter](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=sv-SE) i din Adobe Commerce i molninfrastrukturens rotkatalog.
 - **miljövariabel** - En miljövariabel som konfigurerar autentiseringsnycklar i ditt Adobe Commerce-infrastrukturprojekt för att förhindra oavsiktlig exponering.
 
 >[!BEGINSHADEBOX]

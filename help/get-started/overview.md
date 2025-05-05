@@ -19,7 +19,7 @@ I den här handboken förutsätts att du har viss arbetsförståelse för progra
 
 - [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs/) (Adobe Developer webbplats) - Utveckla, anpassa, integrera, utöka och använda avancerade funktioner
 
-- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) - Planera, implementera, använd, uppgradera och underhåll dina Commerce-projekt
+- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html?lang=sv-SE) (Adobe Experience League) - Planera, implementera, använd, uppgradera och underhåll dina Commerce-projekt
 
 >[!TIP]
 >

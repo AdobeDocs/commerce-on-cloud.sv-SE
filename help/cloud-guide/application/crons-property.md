@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Adobe Commerce använder egenskapen `crons` för att schemalägga återkommande aktiviteter. Det är idealiskt för schemaläggning av en viss uppgift som ska köras vid vissa tidpunkter på dygnet. På grund av skrivskyddade miljöer kan endast ett kroniskt jobb köras åt gången på webbinstansen för Adobe Commerce i molninfrastrukturprojekt. Det är en god rutin att dela upp långvariga uppgifter i mindre uppgifter som ligger i kö. Du kan också skapa en [worker-instans](workers-property.md).
 
-Adobe rekommenderar att du kör `crons` som [filsystemsägare](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html). Kör _inte_ `crons` som `root` eller som webbserveranvändare.
+Adobe rekommenderar att du kör `crons` som [filsystemsägare](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=sv-SE). Kör _inte_ `crons` som `root` eller som webbserveranvändare.
 
-Den här konfigurationen skiljer sig från lokala distributioner av Adobe Commerce, som har flera standardcron-jobb. Se [Konfigurera cron-jobb](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html) i _Konfigurationsguiden_.
+Den här konfigurationen skiljer sig från lokala distributioner av Adobe Commerce, som har flera standardcron-jobb. Se [Konfigurera cron-jobb](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=sv-SE) i _Konfigurationsguiden_.
 
 ## Ställ in cron-jobb
 
@@ -55,7 +55,7 @@ Adobe Commerce har lagt till ett konfigurationsalternativ för automatiska krone
 
    >[!NOTE]
    >
-   >Om kommandot `crontab -l` returnerar ett `Command not found`-fel (endast i Pro Staging- och Production-miljöer) måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att aktivera självbetjäningskonfigurationsalternativet för automatiska kopior i ditt projekt.
+   >Om kommandot `crontab -l` returnerar ett `Command not found`-fel (endast i Pro Staging- och Production-miljöer) måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att aktivera självbetjäningskonfigurationsalternativet för automatiska kopior i ditt projekt.
 
 I följande exempel visas `crontab`-utdata för en miljö som bara har standardkonfigurationen `crons`:
 
@@ -123,7 +123,7 @@ På Adobe Commerce på molninfrastrukturplattformen kan du lägga till anpassnin
 >
 >För Starter-miljöer och Pro `integration`-miljöer är det minsta intervallet en gång per fem minuter. För Pro Staging- och Production-miljöer är minimiintervallet en gång per minut. Du kan inte konfigurera mer frekventa intervall än standardminimumen.
 
-I Adobe Commerce Pro-projekt måste funktionen [för automatiska kroner](#set-up-cron-jobs) vara aktiverad i ditt projekt innan du kan lägga till anpassade kron-jobb i mellanlagrings- och produktionsmiljöer med hjälp av filen `.magento.app.yaml`. Om den här funktionen inte är aktiverad kan du [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill aktivera automatiska korrigeringar.
+I Adobe Commerce Pro-projekt måste funktionen [för automatiska kroner](#set-up-cron-jobs) vara aktiverad i ditt projekt innan du kan lägga till anpassade kron-jobb i mellanlagrings- och produktionsmiljöer med hjälp av filen `.magento.app.yaml`. Om den här funktionen inte är aktiverad kan du [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill aktivera automatiska korrigeringar.
 
 **Så här lägger du till anpassade cron-jobb**:
 
@@ -197,6 +197,6 @@ Du kan granska information om cron processing i loggfiler på programnivå för 
 
 Se följande Adobe Commerce supportartiklar för hjälp med felsökning av kronrelaterade problem:
 
-- [Kronuppgifter låser uppgifter från andra grupper](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html)
+- [Kronuppgifter låser uppgifter från andra grupper](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=sv-SE)
 
-- [Återställ fastnade cron-jobb manuellt i molnet](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html)
+- [Återställ fastnade cron-jobb manuellt i molnet](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=sv-SE)

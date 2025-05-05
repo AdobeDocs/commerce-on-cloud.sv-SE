@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Variables, egenskap
 
-Du kan använda programbaserade miljövariabler för att anpassa butikskonfigurationer. Dessa variabler använder en specifik syntax. Se [Åsidosätt konfigurationsinställningar](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html) i _Konfigurationshandboken_.
+Du kan använda programbaserade miljövariabler för att anpassa butikskonfigurationer. Dessa variabler använder en specifik syntax. Se [Åsidosätt konfigurationsinställningar](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=sv-SE) i _Konfigurationshandboken_.
 
 Följande miljövariabler som ingår i filen `.magento.app.yaml` krävs för specifika versioner av programmet [!DNL Commerce].
 

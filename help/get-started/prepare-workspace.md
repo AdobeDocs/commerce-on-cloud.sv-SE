@@ -27,7 +27,7 @@ Innan du konfigurerar en arbetsyta bör du samla in följande nycklar och konto�
 
 - **Adobe Commerce-krypteringsnyckel**
 
-  Om du bara importerar ett befintligt system hämtar du den krypteringsnyckel som används för att skydda åtkomst och data för databasen. Mer information om den här nyckeln finns i [Lös problem med krypteringsnyckeln](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)
+  Om du bara importerar ett befintligt system hämtar du den krypteringsnyckel som används för att skydda åtkomst och data för databasen. Mer information om den här nyckeln finns i [Lös problem med krypteringsnyckeln](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=sv-SE)
 
 ## Utvecklarverktyg
 

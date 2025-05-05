@@ -167,7 +167,7 @@ Hantera alla sidor via TLS. För den här konfigurationen måste du konfigurera 
       upstream: "mymagento:http"
   ```
 
-- För mellanlagrings- och produktionsmiljöer aktiverar du alternativet [Tvinga TLS snabbt](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html) i administratörsgränssnittet. När du använder det här alternativet hanterar omdirigeringen snabbt till HTTPS, så du behöver inte uppdatera konfigurationen för `routes.yaml`.
+- För mellanlagrings- och produktionsmiljöer aktiverar du alternativet [Tvinga TLS snabbt](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=sv-SE) i administratörsgränssnittet. När du använder det här alternativet hanterar omdirigeringen snabbt till HTTPS, så du behöver inte uppdatera konfigurationen för `routes.yaml`.
 
 ## Flödesalternativ
 

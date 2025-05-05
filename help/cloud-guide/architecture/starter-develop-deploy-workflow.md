@@ -104,9 +104,9 @@ När du är redo att konfigurera din butik skickar du all kod till miljön `inte
 Mer information om konfigurationer finns i dokumentationen för Adobe Commerce och de installerade tilläggen. Här är några länkar och idéer som hjälper dig att komma igång:
 
 - [Bästa tillvägagångssätt för butikskonfiguration](../store/best-practices.md) för specifik bästa praxis i molnet
-- [Grundkonfiguration](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details) för administratörsåtkomst, namn, språk, valutor, varumärkning, webbplatser, butiksvyer med mera
-- [Tema](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features) om du vill ha webbplatsens utseende och känsla och lagra inklusive CSS och layouter
-- [Systemkonfiguration](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview) för roller, verktyg, meddelanden och din krypteringsnyckel för databasen
+- [Grundkonfiguration](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/setup/store-details) för administratörsåtkomst, namn, språk, valutor, varumärkning, webbplatser, butiksvyer med mera
+- [Tema](https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/content-menu#design-features) om du vill ha webbplatsens utseende och känsla och lagra inklusive CSS och layouter
+- [Systemkonfiguration](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/guide-overview) för roller, verktyg, meddelanden och din krypteringsnyckel för databasen
 - Tilläggsinställningar med hjälp av deras dokumentation
 
 Förutom att bara lagra inställningar kan du konfigurera flera webbplatser och butiker, konfigurerade tjänster och mycket mer. Se [Konfigurera din butik](../store/overview.md).
@@ -162,9 +162,9 @@ När du utvecklar funktioner kan du lägga till tillägg och utforma teman, så 
 
 Så här exporterar du produktionsdata som testdata som kan användas i miljöer med staging och integration:
 
-- [Kör CLI-kommandona för supportverktygen](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) (rekommenderas) när du exporterar en skyddad säkerhetskopia av kunddata och lagrar data med din Adobe Commerce-krypteringsnyckel
+- [Kör CLI-kommandona för supportverktygen](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=sv-SE) (rekommenderas) när du exporterar en skyddad säkerhetskopia av kunddata och lagrar data med din Adobe Commerce-krypteringsnyckel
 
-- [Datainsamling](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) för att generera och exportera data
+- [Datainsamling](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/support#data-collector) för att generera och exportera data
 
 Information om hur du migrerar dessa data finns i [Migrera och distribuera statiska filer och data](../deploy/staging-production.md#migrate-static-files).
 
@@ -172,7 +172,7 @@ Information om hur du migrerar dessa data finns i [Migrera och distribuera stati
 
 >[!NOTE]
 >
->Innan du överför data till en annan miljö bör du överväga att sanera dina data. Du har ett par alternativ, bland annat [att använda supportverktyg](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) eller att utveckla ett skript som rensar bort kunddata.
+>Innan du överför data till en annan miljö bör du överväga att sanera dina data. Du har ett par alternativ, bland annat [att använda supportverktyg](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=sv-SE) eller att utveckla ett skript som rensar bort kunddata.
 
 >[!WARNING]
 >

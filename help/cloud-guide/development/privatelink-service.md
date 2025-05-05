@@ -35,7 +35,7 @@ Integreringen av PrivateLink-tjänsten för Adobe Commerce i molninfrastrukturpr
 - Du kan inte upprätta SSH-anslutningar med PrivateLink. Se [Aktivera SSH-nycklar](secure-connections.md).
 - Adobe Commerce support omfattar inte felsökning av AWS PrivateLink-problem utöver den initiala aktiveringen.
 - Kunderna ansvarar för kostnaderna för att hantera sina egna VPC.
-- Du kan inte använda HTTPS-protokollet (port 443) för att ansluta till Adobe Commerce i molninfrastrukturen via Azure Private Link på grund av [snabb ursprungsinsvepning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html). Denna begränsning gäller inte AWS PrivateLink.
+- Du kan inte använda HTTPS-protokollet (port 443) för att ansluta till Adobe Commerce i molninfrastrukturen via Azure Private Link på grund av [snabb ursprungsinsvepning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=sv-SE). Denna begränsning gäller inte AWS PrivateLink.
 - PrivateDNS är inte tillgängligt.
 
 ## Anslutningstyper för PrivateLink
@@ -202,7 +202,7 @@ Du kan använda Telnet-programmet för att testa anslutningen till VPC slutpunkt
 
 ## Ändra konfiguration för PrivateLink
 
-[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ändra en befintlig PrivateLink-konfiguration. Du kan till exempel begära ändringar enligt följande:
+[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill ändra en befintlig PrivateLink-konfiguration. Du kan till exempel begära ändringar enligt följande:
 
 - Ta bort PrivateLink-anslutningen från Adobe Commerce i molninfrastrukturen Pro Production eller Staging-miljön.
 - Ändra kundens Cloud-plattformskontonummer för åtkomst till slutpunktstjänsten i Adobe.

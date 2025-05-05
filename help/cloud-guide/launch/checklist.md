@@ -90,7 +90,7 @@ När du är redo att starta webbplatsen måste du uppdatera DNS-konfigurationen 
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **OBS!**: Du kan även uppdatera bas-URL:en från administratören. Se [Lagra URL:er](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) i _Adobe Commerce Store och Köp Experience Guide_.
+   **OBS!**: Du kan även uppdatera bas-URL:en från administratören. Se [Lagra URL:er](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=sv-SE) i _Adobe Commerce Store och Köp Experience Guide_.
 
 1. Vänta några minuter tills webbplatsen har uppdaterats.
 
@@ -104,7 +104,7 @@ Följande är rekommenderade ändringar och kontroller:
 
 - [Utgående e-posttestning har slutförts](../project/outgoing-emails.md)
 
-- [Säker konfiguration för administratörsautentiseringsuppgifter och bas-admin-URL](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [Säker konfiguration för administratörsautentiseringsuppgifter och bas-admin-URL](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-admin)
 
 - [Optimera alla bilder för webben](../cdn/fastly-image-optimization.md)
 
@@ -136,9 +136,9 @@ Du kan också testa med följande alternativ från tredje part:
 
 - [Konfigurera säkerhetsgenomsökning](overview.md#set-up-the-security-scan-tool)
 
-- [Säker konfiguration för administratörsanvändare](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [Säker konfiguration för administratörsanvändare](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-admin)
 
-- [Säker konfiguration för Admin URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [Säker konfiguration för Admin URL](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [Ta bort användare som inte längre använder Adobe Commerce i molninfrastrukturprojektet](../project/user-access.md)
 

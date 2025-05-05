@@ -40,7 +40,7 @@ hooks:
 
 >[!NOTE]
 >
->I och med versionen av `ece-tools` 2002.1.x finns det ett nytt [hooks-konfigurationsformat](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html). Det gamla formatet från `ece-tools` 2002.0.x stöds fortfarande. Du måste dock uppdatera till det nya formatet för att kunna använda den scenariobaserade distributionsfunktionen.
+>I och med versionen av `ece-tools` 2002.1.x finns det ett nytt [hooks-konfigurationsformat](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=sv-SE). Det gamla formatet från `ece-tools` 2002.0.x stöds fortfarande. Du måste dock uppdatera till det nya formatet för att kunna använda den scenariobaserade distributionsfunktionen.
 
 ## Granska scenariesteg
 

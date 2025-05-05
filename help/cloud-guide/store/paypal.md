@@ -58,7 +58,7 @@ Så här konfigurerar du PayPal Express Checkout:
    * **Sandlådeläge** Välj Ja eller Nej för att ange om inloggningsuppgifterna som du angav gäller sandlådan. Om du har angett produktionsuppgifter väljer du Nej.
    * **API:t använder Proxy**, välj Ja eller Nej om systemet använder en proxyserver för att upprätta en anslutning mellan Adobe Commerce och PayPal-betalningssystemet. Om Ja, ange proxyvärden och port.
 
-1. Detaljerad information och steg för hur du konfigurerar ditt konto finns i [PayPal Express Checkout](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) som börjar med steg 2 Slutför de obligatoriska inställningarna.
+1. Detaljerad information och steg för hur du konfigurerar ditt konto finns i [PayPal Express Checkout](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) som börjar med steg 2 Slutför de obligatoriska inställningarna.
 
 Med kontot konfigurerat och autentiserat kan du aktivera och inaktivera betalningsalternativ för PayPal under Obligatoriska PayPal-inställningar:
 

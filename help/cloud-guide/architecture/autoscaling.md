@@ -58,14 +58,14 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 ## Aktivera automatisk skalförändring
 
-[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill aktivera eller inaktivera automatisk skalning för ditt Adobe Commerce i molninfrastrukturprojekt. Välj följande orsaker i biljetten:
+[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill aktivera eller inaktivera automatisk skalning för ditt Adobe Commerce i molninfrastrukturprojekt. Välj följande orsaker i biljetten:
 
 - **Kontaktorsak**: Begäran om infrastrukturändring
 - **Kontaktorsak till Adobe Commerce-infrastruktur**: Annan begäran om infrastrukturändring
 
 >[!IMPORTANT]
 >
->Funktionen för autoskalning fångar upp oväntade händelser. Även om automatisk skalförändring är aktiverat rekommenderar Adobe att du fortsätter att [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du förväntar dig en kommande händelse.
+>Funktionen för autoskalning fångar upp oväntade händelser. Även om automatisk skalförändring är aktiverat rekommenderar Adobe att du fortsätter att [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du förväntar dig en kommande händelse.
 
 ### Belastningstestning
 

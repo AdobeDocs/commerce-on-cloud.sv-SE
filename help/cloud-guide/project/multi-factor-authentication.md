@@ -18,7 +18,7 @@ När MFA är aktiverat i ett projekt kräver alla användarkonton med SSH-åtkom
 
 >[!NOTE]
 >
->MFA är inte aktiverat i molnprojekt som standard. Kontoägaren för Adobe Commerce i molninfrastrukturprojektet måste [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att kunna aktivera det. När MFA är aktiverat måste alla användare ha tvåfaktorsautentisering (TFA) aktiverad på sina Adobe Commerce-konton för molninfrastruktur för SSH-åtkomst till projektmiljöerna.
+>MFA är inte aktiverat i molnprojekt som standard. Kontoägaren för Adobe Commerce i molninfrastrukturprojektet måste [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna aktivera det. När MFA är aktiverat måste alla användare ha tvåfaktorsautentisering (TFA) aktiverad på sina Adobe Commerce-konton för molninfrastruktur för SSH-åtkomst till projektmiljöerna.
 
 ## Certifikat för SSH-åtkomst
 

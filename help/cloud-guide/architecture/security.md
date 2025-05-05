@@ -66,9 +66,9 @@ Adobe testar regelbundet kärnprogramkoden för att se om det finns några säke
 - OWASPZAP
 - andSqlMap
 
-Den fullständiga kodbasen skannas med dessa verktyg varannan vecka. Kunderna meddelas om säkerhetsuppdateringar via direkt e-post, meddelanden i programmet och i [Säkerhetscenter](https://helpx.adobe.com/security.html).
+Den fullständiga kodbasen skannas med dessa verktyg varannan vecka. Kunderna meddelas om säkerhetsuppdateringar via direkt e-post, meddelanden i programmet och i [Säkerhetscenter](https://helpx.adobe.com/se/security.html).
 
-Kunderna måste se till att dessa korrigeringsfiler tillämpas på deras anpassade program inom 30 dagar efter lanseringen, enligt PCI-riktlinjerna. Adobe har också ett [säkerhetssökningsverktyg](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) som gör det möjligt för handlare att regelbundet övervaka sina webbplatser och få uppdateringar om kända säkerhetsrisker, skadlig kod och obehörig åtkomst. Verktyget för säkerhetssökning är en kostnadsfri tjänst och kan köras på alla versioner av Adobe Commerce.
+Kunderna måste se till att dessa korrigeringsfiler tillämpas på deras anpassade program inom 30 dagar efter lanseringen, enligt PCI-riktlinjerna. Adobe har också ett [säkerhetssökningsverktyg](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-scan) som gör det möjligt för handlare att regelbundet övervaka sina webbplatser och få uppdateringar om kända säkerhetsrisker, skadlig kod och obehörig åtkomst. Verktyget för säkerhetssökning är en kostnadsfri tjänst och kan köras på alla versioner av Adobe Commerce.
 
 För att uppmuntra säkerhetsforskare att identifiera och rapportera säkerhetsluckor har Adobe Commerce ett [felbegränsningsprogram](https://hackerone.com/magento) förutom intern testning. Kunden får dessutom den fullständiga källkoden för programmet för egen granskning om så önskas.
 
@@ -108,7 +108,7 @@ GDPR kräver att all personligt identifierbar information (t.ex. namn, ras och f
 
 >[!NOTE]
 >
->Den här sidan innehåller en allmän översikt över vad du bör tänka på för GDPR. Se _[Säkerhets- och efterlevnadshandboken](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)_ för mer information om hur Adobe Commerce lagrar personuppgifter. Om du vill ta reda på hur ditt företag ska uppfylla juridiska skyldigheter, rådgör med ditt juridiska ombud eller referera till den [officiella texten](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
+>Den här sidan innehåller en allmän översikt över vad du bör tänka på för GDPR. Se _[Säkerhets- och efterlevnadshandboken](https://experienceleague.adobe.com/sv/docs/commerce-operations/security-and-compliance/overview)_ för mer information om hur Adobe Commerce lagrar personuppgifter. Om du vill ta reda på hur ditt företag ska uppfylla juridiska skyldigheter, rådgör med ditt juridiska ombud eller referera till den [officiella texten](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
 
 ## Säkerhetskopior
 

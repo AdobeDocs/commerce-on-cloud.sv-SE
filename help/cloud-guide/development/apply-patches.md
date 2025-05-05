@@ -14,15 +14,15 @@ ht-degree: 0%
 [Molnkorrigeringar för Commerce](https://github.com/magento/magento-cloud-patches) och [kvalitetskorrigeringsverktyget](https://github.com/magento/quality-patches) levererar korrigeringsfiler till det installerade Adobe Commerce-programmet.
 
 - Cloud Patches for Commerce-paketet innehåller nödvändiga korrigeringar med viktiga korrigeringar
-- Kvalitetskorrigeringar ger valfria kvalitetskorrigeringar med låg påverkan som [enskilda korrigeringar](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html#individual-patch) som inte innehåller inkompatibla ändringar bakåt
+- Kvalitetskorrigeringar ger valfria kvalitetskorrigeringar med låg påverkan som [enskilda korrigeringar](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html?lang=sv-SE#individual-patch) som inte innehåller inkompatibla ändringar bakåt
 
-Se [Tillgängliga korrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i _Commerce Operations Tools Guide_ om du vill visa en fullständig lista över släppta korrigeringsfiler.
+Se [Tillgängliga korrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i _Commerce Operations Tools Guide_ om du vill visa en fullständig lista över släppta korrigeringsfiler.
 
 Båda paketen förbättrar integreringen av alla Adobe Commerce-versioner med molnmiljöer och stöder snabb leverans av viktiga, valfria och anpassade korrigeringar. Du kan använda dessa paket för att tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för Commerce.
 
 >[!TIP]
 >
->Du kan använda [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) och molnkorrigeringar för Commerce som fristående paket för Magento Open Source- och Adobe Commerce-projekt. Vi rekommenderar att du använder verktyget Kvalitetskorrigeringar för icke-molnprojekt.
+>Du kan använda [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) och molnkorrigeringar för Commerce som fristående paket för Magento Open Source- och Adobe Commerce-projekt. Vi rekommenderar att du använder verktyget Kvalitetskorrigeringar för icke-molnprojekt.
 
 När du distribuerar ändringar i fjärrmiljön använder `ece-tools`-paketet `magento/magento-cloud-patches` och `magento/quality-patches` för att söka efter väntande korrigeringar och tillämpar dem automatiskt i följande ordning:
 

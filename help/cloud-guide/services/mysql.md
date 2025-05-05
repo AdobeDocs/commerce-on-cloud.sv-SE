@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Tjänsten `mysql` ger beständig datalagring baserat på [MariaDB](https://mariadb.com/), version 10.2 till 10.4, som stöder [ XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html) -lagringsmotorn och återimplementerade funktioner från MySQL 5.6 och 5.7.
 
-Omindexering av MariaDB 10.4 tar längre tid jämfört med andra versioner av MariaDB eller MySQL. Se [Indexerare](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers) i guiden _Bästa metoder för prestanda_.
+Omindexering av MariaDB 10.4 tar längre tid jämfört med andra versioner av MariaDB eller MySQL. Se [Indexerare](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=sv-SE#indexers) i guiden _Bästa metoder för prestanda_.
 
 >[!WARNING]
 >
@@ -72,7 +72,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-`properties` i exemplet ovan ändrar standardinställningarna för `optimizer` enligt [rekommendationerna i guiden ](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers) för bästa prestanda.
+`properties` i exemplet ovan ändrar standardinställningarna för `optimizer` enligt [rekommendationerna i guiden ](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=sv-SE#indexers) för bästa prestanda.
 
 **MariaDB-konfigurationsalternativ**:
 
@@ -88,7 +88,7 @@ mysql:
 
 Du kan också konfigurera flera användare med olika behörigheter för åtkomst till databasen `main`.
 
-Som standard finns det en slutpunkt med namnet `mysql` som har administratörsåtkomst till databasen. Om du vill konfigurera flera databasanvändare måste du definiera flera slutpunkter i filen `services.yaml` och deklarera relationerna i filen `.magento.app.yaml`. För Pro Staging- och Production-miljöer [skickar du en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att begära ytterligare användare.
+Som standard finns det en slutpunkt med namnet `mysql` som har administratörsåtkomst till databasen. Om du vill konfigurera flera databasanvändare måste du definiera flera slutpunkter i filen `services.yaml` och deklarera relationerna i filen `.magento.app.yaml`. För Pro Staging- och Production-miljöer [skickar du en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att begära ytterligare användare.
 
 Använd en kapslad array för att definiera slutpunkterna för specifik användaråtkomst. Varje slutpunkt kan ange åtkomst till ett eller flera scheman (databaser) och olika behörighetsnivåer för varje.
 
@@ -212,13 +212,13 @@ Om du vill komma åt MariaDB-databasen direkt måste du använda en SSH för att
 >
 >Den här funktionen är endast tillgänglig i Pro Production- och Staging-kluster.
 
-Ibland måste du ansluta till den sekundära databasen för att förbättra databasprestanda eller lösa problem med låsning av databaser. Om den här konfigurationen krävs använder du `"port" : 3304` för att upprätta anslutningen. Se [Bästa praxis för att konfigurera MySQL-slavanslutningen](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration.html) i guiden _Bästa praxis för implementering_.
+Ibland måste du ansluta till den sekundära databasen för att förbättra databasprestanda eller lösa problem med låsning av databaser. Om den här konfigurationen krävs använder du `"port" : 3304` för att upprätta anslutningen. Se [Bästa praxis för att konfigurera MySQL-slavanslutningen](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration.html?lang=sv-SE) i guiden _Bästa praxis för implementering_.
 
 ## Felsökning
 
 Se följande Adobe Commerce supportartiklar för hjälp med felsökning av MySQL-problem:
 
-- [Kontrollerar långsamma frågor och processer MySQL](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html)
-- [Skapa databasdump i molnet](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html)
-- [Felsökning för datamigreringsverktyget](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
-- [Uppgradering av Adobe Commerce: kompakt till dynamiska tabeller 2.2.x, 2.3.x till 2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html)
+- [Kontrollerar långsamma frågor och processer MySQL](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html?lang=sv-SE)
+- [Skapa databasdump i molnet](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html?lang=sv-SE)
+- [Felsökning för datamigreringsverktyget](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=sv-SE)
+- [Uppgradering av Adobe Commerce: kompakt till dynamiska tabeller 2.2.x, 2.3.x till 2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=sv-SE)

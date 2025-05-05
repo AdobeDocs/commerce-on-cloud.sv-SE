@@ -56,7 +56,7 @@ I integreringsmiljön kan du logga in på Admin för att ändra systemkonfigurat
    ![Ändra språkinställning](../../assets/locale-options.png)
 
 1. Klicka på **Spara konfiguration**.
-1. Om du uppmanas till det tömmer [cachen](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
+1. Om du uppmanas till det tömmer [cachen](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/cache-management).
 1. Logga ut från administratören.
 
 ## Exportera värden och överför config.php till ditt lokala system
@@ -159,7 +159,7 @@ Så här lägger du till konfigurationsvärden i integreringsmiljöns administra
 1. Expandera **JavaScript-inställningar** i den högra rutan.
 1. Klicka på **Ja** i listan **Sammanfoga JavaScript-filer**.
 1. Klicka på **Spara konfiguration**.
-1. Om du uppmanas till det tömmer [cachen](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
+1. Om du uppmanas till det tömmer [cachen](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/cache-management).
 1. Logga ut från administratören.
 
 Genom att köra dumpkommandot igen läggs den nya konfigurationen till i filen.

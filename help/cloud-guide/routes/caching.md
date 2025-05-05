@@ -131,7 +131,7 @@ Det finns ett specialfall om nyckeln `cookies` har värdet `["*"]`. Detta värde
 
 Cookies har följande begränsningar:
 
-- Det finns högst **50 cookies** i systemet. Annars genereras ett `Unable to send the cookie. Maximum number of cookies would be exceeded`-undantag. Om du vill öka antalet cookies till 200 använder du [MDVA-12304-korrigeringen](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html) med [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool).
+- Det finns högst **50 cookies** i systemet. Annars genereras ett `Unable to send the cookie. Maximum number of cookies would be exceeded`-undantag. Om du vill öka antalet cookies till 200 använder du [MDVA-12304-korrigeringen](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=sv-SE) med [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/sv/docs/commerce-learn/tutorials/tools/quality-patch-tool).
 - En maximal cookie-storlek är **4096 byte**. Annars genereras ett `Unable to send the cookie. Size of '%name' is %size bytes`-undantag.
 
 ### `default_ttl`

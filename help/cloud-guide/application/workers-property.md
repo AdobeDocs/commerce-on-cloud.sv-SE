@@ -17,7 +17,7 @@ Du kan definiera en arbetare som ska köras oberoende av webbinstansen utan att 
 
 Arbetare är endast tillgängliga för användning i Pro Staging- och Production-miljöer. Pro-integrering och Starter-miljöer kan välja att använda variabeln [CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner) .
 
-[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) och inkludera följande information om du vill konfigurera en arbetare i Pro Staging eller Production:
+[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) och inkludera följande information om du vill konfigurera en arbetare i Pro Staging eller Production:
 
 - Projekt-ID
 - Miljö-ID

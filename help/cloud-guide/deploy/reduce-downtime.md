@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Driftsättning utan driftstopp
 
-Adobe Commerce i molninfrastrukturen kör programmet i [_underhållsläge_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode) under distributionsfasen, vilket gör att webbplatsen kopplas från tills distributionen är klar. Hur lång tid produktionsplatsen är i underhållsläge beror på platsens storlek, antalet ändringar som gjorts under distributionen och konfigurationen för statisk innehållsdistribution. Det går att konfigurera ditt projekt så att det distribueras med en **noll**-nedtidseffekt.
+Adobe Commerce i molninfrastrukturen kör programmet i [_underhållsläge_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=sv-SE#production-mode) under distributionsfasen, vilket gör att webbplatsen kopplas från tills distributionen är klar. Hur lång tid produktionsplatsen är i underhållsläge beror på platsens storlek, antalet ändringar som gjorts under distributionen och konfigurationen för statisk innehållsdistribution. Det går att konfigurera ditt projekt så att det distribueras med en **noll**-nedtidseffekt.
 
 Under distributionsprocessen bevarar alla anslutningsköer i upp till 5 minuter alla aktiva sessioner och väntande åtgärder, som att lägga till i kundvagnen eller i kassan. Efter distributionen släpps kön och anslutningarna fortsätter utan avbrott. Om du vill använda det här _anslutningsundantaget_ till din fördel och minska distributionen till _noll_ driftavbrott, måste du konfigurera projektet så att det använder den mest effektiva distributionsstrategin.
 

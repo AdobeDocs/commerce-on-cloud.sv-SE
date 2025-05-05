@@ -20,4 +20,4 @@ ht-degree: 0%
 + [Logga in på  [!DNL Cloud Console]](cloud-console.md)
 + [Åtkomstbutik](access-storefront.md)
 + [Förbered för utveckling](prepare-workspace.md)
-+ [Återgå till Cloud Infrastructure Guide](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
++ [Återgå till Cloud Infrastructure Guide](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=sv-SE)

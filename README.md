@@ -9,8 +9,8 @@ ht-degree: 0%
 
 Den här webbplatsen innehåller den senaste utvecklardokumentationen för Commerce om molninfrastruktur.
 
-- [Commerce on Cloud Infrastructure Guide](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
-- [Kom igång med Commerce](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html) i molninfrastrukturen
+- [Commerce on Cloud Infrastructure Guide](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=sv-SE)
+- [Kom igång med Commerce](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=sv-SE) i molninfrastrukturen
 
 ## Adobe Öppna Source uppförandekod
 
@@ -19,7 +19,7 @@ Se artikeln [Contributing](contributing.md).
 
 ### Mindre ändringar
 
-Om du bidrar med mindre uppdateringar öppnar du artikeln och klickar på länken **Redigera** som tar dig till artikelns GitHub-källa. Använd GitHub-gränssnittet för att göra uppdateringar. Se den allmänna [handboken om medverkande på Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Om du bidrar med mindre uppdateringar öppnar du artikeln och klickar på länken **Redigera** som tar dig till artikelns GitHub-källa. Använd GitHub-gränssnittet för att göra uppdateringar. Se den allmänna [handboken om medverkande på Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=sv-SE).
 
 Mindre korrigeringar och förtydliganden som du lämnar in för dokumentation och kodexempel i den här rapporten omfattas av Adobe användarvillkoren.
 
@@ -35,7 +35,7 @@ Om du är teknikskribent, programchef eller utvecklare från ett Adobe-produktte
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
 
-Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=sv-SE).
 
 ## Markering
 

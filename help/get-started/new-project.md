@@ -31,7 +31,7 @@ Exempel för produktions- och mellanlagringsdomäner:
 
 Se [Konfigurera flera webbplatser eller butiker](../cloud-guide/store/multiple-sites.md) i guiden _Commerce om molninfrastruktur_ för mer information om flera eller unika domäner.
 
-Se [Flera snabbkonton och tilldelade domäner](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"} om du har ett befintligt Fast-konto som länkar samma index och underdomäner som används på din Adobe Commerce-webbplats.
+Se [Flera snabbkonton och tilldelade domäner](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"} om du har ett befintligt Fast-konto som länkar samma index och underdomäner som används på din Adobe Commerce-webbplats.
 
 ## Domän för transaktionell e-post
 

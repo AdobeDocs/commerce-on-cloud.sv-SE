@@ -139,7 +139,7 @@ Cloud CLI innehåller kommandon för att distribuera kod. Du behöver SSH- och G
 
 ## Migrera statiska filer
 
-[Statiska filer](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) lagras i `mounts`. Det finns två metoder för att migrera filer från en källmonteringsplats, till exempel din lokala miljö, till en målmonteringsplats. Båda metoderna använder verktyget `rsync`, men Adobe rekommenderar att du använder CLI `magento-cloud` för att flytta filer mellan den lokala miljön och fjärrmiljön. Och Adobe rekommenderar att du använder metoden `rsync` när du flyttar filer från en fjärrkälla till en annan fjärrplats.
+[Statiska filer](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/glossary) lagras i `mounts`. Det finns två metoder för att migrera filer från en källmonteringsplats, till exempel din lokala miljö, till en målmonteringsplats. Båda metoderna använder verktyget `rsync`, men Adobe rekommenderar att du använder CLI `magento-cloud` för att flytta filer mellan den lokala miljön och fjärrmiljön. Och Adobe rekommenderar att du använder metoden `rsync` när du flyttar filer från en fjärrkälla till en annan fjärrplats.
 
 ### Migrera filer med CLI
 
