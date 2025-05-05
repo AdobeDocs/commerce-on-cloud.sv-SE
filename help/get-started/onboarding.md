@@ -48,7 +48,7 @@ Sidan innehåller en status för Adobe Commerce komponenter och tjänster följt
 >
 > Öppna den nya [!DNL Cloud Console] och visa projekt- och miljöaktiviteter.
 >
->**Nästa steg**: [Logga in på Cl[!DNL ]molnkonsol](cloud-console.md)
+>**Nästa steg**: [Logga in på Clmolnkonsol](cloud-console.md)
 
 <!-- link definitions -->
 

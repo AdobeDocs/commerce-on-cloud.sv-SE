@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io) är en valfri serverdelscachelösning som ersätter `Zend Framework Zend_Cache_Backend_File`, som Adobe Commerce använder som standard.
 
-Se [Konfigurera Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html) {target="_blank"} i _Konfigurationsguiden_.
+Se [Konfigurera Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"}  i _Konfigurationsguiden_.
 
 {{service-instruction}}
 

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Säkerhet
 
-Planarkitekturen ](pro-architecture.md) för Adobe Commerce [Pro är utformad för att ge en mycket säker miljö. Varje kund driftsätts i sin egen isolerade servermiljö, skild från andra kunder. Säkerhetsdetaljerna för produktionsmiljön beskrivs nedan.
+Planarkitekturen [&#128279;](pro-architecture.md) för Adobe Commerce Pro är utformad för att ge en mycket säker miljö. Varje kund driftsätts i sin egen isolerade servermiljö, skild från andra kunder. Säkerhetsdetaljerna för produktionsmiljön beskrivs nedan.
 
 ## Webbläsare
 

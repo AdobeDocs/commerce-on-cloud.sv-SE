@@ -87,7 +87,7 @@ Innan du kan ta bort en miljö måste du inaktivera den. När en miljö är inak
 
 1. Klicka på konfigurationsikonen till höger i det övre navigeringsfältet, som öppnar miljöinställningarna.
 
-1. Bläddra nedåt till avsnittet _[!UICONTROL Deactivate environment]_på fliken_[!UICONTROL General]_, klicka på **[!UICONTROL Deactivate environment and delete data]** och följ instruktionerna.
+1. Bläddra nedåt till avsnittet _[!UICONTROL Deactivate environment]_&#x200B;på fliken&#x200B;_[!UICONTROL General]_, klicka på **[!UICONTROL Deactivate environment and delete data]** och följ instruktionerna.
 
 ## Synkronisera en miljö
 
