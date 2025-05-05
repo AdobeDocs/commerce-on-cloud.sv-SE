@@ -2,11 +2,11 @@
 title: Molnkorrigeringar för Commerce
 description: Se en lista över de senaste förbättringarna av Cloud Patches-paketet.
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-04-24T00:00:00Z
+last-substantial-update: 2025-05-05T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: db8d20cdf999657c059202131111e71faf50b8e9
+source-git-commit: 0b9717be7d24fa83fe9208f2576508d62cc5594f
 workflow-type: tm+mt
-source-wordcount: '2402'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,17 @@ Paketet `magento/magento-cloud-patches` använder följande versionssekvens: `<m
 
 <!--Add release notes below-->
 
-## v1.1.6 {#latest}
+## v1.1.7 {#latest}
+
+Releasedatum: 5 maj 2025
+
+- ![ny ikon](../../assets/new.svg) **Uppdaterad patch för Commerce 2.4.4 till 2.4.8** - Det här är en uppdaterad patch för [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch) som släpptes i 1.1.7<!-- MCLOUD-13619 -->
+
+## v1.1.6
 
 Releasedatum: 24 april 2025
 
-- ![ny ikon](../../assets/new.svg) **Uppdaterad patch för Commerce 2.4.4 till 2.4.7** - Det här är en uppdaterad patch för [CVE-2025-24434](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08) som släpptes i 1.1.4<!-- MCLOUD-13240 -->
+- ![ny ikon](../../assets/new.svg) **Uppdaterad patch för Commerce 2.4.4 till 2.4.7** - Det här är en uppdaterad patch för [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08) som släpptes i 1.1.4<!-- MCLOUD-13240 -->
 
 ## v1.1.5
 
@@ -45,7 +51,7 @@ Releasedatum: 15 april 2025
 
 Releasedatum: 13 februari 2025
 
-- ![ny ikon](../../assets/new.svg) **Lagt till patch för Commerce 2.4.4 till 2.4.7** - Uppdateringspatchar [CVE-2025-24434](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+- ![ny ikon](../../assets/new.svg) **Lagt till patch för Commerce 2.4.4 till 2.4.7** - Uppdateringspatchar [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
 
 ## v1.1.3
 
@@ -57,13 +63,13 @@ Releasedatum: 6 februari 2025
 
 Releasedatum: 5 november 2024
 
-- ![korrigeringsikon](../../assets/fix.svg) **Lagt till korrigering för Commerce 2.4.4 till 2.4.7** - Den här uppdateringen åtgärdar en allvarlig [CVE-2024-45115](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) -säkerhetslucka för Adobe Commerce när B2B-modulen används.<!-- MCLOUD-12980 - -->
+- ![korrigeringsikon](../../assets/fix.svg) **Lagt till korrigering för Commerce 2.4.4 till 2.4.7** - Den här uppdateringen åtgärdar en allvarlig [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) -säkerhetslucka för Adobe Commerce när B2B-modulen används.<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 Releasedatum: 5 november 2024
 
-- ![korrigeringsikon](../../assets/fix.svg) **Lagt till korrigering för Commerce 2.4.4 till 2.4.7** - Den här uppdateringen åtgärdar ett kritiskt [CVE-2024-34102](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting-problem.<!-- MCLOUD-12980 - -->
+- ![korrigeringsikon](../../assets/fix.svg) **Lagt till korrigering för Commerce 2.4.4 till 2.4.7** - Den här uppdateringen åtgärdar ett kritiskt [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting-problem.<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -141,7 +147,7 @@ Viktig patch för Adobe Commerce 2.4.5:
 
 - **Problem med beställningar med Braintree-betalningar** - Korrigeringen åtgärdar ett kritiskt problem som förhindrar administratörer från att göra nya beställningar eller beställningar.<!-- MCLOUD-9137 -->
 
-Se [Administratören kan inte skapa en order/ändra ordning när Braintree-betalning är aktiverad](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html?lang=sv-SE).
+Se [Administratören kan inte skapa en order/ändra ordning när Braintree-betalning är aktiverad](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
 
 ## v1.0.17
 
@@ -157,7 +163,7 @@ Viktig patch för Adobe Commerce 2.3.3-p1 och senare:
 
 Uppdaterade patchar för att lösa en **kritisk** -sårbarhet som resulterar i oautentiserad fjärrexekvering av kod.<!-- MCLOUD-8479 -->
 
-Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/se/security/products/magento/apsb22-12.html).
+Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## v1.0.15
 
@@ -174,7 +180,7 @@ Viktig patch för Adobe Commerce 2.3.3-p1 och senare:
 
 En korrigering har lagts till för att åtgärda en **kritisk** -sårbarhet som resulterar i oautentiserad fjärrexekvering av kod.<!-- MCLOUD-8461 -->
 
-Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/se/security/products/magento/apsb22-12.html).
+Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## v1.0.13
 
@@ -190,7 +196,7 @@ Releasedatum: 12 augusti 2021
 
 Viktig patch för Adobe Commerce 2.4.3 och 2.3.7-p1:
 
-- **Problem med API-hastighetsbegränsning** - Den här korrigeringen åtgärdar en standardhastighetsgräns som förhindrar att webb-API:er bearbetar begäranden med mer än 20 objekt i en array. Den här korrigeringen höjer standardvärdet för hastighetsgränsen. Se versionsinformationen för Adobe Commerce [ 2.4.3](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **Problem med API-hastighetsbegränsning** - Den här korrigeringen åtgärdar en standardhastighetsgräns som förhindrar att webb-API:er bearbetar begäranden med mer än 20 objekt i en array. Den här korrigeringen höjer standardvärdet för hastighetsgränsen. Se versionsinformationen för Adobe Commerce [ 2.4.3](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
