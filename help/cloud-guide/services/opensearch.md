@@ -2,16 +2,17 @@
 title: Konfigurera OpenSearch-tjänsten
 description: Lär dig hur du aktiverar OpenSearch-tjänsten för Adobe Commerce i molninfrastruktur.
 feature: Cloud, Search, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
+source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
 # Konfigurera OpenSearch-tjänsten
 
-Tjänsten [OpenSearch](https://www.opensearch.org) är en öppen källkodsgaffel i Elasticsearch 7.10.2, efter licensändringarna för Elasticsearch. Se [OpenSource-projektet](https://github.com/opensearch-project) i GitHub.
+Tjänsten [OpenSearch](https://www.opensearch.org) är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter licensändringarna för Elasticsearch. Se [OpenSource-projektet](https://github.com/opensearch-project) i GitHub.
 
 {{elasticsearch-support}}
 
@@ -30,7 +31,7 @@ Med OpenSearch kan du hämta data från alla källor, alla format och söka och 
 
 **Så här aktiverar du OpenSearch**:
 
-1. För integreringsmiljöerna Starter och Pro lägger du till tjänsten `opensearch` i filen `.magento/services.yaml` med rätt version och allokerat diskutrymme i MB. I det här fallet är version 2 lämplig. Den mindre versionen krävs inte eftersom molninfrastrukturen använder den senaste versionen av OpenSearch.
+1. För integreringsmiljöer lägger du till tjänsten `opensearch` i filen `.magento/services.yaml` med rätt version och allokerat diskutrymme i MB. I det här fallet är version 2 lämplig. Den mindre versionen är inte obligatorisk.
 
    ```yaml
    opensearch:
@@ -38,7 +39,7 @@ Med OpenSearch kan du hämta data från alla källor, alla format och söka och 
        disk: 1024
    ```
 
-   För Pro-projekt måste du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna ändra OpenSearch-versionen i mellanlagrings- och produktionsmiljöer.
+   För Pro-projekt måste du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att kunna ändra OpenSearch-versionen i mellanlagrings- och produktionsmiljöer.
 
 1. Ange eller verifiera egenskapen `relationships` i filen `.magento.app.yaml`.
 
@@ -91,7 +92,7 @@ När du installerar eller uppgraderar din Adobe Commerce i ett molninfrastruktur
 
 - **Projektuppgradering**-Kontrollera att PHP-klienten för OpenSearch i den nya programversionen är kompatibel med OpenSearch-tjänstversionen som är installerad i molninfrastrukturen.
 
-Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har testats och distribuerats i molninfrastrukturen, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. En lista över vilka versioner som stöds finns i [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _installationshandboken_.
+Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har testats och distribuerats i molninfrastrukturen, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. En lista över vilka versioner som stöds finns i [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _installationshandboken_.
 
 **Så här verifierar du OpenSearch-programkompatibilitet**:
 
