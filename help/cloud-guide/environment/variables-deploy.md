@@ -4,9 +4,10 @@ description: Se en lista över miljövariabler som styr åtgärder i Adobe Comme
 feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
+source-git-commit: 275a2a5c58b7c5db12f8f31bffed85004e77172f
 workflow-type: tm+mt
-source-wordcount: '2209'
+source-wordcount: '2483'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ stage:
             database: 11
 ```
 
-I följande exempel används [Redis-förinläsningsfunktionen](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=sv-SE#redis-preload-feature) enligt definitionen i _Konfigurationsguiden_:
+I följande exempel används [Redis-förinläsningsfunktionen](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html#redis-preload-feature) enligt definitionen i _Konfigurationsguiden_:
 
 ```yaml
 stage:
@@ -97,7 +98,7 @@ stage:
 - **Standard**—`true`
 - **Version** - Adobe Commerce 2.1.4 och senare
 
-Aktiverar eller inaktiverar rensning av [statiska innehållsfiler](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=sv-SE) som genereras under bygg- eller distributionsfasen. Använd standardvärdet _true_ i utvecklingen som en bra rutin.
+Aktiverar eller inaktiverar rensning av [statiska innehållsfiler](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html) som genereras under bygg- eller distributionsfasen. Använd standardvärdet _true_ i utvecklingen som en bra rutin.
 
 - **`true`** - Tar bort allt befintligt statiskt innehåll innan det uppdaterade statiska innehållet distribueras.
 - **`false`** - Distributionen skriver bara över befintliga statiska innehållsfiler om det genererade innehållet innehåller en nyare version.
@@ -156,7 +157,7 @@ stage:
       consumers: []
 ```
 
-Som standard skriver distributionsprocessen över alla inställningar i filen `env.php`. Se [Hantera meddelandeköer](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=sv-SE) i _Commerce Configuration Guide_ för lokal Adobe Commerce.
+Som standard skriver distributionsprocessen över alla inställningar i filen `env.php`. Se [Hantera meddelandeköer](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html) i _Commerce Configuration Guide_ för lokal Adobe Commerce.
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -186,7 +187,7 @@ stage:
 
 >[!WARNING]
 >
->Ange värdet `CRYPT_KEY` via filen [!DNL Cloud Console] i stället för `.magento.env.yaml` för att undvika att visa nyckeln i källkodsdatabasen för miljön. Se [Ange miljö- och projektvariabler](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=sv-SE#configure-environment).
+>Ange värdet `CRYPT_KEY` via filen [!DNL Cloud Console] i stället för `.magento.env.yaml` för att undvika att visa nyckeln i källkodsdatabasen för miljön. Se [Ange miljö- och projektvariabler](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html#configure-environment).
 
 När du flyttar databasen från en miljö till en annan utan någon installationsprocess behöver du motsvarande kryptografisk information. Adobe Commerce använder det krypteringsnyckelvärde som angetts i [!DNL Cloud Console] som `crypt/key`-värde i filen `env.php`.
 
@@ -277,7 +278,7 @@ stage:
 
 >[!NOTE]
 >
->På ett Pro Staging-/Production-kluster som har tre noder (eller tre servicenoder på [den skalade arkitekturen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)) ska `indices_settings` anges enligt följande:
+>På ett Pro Staging-/Production-kluster som har tre noder (eller tre servicenoder på [den skalade arkitekturen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)) ska `indices_settings` anges enligt följande:
 >
 >```yaml
 >           indices_settings:
@@ -302,7 +303,7 @@ stage:
 **Kända begränsningar**:
 
 - Om du ändrar sökmotorn till någon annan typ än `elasticsuite` uppstår ett distributionsfel som följs av ett lämpligt valideringsfel
-- Om du tar bort tjänsten Elasticsearch uppstår ett distributionsfel som följs av ett lämpligt valideringsfel
+- Borttagning av Elasticsearch-tjänsten orsakar ett distributionsfel som följs av ett lämpligt valideringsfel
 
 >[!NOTE]
 >
@@ -313,7 +314,7 @@ stage:
 - **Standard**—`false`
 - **Version** - Adobe Commerce 2.1.4 och senare
 
-Aktiverar och inaktiverar Google Analytics vid distribuering till miljöer för förproduktion och integrering. Som standard gäller Google Analytics endast för produktionsmiljön. Ange det här värdet till `true` om du vill aktivera Google Analytics i mellanlagrings- och integreringsmiljöerna.
+Aktiverar och inaktiverar Google Analytics vid distribution till miljöer för förproduktion och integrering. Som standard gäller Google Analytics endast för produktionsmiljön. Ange det här värdet till `true` om du vill aktivera Google Analytics i mellanlagrings- och integreringsmiljöerna.
 
 - **`true`** - Aktiverar Google Analytics i mellanlagrings- och integreringsmiljöer.
 - **`false`** - Inaktiverar Google Analytics i mellanlagrings- och integreringsmiljöer.
@@ -348,7 +349,7 @@ stage:
 - **Standard**—`file`
 - **Version** - Adobe Commerce 2.2.5 och senare
 
-Lås-providern förhindrar att duplicerade cron-jobb och cron-grupper startas. Använd låsprovidern `file` i produktionsmiljön. Startmiljöer och Pro-integreringsmiljön använder inte variabeln [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md), så `ece-tools` använder `db`-låsprovidern automatiskt.
+Lås-providern förhindrar att duplicerade cron-jobb och cron-grupper startas. Använd låsprovidern `file` i produktionsmiljön. Startmiljöer och Pro-integreringsmiljön använder inte variabeln [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md), vilket innebär att `ece-tools` använder `db`-låsprovidern automatiskt.
 
 ```yaml
 stage:
@@ -356,7 +357,7 @@ stage:
     LOCK_PROVIDER: "db"
 ```
 
-Se [Konfigurera låset](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=sv-SE) i _installationsguiden_.
+Se [Konfigurera låset](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html) i _installationsguiden_.
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
@@ -442,7 +443,7 @@ stage:
 
 >[!NOTE]
 >
->Om du anger `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` som Redis-serverdelsmodell för att aktivera [ L2-cache](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE) genererar `ece-tools` cachekonfigurationen automatiskt. Se ett exempel på [konfigurationsfil](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE#configuration-example) i _Adobe Commerce Configuration Guide_. Om du vill åsidosätta den genererade cachekonfigurationen använder du distributionsvariabeln [CACHE_CONFIGURATION](#cache_configuration) .
+>Om du anger `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` som Redis-serverdelsmodell för att aktivera [ L2-cache](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) genererar `ece-tools` cachekonfigurationen automatiskt. Se ett exempel på [konfigurationsfil](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) i _Adobe Commerce Configuration Guide_. Om du vill åsidosätta den genererade cachekonfigurationen använder du distributionsvariabeln [CACHE_CONFIGURATION](#cache_configuration) .
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -468,6 +469,58 @@ stage:
 Du måste ha en Redis-tjänst konfigurerad i filen `.magento.app.yaml` och i filen `services.yaml`.
 
 [ECE-Tools version 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) och senare använder mer feltoleranta inställningar. Om Adobe Commerce inte kan läsa data från instansen Redis _slave_ läser den data från instansen Redis _master_.
+
+Den skrivskyddade anslutningen är inte tillgänglig för användning i integreringsmiljön eller om du använder variabeln [`CACHE_CONFIGURATION` ](#cache_configuration).
+
+## `VALKEY_BACKEND`
+
+- **Standard**—`Cm_Cache_Backend_Redis`
+- **Version** - Adobe Commerce 2.8.0 och senare
+
+`VALKEY_BACKEND` anger serverdelsmodellens konfiguration för Valkey-cachen.
+
+Adobe Commerce version 2.8.0 och senare innehåller följande backend-modeller:
+
+- `Cm_Cache_Backend_Redis`
+- `\Magento\Framework\Cache\Backend\Redis`
+- `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
+
+I följande exempel beskrivs hur du ställer in `VALKEY_BACKEND`:
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+```
+
+>[!NOTE]
+>
+>Om du anger `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` som värdenhetens serverdelsmodell för att aktivera [ L2-cache](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) genererar `ece-tools` cachekonfigurationen automatiskt. Se ett exempel på [konfigurationsfil](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) i _Adobe Commerce Configuration Guide_. Om du vill åsidosätta den genererade cachekonfigurationen använder du distributionsvariabeln [CACHE_CONFIGURATION](#cache_configuration) .
+
+## `VALKEY_USE_SLAVE_CONNECTION`
+
+- **Standard**—`false`
+- **Version** - Adobe Commerce 2.4.8 och senare
+
+>[!WARNING]
+>
+>Aktivera _inte_ den här variabeln i ett [skalat arkitekturprojekt](../architecture/scaled-architecture.md). Det orsakar anslutningsfel för Valkey. Redis-slavar är fortfarande aktiva men används inte för Redis-läsningar. Adobe rekommenderar också att du använder Adobe Commerce 2.4.8 eller senare, implementerar en ny backend-konfiguration för Valkey och implementerar L2-cachning för Valkey.
+
+>[!TIP]
+>
+>Variabeln `VALKEY_USE_SLAVE_CONNECTION` stöds bara i Adobe Commerce i molninfrastrukturerna Staging och Production Pro och stöds inte i Starter-projekt.
+
+Adobe Commerce kan läsa flera Redis-instanser asynkront. `VALKEY_USE_SLAVE_CONNECTION` Ange som `true` om du automatiskt vill använda en _skrivskyddad_-anslutning till en Redis-instans för att ta emot skrivskyddad trafik på en icke-huvudnod. Den här anslutningen förbättrar prestanda genom belastningsutjämning, eftersom bara en nod hanterar läs- och skrivtrafik. Ange `VALKEY_USE_SLAVE_CONNECTION` till `false` om du vill ta bort alla befintliga skrivskyddade anslutningsmatriser från filen `env.php`.
+
+```yaml
+stage:
+  deploy:
+    VALKEY_USE_SLAVE_CONNECTION: true
+```
+
+Du måste ha en Redis-tjänst konfigurerad i filen `.magento.app.yaml` och i filen `services.yaml`.
+
+[ECE-Tools version 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) och senare använder mer feltoleranta inställningar. Om Adobe Commerce inte kan läsa data från Valkey-instansen _slave_ läser den data från Redis _master_-instansen.
 
 Den skrivskyddade anslutningen är inte tillgänglig för användning i integreringsmiljön eller om du använder variabeln [`CACHE_CONFIGURATION` ](#cache_configuration).
 
@@ -581,7 +634,7 @@ stage:
 - **Standard**—`quick`
 - **Version** - Adobe Commerce 2.2.0 och senare
 
-Gör att du kan anpassa [distributionsstrategin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=sv-SE) för statiskt innehåll. Se [Distribuera statiska vyfiler](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=sv-SE).
+Gör att du kan anpassa [distributionsstrategin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html) för statiskt innehåll. Se [Distribuera statiska vyfiler](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html).
 
 Använd dessa alternativ _endast_ om du har fler än en språkinställning:
 

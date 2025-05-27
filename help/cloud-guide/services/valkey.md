@@ -2,7 +2,8 @@
 title: Konfigurera Valkey-tjänsten
 description: Lär dig hur du konfigurerar och optimerar Valkey som en serverdelscachelösning för Adobe Commerce i molninfrastruktur.
 feature: Cloud, Cache, Services
-source-git-commit: f73c742cbdbf56ac073802074d5a9cd921591f0f
+exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
+source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io) är en valfri serverdelscachelösning som ersätter `Zend Framework Zend_Cache_Backend_File`, som Adobe Commerce använder som standard.
 
-Se [Konfigurera Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=sv-SE){target="_blank"}  i _Konfigurationsguiden_.
+Se [Konfigurera Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"} i _Konfigurationsguiden_.
 
 {{service-instruction}}
 
@@ -59,7 +60,7 @@ Om du antar att din Valkey-relation har namnet `valkey` kan du komma åt den med
 1. Öppna en SSH-tunnel för en värd.
 
    ```bash
-   valkey-cli -h valkeycache.internal
+   valkey-cli -h valkey.internal
    ```
 
 ## Hämta installerad Valkey-version
@@ -67,7 +68,7 @@ Om du antar att din Valkey-relation har namnet `valkey` kan du komma åt den med
 Använd följande kommando för att installera Valkey-versionen i en integreringsmiljö:
 
 ```bash
-valkey-cli -h valkeycache.internal info | grep version
+valkey-cli -h valkey.internal info | grep version
 ```
 
 Svar:
