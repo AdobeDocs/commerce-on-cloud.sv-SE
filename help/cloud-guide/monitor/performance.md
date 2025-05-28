@@ -3,9 +3,10 @@ title: Prestandaövervakning
 description: Läs om prestandaövervakning för Adobe Commerce i molninfrastruktur.
 feature: Cloud, Observability
 topic: Performance
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 51e371cf-8374-4dae-8e5a-f31477dc59c1
+source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,8 @@ ht-degree: 0%
 Du kan använda följande tjänster för att övervaka prestanda i dina molnmiljöer:
 
 - [Hälsoaviseringar](../integrations/health-notifications.md) - En integrering som ger ett varningsmeddelande om diskutrymme i integreringsmiljöerna Starter och Pro.
-- [Observation for Adobe Commerce Guide](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html?lang=sv-SE) - Omfattande övervakning för alla Commerce-webbplatser som kombinerar loggdata från flera källor för att hjälpa dig att bättre hantera din Adobe Commerce webbplatsprestanda och diagnostisera problem.
+- [Observation for Adobe Commerce Guide](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) - Omfattande övervakning för alla Commerce-webbplatser som kombinerar loggdata från flera källor för att hjälpa dig att bättre hantera din Adobe Commerce webbplatsprestanda och diagnostisera problem.
+- [Drifttelemetritjänst](operational-telemetry.md) - Prestandaövervakning av klienttrafik på din butik.
 
 ## New Relic
 

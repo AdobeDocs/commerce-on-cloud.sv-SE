@@ -3,9 +3,9 @@ user-guide-title: Användarhandbok om Commerce i molnet
 user-guide-description: Lär dig hur du hanterar Adobe Commerce-programmet i molninfrastrukturen.
 product: magento
 feature: Cloud
-source-git-commit: fd7879e8f3c9e1965cf4aa3d99824e577971529d
+source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '359'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 4%
    + [Arbetsflöde för Pro](architecture/pro-develop-deploy-workflow.md)
    + [Skalbar arkitektur](architecture/scaled-architecture.md)
    + [Automatisk skalning](architecture/autoscaling.md)
-+ [Kom igång](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=sv-SE)
++ [Kom igång](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Versionsinformation {#release-notes}
    + [Cloud Tools Suite](release-notes/cloud-tools-suite.md)
    + [ECE-verktygspaket](release-notes/ece-tools-package.md)
@@ -56,7 +56,7 @@ ht-degree: 4%
       + [Uppdateringspaket för ECE-verktyg](dev-tools/update-package.md)
       + [CLI-referens](dev-tools/ece-tools-cli-reference.md)
       + [Felreferens](dev-tools/error-reference.md)
-   + Integrationer {#integrations}
+   + Integreringar {#integrations}
       + [Ökning](integrations/overview.md)
       + [Bitbucket](integrations/bitbucket.md)
       + [GitHub](integrations/github.md)
@@ -92,7 +92,7 @@ ht-degree: 4%
       + [Profildatabasfrågor](storage/profile-database-queries.md)
       + [Säkerhetskopiera databasen](storage/database-dump.md)
       + [Hantering av säkerhetskopiering](storage/snapshots.md)
-   + Uppgraderingar och korrigeringar {#upgrade}
+   + Uppgraderingar och patchar {#upgrade}
       + [God praxis](development/best-practices.md)
       + [Uppgradera Commerce](development/commerce-version.md)
       + [Tillämpa patchar](development/apply-patches.md)
@@ -113,7 +113,7 @@ ht-degree: 4%
    + Miljö {#env}
       + [Konfigurera miljödistribution](environment/configure-env-yaml.md)
       + [Variabla nivåer och alternativ](environment/variable-levels.md)
-      + Åsidosätt variabler {#stage}
+      + Åsidosätta variabler {#stage}
          + [Miljövariabler](environment/variables-intro.md)
          + [ADMIN](environment/variables-admin.md)
          + [Molnvariabler](environment/variables-cloud.md)
@@ -167,9 +167,10 @@ ht-degree: 4%
    + [Ökning](launch/overview.md)
    + [Öppna checklista](launch/checklist.md)
    + [Starta steg](launch/steps.md)
-+ Övervaka plats {#monitor}
++ Övervaka webbplats {#monitor}
    + [Prestanda](monitor/performance.md)
-   + New Relic-tjänst {#new-relic}
+   + [Drifttelemetri](monitor/operational-telemetry.md)
+   + New Relic {#new-relic}
       + [New Relic - översikt](monitor/new-relic-service.md)
       + [Konto- och användarhantering](monitor/account-management.md)
       + Undersök prestanda {#investigate}
