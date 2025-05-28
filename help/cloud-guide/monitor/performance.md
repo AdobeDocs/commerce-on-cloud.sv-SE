@@ -16,7 +16,7 @@ ht-degree: 0%
 Du kan använda följande tjänster för att övervaka prestanda i dina molnmiljöer:
 
 - [Hälsoaviseringar](../integrations/health-notifications.md) - En integrering som ger ett varningsmeddelande om diskutrymme i integreringsmiljöerna Starter och Pro.
-- [Observation for Adobe Commerce Guide](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) - Omfattande övervakning för alla Commerce-webbplatser som kombinerar loggdata från flera källor för att hjälpa dig att bättre hantera din Adobe Commerce webbplatsprestanda och diagnostisera problem.
+- [Observation for Adobe Commerce Guide](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) - Omfattande övervakning för alla Commerce-webbplatser som kombinerar loggdata från flera källor för att hjälpa dig att bättre hantera din Adobe Commerce webbplatsprestanda och diagnostisera problem.
 - [Drifttelemetritjänst](operational-telemetry.md) - Prestandaövervakning av klienttrafik på din butik.
 
 ## New Relic
