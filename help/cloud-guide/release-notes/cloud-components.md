@@ -3,9 +3,9 @@ title: Cloud-komponenter för Commerce
 description: Se en lista med de senaste förbättringarna av Cloud Components-paketet.
 recommendations: noDisplay, catalog
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: dcf71ffbdafae46e6a02735c090c33a8fe248bc6
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,13 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v1.1.1 {#latest}
+## v1.1.2 {#latest}
 
+Releasedatum: 3 juni 2025
+
+- ![fix-ikon](../../assets/fix.svg) **Förbättrad kompatibilitet med 2.4.8**-uppdaterade tredjepartsbibliotek för bättre kompatibilitet med 2.4.8<!-- MCLOUD-13707	 - -->
+
+## v1.1.1
 
 Releasedatum: 6 februari 2025
 
@@ -55,7 +60,7 @@ Releasedatum: 10 mars 2023
 
 Releasedatum: 13 september 2022
 
-- ![korrigeringsikon](../../assets/fix.svg) **Fel vid varning** - Korrigerade ett fel som försökte [varma](../environment/variables-post-deploy.md#warm_up_pages) när sidsynligheten är inställd på [**Inte synlig enskilt**](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) i administratören, vilket resulterade i `ERROR: Warming up failed: <link to page>` fel i distributionsloggen.<!-- MCLOUD-9134 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Fel vid varning** - Korrigerade ett fel som försökte [varma](../environment/variables-post-deploy.md#warm_up_pages) när sidsynligheten är inställd på [**Inte synlig enskilt**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) i administratören, vilket resulterade i `ERROR: Warming up failed: <link to page>` fel i distributionsloggen.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

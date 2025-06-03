@@ -2,11 +2,11 @@
 title: Versionsinformation för ECE-verktyg
 description: Se en lista över de senaste förbättringarna av ECE-verktygspaketet.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-05-27T00:00:00Z
+last-substantial-update: 2024-06-03T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 70664897a10a59668fad74565c04b4ad72474736
+source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
 workflow-type: tm+mt
-source-wordcount: '3166'
+source-wordcount: '3185'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,17 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v2002.2.5 {#latest}
+## v2002.2.6 {#latest}
+
+Releasedatum: 3 juni 2025
+
+- ![fix-ikon](../../assets/fix.svg) **Förbättrad kompatibilitet med 2.4.8**-uppdaterade tredjepartsbibliotek för bättre kompatibilitet med 2.4.8<!-- MCLOUD-13707	 - -->
+
+## v2002.2.5
 
 Releasedatum: 27 maj 2025
 
-- ![korrigeringsikon](../../assets/new.svg) **Utökad Valkey-kompatibilitet**-Utökad Valkey-kompatibilitet i Adobe Commerce.<!-- MCLOUD-13595	 - -->
+- ![ny ikon](../../assets/new.svg) **Utökad Valkey-kompatibilitet**-utökad Valkey-kompatibilitet i Adobe Commerce.<!-- MCLOUD-13595	 - -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdaterad RabbitMQ-validerare**-Uppdaterad validerare för RabbitMQ.<!-- MCLOUD-13589	 - -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdaterad MariaDB-validerare**-Uppdaterad ece-tools-validerare för MariaDB 10.11.<!-- MCLOUD-13593	 - -->
 - ![korrigeringsikon](../../assets/fix.svg) **Utökad OpenSearch2-kompatibilitet**-gjord OpenSearch2-kompatibel med de senaste 2.4.4-versionerna.<!-- MCLOUD-13710	 - -->
