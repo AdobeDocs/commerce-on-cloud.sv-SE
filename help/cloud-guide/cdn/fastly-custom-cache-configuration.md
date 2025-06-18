@@ -185,7 +185,7 @@ För både Starter- och Pro-projekt kan du använda alternativet [!UICONTROL Dom
 
 - För Starter-projekt går du till Project URL på fliken [!UICONTROL Domains] i [!DNL Cloud Console] för att lägga till din projekt-URL.
 
-- För Pro-projekt skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att lägga till domänen i din molnprojektskonfiguration. Supportteamet uppdaterar även kontokonfigurationen för Adobe Commerce Fast för att lägga till domänen.
+- För Pro-projekt skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att lägga till domänen i din molnprojektskonfiguration. Supportteamet uppdaterar även kontokonfigurationen för Adobe Commerce Fast för att lägga till domänen.
 
 **Så här hanterar du snabb domänkonfiguration från administratören**:
 
