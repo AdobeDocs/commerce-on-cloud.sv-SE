@@ -3,9 +3,9 @@ title: Anpassa cachekonfigurationen
 description: Lär dig hur du granskar och anpassar inställningarna för cachekonfigurationen när tjänsten Snabbt har installerats.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
+source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,10 @@ Om du vill slutföra gruppåtgärder som tar längre tid än 3 minuter ändrar d
 1. Expandera **Avancerad konfiguration** i avsnittet _Snabbt konfigurering_.
 
 1. Ange tidsgränsen **för** Admin-sökvägen i sekunder. Värdet får inte vara längre än 10 minuter (600 sekunder).
+
+>[!NOTE]
+>
+>Konfigurationsinställningen **_Admin path timeout_** styr inte timeout-värden utanför Adobe Commerce, som Fastly WAF timeout. Om du vill justera tidsgränsen för Fast WAF måste du öppna en Adobe Support-biljett och uppdatera den i tjänsten Snabbt.
 
 1. Klicka på **Spara konfiguration** överst på sidan.
 
@@ -181,7 +185,7 @@ För både Starter- och Pro-projekt kan du använda alternativet [!UICONTROL Dom
 
 - För Starter-projekt går du till Project URL på fliken [!UICONTROL Domains] i [!DNL Cloud Console] för att lägga till din projekt-URL.
 
-- För Pro-projekt skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att lägga till domänen i din molnprojektskonfiguration. Supportteamet uppdaterar även kontokonfigurationen för Adobe Commerce Fast för att lägga till domänen.
+- För Pro-projekt skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att lägga till domänen i din molnprojektskonfiguration. Supportteamet uppdaterar även kontokonfigurationen för Adobe Commerce Fast för att lägga till domänen.
 
 **Så här hanterar du snabb domänkonfiguration från administratören**:
 
