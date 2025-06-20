@@ -2,9 +2,10 @@
 title: Statisk innehållsdistribution
 description: Lär dig mer om strategier för att distribuera statiskt innehåll, som bilder, skript och CSS, i Adobe Commerce i molninfrastrukturprojekt.
 feature: Cloud, Build, Deploy, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
+source-git-commit: 325b7584daa38ad788905a6124e6d037cf679332
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -13,13 +14,13 @@ ht-degree: 0%
 
 Distribution av statiskt innehåll (SCD) har stor inverkan på distributionsprocessen för butiken, vilket beror på hur mycket innehåll som ska genereras, till exempel bilder, skript, CSS, videor, teman, språkområden och webbsidor, och när innehållet ska genereras. Standardstrategin genererar till exempel statiskt innehåll under [distributionsfasen](process.md#deploy-phase-deploy-phase) när platsen är i underhållsläge, men den här distributionsstrategin tar tid att skriva innehållet direkt till den monterade `pub/static`-katalogen. Du har flera alternativ eller strategier som hjälper dig att förbättra driftsättningstiden beroende på dina behov.
 
-## Optimera JavaScript- och HTML-innehåll
+## Optimera JavaScript- och HTML-material
 
 Ni kan använda paketering och miniatyrbilder för att skapa optimerat JavaScript- och HTML-innehåll under distributionen av statiskt innehåll.
 
 ### Minimera innehåll
 
-Du kan förbättra SCD-inläsningstiden under distributionsprocessen om du hoppar över kopieringen av statiska vyfiler i katalogen `var/view_preprocessed` och genererar _minified_ HTML vid begäran. Du kan aktivera detta genom att ange den globala miljövariabeln [SKIP_HTML_MINIFICATION](../environment/variables-global.md#skiphtmlminification) till `true` i filen `.magento.env.yaml`.
+Du kan förbättra SCD-inläsningstiden under distributionsprocessen om du hoppar över kopieringen av statiska vyfiler i katalogen `var/view_preprocessed` och genererar _minified_ HTML när det efterfrågas. Du kan aktivera detta genom att ange den globala miljövariabeln [SKIP_HTML_MINIFICATION](../environment/variables-global.md#skiphtmlminification) till `true` i filen `.magento.env.yaml`.
 
 >[!NOTE]
 >
@@ -29,15 +30,20 @@ Du kan spara **mer** distributionstid och diskutrymme genom att minska antalet o
 
 ## Välja en distributionsstrategi
 
-Distributionsstrategierna skiljer sig åt beroende på om du väljer att generera statiskt innehåll under fasen _build_, fasen _deploy_ eller fasen _on demand_. Som framgår av följande diagram är det minst optimala alternativet att generera statiskt innehåll under distributionsfasen. Även om det finns en minifierad HTML måste varje innehållsfil kopieras till den monterade katalogen `~/pub/static`, vilket kan ta lång tid. Att generera statiskt innehåll on demand verkar vara det optimala valet. Men om innehållsfilen inte finns i cachen genereras den när den begärs, vilket ökar användarens inläsningstid. Därför är det mest optimala att generera statiskt innehåll under byggfasen.
+Distributionsstrategierna skiljer sig åt beroende på om du väljer att generera statiskt innehåll under fasen _build_, fasen _deploy_ eller fasen _on demand_. Som framgår av följande diagram är det minst optimala alternativet att generera statiskt innehåll under distributionsfasen. Även med minifierad HTML måste varje innehållsfil kopieras till den monterade katalogen `~/pub/static`, vilket kan ta lång tid. Att generera statiskt innehåll on demand verkar vara det optimala valet. Men om innehållsfilen inte finns i cachen genereras den när den begärs, vilket ökar användarens inläsningstid. Därför är det mest optimala att generera statiskt innehåll under byggfasen.
 
 ![SCD-belastningsjämförelse](../../assets/scd-load-times.png)
 
 ### Ställa in SCD vid skapande
 
-Att generera statiskt innehåll under byggfasen med minifierad HTML är den optimala konfigurationen för [**noll-driftstopp**-distributioner](reduce-downtime.md), som också kallas **idealiskt läge**. I stället för att kopiera filer till en monterad enhet skapas en länk från katalogen `./init/pub/static`.
+Att generera statiskt innehåll under byggfasen med minifierad HTML är den optimala konfigurationen för [**noll-nedtid**-distributioner](reduce-downtime.md), som också kallas **idealiskt läge**. I stället för att kopiera filer till en monterad enhet skapas en länk från katalogen `./init/pub/static`.
 
 För att generera statiskt innehåll måste du ha tillgång till teman och språkområden. Adobe Commerce lagrar teman i filsystemet, som är tillgängligt under byggfasen, men i Adobe Commerce lagras språkinställningarna i databasen. Databasen är _inte_ tillgänglig under byggfasen. För att kunna generera det statiska innehållet under byggfasen måste du använda kommandot `config:dump` i paketet `ece-tools` för att flytta språkområden till filsystemet. Det läser språkinställningarna och sparar dem i filen `app/etc/config.php`.
+
+>[!NOTE]
+>När du har kört kommandot `config:dump` i paketet `ece-tools` låses (nedtonas) de konfigurationer som dumpas i filen `config.php` [ på Admin Dashboard](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). Det enda sättet att uppdatera dessa konfigurationer i Admin är att ta bort dem från filen lokalt och distribuera om projektet.
+>>Varje gång du lägger till en ny butiks-/butiksgrupp/webbplats i din instans måste du dessutom köra kommandot `config:dump` för att vara säker på att databasen är synkroniserad. Du kan också välja [vilka konfigurationer som ska dumpas](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) i `config.php`-filen.
+>>Om du tar bort konfigurationen av grupp/webbplats för butik/butik från filen `config.php` eftersom fälten är nedtonade men inte utför det här steget, tas de nya entiteterna som inte har dumpats bort från databasen vid nästa distribution.
 
 **Så här konfigurerar du projektet för att generera SCD vid bygge**:
 
