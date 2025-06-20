@@ -2,9 +2,10 @@
 title: Konfigurera snabbfunktioner
 description: Lär dig hur du konfigurerar snabbtjänster för ditt Adobe Commerce-projekt.
 feature: Cloud, Configuration, Iaas, Cache, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
+source-git-commit: 1c7f5323a80181fc63e430e6a276fd8937d49fba
 workflow-type: tm+mt
-source-wordcount: '1960'
+source-wordcount: '1957'
 ht-degree: 0%
 
 ---
@@ -33,13 +34,13 @@ Följ de här stegen för att aktivera, konfigurera och testa snabbt i webbplats
 
 ## Få inloggningsuppgifter snabbt
 
-Under etableringen av projektet lägger Adobe till ditt projekt i [snabbtjänstkontot](fastly.md#fastly-service-account-and-credentials) för Adobe Commerce i molninfrastrukturen och skapar snabbkontoautentiseringsuppgifter för Starter `master` - och Pro Staging- och Production-miljöerna. Varje miljö har unika referenser.
+Under etableringen lägger Adobe till ditt projekt i [snabbtjänstkontot](fastly.md#fastly-service-account-and-credentials) för Adobe Commerce i molninfrastrukturen och skapar snabbkontoautentiseringsuppgifter för Starter `master` - och Pro Staging- och Production-miljöerna. Varje miljö har unika referenser.
 
 Du behöver snabbinloggningsuppgifterna för att kunna konfigurera Fast CDN-tjänster från administratören och skicka in Fast API-begäranden.
 
 >[!NOTE]
 >
->Med Adobe Commerce i molninfrastruktur har du inte tillgång till Snabbadministratör direkt. Använd administratören för att granska och uppdatera snabbkonfigurationen för dina miljöer. Om du inte kan lösa ett problem med hjälp av snabbfunktionerna i Admin skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket).
+>Med Adobe Commerce i molninfrastruktur har du inte tillgång till Snabbadministratör direkt. Använd administratören för att granska och uppdatera snabbkonfigurationen för dina miljöer. Om du inte kan lösa ett problem med hjälp av snabbfunktionerna i Admin skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
 
 Använd följande metoder för att hitta och spara snabb service-ID och API-token för din miljö:
 
@@ -63,13 +64,13 @@ Metoden för att visa inloggningsuppgifter skiljer sig åt för Pro- och Starter
 
 >[!NOTE]
 >
->Om du inte hittar de snabba autentiseringsuppgifterna för förproduktionsmiljö eller produktionsmiljö kontaktar du Adobe Customer Technical Advisor (CTA).
+>Om du inte hittar de snabba inloggningsuppgifterna för förproduktionsmiljö eller produktionsmiljö kontaktar du Adobe Customer Technical Advisor (CTA).
 
 ## Aktivera snabb cachelagring
 
 Du behöver följande komponenter för att aktivera och konfigurera snabbfunktioner:
 
-- Senaste versionen av [Snabbt CDN för modulen Magento 2](fastly.md#fastly-cdn-module-for-magento-2) som är installerad i miljö för förproduktion och produktion. Se [Uppgradera snabbt](#upgrade-the-fastly-module).
+- Senaste versionen av [Snabbt CDN för Magento 2-modulen](fastly.md#fastly-cdn-module-for-magento-2) som är installerad i miljö för förproduktion och produktion. Se [Uppgradera snabbt](#upgrade-the-fastly-module).
 
 - [Autentiseringsuppgifter snabbt](#get-fastly-credentials) för Adobe Commerce i molninfrastrukturerna Staging- och Production-miljöer
 
@@ -103,7 +104,7 @@ Du behöver följande komponenter för att aktivera och konfigurera snabbfunktio
 
    >[!NOTE]
    >
-   >Välj inte länken för att skapa en API-token snabbt. Använd i stället de [snabba autentiseringsuppgifterna (Service ID och API-token) som tillhandahålls av Adobe ](#get-fastly-credentials) från Adobe.
+   >Välj inte länken för att skapa en API-token snabbt. Använd i stället de [snabba autentiseringsuppgifterna (Service ID och API-token) som tillhandahålls av Adobe](#get-fastly-credentials).
 
 1. Klicka på **Testa autentiseringsuppgifter**.
 
@@ -129,19 +130,19 @@ När du har aktiverat modulen Snabbt överför du [VCL-standardkoden](https://gi
 
 1. I avsnittet _Snabbkonfiguration_ klickar du på **Överför VCL till Snabbt** enligt bilden nedan.
 
-   ![Överför en Magento-VCL till snabbast](../../assets/cdn/fastly-upload-vcl-admin.png)
+   ![Överför en Magento VCL till snabbast](../../assets/cdn/fastly-upload-vcl-admin.png)
 
 1. När överföringen är klar uppdaterar du cacheminnet enligt meddelandet längst upp på sidan.
 
 ## Tillhandahåll SSL-/TLS-certifikat
 
-Adobe tillhandahåller ett domänvaliderat SSL-/TLS-certifikat (Let&#39;s Encrypt SSL/TLS) för säker HTTPS-trafik snabbt. Adobe tillhandahåller ett certifikat för varje Pro Production-, Staging- och Starter Production-miljö för att skydda alla domäner i den miljön. Mer information om det angivna certifikatet finns i [Adobe SSL-certifikat (TLS) för Adobe Commerce om molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=sv-SE).
+Adobe tillhandahåller ett domänvaliderat SSL-/TLS-certifikat (Let&#39;s Encrypt SSL/TLS) för säker HTTPS-trafik snabbt. Adobe tillhandahåller ett certifikat för varje Pro Production-, Staging- och Starter Production-miljö för att skydda alla domäner i den miljön. Mer information om det angivna certifikatet finns i [Adobe SSL-certifikat (TLS) för Adobe Commerce om molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html).
 
 >[!NOTE]
 >
->Du kan ange ett eget TLS- eller SSL-certifikat i stället för att använda det krypteringscertifikat som medföljer Adobe. Den här processen kräver dock ytterligare arbete för att kunna konfigurera och underhålla. Om du vill välja det här alternativet skickar du en Adobe Commerce supportanmälan eller arbetar med Adobe för att lägga till anpassade värdbaserade certifikat till din Adobe Commerce i molninfrastrukturmiljöer.
+>Du kan ange ett eget TLS- eller SSL-certifikat i stället för att använda det krypteringscertifikat som tillhandahålls av Adobe. Den här processen kräver dock ytterligare arbete för att kunna konfigurera och underhålla. Om du vill välja det här alternativet skickar du en Adobe Commerce supportanmälan eller arbetar med Adobe för att lägga till anpassade värdbaserade certifikat till din Adobe Commerce i molninfrastrukturmiljöer.
 
-Om du vill aktivera SSL-/TLS-certifikaten för Adobe Commerce-miljöer utför Adobe-automatisering följande steg:
+För att aktivera SSL-/TLS-certifikaten för Adobe Commerce-miljöer utför Adobe automatisering följande steg:
 
 - Validerar domänägarskap
 - Tillhandahåller ett Let&#39;s Encrypt SSL/TLS-certifikat som omfattar angivna övre nivåer och underdomäner för dina butiker
@@ -154,7 +155,7 @@ Den här automatiseringen kräver att du uppdaterar DNS-konfigurationen för din
 
 >[!TIP]
 >
->Om du har en produktionsdomän som inte är aktiv använder du ACME-utmanings-CNAME-posterna för domänvalidering. Om du lägger till posterna i DNS-konfigurationen tidigt kan Adobe etablera SSL-/TLS-certifikatet med rätt domäner innan webbplatsen startas. Innan du startar till produktionen måste du ersätta platshållarposterna med CNAME-posterna från Adobe.
+>Om du har en produktionsdomän som inte är aktiv använder du ACME-utmanings-CNAME-posterna för domänvalidering. Om du lägger till posterna i DNS-konfigurationen tidigt kan Adobe tillhandahålla SSL-/TLS-certifikatet med rätt domäner innan webbplatsen startas. Innan du startar produktionen måste du ersätta platshållarposterna med CNAME-posterna från Adobe.
 
 När domänvalideringen är klar tillhandahåller Adobe certifikatet för kryptering av TLS/SSL och överför det till miljöer med aktiv förproduktion eller produktion. Den här processen kan ta upp till 12 timmar. Vi rekommenderar att du slutför DNS-konfigurationsuppdateringarna flera dagar i förväg för att undvika förseningar i webbplatsutvecklingen och webbplatsens start.
 
@@ -187,7 +188,7 @@ Uppdatera din DNS-konfiguration om du vill dirigera trafik från dina webbutiks-
 
 - Aktivera modulen Snabbt.
 - Ladda upp standardkoden för VCL snabbt.
-- Ange en lista över de översta domänerna och underdomänerna för varje miljö till Adobe, eller skicka en Adobe Commerce supportanmälan.
+- Tillhandahåll en lista över de översta domänerna och underdomänerna för varje miljö till Adobe, eller skicka en Adobe Commerce supportanmälan.
 - Vänta på bekräftelse på att de angivna domänerna har lagts till i dina molnmiljöer.
 - I Starter-projekt lägger du till domänerna i din snabbtjänstkonfiguration. Se [Hantera domäner](fastly-custom-cache-configuration.md#manage-domains).
 - Om du vill ha information om hur du uppdaterar DNS-konfigurationen kan du fråga din [DNS-registrator](https://lookup.icann.org/) om du vill ha rätt metod för domäntjänsten.
@@ -239,7 +240,7 @@ Uppdatera din DNS-konfiguration om du vill dirigera trafik från dina webbutiks-
 
    >[!NOTE]
    >
-   >Som ett alternativ till molnbaserad CLI kan du uppdatera bas-URL:en från [administratören](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=sv-SE)
+   >Som ett alternativ till molnbaserad CLI kan du uppdatera bas-URL:en från [administratören](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html)
 
 1. Starta om webbläsaren.
 
@@ -274,7 +275,7 @@ Om rubrikerna inte har rätt värden läser du [Åtgärda fel i svarsrubrikerna]
 
 ## Uppgradera modulen Snabbt
 
-Uppdaterar snabbt CDN för Magento 2-modulen för att lösa problem, öka prestandan och tillhandahålla nya funktioner.
+Uppdaterar snabbt CDN för Magento 2-modulen för att åtgärda problem, öka prestandan och tillhandahålla nya funktioner.
 Vi rekommenderar att du uppdaterar modulen Snabbt i dina miljö för förproduktion och produktion till den [senaste versionen](https://github.com/fastly/fastly-magento2/blob/master/VERSION).
 
 När du har uppdaterat modulen måste du överföra VCL-koden för att ändringarna ska gälla för snabbtjänstkonfigurationen.
@@ -283,7 +284,7 @@ När du har uppdaterat modulen måste du överföra VCL-koden för att ändringa
 >
 > Om du har anpassat standardkoden för Fast VCL med en anpassad version skrivs ändringarna över när du uppgraderar modulen Snabbt. Om du har lagt till anpassade VCL-fragment med unika namn bevaras dessa ändringar under uppgraderingsprocessen. Som en god praxis bör du uppgradera mellanlagringsmiljön och validera ändringarna innan du tillämpar ändringarna i produktionsmiljön.
 
-**Så här kontrollerar du vilken version av Fast CDN-modulen som används för Magento 2**:
+**Så här kontrollerar du vilken version av Fast CDN-modulen som används i Magento 2**:
 
 1. Byt till rotkatalogen i molnmiljön.
 
@@ -314,4 +315,4 @@ När du har verifierat Snabba tjänster på mellanlagringsplatsen upprepar du up
 
 >[!TIP]
 >
-> Om du har problem med Snabba tjänster i dina Adobe Commerce-miljöer kan du läsa [Adobe Commerce Snabbt felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=sv-SE).
+> Om du har problem med Snabba tjänster i dina Adobe Commerce-miljöer kan du läsa [Adobe Commerce Snabbt felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html).
