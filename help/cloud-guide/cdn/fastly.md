@@ -2,9 +2,10 @@
 title: Snabb översikt över tjänster
 description: Se hur de snabbaste tjänsterna som ingår i Adobe Commerce i molninfrastrukturen hjälper er att optimera och säkra leveransåtgärder för era Adobe Commerce-sajter.
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 429b6762-0b01-438b-a962-35376306895b
+source-git-commit: 3cef442321120d8ca813c760d2fd0435f4961235
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -43,7 +44,7 @@ Tillhandahåller snabbt följande tjänster för att optimera och skydda innehå
 
 - **Insvepning av ursprung** - Förhindrar att trafik kringgår Fastly WAF och döljer IP-adresserna för dina ursprungliga servrar för att skydda dem mot direkt åtkomst och DDoS-attacker.
 
-  Insvepning av ursprung är aktiverat som standard på Adobe Commerce i projekt för molninfrastruktur och Pro Production. Om du vill aktivera ursprungsinsvepning på Adobe Commerce i startproduktionsprojekt för molninfrastruktur skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket). Om du har trafik som inte kräver cachelagring kan du anpassa snabbtjänstkonfigurationen så att begäranden kan [kringgå snabbcachen](fastly-vcl-bypass-to-origin.md).
+  Insvepning av ursprung är aktiverat som standard på Adobe Commerce i projekt för molninfrastruktur och Pro Production. Om du vill aktivera ursprungsinsvepning på Adobe Commerce i startproduktionsprojekt för molninfrastruktur skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Om du har trafik som inte kräver cachelagring kan du anpassa snabbtjänstkonfigurationen så att begäranden kan [kringgå snabbcachen](fastly-vcl-bypass-to-origin.md).
 
 - **[Bildoptimering](fastly-image-optimization.md)** - Avlastar bildbearbetning och storleksändring från tjänsten Snabbt så att servrar kan bearbeta beställningar och konverteringar mer effektivt.
 
@@ -53,23 +54,25 @@ Tillhandahåller snabbt följande tjänster för att optimera och skydda innehå
 
 Snabba tjänster för Adobe Commerce i molninfrastruktur använder modulen [Snabbt CDN för Magento 2] som är installerad i följande miljöer: Pro Staging and Production, Starter Production (`master` grenen).
 
-Vid första etableringen eller uppgraderingen av ditt Adobe Commerce-projekt installerar Adobe den senaste versionen av snabbuppdateringsmodulen i dina miljö för förproduktion och produktion. När modulen uppdateras snabbt får du meddelanden i Admin för dina miljöer. Adobe rekommenderar att du uppdaterar dina miljöer så att de använder den senaste versionen. Se [Uppgradera snabbt](fastly-configuration.md#upgrade-the-fastly-module).
+Vid första etableringen eller uppgraderingen av ditt Adobe Commerce-projekt installerar Adobe den senaste versionen av snabbuppdateringsmodulen i dina stagnings- och produktionsmiljöer. När modulen uppdateras snabbt får du meddelanden i Admin för dina miljöer. Adobe rekommenderar att du uppdaterar dina miljöer så att de använder den senaste versionen. Se [Uppgradera snabbt](fastly-configuration.md#upgrade-the-fastly-module).
 
 ## Snabb service av konto och autentiseringsuppgifter
 
-Adobe Commerce i molninfrastrukturprojekt har inget dedikerat Fast-konto. Snabbtjänsten hanteras i ett centralt konto som är registrerat för Adobe och kontrollpanelen är bara tillgänglig för molnsupportteamet.
+Adobe Commerce i molninfrastrukturprojekt har inget dedikerat Fast-konto. Snabbtjänsten hanteras i ett centralt konto som är registrerat hos Adobe, och kontrollpanelen för hantering är bara tillgänglig för molnsupportteamet.
 
 I stället har varje mellanlagrings- och produktionsmiljö unika snabbinloggningsuppgifter (API-token och tjänst-ID) för att konfigurera och hantera snabbtjänster från Commerce Admin. API:t Fast finns för avancerad hantering av tjänsten Fast, som kräver att autentiseringsuppgifterna används för att skicka dessa begäranden.
 
-Under etableringen av ett projekt lägger Adobe till ditt projekt på snabbtjänstkontot för Adobe Commerce i molninfrastrukturen och lägger till snabbinloggningsuppgifterna i konfigurationen för mellanlagrings- och produktionsmiljöerna. Se [Få snabbt inloggningsuppgifter](fastly-configuration.md#get-fastly-credentials).
+Under etableringen lägger Adobe till ditt projekt till snabbtjänstkontot för Adobe Commerce i molninfrastrukturen och lägger till snabbinloggningsuppgifterna i konfigurationen för mellanlagrings- och produktionsmiljöer. Se [Få snabbt inloggningsuppgifter](fastly-configuration.md#get-fastly-credentials).
 
 ### Ändra snabbt API-token
 
-Skicka en Adobe Commerce Support-biljett för att ändra autentiseringsuppgifter för snabbprogrammeringstoken. När du får en ny token uppdaterar du din förproduktionsmiljö så att den använder den nya token.
+Skicka en Adobe Commerce Support-biljett för att utfärda en ny snabb API-tokenautentiseringsuppgift [om valideringen misslyckas/har upphört](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) eller om du tror att den har komprometterats.
+
+När du får en ny token uppdaterar du din förproduktionsmiljö så att den använder den nya token.
 
 **Så här ändrar du autentiseringsuppgifter för snabb API-token**:
 
-1. [Skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) och begär nya Snabb-API-autentiseringsuppgifter.
+1. [Skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) och begär nya Snabb-API-autentiseringsuppgifter.
 
    Inkludera ditt Adobe Commerce i projekt-ID för molninfrastruktur och miljöer som kräver nya autentiseringsuppgifter.
 
@@ -121,12 +124,12 @@ DDOS-skyddet är inbyggt i tjänsten Fast CDN. När du har aktiverat Snabba tjä
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Söka efter DDoS-attacker]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=sv-SE
+[Söka efter DDoS-attacker]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
 
 [Snabb CDN-modul för Magento 2]: https://github.com/fastly/fastly-magento2
 
 [Snabbt supportärende]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[Blockera skadlig trafik]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=sv-SE
+[Blockera skadlig trafik]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
 
 [Arbeta med domäner]: https://docs.fastly.com/en/guides/working-with-domains
