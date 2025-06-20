@@ -3,9 +3,9 @@ title: Hantering av säkerhetskopiering
 description: Lär dig hur du manuellt skapar och återställer en säkerhetskopia för ditt Adobe Commerce i molninfrastrukturprojekt.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
+source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,18 @@ Säkerhetskopierings-/ögonblicksbildsfunktionen **gäller inte** för Pro Stagi
 
 Du kan skapa en manuell säkerhetskopia av alla aktiva Starter-miljöer och integreringPro-miljöer från [!DNL Cloud Console] eller skapa en ögonblicksbild från molnet-CLI. Du måste ha en [administratörsroll](../project/user-access.md) för miljön.
 
+>[!NOTE]
+>
+>Du kan skapa en säkerhetskopia av koden direkt i Pro Production- och Staging-klustren genom att köra följande kommando i terminalen - justera den för de mappar/sökvägar som du vill inkludera/exkludera:
+>
+```bash
+>mkdir -p var/support
+>/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
+>```
+
 **Så här skapar du en databassäkerhetskopia av Pro-miljön**:
-Mer information om hur du skapar en databasdump av en Pro-miljö, inklusive mellanlagring och produktion, finns i artikeln [Skapa en databasdump](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) i kunskapsbasen.
+
+Om du vill skapa en databasdump av en Pro-miljö, inklusive mellanlagring och produktion, kan du läsa artikeln [Skapa en databasdump](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) i kunskapsbasen.
 
 **Så här skapar du en säkerhetskopia av en startmiljö med[!DNL Cloud Console]**:
 
@@ -140,10 +150,15 @@ Du måste ha [administratörsåtkomst](../project/user-access.md) till miljön. 
 
 ## Återställ en ögonblicksbild av Disaster Recovery
 
-[Importera databasdumpen direkt från servern](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3) om du vill återställa ögonblicksbilden av Disaster Recovery i Pro-miljöer för förproduktion och produktion.
+[Importera databasdumpen direkt från servern](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3) om du vill återställa ögonblicksbilden av Disaster Recovery i Pro-miljöer för förproduktion och produktion.
 
 ## Återställningskod
 
 Säkerhetskopior och ögonblicksbilder innehåller _inte_ en kopia av koden. Koden lagras redan i den Git-baserade databasen, så du kan använda Git-baserade kommandon för att återställa (återställa) kod. Använd till exempel `git log --oneline` för att bläddra igenom tidigare implementeringar och använd sedan [`git revert`](https://git-scm.com/docs/git-revert) för att återställa kod från en specifik implementering.
 
 Du kan också välja att lagra kod i en _inaktiv_-gren. Använd Git-kommandon för att skapa en gren i stället för att använda `magento-cloud`-kommandon. Läs mer om [Git-kommandon](../dev-tools/cloud-cli-overview.md#git-commands) i Cloud CLI-avsnittet.
+
+## Relaterad information
+
+- [Säkerhetskopiera databasen](database-dump.md)
+- [Säkerhetskopiering och katastrofåterställning](../architecture/pro-architecture.md#backup-and-disaster-recovery) för Pro Production och Staging-kluster
