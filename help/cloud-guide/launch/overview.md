@@ -43,7 +43,7 @@ Som en del av Adobe Commerce prenumeration på molninfrastruktur tillhandahålle
 
 >[!NOTE]
 >
->Om du vill distribuera ditt eget SSL-certifikat för utökad validering för ditt företag i stället för att använda krypteringscertifikatet för Låt oss kontakta din CTA eller [Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
+>Om du vill distribuera ditt eget SSL-certifikat för utökad validering för ditt företag i stället för att använda krypteringscertifikatet för Låt oss kontakta din CTA eller [Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket).
 
 ## Konfigurera verktyget för säkerhetsgenomsökning
 
@@ -69,7 +69,7 @@ Med verktyget för säkerhetsgenomsökning kan du regelbundet övervaka dina but
 >
 >Adobe rekommenderar att du använder verktyget för säkerhetsgenomsökning framför andra verktyg från tredje part för att säkerställa bästa möjliga servicekvalitet under undersökningen av resultaten.
 
-Mer information om hur du konfigurerar och använder verktyget för säkerhetssökning finns i [användarhandboken](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan). Vanligtvis börjar du använda det här verktyget när du börjar testa användargodkännande (UAT).
+Mer information om hur du konfigurerar och använder verktyget för säkerhetssökning finns i [användarhandboken](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-scan). Vanligtvis börjar du använda det här verktyget när du börjar testa användargodkännande (UAT).
 
 Varje plats som du skannar måste registreras via fliken Security Scan. Under registreringsprocessen måste du godkänna ansvarsfriskrivningen innan du kan börja skanna. Du styr både schemat och auktoriserar användaren att ta emot meddelanden när varje skanning är klar. Du kan schemalägga genomsökningar efter ett visst, återkommande datum och tid, eller köra en genomsökning på begäran efter behov.
 
