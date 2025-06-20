@@ -3,9 +3,9 @@ title: Konfigurera snabbfunktioner
 description: Lär dig hur du konfigurerar snabbtjänster för ditt Adobe Commerce-projekt.
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
-source-git-commit: 1c7f5323a80181fc63e430e6a276fd8937d49fba
+source-git-commit: 184f961a39611ea14dc96648b16644742407badc
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1968'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,17 @@ Följ de här stegen för att aktivera, konfigurera och testa snabbt i webbplats
 >
 >När du har aktiverat och verifierat den ursprungliga snabbkonfigurationen kan du anpassa konfigurationen. Du kan till exempel aktivera ytterligare alternativ som bildoptimering, kantmoduler och anpassad VCL-kod. Se [Anpassa cachekonfigurationen](fastly-custom-cache-configuration.md).
 
-## Få inloggningsuppgifter snabbt
-
 Under etableringen lägger Adobe till ditt projekt i [snabbtjänstkontot](fastly.md#fastly-service-account-and-credentials) för Adobe Commerce i molninfrastrukturen och skapar snabbkontoautentiseringsuppgifter för Starter `master` - och Pro Staging- och Production-miljöerna. Varje miljö har unika referenser.
 
-Du behöver snabbinloggningsuppgifterna för att kunna konfigurera Fast CDN-tjänster från administratören och skicka in Fast API-begäranden.
+Du behöver snabbinloggningsuppgifterna för att konfigurera Fast CDN-tjänster från Adobe Commerce Admin och för att skicka in Fast API-begäranden.
 
->[!NOTE]
->
->Med Adobe Commerce i molninfrastruktur har du inte tillgång till Snabbadministratör direkt. Använd administratören för att granska och uppdatera snabbkonfigurationen för dina miljöer. Om du inte kan lösa ett problem med hjälp av snabbfunktionerna i Admin skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket).
+## Snabb åtkomst till Admin Dashboard
+
+Med Adobe Commerce i molninfrastruktur kan du inte komma åt snabbadministratörsmodulen direkt.
+
+Du måste använda Adobe Commerce Admin för att granska och uppdatera snabbkonfigurationen för dina miljöer. Om du inte kan lösa ett problem med hjälp av snabbfunktionerna i Admin skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
+
+## Få inloggningsuppgifter snabbt
 
 Använd följande metoder för att hitta och spara snabb service-ID och API-token för din miljö:
 
@@ -136,7 +138,7 @@ När du har aktiverat modulen Snabbt överför du [VCL-standardkoden](https://gi
 
 ## Tillhandahåll SSL-/TLS-certifikat
 
-Adobe tillhandahåller ett domänvaliderat SSL-/TLS-certifikat (Let&#39;s Encrypt SSL/TLS) för säker HTTPS-trafik snabbt. Adobe tillhandahåller ett certifikat för varje Pro Production-, Staging- och Starter Production-miljö för att skydda alla domäner i den miljön. Mer information om det angivna certifikatet finns i [Adobe SSL-certifikat (TLS) för Adobe Commerce om molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=sv-SE).
+Adobe tillhandahåller ett domänvaliderat SSL-/TLS-certifikat (Let&#39;s Encrypt SSL/TLS) för säker HTTPS-trafik snabbt. Adobe tillhandahåller ett certifikat för varje Pro Production-, Staging- och Starter Production-miljö för att skydda alla domäner i den miljön. Mer information om det angivna certifikatet finns i [Adobe SSL-certifikat (TLS) för Adobe Commerce om molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html).
 
 >[!NOTE]
 >
@@ -240,7 +242,7 @@ Uppdatera din DNS-konfiguration om du vill dirigera trafik från dina webbutiks-
 
    >[!NOTE]
    >
-   >Som ett alternativ till molnbaserad CLI kan du uppdatera bas-URL:en från [administratören](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=sv-SE)
+   >Som ett alternativ till molnbaserad CLI kan du uppdatera bas-URL:en från [administratören](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html)
 
 1. Starta om webbläsaren.
 
@@ -315,4 +317,4 @@ När du har verifierat Snabba tjänster på mellanlagringsplatsen upprepar du up
 
 >[!TIP]
 >
-> Om du har problem med Snabba tjänster i dina Adobe Commerce-miljöer kan du läsa [Adobe Commerce Snabbt felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=sv-SE).
+> Om du har problem med Snabba tjänster i dina Adobe Commerce-miljöer kan du läsa [Adobe Commerce Snabbt felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html).
