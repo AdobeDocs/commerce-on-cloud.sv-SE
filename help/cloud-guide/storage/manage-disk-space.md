@@ -2,9 +2,10 @@
 title: Hantera diskutrymme
 description: Lär dig hur du hanterar diskutrymme med hjälp av kommandoradsgränssnittet.
 feature: Cloud, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
+source-git-commit: b8cabaad4b7805858563cecbe5ffc2fdb9aeac58
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -35,7 +36,7 @@ _&quot;Vår övervakning har upptäckt att fillagringen på ditt kluster (projek
 
 >[!TIP]
 >
->Vi rekommenderar att du regelbundet övervakar din lagringskapacitet och underhåller den väl under 90 % för att undvika dessa automatiska ökningar. Lagringsökningen för Pro-testning och -produktion kan inte återställas när den har tilldelats.
+>Adobe rekommenderar att du regelbundet övervakar din lagringskapacitet och underhåller den väl under 90 % för att undvika dessa automatiska ökningar. När lagringsutrymmet för Pro-testning och -produktion har tilldelats är det permanent och kan inte återställas.
 
 ## Kontrollera integreringsmiljön
 
@@ -131,7 +132,7 @@ Två [konfigurationsfiler](../environment/overview.md) styr tilldelningen av dis
 
 >[!IMPORTANT]
 >
->För Pro Production- och mellanlagringsmiljöer måste du [skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill ändra diskutrymme för allokering. En storleksökning av Pro Production- och Staging-miljöerna kan endast utföras med vissa intervall, så beroende på hur mycket diskutrymme du använder kan stödet rekommendera att du ökar diskutrymmet med minst 10 GB. Lagringsökningen för Pro-testning och -produktion kan inte återställas när den har tilldelats. Lagring kan inte omfördelas eller omfördelas mellan resurser. Minska diskutrymmet som tilldelats MySQL om du vill lägga till mer lagringsutrymme.
+>För Pro Production- och mellanlagringsmiljöer måste du [skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ändra diskutrymme för allokering. En storleksökning av Pro Production- och Staging-miljöerna kan endast utföras med vissa intervall, så beroende på hur mycket diskutrymme du använder kan stödet rekommendera att du ökar diskutrymmet med minst 10 GB. Lagringsökningen för Pro-testning och -produktion kan inte återställas när den har tilldelats. Lagring kan inte omfördelas eller omfördelas mellan resurser. Minska diskutrymmet som tilldelats MySQL om du vill lägga till mer lagringsutrymme.
 
 ### Programdiskutrymme
 
@@ -187,7 +188,7 @@ Filen `.magento/services.yaml` styr vilket diskutrymme som är tillgängligt fö
 
 ## Övervaka diskutrymme
 
-I Pro Production-miljöer kan du övervaka diskutrymme och andra prestandaindikatorer med hjälp av varningspolicyn för Adobe Commerce för New Relic. Mer information finns i [Övervaka prestanda med hanterade aviseringar](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Mer vägledning finns i [Bästa tillvägagångssätt för att lösa databasprestandaproblem](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=sv-SE).
+I Pro Production-miljöer kan du övervaka diskutrymme och andra prestandaindikatorer med hjälp av varningspolicyn för Adobe Commerce för New Relic. Mer information finns i [Övervaka prestanda med hanterade aviseringar](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Mer vägledning finns i [Bästa tillvägagångssätt för att lösa databasprestandaproblem](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html).
 
 ## Inget utrymme kvar
 
