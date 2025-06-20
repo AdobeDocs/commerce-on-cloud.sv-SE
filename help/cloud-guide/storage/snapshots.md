@@ -3,9 +3,9 @@ title: Hantering av säkerhetskopiering
 description: Lär dig hur du manuellt skapar och återställer en säkerhetskopia för ditt Adobe Commerce i molninfrastrukturprojekt.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 3efc5478428c4ede9e2106e1cbef8362c525ccd8
+source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,9 @@ Säkerhetskopierings-/ögonblicksbildsfunktionen **gäller inte** för Pro Stagi
 ## Skapa manuell säkerhetskopiering
 
 Du kan skapa en manuell säkerhetskopia av alla aktiva Starter-miljöer och integreringPro-miljöer från [!DNL Cloud Console] eller skapa en ögonblicksbild från molnet-CLI. Du måste ha en [administratörsroll](../project/user-access.md) för miljön.
+
+**Så här skapar du en databassäkerhetskopia av Pro-miljön**:
+Mer information om hur du skapar en databasdump av en Pro-miljö, inklusive mellanlagring och produktion, finns i artikeln [Skapa en databasdump](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) i kunskapsbasen.
 
 **Så här skapar du en säkerhetskopia av en startmiljö med[!DNL Cloud Console]**:
 
@@ -83,8 +86,6 @@ Du kan skapa en manuell säkerhetskopia av alla aktiva Starter-miljöer och inte
    +---------------------------+----------------------+------------+
    ```
 
-Mer information om hur du skapar en databasdump av en miljö, inklusive mellanlagring och produktion, finns i artikeln [Skapa en databasdump](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) i kunskapsbasen.
-
 ## Återställa en manuell säkerhetskopia
 
 Du måste ha [administratörsåtkomst](../project/user-access.md) till miljön. Du har upp till **sju dagar** att _återställa_ en manuell säkerhetskopia. Koden för den aktuella Git-grenen ändras inte när du återställer en säkerhetskopia. Återställning av en säkerhetskopia på det här sättet gäller inte testmiljöer och produktionsmiljöer i Pro. Se [Pro Backup &amp; Disaster Recovery](../architecture/pro-architecture.md#backup-and-disaster-recovery).
@@ -139,7 +140,7 @@ Du måste ha [administratörsåtkomst](../project/user-access.md) till miljön. 
 
 ## Återställ en ögonblicksbild av Disaster Recovery
 
-[Importera databasdumpen direkt från servern](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3) om du vill återställa ögonblicksbilden av Disaster Recovery i Pro-miljöer för förproduktion och produktion.
+[Importera databasdumpen direkt från servern](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3) om du vill återställa ögonblicksbilden av Disaster Recovery i Pro-miljöer för förproduktion och produktion.
 
 ## Återställningskod
 
