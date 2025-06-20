@@ -2,9 +2,10 @@
 title: Lägg till webbplatskarta och sökrobotar
 description: Lär dig hur du lägger till webbplatskartor och sökrobotar i Adobe Commerce i molninfrastruktur.
 feature: Cloud, Configuration, Search, Site Navigation
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
+source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ För detta krävs ECE-Tools version 2002.0.12 och senare med en uppdaterad `.mag
 
 >[!NOTE]
 >
->Om filen `<domain.your.project>/robots.txt` genererar en `404 error`, [skickar du en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att ta bort omdirigeringen från `/robots.txt` till `/media/robots.txt`.
+>Om filen `<domain.your.project>/robots.txt` genererar en `404 error`, [skickar du en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att ta bort omdirigeringen från `/robots.txt` till `/media/robots.txt`.
 
 ## Skriv om med snabbVCL-kodfragment
 
@@ -116,12 +117,19 @@ I administratörskonfigurationen för `sitemap` måste du ange filens plats med 
 
 ### Konfigurera indexering med sökmotor
 
-Om du vill aktivera `robots.txt` anpassningar i produktionen måste du aktivera alternativet **Indexering av sökmotorer är aktiverat för`<environment-name>`** i projektinställningarna.
+Om du vill aktivera `robots.txt` anpassningar i produktionen måste du aktivera alternativet **Indexering av sökmotorer är aktiverat för`<environment-name>`** i dina projektinställningar på molnkonsolen:
 
 ![Använd [!DNL Cloud Console] för att hantera miljöer](../../assets/robots-indexing-by-search-engine.png)
+
+Du kan även använda magento-cloud CLI för att uppdatera den här inställningen:
+
+```bash
+magento-cloud environment:info -p <project_id> -e production restrict_robots false
+```
 
 >[!NOTE]
 >
 >- Indexering med sökmotorer kan bara aktiveras i Produktion, men inte i någon av de lägre miljöerna.
 >
->- Om du använder PWA Studio och inte kan komma åt den konfigurerade `robots.txt`-filen lägger du till `robots.txt` i Tillåtelselista [Front Name](https://github.com/magento/magento2-upward-connector#front-name-allowlist) på **Stores** > Configuration > **General** > **Web** > UPWARD PWA Configuration.
+>- Om du använder PWA Studio och inte kan komma åt den konfigurerade `robots.txt`-filen lägger du till `robots.txt` i Tillåtelselista [Front Name](https://github.com/magento/magento2-upward-connector#front-name-allowlist) på **Store** > Configuration > **General** > **Web** > UPWARD PWA Configuration.
+
