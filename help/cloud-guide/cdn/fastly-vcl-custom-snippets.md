@@ -2,9 +2,10 @@
 title: Kom igång med anpassade VCL-kodfragment
 description: Lär dig mer om hur du använder kodfragment för varianskontrollspråk för att anpassa konfigurationen av snabbtjänsten för Adobe Commerce.
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
+source-git-commit: 71fb8f5b3f32553d8b247de44fea29b1bb945584
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2037'
 ht-degree: 0%
 
 ---
@@ -87,7 +88,7 @@ Följande tabell innehåller information om nyckeldata för anpassade VCL-fragme
 | `content` | Det VCL-kodfragment som ska köras. Det går inte att använda alla språkfunktioner för VCL snabbt. Dessutom har Fastly tillägg med anpassade funktioner. Mer information om vilka funktioner som stöds finns i [Snabbt VCL-programmeringsreferens](https://docs.fastly.com/vcl/reference/). |
 | `dynamic` | Dynamisk status för ett fragment. Returnerar `false` för [vanliga fragment](https://docs.fastly.com/en/guides/about-vcl-snippets) som ingår i den versionshanterade VCL-filen för snabbtjänstkonfigurationen. Returnerar `true` för ett [dynamiskt fragment](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/) som kan ändras och distribueras utan att en ny VCL-version krävs. |
 | `number` | VCL-versionsnummer där fragmentet ingår. *Redigerbar version #* används snabbt i sina exempelvärden. Om du lägger till anpassade kodfragment från API:t inkluderar du versionsnumret i API-begäran. Om du lägger till anpassad VCL från administratören tillhandahålls versionen åt dig. |
-| `priority` | Numeriskt värde från `1` till `100` som anger när den anpassade VCL-fragmentkoden körs. Fragment med lägre prioritetsvärden körs först. Om inget anges blir `priority`-värdet som standard `100`.<p>Alla anpassade VCL-kodfragment med prioritetsvärdet `5` körs omedelbart, vilket är bäst för VCL-kod som implementerar routning av begäranden (block, tillåtelselista och omdirigeringar). Prioriteten `100` är bäst för att åsidosätta VCL-standardkodfragment.<p>Alla [VCL-standardfragment](fastly-configuration.md#upload-vcl-snippets) som ingår i modulen Magento-Fast har `priority=50`.<ul><li>Tilldela en hög prioritet som `100` om du vill köra anpassad VCL-kod efter alla andra VCL-funktioner och åsidosätta standardkoden för VCL.</li></ul> |
+| `priority` | Numeriskt värde från `1` till `100` som anger när den anpassade VCL-fragmentkoden körs. Fragment med lägre prioritetsvärden körs först. Om inget anges blir `priority`-värdet som standard `100`.<p>Alla anpassade VCL-kodfragment med prioritetsvärdet `5` körs omedelbart, vilket är bäst för VCL-kod som implementerar routning av begäranden (block, tillåtelselista och omdirigeringar). Prioriteten `100` är bäst för att åsidosätta VCL-standardkodfragment.<p>Alla [VCL-standardfragment](fastly-configuration.md#upload-vcl-snippets) som ingår i modulen Magento-Snabbt har `priority=50`.<ul><li>Tilldela en hög prioritet som `100` om du vill köra anpassad VCL-kod efter alla andra VCL-funktioner och åsidosätta standardkoden för VCL.</li></ul> |
 | `service_id` | Snabbt service-ID för en viss staging- eller produktionsmiljö. Detta ID tilldelas när ditt projekt läggs till i Adobe Commerce i molninfrastrukturen [Snabbt tjänstkonto](fastly.md#fastly-service-account-and-credentials). |
 | `type` | Anger platsen för infogning av det genererade fragmentet, t.ex. `init` (ovan) och `recv` (inom underrutiner). Mer information finns i handboken [VCL-kodfragment](https://docs.fastly.com/api/config#api-section-snippet) snabbt. |
 
@@ -316,3 +317,16 @@ I dessa API-frågeexempel används exporterade miljövariabler för att tillhand
 - **Åsidosätt värden i den [standardmässiga VCL-koden](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   Skapa ett fragment med uppdaterade värden och tilldela prioriteten `100`.
+
+## Fragment som inte kan visas/ändras i Commerce Admin
+
+Du kan inte visa eller ändra vissa fragment direkt i Commerce Admin. Till exempel [dynamiska fragment](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets). I avsnittet Anpassade VCL-fragment visas inte fragment som har lagts till av molnsupportteamet direkt på [kontrollpanelen Snabbt hantering](fastly.md#fastly-service-account-and-credentials).
+
+
+**Om du vill observera de fragment som lagts till av molnsupportteamet:**
+
+1. Gå till avsnittet **Verktyg**.
+
+1. Klicka på **Visa alla versioner** bredvid _Versionshistorik_.
+
+1. Klicka på ögonikonen bredvid den tillämpliga VCL-versionen för att visa de befintliga fragmenten.
