@@ -30,7 +30,7 @@ Du kan skapa en manuell säkerhetskopia av alla aktiva Starter-miljöer och inte
 >
 >Du kan skapa en säkerhetskopia av koden direkt i Pro Production- och Staging-klustren genom att köra följande kommando i terminalen - justera den för de mappar/sökvägar som du vill inkludera/exkludera:
 >
-```bash
+>```bash
 >mkdir -p var/support
 >/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
 >```
