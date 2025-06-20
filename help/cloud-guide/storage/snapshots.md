@@ -27,7 +27,7 @@ Säkerhetskopierings-/ögonblicksbildsfunktionen **gäller inte** för Pro Stagi
 Du kan skapa en manuell säkerhetskopia av alla aktiva Starter-miljöer och integreringPro-miljöer från [!DNL Cloud Console] eller skapa en ögonblicksbild från molnet-CLI. Du måste ha en [administratörsroll](../project/user-access.md) för miljön.
 
 **Så här skapar du en databassäkerhetskopia av Pro-miljön**:
-Mer information om hur du skapar en databasdump av en Pro-miljö, inklusive mellanlagring och produktion, finns i artikeln [Skapa en databasdump](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) i kunskapsbasen.
+Mer information om hur du skapar en databasdump av en Pro-miljö, inklusive mellanlagring och produktion, finns i artikeln [Skapa en databasdump](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) i kunskapsbasen.
 
 **Så här skapar du en säkerhetskopia av en startmiljö med[!DNL Cloud Console]**:
 
@@ -140,7 +140,7 @@ Du måste ha [administratörsåtkomst](../project/user-access.md) till miljön. 
 
 ## Återställ en ögonblicksbild av Disaster Recovery
 
-[Importera databasdumpen direkt från servern](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3) om du vill återställa ögonblicksbilden av Disaster Recovery i Pro-miljöer för förproduktion och produktion.
+[Importera databasdumpen direkt från servern](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3) om du vill återställa ögonblicksbilden av Disaster Recovery i Pro-miljöer för förproduktion och produktion.
 
 ## Återställningskod
 
