@@ -2,18 +2,23 @@
 title: Driftsättning utan driftstopp
 description: Lär dig hur du minskar den totala driftstoppen när du distribuerar Adobe Commerce i molninfrastrukturprojekt.
 feature: Cloud, Deploy, SCD, Themes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
+source-git-commit: b831bc5bce0f76ec8972b3578c500508dd4d7d41
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # Driftsättning utan driftstopp
 
-Adobe Commerce i molninfrastrukturen kör programmet i [_underhållsläge_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=sv-SE#production-mode) under distributionsfasen, vilket gör att webbplatsen kopplas från tills distributionen är klar. Hur lång tid produktionsplatsen är i underhållsläge beror på platsens storlek, antalet ändringar som gjorts under distributionen och konfigurationen för statisk innehållsdistribution. Det går att konfigurera ditt projekt så att det distribueras med en **noll**-nedtidseffekt.
+Adobe Commerce i molninfrastrukturen kör programmet i [_underhållsläge_](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode) under distributionsfasen, vilket gör att webbplatsen kopplas från tills distributionen är klar. Hur lång tid produktionsplatsen är i underhållsläge beror på platsens storlek, antalet ändringar som gjorts under distributionen och konfigurationen för statisk innehållsdistribution. Det går att konfigurera ditt projekt så att det distribueras med en **noll**-nedtidseffekt.
 
 Under distributionsprocessen bevarar alla anslutningsköer i upp till 5 minuter alla aktiva sessioner och väntande åtgärder, som att lägga till i kundvagnen eller i kassan. Efter distributionen släpps kön och anslutningarna fortsätter utan avbrott. Om du vill använda det här _anslutningsundantaget_ till din fördel och minska distributionen till _noll_ driftavbrott, måste du konfigurera projektet så att det använder den mest effektiva distributionsstrategin.
+
+>[!NOTE]
+>
+>Använd [Smart Wizard](smart-wizards.md) för att kontrollera om ditt molnprojekt är optimalt konfigurerat för att minimera driftsättningsdriftavbrott. Smart Wizard kontrollerar din aktuella konfiguration och vägleder dig genom rekommenderade konfigurationsjusteringar för att aktivera bästa praxis för driftsättningar utan driftavbrott.
 
 Följ de här stegen för att minska den tid det tar för butiken att distribuera en uppdatering till produktionen:
 
@@ -25,7 +30,7 @@ Adobe Commerce i molninfrastrukturprojektet måste ha det senaste `ece-tools` -p
    >Även om det är en god vana att använda det senaste `ece-tools`-paketet fungerar distributionsmetoden utan driftstopp med `ece-tools` [ version 2002.0.13](../release-notes/cloud-release-archive.md#v2002013) och senare.
 
 1. [Konfigurera distribution av statiskt innehåll](static-content.md)
-Om statisk innehållsdistribution misslyckas i distributionsfasen fastnar platsen i underhållsläge. När ett fel inträffar under byggfasen undviker processen driftavbrott eftersom den aldrig påbörjar distributionsfasen. [Att generera statiskt innehåll under byggfasen med minifierad HTML](static-content.md#setting-the-scd-on-build), även kallat idealiskt läge, är den optimala konfigurationen för driftsättningar utan driftavbrott och _förhindrar_ driftavbrott om ett fel inträffar.
+Om statisk innehållsdistribution misslyckas i distributionsfasen fastnar platsen i underhållsläge. När ett fel inträffar under byggfasen undviker processen driftavbrott eftersom den aldrig påbörjar distributionsfasen. [Att generera statiskt innehåll under byggfasen med minifierad HTML](static-content.md#setting-the-scd-on-build), även kallat det idealiska läget, är den optimala konfigurationen för driftsättningar utan driftavbrott och _förhindrar_ driftavbrott om ett fel inträffar.
 
 1. [Konfigurera kroken efter distribution](../application/hooks-property.md)
 Du måste konfigurera kroken efter distributionen för att rensa och värma cachen. Som standard rensas cacheminnet under distributionsfasen när platsen är nere. Att flytta cacheminnet till fasen efter distributionen innebär att cacheminnet förblir levande tills distributionsfasen är klar och sedan kan du rensa cacheminnet på ett säkert sätt.
