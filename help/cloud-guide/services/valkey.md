@@ -3,9 +3,9 @@ title: Konfigurera Valkey-tjänsten
 description: Lär dig hur du konfigurerar och optimerar Valkey som en serverdelscachelösning för Adobe Commerce i molninfrastruktur.
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
-source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
+source-git-commit: cf2e659267445603b3f5eaf877f4eb7ac0c1b54c
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io) är en valfri serverdelscachelösning som ersätter `Zend Framework Zend_Cache_Backend_File`, som Adobe Commerce använder som standard.
 
-Se [Konfigurera Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=sv-SE){target="_blank"} i _Konfigurationsguiden_.
+Se [Konfigurera Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"} i _Konfigurationsguiden_.
 
 {{service-instruction}}
 
-**Aktivera Valkey**:
+**Om du vill ersätta Redis med Valkey uppdaterar du konfigurationen i följande tre filer**:
 
 1. Lägg till önskat namn och typ i filen `.magento/services.yaml`.
 
@@ -41,10 +41,19 @@ Se [Konfigurera Valkey](https://experienceleague.adobe.com/docs/commerce-operati
        valkey: "cache:valkey"
    ```
 
+1. Konfigurera `.magento.env.yaml` enligt följande:.
+
+   ```yaml
+    stage:
+        deploy:
+        VALKEY_USE_SLAVE_CONNECTION: true
+        VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+   ```
+
 1. Lägg till, implementera och push-överföra kodändringar.
 
    ```bash
-   git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
+   git add .magento/services.yaml .magento.app.yaml .magento.env.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
    ```
 
 1. [Verifiera tjänstrelationerna](services-yaml.md#service-relationships).
