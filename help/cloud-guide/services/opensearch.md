@@ -3,9 +3,9 @@ title: Konfigurera OpenSearch-tjänsten
 description: Lär dig hur du aktiverar OpenSearch-tjänsten för Adobe Commerce i molninfrastruktur.
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
+source-git-commit: 1f965749e59e3c48be2d8e04ac58683234e7b685
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Med OpenSearch kan du hämta data från alla källor, alla format och söka och 
        disk: 1024
    ```
 
-   För Pro-projekt måste du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna ändra OpenSearch-versionen i mellanlagrings- och produktionsmiljöer.
+   För Pro-projekt måste du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att kunna ändra OpenSearch-versionen i mellanlagrings- och produktionsmiljöer.
 
 1. Ange eller verifiera egenskapen `relationships` i filen `.magento.app.yaml`.
 
@@ -92,7 +92,7 @@ När du installerar eller uppgraderar din Adobe Commerce i ett molninfrastruktur
 
 - **Projektuppgradering**-Kontrollera att PHP-klienten för OpenSearch i den nya programversionen är kompatibel med OpenSearch-tjänstversionen som är installerad i molninfrastrukturen.
 
-Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har testats och distribuerats i molninfrastrukturen, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. En lista över vilka versioner som stöds finns i [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _installationshandboken_.
+Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har testats och distribuerats i molninfrastrukturen, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. En lista över vilka versioner som stöds finns i [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _installationshandboken_.
 
 **Så här verifierar du OpenSearch-programkompatibilitet**:
 
@@ -182,6 +182,11 @@ Om du behöver starta om tjänsten OpenSearch måste du kontakta Adobe Commerce 
 
 Du kan också lägga till plugin-program för OpenSearch genom att lägga till avsnittet `configuration:plugins` i OpenSearch-tjänsten i filen `.magento/services.yaml`. Följande kod aktiverar till exempel ICU-analys och plugin-program för fonetisk analys.
 
+>[!NOTE]
+>
+>Detta gäller endast för integrerings- och startmiljöer. [Skicka en supportförfrågan](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) om du vill installera plugin-programmen i ett Pro Staging- eller Production-kluster.
+
+
 ```yaml
 opensearch:
     type: opensearch:2
@@ -198,7 +203,12 @@ Mer information om plugin-program finns i [OpenSearch-projektet](https://github.
 
 Om du tar bort plugin-posterna från avsnittet `opensearch:` i filen `.magento/services.yaml` avinstalleras eller inaktiveras inte **tjänsten**. Om du vill inaktivera tjänsten helt måste du indexera om dina OpenSearch-data efter att du har tagit bort plugin-programmen från `.magento/services.yaml`-filen. Den här designen förhindrar att data som är beroende av dessa plugin-program går förlorade eller skadas.
 
+
 **Så här tar du bort OpenSearch-plugin-program**:
+
+>[!NOTE]
+>
+>Den här ändringen gäller endast för integrerings- och startmiljöer. Du måste [skicka en supportanmälan](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) för att ta bort plugin-programmet i ett Pro Staging- eller Production-kluster.
 
 1. Ta bort OpenSearch-pluginposterna från filen `.magento/services.yaml`.
 1. Lägg till, implementera och push-överföra kodändringar.
@@ -216,7 +226,7 @@ Om du tar bort plugin-posterna från avsnittet `opensearch:` i filen `.magento/s
    ```
 
 1. Genomför `.magento/services.yaml`-ändringarna i din molndatabas.
-1. Indexera om indexet för katalogsökning.
+1. Indexera om indexet för katalogsökning (alla miljöer: integrerings-, start-, Pro-mellanlagrings- och produktionskluster).
 
    ```bash
    bin/magento indexer:reindex catalogsearch_fulltext
