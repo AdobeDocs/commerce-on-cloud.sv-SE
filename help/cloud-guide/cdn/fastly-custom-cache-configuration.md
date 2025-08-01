@@ -3,9 +3,9 @@ title: Anpassa cachekonfigurationen
 description: Lär dig hur du granskar och anpassar inställningarna för cachekonfigurationen när tjänsten Snabbt har installerats.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
+source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1953'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Om du vill slutföra gruppåtgärder som tar längre tid än 3 minuter ändrar d
 
 1. Klicka på **Lagrar** > Inställningar > **Konfiguration** > **Avancerat** > **System** och expandera **Helsidescache**.
 
-1. Expandera **Avancerad konfiguration** i avsnittet _Snabbt konfigurering_.
+1. Expandera _Avancerad konfiguration_ i avsnittet **Snabbt konfigurering**.
 
 1. Ange tidsgränsen **för** Admin-sökvägen i sekunder. Värdet får inte vara längre än 10 minuter (600 sekunder).
 
@@ -71,7 +71,7 @@ Rensningsalternativen är:
 
 **Så här konfigurerar du alternativen för snabbtömning**:
 
-1. Expandera **Avancerad konfiguration** i avsnittet _Snabbt konfigurering_ för att visa rensningsalternativen.
+1. Expandera _Avancerad konfiguration_ i avsnittet **Snabbt konfigurering** för att visa rensningsalternativen.
 
 1. För varje rensningsalternativ väljer du **Ja** om du vill aktivera automatisk tömning eller **Nej** om du vill inaktivera automatisk tömning.
 
@@ -93,7 +93,7 @@ I modulen Snabbt finns GeoIP-hantering som automatiskt omdirigerar besökare ell
 
 1. Klicka på **Lagrar** > Inställningar > **Konfiguration** > **Avancerat** > **System** och expandera **Helsidescache**.
 
-1. Expandera **Avancerad konfiguration** i avsnittet _Snabbt konfigurering_.
+1. Expandera _Avancerad konfiguration_ i avsnittet **Snabbt konfigurering**.
 
 1. Bläddra nedåt och välj **Yes** för att **aktivera GeoIP**. Ytterligare konfigurationsalternativ visas.
 
@@ -161,13 +161,15 @@ Mer information finns i handboken [Backend-inställningar](https://github.com/fa
 
 ## Grundläggande autentisering
 
-Grundläggande autentisering är en funktion som skyddar alla sidor och resurser på din webbplats
-med användarnamn och lösenord. Vi **rekommenderar inte att** aktiverar grundläggande
-autentisering i produktionsmiljön. Du kan konfigurera det på Förproduktion
-för att skydda din webbplats under utvecklingsprocessen. Se [Grundläggande autentiseringshandbok](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) i dokumentationen för snabbkorrigeringsmodulen.
+Grundläggande autentisering är en funktion som skyddar alla sidor och resurser på din webbplats med ett användarnamn och lösenord.
 
-Om du lägger till användaråtkomst och aktiverar grundläggande autentisering på mellanlagring kan du fortfarande
-åtkomst till administratören utan att ytterligare autentiseringsuppgifter krävs.
+Adobe **rekommenderar inte** att du aktiverar grundläggande autentisering i din produktionsmiljö. Du kan konfigurera den på mellanlagring för att skydda din plats under utvecklingsprocessen. Se [Grundläggande autentiseringshandbok](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) i dokumentationen för snabbkorrigeringsmodulen.
+
+Om du lägger till användaråtkomst och aktiverar grundläggande autentisering på mellanlagring, kan du fortfarande komma åt administratören utan att ytterligare autentiseringsuppgifter krävs.
+
+>[!NOTE]
+>
+>Kontrollera **inte** [!UICONTROL Enable HTTP access control] i molnkonsolen för miljöer där Fastly är aktiverat (till exempel för förproduktionsmiljöer eller icke-aktiva produktionsmiljöer). Om åtkomstkontrollen är konfigurerad på det här sättet kan användare som tidigare haft åtkomst fortfarande komma åt webbplatsen om deras inloggningsuppgifter cachas av Fastly, även efter att åtkomsten har återkallats.
 
 ## Skapa anpassade VCL-fragment
 
@@ -185,7 +187,7 @@ För både Starter- och Pro-projekt kan du använda alternativet [!UICONTROL Dom
 
 - För Starter-projekt går du till Project URL på fliken [!UICONTROL Domains] i [!DNL Cloud Console] för att lägga till din projekt-URL.
 
-- För Pro-projekt skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att lägga till domänen i din molnprojektskonfiguration. Supportteamet uppdaterar även kontokonfigurationen för Adobe Commerce Fast för att lägga till domänen.
+- För Pro-projekt skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att lägga till domänen i din molnprojektskonfiguration. Supportteamet uppdaterar även kontokonfigurationen för Adobe Commerce Fast för att lägga till domänen.
 
 **Så här hanterar du snabb domänkonfiguration från administratören**:
 
@@ -193,7 +195,7 @@ För både Starter- och Pro-projekt kan du använda alternativet [!UICONTROL Dom
 
 1. Välj **Lagrar** > Inställningar > **Konfiguration** > **Avancerat** > **System** och expandera **Helsidescache**.
 
-1. Välj **Domäner** i avsnittet Admin _Snabbt konfiguration_.
+1. Välj _Domäner_ i avsnittet Admin **Snabbt konfiguration**.
 
 1. Klicka på **Hantera domäner** för att öppna sidan Domäner.
 
@@ -221,7 +223,7 @@ Använd alternativet _Underhållsläge_ om du vill tillåta administrativ åtkom
 
    ![Uppdatera IP-underhållsläge tillåtelselista](../../assets/cdn/fastly-maint-allowlist.png)
 
-1. Välj **Aktivera underhållsläge** i avsnittet _Underhållsläge_.
+1. Välj _Aktivera underhållsläge_ i avsnittet **Underhållsläge**.
 
    När du har aktiverat underhållsläge blockeras all trafik utom förfrågningar från IP-adresserna i `maint_allowlist` ACL. Du kan uppdatera `maint_allowlist` om du vill ändra IP-adresserna i åtkomstkontrollistan.
 
