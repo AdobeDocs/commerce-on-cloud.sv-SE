@@ -3,11 +3,11 @@ title: Cloud Docker-paket
 description: Se en lista över de senaste förbättringarna av Cloud Docker-paketet.
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-06-03T00:00:00Z
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '3729'
+source-wordcount: '3775'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,17 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v1.4.3 {#latest}
+## v1.4.4 {#latest}
+
+Releasedatum: 7 augusti 2025
+
+- ![korrigeringsikon](../../assets/fix.svg) **PHP 8.4**—Added PHP 8.4 tests.<!-- MCLOUD-13311 -->
+- ![korrigeringsikon](../../assets/fix.svg) **FTP-tillägg** - korrigering för FTP-tillägg har lagts till.<!-- MCLOUD-13843 -->
+- ![ny ikon](../../assets/new.svg) **OpenSearch3-bild** - Stöd för OpenSearch3 har lagts till.<!-- MCLOUD-13766 -->
+- ![ny ikon](../../assets/new.svg) **OpenSearch3-tester** - PHP 8.4-tester för OpenSearch3 har lagts till.<!-- MCLOUD-13768 -->
+- ![ny ikon](../../assets/new.svg) **Valkey** - Stöd för Valkey har lagts till.<!-- MCLOUD-13558 -->
+
+## v1.4.3
 
 Releasedatum: 3 juni 2025
 
@@ -163,7 +173,7 @@ Releasedatum: 20 april 2021
 - ![ny ikon](../../assets/new.svg) **Autogenererande NGINX-certifikat** - Befintliga certifikat har tagits bort från NGINX-bilden. NGINX-certifikaten genereras nu automatiskt med varje ny distribution för förbättrad säkerhet.<!--MCLOUD-7396-->
 - ![korrigeringsikon](../../assets/fix.svg) **Aktiverad`opcache.validate_timestamps`** - Aktiverade PHP-inställningen `opcache.validate_timestamps` som standard i utvecklarläge. Om du aktiverar den här inställningen åtgärdas problemet där ändringar i filsystemet inte kändes igen i Docker.<!--MCLOUD-7466-->
 - ![korrigeringsikon](../../assets/fix.svg) **Korrigerad`build:custom:compose`** - Korrigerade kommandot `build:custom:compose` så att ett fel uppstod när filer inte kunde skrivas över under byggprocessen. Ett fel förhindrar situationer där `docker-compose up` kan använda fel filer.<!--MCLOUD-7457-->
-- ![korrigeringsikon](../../assets/fix.svg) **Åtgärdat `--sync_engine="native"` alternativ** - Korrigerade problemet där `--sync_engine="native"` inte skulle skapa några poster för lokala mappar i `docker.composer.yml`-filen i produktionsläget (`--mode="production"`).<!--MCLOUD-7254-->
+- ![korrigeringsikon](../../assets/fix.svg) **Åtgärdat `--sync_engine="native"` alternativ** - Korrigerade problemet där `--mode="production"` inte skulle skapa några poster för lokala mappar i `--sync_engine="native"`-filen i produktionsläget (`docker.composer.yml`).<!--MCLOUD-7254-->
 - ![korrigeringsikon](../../assets/fix.svg) **Verifieringsfel för tjänstversion** - Tjänstversioner för [!DNL RabbitMQ], Elasticsearch och andra tjänster har lagts till i egenskapen `type` i variabeln `MAGENTO_CLOUD_RELATIONSHIP`. Genom att lägga till de här versionerna i variabeln `relationships` åtgärdas de valideringsfel som uppstod under distributionsfasen.<!--MCLOUD-7572-->
 
 ## v1.2.1

@@ -2,11 +2,11 @@
 title: Versionsinformation för ECE-verktyg
 description: Se en lista över de senaste förbättringarna av ECE-verktygspaketet.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-06-03T00:00:00Z
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '3185'
+source-wordcount: '3269'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Paketet [ece-tools](https://github.com/magento/ece-tools) är en uppsättning sk
 
 >[!NOTE]
 >
->Mer information om hur du uppdaterar till den senaste versionen av `ece-tools`-paketet finns i [Uppgradera ECE-verktyg](../dev-tools/update-package.md) .
+>Mer information om hur du uppdaterar till den senaste versionen av [-paketet finns i ](../dev-tools/update-package.md)Uppgradera ECE-verktyg`ece-tools` .
 
 Paketet `ece-tools` använder följande versionssekvens: `200<major>.<minor>.<patch>`
 
@@ -28,20 +28,34 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v2002.2.6 {#latest}
+## v2002.2.7 {#latest}
+
+Releasedatum: 7 augusti 2025
+
+- ![korrigeringsikon](../../assets/fix.svg) **PHP 8.4 korrigerar** - Typkompatibilitet tillagd.<!-- MCLOUD-13965 -->
+- ![korrigeringsikon](../../assets/fix.svg) **EOL-valideraren**-Uppdaterade EOL-tjänstdatum (End of Life).<!-- MCLOUD-13929 -->
+- ![ny ikon](../../assets/new.svg) **Valkey**-Added PHP 8.2 and PHP 8.3 function tests.<!-- MCLOUD-13610 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Validerare för färgvärden**-Åtgärdade ECE-verktygsvarningsmeddelandet.<!-- MCLOUD-13896 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Förbättringar av ECE-verktyg**-tillagda enhetstester.<!-- MCLOUD-13838 -->
+- ![ny ikon](../../assets/new.svg) **Validerare för tjänster**-Added new versions support of Opensearch, MariaDB and PHP.<!-- MCLOUD-13923 -->
+- ![ny ikon](../../assets/new.svg) **OpenSearch3** - Stöd för OpenSearch3 har lagts till.<!-- MCLOUD-13763 -->
+- ![fix-ikon](../../assets/fix.svg) **Öppningsstöd för 2.4.4-p7/p12**-Uppdaterat valideringsskriptet.<!-- MCLOUD-13945 -->
+- ![ny ikon](../../assets/new.svg) **Öppna sökning3-tester**-Tillagda funktionstester.<!-- MCLOUD-13769 -->
+
+## v2002.2.6
 
 Releasedatum: 3 juni 2025
 
-- ![fix-ikon](../../assets/fix.svg) **Förbättrad kompatibilitet med 2.4.8**-uppdaterade tredjepartsbibliotek för bättre kompatibilitet med 2.4.8<!-- MCLOUD-13707	 - -->
+- ![fix-ikon](../../assets/fix.svg) **Förbättrad kompatibilitet med 2.4.8**-uppdaterade tredjepartsbibliotek för bättre kompatibilitet med 2.4.8<!-- MCLOUD-13707 -->
 
 ## v2002.2.5
 
 Releasedatum: 27 maj 2025
 
-- ![ny ikon](../../assets/new.svg) **Utökad Valkey-kompatibilitet**-utökad Valkey-kompatibilitet i Adobe Commerce.<!-- MCLOUD-13595	 - -->
-- ![korrigeringsikon](../../assets/fix.svg) **Uppdaterad RabbitMQ-validerare**-Uppdaterad validerare för RabbitMQ.<!-- MCLOUD-13589	 - -->
-- ![korrigeringsikon](../../assets/fix.svg) **Uppdaterad MariaDB-validerare**-Uppdaterad ece-tools-validerare för MariaDB 10.11.<!-- MCLOUD-13593	 - -->
-- ![korrigeringsikon](../../assets/fix.svg) **Utökad OpenSearch2-kompatibilitet**-gjord OpenSearch2-kompatibel med de senaste 2.4.4-versionerna.<!-- MCLOUD-13710	 - -->
+- ![ny ikon](../../assets/new.svg) **Utökad Valkey-kompatibilitet**-utökad Valkey-kompatibilitet i Adobe Commerce.<!-- MCLOUD-13595 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Uppdaterad RabbitMQ-validerare**-Uppdaterad validerare för RabbitMQ.<!-- MCLOUD-13589 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Uppdaterad MariaDB-validerare**-Uppdaterad ece-tools-validerare för MariaDB 10.11.<!-- MCLOUD-13593 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Utökad OpenSearch2-kompatibilitet**-gjord OpenSearch2-kompatibel med de senaste 2.4.4-versionerna.<!-- MCLOUD-13710 -->
 
 ## v2002.2.4
 
@@ -53,8 +67,8 @@ Releasedatum: 24 april 2025
 
 Releasedatum: 9 april 2025
 
-- ![korrigeringsikon](../../assets/fix.svg) **Korrigera Valkey** Ett problem med anpassad nyckelkonfiguration har korrigerats.<!-- MCLOUD-13569	 - -->
-- ![korrigeringsikon](../../assets/fix.svg) **Korrigera validerare**-Fast validerare för RabbitMQ 4.0.<!-- MCLOUD-13560	 - -->
+- ![korrigeringsikon](../../assets/fix.svg) **Korrigera Valkey** Ett problem med anpassad nyckelkonfiguration har korrigerats.<!-- MCLOUD-13569 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Korrigera validerare**-Fast validerare för RabbitMQ 4.0.<!-- MCLOUD-13560 -->
 
 ## v2002.2.2
 
@@ -64,16 +78,15 @@ Releasedatum: 7 april 2025
 
 Releasedatum: 7 april 2025
 
-- ![ny ikon](../../assets/new.svg) **Valkey** - Stöd har lagts till för en ny tjänst (Valkey), som ersätter Redis.&lt;!— MCLOUD-13455 —>
-- ![korrigeringsikon](../../assets/fix.svg) **Öppna sökning2 för 2.4.4/2.4.5** - Stöd för `opensearch2` har lagts till i Adobe Commerce version 2.4.4/2.4.5. &lt;!— MCLOUD-13493 —>
+- ![ny ikon](../../assets/new.svg) **Valkey** - Stöd har lagts till för en ny tjänst (Valkey), som ersätter Redis.<!-- MCLOUD-13455 -->
+- ![korrigeringsikon](../../assets/fix.svg) **OpenSearch2 for 2.4.4/2.4.5**—Added support for `opensearch2` in Adobe Commerce versions 2.4.4/2.4.5.<!-- MCLOUD-13493 -->
 
 ## v2002.2.1
 
 Releasedatum: 6 februari 2024
 
-- ![ny ikon](../../assets/new.svg) **PHP 8.4** - Stöd för PHP 8.4 har lagts till.<!-- MCLOUD-13145     - -->
-- ![korrigeringsikon](../../assets/fix.svg) **Valideraren för OpenSearch**-Korrigerade valideraren som gav upphov till ett missvisande meddelande om fel tjänstversion.&lt;!— MCLOUD-13184 —>
-
+- ![ny ikon](../../assets/new.svg) **PHP 8.4** - Stöd för PHP 8.4 har lagts till.<!-- MCLOUD-13145 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Valideraren för OpenSearch**-Korrigerade valideraren som gav upphov till ett missvisande meddelande om fel version av tjänsten.<!-- MCLOUD-13184 -->
 
 ## v2002.2.0
 
@@ -231,7 +244,7 @@ Releasedatum: 1 februari 2021
 
 - ![korrigeringsikon](../../assets/fix.svg) **MariaDB 10.3-validering** - Verifieringen av MariaDB 10.3 för Adobe Commerce 2.3.6-p1 har korrigerats.<!--MCLOUD-7416-->
 
-- ![korrigeringsikon](../../assets/fix.svg) **Cache:flush-loggning** - Förbättrade loggposter som anger början och slut på `cache:flush`-steget.<!--MCLOUD-7503-->
+- ![korrigeringsikon](../../assets/fix.svg) **Cacheminne:flush loggning** - Förbättrade loggposter som anger början och slut på `cache:flush`-steget.<!--MCLOUD-7503-->
 
 ## v2002.1.4
 
