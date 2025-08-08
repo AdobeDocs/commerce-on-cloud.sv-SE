@@ -1,13 +1,13 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 69b764a03e6c272498e57645dca40d29c4e79626
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
 # ece-tools
 
-**Version**: 2002.2.5
+**Version**: 2002.2.7
 
 Referensen innehåller 34 kommandon som är tillgängliga via kommandoradsverktyget `ece-tools`.
 Den inledande listan genereras automatiskt med kommandot `ece-tools list` på Adobe Commerce i molninfrastrukturen.
@@ -25,9 +25,16 @@ Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen
 - Standard: `false`
 - Accepterar inte ett värde
 
-#### `--quiet`, `-q`
+#### `--silent`
 
 Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--quiet`, `-q`
+
+Endast fel visas. Alla andra utdata inaktiveras
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -56,7 +63,6 @@ Tvinga (eller inaktivera) ANSI-utdata
 
 Ignorera alternativet &quot;—ansi&quot;
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 #### `--no-interaction`, `-n`
@@ -401,7 +407,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 ece-tools backup:restore [-f|--force] [--file [FILE]]
 ```
 
-Återställ viktiga konfigurationsfiler. Kör säkerhetskopiering:lista för att visa listan med säkerhetskopierade filer.
+Återställ viktiga konfigurationsfiler. Kör säkerhetskopian :list för att visa listan med säkerhetskopieringsfiler.
 
 ### Alternativ
 
