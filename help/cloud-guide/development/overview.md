@@ -6,9 +6,9 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+source-git-commit: 1cf1f9097f9897591fe59a390b0e73921f2300fa
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,7 @@ Huvudpaketen i det här metapaketet är följande:
 - **vendor/magento/product-enterprise-edition** - Det här metapaketet kräver programkomponenter, bland annat moduler, ramverk, teman.
 - **vendor/fastly2/magento2** - Den här modulen hanterar snabbkorrigeringsnumret och tjänster för Pro Staging- och Production- och Starter Production-miljöerna. Se [Snabba tjänster](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2).
 - **vendor/magento/module-paypal-on-boarding** - Den här modulen erbjuder PayPal-betalningsgateway-utcheckning genom att ansluta till ditt PayPal-handelskonto. Se [PayPal On-Boarding-verktyget](../store/paypal.md).
+- **vendor/aem/rum** - Den här modulen hanterar datainsamlingsverktyget [Operational Telemetry](../monitor/operational-telemetry.md).
 
 >[!TIP]
 >
