@@ -3,9 +3,9 @@ title: Arbetsflöde för Pro-projekt
 description: Lär dig använda arbetsflödena för Pro-utveckling och -distribution.
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
+source-git-commit: 8aacac9ae721bc98cbe29e67ddf23d784e478e55
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,20 @@ Pro-projektet innehåller en enda Git-databas med en global `master`-gren och tr
 
 ![Proffsmiljölista](../../assets/pro-environments.png)
 
-De här miljöerna är `read-only`, och godkänner distribuerade kodändringar från grenar som skickats från den lokala arbetsytan. En fullständig översikt över Pro-miljöerna finns i [Pro-arkitekturen](pro-architecture.md) . Se [[!DNL Cloud Console]](../project/overview.md#cloud-console) för en översikt över Pro-miljölistan i projektvyn.
+De här miljöerna är `read-only`, och godkänner bara distribuerade kodändringar från grenar som skickats från den lokala arbetsytan.
 
 I följande bild visas arbetsflödet för Pro-utveckling och -distribution, som använder en enkel Git-förgrening. Du [utvecklar](#development-workflow)-kod med en aktiv gren baserad på `integration`-miljön, _push_- och _pull_-kodsändringar till och från din aktiva fjärrgren. Du distribuerar verifierad kod genom att _sammanfoga_ fjärrgrenen till basgrenen, vilket aktiverar en automatiserad [bygg- och distributionsprocess](#deployment-workflow) för den miljön.
 
 ![Högnivåvy av arbetsflödet för utveckling av Pro-arkitektur](../../assets/pro-dev-workflow.png)
+
+Eftersom miljön är skrivskyddad kan du inte göra några kodändringar direkt i molnmiljön. Om du försöker köra `composer install` för att installera några moduler visas ett fel, till exempel:
+
+```bash
+file_put_contents(...): Failed to open stream: Read-only file system  
+The disk hosting /app/<cluster_ID> is full
+```
+
+Mer information finns i [Pro-arkitektur](pro-architecture.md) för en översikt över Pro-miljöer, och i [[!DNL Cloud Console]](../project/overview.md#cloud-console) finns en översikt över Pro-miljölistan i projektvyn.
 
 ## Arbetsflöde för utveckling
 
