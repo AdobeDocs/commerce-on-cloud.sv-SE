@@ -3,7 +3,7 @@ title: Kom igång med anpassade VCL-kodfragment
 description: Lär dig mer om hur du använder kodfragment för varianskontrollspråk för att anpassa konfigurationen av snabbtjänsten för Adobe Commerce.
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: 71fb8f5b3f32553d8b247de44fea29b1bb945584
+source-git-commit: a51946f65ccd606cde6fbb4278f625a49ae42dad
 workflow-type: tm+mt
 source-wordcount: '2037'
 ht-degree: 0%
@@ -108,6 +108,20 @@ I följande exempel visas hur du skapar och hanterar anpassade VCL-kodfragment f
 - [Anpassad VCL för IP-tillåtelselista](fastly-vcl-allowlist.md)
 - [Anpassad VCL för IP-blockeringslista](fastly-vcl-blocking.md)
 - [Kringgå snabbcache](fastly-vcl-bypass-to-origin.md)
+
+## Fragment som inte kan visas/ändras i Commerce Admin
+
+Du kan inte visa eller ändra vissa fragment direkt i Commerce Admin. Till exempel [dynamiska fragment](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets). I avsnittet Anpassade VCL-fragment visas inte fragment som har lagts till av molnsupportteamet direkt på [kontrollpanelen Snabbt hantering](fastly.md#fastly-service-account-and-credentials).
+
+
+**Om du vill observera de fragment som lagts till av molnsupportteamet:**
+
+1. Gå till avsnittet **Verktyg**.
+
+1. Klicka på **Visa alla versioner** bredvid _Versionshistorik_.
+
+1. Klicka på ögonikonen bredvid den tillämpliga VCL-versionen för att visa de befintliga fragmenten.
+
 
 ## Hantera VCL med API
 
@@ -270,6 +284,7 @@ När du har lagt till ett anpassat VCL-fragment infogar snabbt fragmentet i den 
    curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_EDIT_VERSION/activate -X PUT
    ```
 
+
 ## API-snabbreferens för VCL-fragment
 
 I dessa API-frågeexempel används exporterade miljövariabler för att tillhandahålla autentiseringsuppgifter för att autentisera med Fast. Mer information om de här kommandona finns i [Snabb API-referens](https://docs.fastly.com/api/config#vcl).
@@ -317,16 +332,3 @@ I dessa API-frågeexempel används exporterade miljövariabler för att tillhand
 - **Åsidosätt värden i den [standardmässiga VCL-koden](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   Skapa ett fragment med uppdaterade värden och tilldela prioriteten `100`.
-
-## Fragment som inte kan visas/ändras i Commerce Admin
-
-Du kan inte visa eller ändra vissa fragment direkt i Commerce Admin. Till exempel [dynamiska fragment](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets). I avsnittet Anpassade VCL-fragment visas inte fragment som har lagts till av molnsupportteamet direkt på [kontrollpanelen Snabbt hantering](fastly.md#fastly-service-account-and-credentials).
-
-
-**Om du vill observera de fragment som lagts till av molnsupportteamet:**
-
-1. Gå till avsnittet **Verktyg**.
-
-1. Klicka på **Visa alla versioner** bredvid _Versionshistorik_.
-
-1. Klicka på ögonikonen bredvid den tillämpliga VCL-versionen för att visa de befintliga fragmenten.
