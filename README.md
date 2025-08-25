@@ -70,7 +70,7 @@ I allmänhet behöver de flesta skribenter bara lägga till en releaseversion ti
 >**OBS!**
 >
 >- För att generera mallinnehåll måste du arbeta på kommandoraden i en terminal.
->- Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version ](_jekyll/.ruby-version) för den version som krävs.
+>- Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version ] (_jekyll/.ruby-version) för den version som krävs.
 
 Här nedan finns en beskrivning av filstrukturen för mallat innehåll:
 
