@@ -2,7 +2,8 @@
 title: Anpassad VCL för att tillåta begäranden
 description: Filtrera inkommande förfrågningar och tillåt åtkomst via IP-adress för Adobe Commerce-webbplatser genom att använda en lista med Edge ACL och anpassade VCL-fragment.
 feature: Cloud, Configuration, Security
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '848'
 ht-degree: 0%
@@ -42,7 +43,7 @@ Edge ACL:er skapar IP-adresslistor för att hantera åtkomst till din webbplats.
 
    - Klicka på **Lägg till ACL**.
 
-   - Ange ett **ACL-namn**—`allowlist` på sidan *ACL-behållare*.
+   - Ange ett *ACL-namn*—**på sidan** ACL-behållare`allowlist`.
 
    - Välj **Aktivera efter ändringen** om du vill distribuera ändringarna till den version av snabbtjänstkonfigurationen som du redigerar.
 
@@ -74,11 +75,11 @@ Följande anpassade VCL-kodfragment (JSON-format) visar logiken för att filtrer
 }
 ```
 
-Innan du [skapar ett anpassat fragment](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=sv-SE#add-the-custom-vcl-snippet) från det här exemplet bör du kontrollera värdena för att avgöra om du behöver göra några ändringar. Ange sedan varje värde i respektive fält, till exempel `type`, i fältet Typ `content` i fältet Innehåll.
+Innan du [skapar ett anpassat fragment](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet) från det här exemplet bör du kontrollera värdena för att avgöra om du behöver göra några ändringar. Ange sedan varje värde i respektive fält, till exempel `type`, i fältet Typ `content` i fältet Innehåll.
 
 - `name` - VCL-fragmentets namn. I det här exemplet: `allowlist`.
 
-- `priority` - Avgör när VCL-fragmentet körs. Prioriteten är `5` för att omedelbart köra och kontrollera om en Admin-begäran kommer från en tillåten IP-adress. Utdraget körs före något av de Magento VCL-standardfragment (`magentomodule_*`) som tilldelats en prioritet på 50. Ange prioriteten för varje anpassat fragment som är högre eller lägre än 50, beroende på när du vill att fragmentet ska köras. Fragment med lägre prioritetsnummer körs först.
+- `priority` - Avgör när VCL-fragmentet körs. Prioriteten är `5` för att omedelbart köra och kontrollera om en Admin-begäran kommer från en tillåten IP-adress. Utdraget körs innan något av Magento VCL-standardfragmenten (`magentomodule_*`) har tilldelats en prioritet på 50. Ange prioriteten för varje anpassat fragment som är högre eller lägre än 50, beroende på när du vill att fragmentet ska köras. Fragment med lägre prioritetsnummer körs först.
 
 - `type` - Anger en plats där fragmentet ska infogas i den versionshanterade VCL-koden. Denna VCL är en `recv`-fragmenttyp som lägger till fragmentkoden i `vcl_recv`-underrutinen nedanför den förvalda snabbvariga VCL-koden och ovanför eventuella objekt.
 
@@ -90,7 +91,7 @@ I kodexemplet är villkoret `!req.http.Fastly-FF` viktigt när du använder [Ori
 
 När du har granskat och uppdaterat koden för din miljö använder du någon av följande metoder för att lägga till det anpassade VCL-fragmentet i din snabbtjänstkonfiguration:
 
-- [Lägg till det anpassade VCL-fragmentet från administratören](#add-the-custom-vcl-snippet). Den här metoden rekommenderas om du har åtkomst till Admin. (Kräver modulen [Snabbt CDN för Magento 2 version 1.2.58](fastly-configuration.md#upgrade) eller senare.)
+- [Lägg till det anpassade VCL-fragmentet från administratören](#add-the-custom-vcl-snippet). Den här metoden rekommenderas om du har åtkomst till Admin. (Kräver [snabb CDN-modul för Magento 2 version 1.2.58](fastly-configuration.md#upgrade) eller senare.)
 
 - Spara JSON-kodexemplet till en fil (till exempel `allowlist.json`) och [överför det med snabbprogrammeringsgränssnittet](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api). Använd den här metoden om du inte kan komma åt administratören.
 
@@ -129,3 +130,5 @@ Snabbt validerar den uppdaterade versionen av VCL-koden under överföringsproce
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

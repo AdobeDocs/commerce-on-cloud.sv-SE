@@ -2,7 +2,8 @@
 title: Blockera skräppost
 description: Blockera spam från din webbplats med hjälp av Fastly Edge-ordlistan och ett anpassat VCL-kodfragment.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 0%
@@ -79,7 +80,7 @@ Innan du skapar ett fragment baserat på det här exemplet ska du granska värde
 
 - `dynamic` - Värdet 0 anger att ett [vanligt fragment](https://docs.fastly.com/en/guides/using-regular-vcl-snippets) ska överföras till den versionshanterade VCL-listan för snabbkonfigurationen.
 
-- `priority` - Avgör när VCL-fragmentet körs. Prioriteten är `5` för att köra den här kodfragmentkoden innan något av de Magento VCL-standardfragment (`magentomodule_*`) har tilldelats en prioritet på 50. Ange prioriteten för varje anpassat fragment som är högre eller lägre än 50, beroende på när du vill att fragmentet ska köras. Fragment med lägre prioritetsnummer körs först.
+- `priority` - Avgör när VCL-fragmentet körs. Prioriteten är `5` för att köra kodfragmentkoden innan något av Magento VCL-standardfragmenten (`magentomodule_*`) har tilldelats en prioritet på 50. Ange prioriteten för varje anpassat fragment som är högre eller lägre än 50, beroende på när du vill att fragmentet ska köras. Fragment med lägre prioritetsnummer körs först.
 
 - `type` - Anger en plats där fragmentet ska infogas i VCL-versionen. I det här exemplet är VCL-fragmentet ett `recv`-fragment. När fragmentet infogas i VCL-versionen läggs det till i underrutinen `vcl_recv`, nedanför den förvalda VCL-koden Fast och ovanför eventuella objekt.
 
@@ -135,3 +136,5 @@ Validerar snabbt den uppdaterade VCL-versionen under överföringsprocessen. Om 
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

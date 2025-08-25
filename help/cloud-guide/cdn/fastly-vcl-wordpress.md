@@ -2,7 +2,8 @@
 title: Omdirigera begäranden till en CMS-serverdel
 description: Lär dig hur du dirigerar om inkommande begäranden från en Adobe Commerce-butik till en separat WordPress-webbplats med hjälp av modulen Snabb.
 feature: Cloud, Configuration, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ef024c68-395b-4d47-9362-a8404a93dbbe
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -45,6 +46,8 @@ Använd Edge-moduler snabbt för att skapa och överföra anpassad VCL-kod från
 
    - Konfigurera Edge-modulen _Annan CMS/backend-integrering_ för att hantera URL-omskrivningar från Adobe Commerce till WordPress-serverdelen.
 
-     Mer information finns i [Snabbt Edge-moduler - Annan CMS/Backend-integrering](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md) i _Snabbt CDN-modulen för Magento 2_ -dokumentationen.
+     Mer information finns i [Snabbt Edge-moduler - Annan CMS/Backend-integrering](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md) i dokumentationen för _Snabbt CDN-modulen för Magento 2_.
 
 1. När du har uppdaterat konfigurationen för tjänsten Snabb testar du Adobe Commerce Store för att kontrollera att de angivna URL-förfrågningarna för WordPress dirigeras om korrekt.
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

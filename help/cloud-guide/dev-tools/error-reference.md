@@ -4,7 +4,7 @@ description: Se en lista med felkoder och meddelanden som kan visas under Adobe 
 recommendations: noDisplay
 role: Developer
 exl-id: e240c268-b171-44e9-9fa4-f0e91b0d9899
-source-git-commit: 350cfea06f036f0787b330e6e40c5af46a30f5ad
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -33,3 +33,5 @@ Felmeddelanden kategoriseras efter en av distributionsfaserna: skapa, distribuer
 - **Typ**: Anger om felet är ett kritiskt fel eller en varning
 
 {{$include /help/_includes/automated/ece-tools-error-codes.md}}
+
+<!-- Last updated from includes: 2025-05-28 21:01:41 -->

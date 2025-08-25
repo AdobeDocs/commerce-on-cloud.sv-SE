@@ -2,7 +2,8 @@
 title: Anpassad VCL för blockeringsbegäranden
 description: Blockera inkommande begäranden via IP-adresser med hjälp av en ACL-lista (Edge Access Control List) med ett anpassat VCL-fragment.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # Anpassad VCL för blockeringsbegäranden
 
-Du kan använda modulen Fast CDN för Magento 2 för att skapa en Edge ACL med en lista över IP-adresser som du vill blockera. Sedan kan du använda den listan med ett VCL-fragment för att blockera inkommande begäranden. Koden kontrollerar IP-adressen för den inkommande begäran. Om den matchar en IP-adress som ingår i ACL-listan blockerar snabbbegäran från att få åtkomst till din plats och returnerar en `403 Forbidden error`. Alla andra IP-adresser för klienter har åtkomst.
+Du kan använda modulen Snabbt CDN för Magento 2 för att skapa en Edge ACL med en lista över IP-adresser som du vill blockera. Sedan kan du använda den listan med ett VCL-fragment för att blockera inkommande begäranden. Koden kontrollerar IP-adressen för den inkommande begäran. Om den matchar en IP-adress som ingår i ACL-listan blockerar snabbbegäran från att få åtkomst till din plats och returnerar en `403 Forbidden error`. Alla andra IP-adresser för klienter har åtkomst.
 
 **Förutsättningar:**
 
@@ -58,7 +59,7 @@ Innan du skapar ett fragment baserat på det här exemplet ska du granska värde
 
 - `name`: VCL-fragmentets namn. I det här exemplet använde vi namnet `blocklist`.
 
-- `priority`: Avgör när VCL-fragmentet körs. Prioriteten är `5` för att omedelbart köra och kontrollera om en administratörsbegäran kommer från en tillåten IP-adress. Utdraget körs före något av de Magento VCL-standardfragment (`magentomodule_*`) som tilldelats en prioritet på 50. Ange prioriteten för varje anpassat fragment som är högre eller lägre än 50, beroende på när du vill att fragmentet ska köras. Fragment med lägre prioritetsnummer körs först.
+- `priority`: Avgör när VCL-fragmentet körs. Prioriteten är `5` för att omedelbart köra och kontrollera om en administratörsbegäran kommer från en tillåten IP-adress. Utdraget körs innan något av Magento VCL-standardfragmenten (`magentomodule_*`) har tilldelats en prioritet på 50. Ange prioriteten för varje anpassat fragment som är högre eller lägre än 50, beroende på när du vill att fragmentet ska köras. Fragment med lägre prioritetsnummer körs först.
 
 - `type`: Anger den typ av VCL-fragment som bestämmer fragmentets plats i den genererade VCL-koden. I det här exemplet använder vi `recv`, som infogar VCL-koden i underrutinen `vcl_recv`, nedanför mallens VCL och ovanför eventuella objekt. I [Snabbt VCL-fragmentreferens](https://docs.fastly.com/api/config#api-section-snippet) finns en lista med fragmenttyper.
 
@@ -155,3 +156,5 @@ I det här exemplet används ISO 3166-1-landskoden med två tecken för det land
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

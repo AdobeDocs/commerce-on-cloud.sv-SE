@@ -2,7 +2,8 @@
 title: Anpassad VCL för att snabbt kringgå cache
 description: Felsök trafiken till den ursprungliga servern genom att skapa ett anpassat VCL-kodfragment som kringgår snabbcachen.
 feature: Cloud, Configuration, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4e19d6d4-b5a1-4623-b0be-804ddc81ff3d
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
@@ -86,3 +87,5 @@ Kontrollera sedan svaret på felsökningsproblem med det ocachelagrade innehåll
 <!--External link definitions-->
 
 [Snabb VCL-referens]: https://docs.fastly.com/vcl/
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->
