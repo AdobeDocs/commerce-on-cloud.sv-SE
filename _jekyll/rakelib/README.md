@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: f75dbbc9726ff21a648b1bb3d8f06cb45a5d6b08
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -11,13 +11,28 @@ Den här katalogen innehåller definitioner för streckaktiviteter ordnade efter
 
 ## Filorganisation
 
+### `adobe-docs-tasks.rake`
+
+Innehåller vanliga krav, delade funktioner och icke namngivna uppgifter för Adobe Commerce i Experience League dokumentationsarkivuppgifter:
+
+- `whatsnew` - Generera data för nyhetssammanfattning (standard: sedan senaste uppdateringen)
+- `render` - Återge mallade filer och underhåll inkluderar
+
 ### `includes.rake`
 
-Innehåller alla inkluderingsrelaterade streckåtgärder under namnutrymmet `:includes`:
+Innehåller hanteringsaktiviteter som är organiserade i namnområdet `:includes`:
 
-- `includes:maintain_relationships` - Identifiera och underhåll inkluderade relationer
+- `includes:maintain_relationships` - Identifiera och underhåll inkluderade relationer i markeringsfiler
 - `includes:maintain_timestamps` - Lägg till/uppdatera tidsstämplar baserat på inkluderingsfiländringar
 - `includes:maintain_all` - Kör båda åtgärderna i sekvens
+- `includes:unused` - Sök efter oanvända inkluderingsfiler
+
+### `images.rake`
+
+Innehåller bildhanteringsaktiviteter organiserade i namnområdet `:images`:
+
+- `images:optimize` - Optimera bilder i ändrade ej implementerade filer
+- `images:unused` - Sök efter oanvända bilder i projektet
 
 ## Så här fungerar det
 
