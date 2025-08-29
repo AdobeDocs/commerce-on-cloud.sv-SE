@@ -9,8 +9,8 @@ ht-degree: 1%
 
 Den här webbplatsen innehåller den senaste utvecklardokumentationen för Commerce om molninfrastruktur.
 
-- [Commerce on Cloud Infrastructure Guide](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- [Kom igång med Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) i molninfrastrukturen
+- [Commerce on Cloud Infrastructure Guide](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/overview)
+- [Kom igång med Commerce](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/start/overview) i molninfrastrukturen
 
 ## Adobe Open Source - uppförandekod
 
@@ -18,7 +18,7 @@ Det här projektet har antagit [Adobe Open Source Code of Conduct](code-of-condu
 
 ## Om dina bidrag till Adobe-innehåll
 
-Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
+Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/sv/docs/contributor/contributor-guide/introduction).
 
 Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
 
@@ -40,7 +40,7 @@ Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience 
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
 
-Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
+Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/sv/docs/contributor/contributor-guide/introduction).
 
 ## Så här använder du kod för att formatera ämnet
 
