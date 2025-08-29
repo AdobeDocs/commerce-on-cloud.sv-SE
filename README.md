@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '781'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 Den här webbplatsen innehåller den senaste utvecklardokumentationen för Commerce om molninfrastruktur.
 
-- [Commerce on Cloud Infrastructure Guide](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/overview)
-- [Kom igång med Commerce](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/start/overview) i molninfrastrukturen
+- [Commerce on Cloud Infrastructure Guide](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [Kom igång med Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) i molninfrastrukturen
 
 ## Adobe Open Source - uppförandekod
 
@@ -18,7 +18,7 @@ Det här projektet har antagit [Adobe Open Source Code of Conduct](code-of-condu
 
 ## Om dina bidrag till Adobe-innehåll
 
-Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/sv/docs/contributor/contributor-guide/introduction).
+Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
 
@@ -40,7 +40,7 @@ Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience 
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
 
-Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/sv/docs/contributor/contributor-guide/introduction).
+Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 ## Så här använder du kod för att formatera ämnet
 
@@ -70,7 +70,7 @@ I allmänhet behöver de flesta skribenter bara lägga till en releaseversion ti
 >**OBS!**
 >
 >- För att generera mallinnehåll måste du arbeta på kommandoraden i en terminal.
->- Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version ] (_jekyll/.ruby-version) för den version som krävs.
+>- Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version ](_jekyll/.ruby-version) för den version som krävs.
 
 Här nedan finns en beskrivning av filstrukturen för mallat innehåll:
 
@@ -131,3 +131,31 @@ Så här uppdaterar du mallinnehåll:
    ```
 
 Mer information om [datafiler](https://jekyllrb.com/docs/datafiles), [flytande filter](https://jekyllrb.com/docs/liquid/filters/) och andra funktioner finns i dokumentationen för Jekyll.
+
+## Förimplementera kopplingar för bildoptimering
+
+Den här databasen innehåller automatiska förimplementeringskopplingar som optimerar bilder innan implementering. **Alla medverkande bör aktivera dessa kopplingar** för att säkerställa konsekvent bildoptimering och minskad databasstorlek.
+
+### Snabbinställningar
+
+När du har klonat databasen kör du:
+
+```bash
+.githooks/setup-hooks.sh
+```
+
+### Vad krokarna gör
+
+- Identifiera automatiskt mellanlagrade bildfiler (PNG, JPG, JPEG, GIF, SVG)
+- Kör `image_optim` för att komprimera och optimera bilder
+- Scenoptimerade bilder på nytt automatiskt
+- Säkerställ att alla dedikerade bilder optimeras korrekt
+
+### Fördelar
+
+- Minskad databasstorlek
+- Snabbare sidinläsning för dokumentation
+- Enhetlig bildkvalitet för alla deltagare
+- Ingen manuell optimering krävs
+
+Detaljerade installationsanvisningar, felsökning och konfiguration finns i [`.githooks/README.md`](.githooks/README.md).
