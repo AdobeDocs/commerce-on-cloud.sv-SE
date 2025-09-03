@@ -2,7 +2,7 @@
 title: Commerce on Cloud Infrastructure
 description: Lär dig hur du bygger, distribuerar och hanterar Commerce i molninfrastrukturen.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: b3b020dd4a0f76c60be3eae1c93f97e82adcacab
+source-git-commit: 631f27ef653f88138a5257227ad15bec28fc6f0a
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 3%
@@ -23,7 +23,7 @@ Adobe Commerce i molninfrastruktur erbjuder en automatiserad värdplattform med 
 
 >[!NOTE]
 >
->Mer information om säkerhet finns i [checklistan för säkerhetsuppdatering](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Mer information om säkerhet finns i [checklistan för säkerhetsuppdatering](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Visa [Teknikstacken](architecture/tech-stack.md) i detalj eller läs mer om specifika funktioner och produkter som stöds i [Cloud-arkitekturen för Commerce](architecture/cloud-architecture.md).
 
@@ -60,6 +60,8 @@ I guiden för infrastruktur i molnet förutsätts det att du har en viss arbetsk
 
 - [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs/) (Adobe Developer webbplats) - Utveckla, anpassa, integrera, utöka och använda avancerade funktioner
 
-- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html?lang=sv-SE) (Adobe Experience League) - Planera, implementera, använda, uppgradera och underhålla dina [!DNL Commerce]-projekt
+- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) - Planera, implementera, använda, uppgradera och underhålla dina [!DNL Commerce]-projekt
 
 {{$include /help/_includes/templated/whats-new.md}}
+
+<!-- Last updated from includes: 2025-09-03 15:12:41 -->

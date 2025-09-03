@@ -1,5 +1,5 @@
 ---
-source-git-commit: b3b020dd4a0f76c60be3eae1c93f97e82adcacab
+source-git-commit: 631f27ef653f88138a5257227ad15bec28fc6f0a
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
@@ -23,12 +23,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> och <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">felmeddelanden</a> efter ECE-Tools-versionen, v2002.2.7.</p>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">felmeddelanden</a> efter ECE-Tools-versionen, v2002.2.7.</p>
 </td>
       <td>
         Teknisk
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8cf7b01cbd9fe32a89d83db5b4eac7638b834c49">bekräfta</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/8cf7b01cbd9fe32a89d83db5b4eac7638b834c49">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
@@ -45,12 +45,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Versionsinformation</a> har lagts till för molnkomponenter, Docker, korrigeringar och ECE-verktygspaketet.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Versionsinformation</a> har lagts till för molnkomponenter, Docker, korrigeringar och ECE-verktygspaketet.</p>
 </td>
       <td>
         Viktig uppdatering
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7aecdc89a2f4e0103cfe46ed1c2dc7b93566baf5">bekräfta</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/7aecdc89a2f4e0103cfe46ed1c2dc7b93566baf5">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
@@ -67,12 +67,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En anteckning om den obligatoriska 6-timmars nedkylningsperioden har lagts till efter <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">att diskutrymmet ökar</a> för projekt som finns på AWS.</p>
+      <td><p>En anteckning om den obligatoriska 6-timmars nedkylningsperioden har lagts till efter <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">att diskutrymmet ökar</a> för projekt som finns på AWS.</p>
 </td>
       <td>
         Teknisk
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a04d056377da4fec9a54503d959f90ebf605de41">bekräfta</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/a04d056377da4fec9a54503d959f90ebf605de41">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
@@ -89,12 +89,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Ytterligare information om <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">grundläggande autentisering</a> har lagts till i Snabb.</p>
+      <td><p>Ytterligare information om <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">grundläggande autentisering</a> har lagts till i Snabb.</p>
 </td>
       <td>
         Viktig uppdatering
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6d949fbbab631e633ba27641a48829d74856fcaa">bekräfta</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/6d949fbbab631e633ba27641a48829d74856fcaa">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
@@ -111,12 +111,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/service/valkey">konfigurationsinformation</a> för Valkey-tjänsten har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey">konfigurationsinformation</a> för Valkey-tjänsten har lagts till.</p>
 </td>
       <td>
         Teknisk
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/add0d4f3bd91b66fd1bd8f5306ff206076121871">bekräfta</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/add0d4f3bd91b66fd1bd8f5306ff206076121871">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
@@ -133,12 +133,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Uppgraderingsinstruktioner</a> har tagits bort för Commerce-versioner som inte längre stöds och som orsakade förvirring.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Uppgraderingsinstruktioner</a> har tagits bort för Commerce-versioner som inte längre stöds och som orsakade förvirring.</p>
 </td>
       <td>
         Större uppdatering, feedback
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7c0fcf520cd76f25d51f3a644a60132ac6028959">bekräfta</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/7c0fcf520cd76f25d51f3a644a60132ac6028959">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
