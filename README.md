@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5236f2718e5091dfc2fc140e15d4ac87a073d1d0
+source-git-commit: b151aac666510594751937e80dc3d9db4ede41b7
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '815'
 ht-degree: 1%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 1%
 
 Den här webbplatsen innehåller den senaste utvecklardokumentationen för Commerce om molninfrastruktur.
 
-- [Commerce on Cloud Infrastructure Guide](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/overview)
-- [Kom igång med Commerce](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/start/overview) i molninfrastrukturen
+- [Commerce on Cloud Infrastructure Guide](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [Kom igång med Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) i molninfrastrukturen
 
 ## Adobe Open Source - uppförandekod
 
@@ -18,7 +18,7 @@ Det här projektet har antagit [Adobe Open Source Code of Conduct](code-of-condu
 
 ## Om dina bidrag till Adobe-innehåll
 
-Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/sv/docs/contributor/contributor-guide/introduction).
+Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
 
@@ -40,7 +40,7 @@ Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience 
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
 
-Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/sv/docs/contributor/contributor-guide/introduction).
+Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 ## Så här använder du kod för att formatera ämnet
 
@@ -70,7 +70,7 @@ I allmänhet behöver de flesta skribenter bara lägga till en releaseversion ti
 >**OBS!**
 >
 >- För att generera mallinnehåll måste du arbeta på kommandoraden i en terminal.
->- Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version ] (_jekyll/.ruby-version) för den version som krävs.
+>- Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version ](_jekyll/.ruby-version) för den version som krävs.
 
 Här nedan finns en beskrivning av filstrukturen för mallat innehåll:
 
@@ -98,10 +98,10 @@ Så här uppdaterar du mallinnehåll:
 4. Generera mallinnehåll och skriv utdata till katalogen `help/_includes/templated`.
 
    ```bash
-   rake render
+   bundle exec rake render
    ```
 
-   >**OBS!** Du måste köra skriptet från katalogen `_jekyll`. Om detta är första gången du kör skriptet måste du installera Ruby-beroenden först med kommandot `bundle install`.
+   >**OBS!** Du måste köra skriptet från katalogen `_jekyll`. Om detta är första gången du kör skriptet måste du installera Ruby-beroenden först med kommandot `bundle install`. Rita-åtgärderna tillhandahålls av `adobe-comdox-exl-rake-tasks` Gem för bättre underhåll över Adobe Commerce dokumentationsarkiv.
 
 5. Gå tillbaka till katalogen `root`.
 
@@ -131,6 +131,15 @@ Så här uppdaterar du mallinnehåll:
    ```
 
 Mer information om [datafiler](https://jekyllrb.com/docs/datafiles), [flytande filter](https://jekyllrb.com/docs/liquid/filters/) och andra funktioner finns i dokumentationen för Jekyll.
+
+## Tillgängliga uppspelningsuppgifter
+
+I den här databasen används streckuppgifter som tillhandahålls av `adobe-comdox-exl-rake-tasks` Gem. Om du vill se alla tillgängliga uppgifter kör du:
+
+```bash
+cd _jekyll
+bundle exec rake --tasks
+```
 
 ## Förimplementera kopplingar för bildoptimering
 
