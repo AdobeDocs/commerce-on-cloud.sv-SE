@@ -19,12 +19,12 @@ Det här verktyget utökar funktionaliteten för [[!DNL Cloud Console]](../../ge
 >
 >Det här är ett lokalt verktyg och stöds bara på Unix-baserade operativsystem. Windows stöds inte. Det kan inte installeras i molnmiljön (som är skrivskyddad) med den metod som beskrivs på den här sidan. Du kan bara installera moduler i molnmiljön via något av följande **distributionsarbetsflöden**.
 >
->- [Arbetsflöde för Pro-distribution](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [Arbetsflöde för startdistribution](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [Arbetsflöde för Pro-distribution](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [Arbetsflöde för startdistribution](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **Så här installerar du `magento-cloud` CLI**:
 
-1. På din _lokala arbetsstation_ ändrar du till den katalog där du vill klona Cloud-projektet och där [filsystemägaren](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) har _write_ -åtkomst.
+1. På din _lokala arbetsstation_ ändrar du till den katalog där du vill klona Cloud-projektet och där [filsystemägaren](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=sv-SE) har _write_ -åtkomst.
 
 1. Installera CLI:n för `magento-cloud`.
 
@@ -137,7 +137,7 @@ Följande steg visar hur du använder kommandona CLI och Git för att hantera di
 
 1. Byt till din projektkatalog på din lokala arbetsstation.
 
-1. Växla till [filsystemets ägare](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html).
+1. Växla till [filsystemets ägare](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=sv-SE).
 
 1. Logga in på ditt projekt.
 
