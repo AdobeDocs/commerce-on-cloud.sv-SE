@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Tydligare operativsystem som stöds för <code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI-verktyget <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">installation</a>.</p>
+      <td><p>Tydligare operativsystem som stöds för <code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI-verktyget <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">installation</a>.</p>
 </td>
       <td>
         Feedback
@@ -45,7 +45,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Versionsinformation</a> har lagts till för Creative Cloud Patches-paketet v1.1.11.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Versionsinformation</a> har lagts till för Creative Cloud Patches-paketet v1.1.11.</p>
 </td>
       <td>
         Viktig uppdatering
@@ -67,7 +67,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">felmeddelanden</a> efter ECE-Tools-versionen, v2002.2.7.</p>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> och <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">felmeddelanden</a> efter ECE-Tools-versionen, v2002.2.7.</p>
 </td>
       <td>
         Teknisk
@@ -89,7 +89,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Versionsinformation</a> har lagts till för molnkomponenter, Docker, korrigeringar och ECE-verktygspaketet.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Versionsinformation</a> har lagts till för molnkomponenter, Docker, korrigeringar och ECE-verktygspaketet.</p>
 </td>
       <td>
         Viktig uppdatering
@@ -111,7 +111,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En anteckning om den obligatoriska 6-timmars nedkylningsperioden har lagts till efter <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">att diskutrymmet ökar</a> för projekt som finns på AWS.</p>
+      <td><p>En anteckning om den obligatoriska 6-timmars nedkylningsperioden har lagts till efter <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">att diskutrymmet ökar</a> för projekt som finns på AWS.</p>
 </td>
       <td>
         Teknisk
@@ -133,7 +133,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Ytterligare information om <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">grundläggande autentisering</a> har lagts till i Snabb.</p>
+      <td><p>Ytterligare information om <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">grundläggande autentisering</a> har lagts till i Snabb.</p>
 </td>
       <td>
         Viktig uppdatering
@@ -155,7 +155,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey">konfigurationsinformation</a> för Valkey-tjänsten har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/service/valkey">konfigurationsinformation</a> för Valkey-tjänsten har lagts till.</p>
 </td>
       <td>
         Teknisk
@@ -177,7 +177,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Uppgraderingsinstruktioner</a> har tagits bort för Commerce-versioner som inte längre stöds och som orsakade förvirring.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Uppgraderingsinstruktioner</a> har tagits bort för Commerce-versioner som inte längre stöds och som orsakade förvirring.</p>
 </td>
       <td>
         Större uppdatering, feedback
