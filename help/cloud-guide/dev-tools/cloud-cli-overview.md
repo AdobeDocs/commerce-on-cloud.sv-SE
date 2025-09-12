@@ -1,27 +1,30 @@
 ---
 title: Cloud CLI
 description: Läs mer om magento-cloud CLI och hur det hjälper er att hantera lokala utvecklingsmiljöer för Adobe Commerce i molninfrastrukturprojekt.
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 71a705f2-8672-4125-b539-b7b1621f2f64
+source-git-commit: 82d89f442792baec995dd0be40f2a49cba168f76
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
 
-
 # Cloud CLI
 
-Med CLI-verktyget `magento-cloud` kan utvecklare och systemadministratörer hantera molnprojekt och miljöer, utföra rutiner och köra automatiseringsåtgärder lokalt. CLI:n `magento-cloud` utökar funktionerna i [[!DNL Cloud Console]](../../get-started/cloud-console.md). När du har installerat CLI:n för `magento-cloud` på din lokala arbetsstation kan du använda den för att hantera din Adobe Commerce i integreringsmiljöer för Starter och Pro i molnet.
+CLI:n `magento-cloud` är ett kommandoradsverktyg som gör att utvecklare och systemadministratörer kan hantera Adobe Commerce i molninfrastrukturprojekt och miljöer från den lokala arbetsstationen.
+
+Det här verktyget utökar funktionaliteten för [[!DNL Cloud Console]](../../get-started/cloud-console.md) genom att tillhandahålla ytterligare automatiseringsfunktioner och direktåtkomst till projekthanteringsfunktioner. När du har installerat verktyget lokalt kan du använda det för att hantera både integreringsmiljöer för Starter och Pro.
 
 >[!NOTE]
 >
->Det här är ett lokalt verktyg och kan inte installeras i molnmiljön (som är skrivskyddad) med den här metoden. Du kan bara installera moduler i molnmiljön via **distributionsarbetsflödet**
->- [Arbetsflöde för Pro-distribution](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [Arbetsflöde för startdistribution](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>Det här är ett lokalt verktyg och stöds bara på Unix-baserade operativsystem. Windows stöds inte. Det kan inte installeras i molnmiljön (som är skrivskyddad) med den metod som beskrivs på den här sidan. Du kan bara installera moduler i molnmiljön via något av följande **distributionsarbetsflöden**.
+>
+>- [Arbetsflöde för Pro-distribution](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [Arbetsflöde för startdistribution](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **Så här installerar du `magento-cloud` CLI**:
 
-1. På din _lokala arbetsstation_ ändrar du till den katalog där du vill klona Cloud-projektet och där [filsystemägaren](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=sv-SE) har _write_ -åtkomst.
+1. På din _lokala arbetsstation_ ändrar du till den katalog där du vill klona Cloud-projektet och där [filsystemägaren](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) har _write_ -åtkomst.
 
 1. Installera CLI:n för `magento-cloud`.
 
@@ -134,7 +137,7 @@ Följande steg visar hur du använder kommandona CLI och Git för att hantera di
 
 1. Byt till din projektkatalog på din lokala arbetsstation.
 
-1. Växla till [filsystemets ägare](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=sv-SE).
+1. Växla till [filsystemets ägare](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html).
 
 1. Logga in på ditt projekt.
 
