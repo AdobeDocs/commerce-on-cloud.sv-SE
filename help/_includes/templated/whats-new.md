@@ -1,7 +1,7 @@
 ---
-source-git-commit: f985bfc32040919a992b82b56e2f1a58370b3834
+source-git-commit: 988b07b827c32c94a8cb2d30abb7e73fec71c4a0
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Tydligare operativsystem som stöds för <code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI-verktyget <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">installation</a>.</p>
+      <td><p>Tydligare operativsystem som stöds för <code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI-verktyget <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">installation</a>.</p>
 </td>
       <td>
         Feedback
@@ -45,7 +45,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Versionsinformation</a> har lagts till för Creative Cloud Patches-paketet v1.1.11.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Versionsinformation</a> har lagts till för Creative Cloud Patches-paketet v1.1.11.</p>
 </td>
       <td>
         Viktig uppdatering
@@ -67,7 +67,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> och <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">felmeddelanden</a> efter ECE-Tools-versionen, v2002.2.7.</p>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">felmeddelanden</a> efter ECE-Tools-versionen, v2002.2.7.</p>
 </td>
       <td>
         Teknisk
@@ -89,7 +89,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Versionsinformation</a> har lagts till för molnkomponenter, Docker, korrigeringar och ECE-verktygspaketet.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Versionsinformation</a> har lagts till för molnkomponenter, Docker, korrigeringar och ECE-verktygspaketet.</p>
 </td>
       <td>
         Viktig uppdatering
@@ -111,34 +111,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En anteckning om den obligatoriska 6-timmars nedkylningsperioden har lagts till efter <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">att diskutrymmet ökar</a> för projekt som finns på AWS.</p>
+      <td><p>En anteckning om den obligatoriska 6-timmars nedkylningsperioden har lagts till efter <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">att diskutrymmet ökar</a> för projekt som finns på AWS.</p>
 </td>
       <td>
         Teknisk
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/a04d056377da4fec9a54503d959f90ebf605de41">bekräfta</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 1 augusti 2025
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Ytterligare information om <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">grundläggande autentisering</a> har lagts till i Snabb.</p>
-</td>
-      <td>
-        Viktig uppdatering
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/6d949fbbab631e633ba27641a48829d74856fcaa">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
