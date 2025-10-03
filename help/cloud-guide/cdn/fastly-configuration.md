@@ -40,7 +40,7 @@ Du behöver snabbinloggningsuppgifterna för att konfigurera Fast CDN-tjänster 
 
 Med Adobe Commerce i molninfrastruktur kan du inte komma åt snabbadministratörsmodulen direkt.
 
-Använd Adobe Commerce Admin för att granska och uppdatera snabbkonfigurationen för dina miljöer. Om du inte kan lösa ett problem med hjälp av snabbfunktionerna i Admin skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html).
+Använd Adobe Commerce Admin för att granska och uppdatera snabbkonfigurationen för dina miljöer. Om du inte kan lösa ett problem med hjälp av snabbfunktionerna i Admin skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE).
 
 ## Få inloggningsuppgifter snabbt
 
@@ -76,7 +76,7 @@ I Cloud Starter-projekt kan du hämta inloggningsuppgifterna från molnkonsolen 
 
 - Om du inte hittar de snabba inloggningsuppgifterna för förproduktionsmiljö eller produktionsmiljö kontaktar du Adobe Customer Technical Advisor (CTA).
 
-- [Fel vid verifiering av snabbinloggningsuppgifterna](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution).
+- [Fel vid verifiering av snabbinloggningsuppgifterna](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution).
 
 ## Skydda dina autentiseringsuppgifter
 
@@ -156,7 +156,7 @@ När du har aktiverat modulen Snabbt överför du [VCL-standardkoden](https://gi
 
 ## Tillhandahåll SSL-/TLS-certifikat
 
-Adobe tillhandahåller ett domänvaliderat SSL-/TLS-certifikat (Let&#39;s Encrypt SSL/TLS) för säker HTTPS-trafik snabbt. Adobe tillhandahåller ett certifikat för varje Pro Production-, Staging- och Starter Production-miljö för att skydda alla domäner i den miljön. Mer information om det angivna certifikatet finns i [Adobe SSL-certifikat (TLS) för Adobe Commerce om molninfrastruktur](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq).
+Adobe tillhandahåller ett domänvaliderat SSL-/TLS-certifikat (Let&#39;s Encrypt SSL/TLS) för säker HTTPS-trafik snabbt. Adobe tillhandahåller ett certifikat för varje Pro Production-, Staging- och Starter Production-miljö för att skydda alla domäner i den miljön. Mer information om det angivna certifikatet finns i [Adobe SSL-certifikat (TLS) för Adobe Commerce om molninfrastruktur](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq).
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ Uppdatera din DNS-konfiguration om du vill dirigera trafik från dina webbutiks-
 
    >[!NOTE]
    >
-   >Som ett alternativ till molnbaserad CLI kan du uppdatera bas-URL:en från [administratören](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)
+   >Som ett alternativ till molnbaserad CLI kan du uppdatera bas-URL:en från [administratören](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-urls)
 
 1. Starta om webbläsaren.
 
@@ -337,4 +337,4 @@ När du har verifierat Snabba tjänster på mellanlagringsplatsen upprepar du up
 
 >[!TIP]
 >
-> Om du har problem med Snabba tjänster i dina Adobe Commerce-miljöer kan du läsa [Adobe Commerce Snabbt felsökning](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter).
+> Om du har problem med Snabba tjänster i dina Adobe Commerce-miljöer kan du läsa [Adobe Commerce Snabbt felsökning](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter).
