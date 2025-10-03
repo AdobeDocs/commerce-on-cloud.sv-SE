@@ -60,7 +60,7 @@ I Cloud Pro-projekt kontrollerar du autentiseringsuppgifterna från den IaaS-mon
 
 I Cloud Starter-projekt kan du hämta inloggningsuppgifterna från molnkonsolen eller via molnans CLI:
 
-- Kontrollera följande miljövariabler i [!DNL Cloud Console]miljökonfigurationen[ från ](../project/overview.md#configure-environment).
+- Kontrollera följande miljövariabler i [!DNL Cloud Console]miljökonfigurationen[&#x200B; från &#x200B;](../project/overview.md#configure-environment).
 
    - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
 
