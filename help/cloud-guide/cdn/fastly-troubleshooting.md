@@ -285,7 +285,7 @@ Om problemet kvarstår är det troligt att ett annat tillägg återställer dess
 
    - Aktivera ett tillägg i taget, spara konfigurationen och tömma Adobe Commerce-cachen.
 
-   - Kör [`curl`-kommandona ](#check-live-site-through-fastly) för att verifiera [svarsrubrikerna](#check-cache-hit-and-miss-response-headers).
+   - Kör [`curl`-kommandona &#x200B;](#check-live-site-through-fastly) för att verifiera [svarsrubrikerna](#check-cache-hit-and-miss-response-headers).
 
    Upprepa den här processen för varje tillägg. Om rubrikerna för snabbsvar inte längre visas har du identifierat det tillägg som orsakar problem med Snabbt.
 
