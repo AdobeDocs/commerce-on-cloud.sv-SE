@@ -37,7 +37,7 @@ Integreringen av PrivateLink-tjänsten för Adobe Commerce i molninfrastrukturpr
 - Adobe Commerce support omfattar inte felsökning av AWS PrivateLink-problem utöver den initiala aktiveringen.
 - Kunderna ansvarar för kostnaderna för att hantera sina egna VPC.
 - **Stöd för HTTPS-protokoll (port 443) per plattform:**
-   - **Azure Private Link**: Du kan inte använda HTTPS-protokollet (port 443) för att ansluta till Adobe Commerce i molninfrastrukturen på grund av [Insvepning med snabbt ursprung](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html).
+   - **Azure Private Link**: Du kan inte använda HTTPS-protokollet (port 443) för att ansluta till Adobe Commerce i molninfrastrukturen på grund av [Insvepning med snabbt ursprung](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=sv-SE).
    - **AWS PrivateLink**: HTTPS-protokollanslutningar (port 443) stöds.
 - PrivateDNS är inte tillgängligt.
 
@@ -205,7 +205,7 @@ Du kan använda Telnet-programmet för att testa anslutningen till VPC slutpunkt
 
 ## Ändra konfiguration för PrivateLink
 
-[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ändra en befintlig PrivateLink-konfiguration. Du kan till exempel begära ändringar enligt följande:
+[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill ändra en befintlig PrivateLink-konfiguration. Du kan till exempel begära ändringar enligt följande:
 
 - Ta bort PrivateLink-anslutningen från Adobe Commerce i molninfrastrukturen Pro Production eller Staging-miljön.
 - Ändra kundens Cloud-plattformskontonummer för åtkomst till Adobe slutpunktstjänst.
