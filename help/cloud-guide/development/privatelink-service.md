@@ -2,9 +2,10 @@
 title: PrivateLink-tjänst
 description: Lär dig hur du använder tjänsten PrivateLink för att upprätta en säker anslutning mellan en privat molnplattform och Adobe Commerce molnplattform i samma region.
 feature: Cloud, Iaas, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
+source-git-commit: 0e7f268de078bd9840358b66606a60b2a2225764
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -15,14 +16,14 @@ Adobe Commerce i molninfrastrukturen stöder integrering med tjänsten [AWS Priv
 
 >[!TIP]
 >
->PrivateLink används bäst för att skydda anslutningar för icke-HTTP(S)-integreringar, som databaser eller filöverföringar. Om du tänker integrera ditt program med Adobe Commerce API:er kan du läsa om hur du skapar ett [Adobe API-nät](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/) i _API-nät för Adobe Developer App Builder_.
+>PrivateLink används bäst för att skydda anslutningar för icke-HTTP(S)-integreringar, som databaser eller filöverföringar. Om du tänker integrera ditt program med Adobe Commerce API:er kan du läsa om hur du skapar ett [Adobe API Mesh](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/) i _API Mesh för Adobe Developer App Builder_.
 
 ## Funktioner och support
 
 Integreringen av PrivateLink-tjänsten för Adobe Commerce i molninfrastrukturprojekt innehåller följande funktioner och support:
 
 - En säker anslutning mellan ett kundens virtuella privata moln (VPC) och Adobe VPC på samma molnplattform (AWS eller Azure) inom samma molnregion.
-- Stöd för enkelriktad eller dubbelriktad kommunikation mellan slutpunktstjänster som finns på Adobe och kundens VPC:er.
+- Stöd för enkelriktad eller dubbelriktad kommunikation mellan slutpunktstjänster som finns på Adobe och våra VPC:er.
 - Tjänstaktivering:
 
    - Öppna nödvändiga portar i Adobe Commerce i molninfrastruktursmiljö
@@ -35,7 +36,9 @@ Integreringen av PrivateLink-tjänsten för Adobe Commerce i molninfrastrukturpr
 - Du kan inte upprätta SSH-anslutningar med PrivateLink. Se [Aktivera SSH-nycklar](secure-connections.md).
 - Adobe Commerce support omfattar inte felsökning av AWS PrivateLink-problem utöver den initiala aktiveringen.
 - Kunderna ansvarar för kostnaderna för att hantera sina egna VPC.
-- Du kan inte använda HTTPS-protokollet (port 443) för att ansluta till Adobe Commerce i molninfrastrukturen via Azure Private Link på grund av [snabb ursprungsinsvepning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=sv-SE). Denna begränsning gäller inte AWS PrivateLink.
+- **Stöd för HTTPS-protokoll (port 443) per plattform:**
+   - **Azure Private Link**: Du kan inte använda HTTPS-protokollet (port 443) för att ansluta till Adobe Commerce i molninfrastrukturen på grund av [Insvepning med snabbt ursprung](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html).
+   - **AWS PrivateLink**: HTTPS-protokollanslutningar (port 443) stöds.
 - PrivateDNS är inte tillgängligt.
 
 ## Anslutningstyper för PrivateLink
@@ -106,33 +109,33 @@ I följande arbetsflöde beskrivs aktiveringsprocessen för PrivateLink-integrer
 
 1. **Kunden** skickar en supportbiljett med en begäran om PrivateLink-aktivering med ämnesraden `PrivateLink support for <company>`. Inkludera de [data som krävs för aktivering](#prerequisites) i biljetten. Adobe använder supportbiljetten för att koordinera kommunikationen under aktiveringsprocessen.
 
-1. **Adobe** ger kundkontoupporten till slutpunktstjänsten i Adobe VPC.
+1. **Adobe** ger åtkomst till slutpunktstjänsten i Adobe VPC.
 
    - Uppdatera slutpunktstjänstkonfigurationen för Adobe för att acceptera begäranden som initierats från kundens AWS- eller Azure-konto.
    - Uppdatera supportbiljetten för att ange tjänstnamnet för den Adobe VPC-slutpunkt som ska anslutas till, till exempel `com.amazonaws.vpce.<cloud-region>.vpce-svc-<service-id>`.
 
-1. **Kunden** lägger till slutpunktstjänsten i Adobe i sitt molnkonto (AWS eller Azure), vilket utlöser en anslutningsbegäran till Adobe. Mer information finns i dokumentationen för molnplattformen:
+1. **Kunden** lägger till Adobe-slutpunktstjänsten i sitt molnkonto (AWS eller Azure), vilket utlöser en anslutningsbegäran till Adobe. Mer information finns i dokumentationen för molnplattformen:
 
    - Information om AWS finns i [Acceptera och ignorera anslutningsbegäranden för gränssnittets slutpunkt].
    - För Azure, se [Hantera anslutningsbegäranden].
 
 1. **Adobe** godkänner anslutningsbegäran.
 
-1. När anslutningsbegäran har godkänts verifierar **kunden** [anslutningen](#test-vpc-endpoint-service-connection) mellan VPC och Adobe VPC.
+1. **Kunden** [verifierar anslutningen](#test-vpc-endpoint-service-connection) mellan VPC och Adobe VPC när anslutningsbegäran har godkänts.Kunden verifierar anslutningen.
 
 1. Ytterligare steg för att aktivera dubbelriktade anslutningar:
 
    - **Adobe** förser Adobe-kontots huvudnamn (rotanvändare för AWS- eller Azure-konton) och begär åtkomst till kundens VPC slutpunktstjänst.
-   - **Kund** ger Adobe tillgång till slutpunktstjänsten i VPC. Detta förutsätter att kontots huvudnamn i Adobe har åtkomst till `arn:aws:iam::402592597372:root`, vilket tidigare har beskrivits i den **slutpunktstjänståtkomst som beviljats**.
+   - **Kunden** ger Adobe åtkomst till slutpunktstjänsten i VPC. Detta förutsätter att Adobe-kontots huvudnamn har åtkomst till `arn:aws:iam::402592597372:root`, vilket tidigare har beskrivits i den **slutpunktstjänståtkomst som beviljats**.
 
       - Uppdatera kundens slutpunktstjänstkonfiguration för att acceptera begäranden som initierats från Adobe-kontot. Mer information finns i dokumentationen för molnplattformen:
 
          - Mer information om AWS finns i [Lägga till och ta bort behörigheter för slutpunktstjänsten].
          - För Azure, se [Hantera en privat slutpunktsanslutning]
 
-      - Ange slutpunktstjänstens namn för VPC-kunden i Adobe.
+      - Ge Adobe slutpunktstjänstens namn för kunden VPC.
 
-   - **Adobe** lägger till kundslutpunktstjänsten på Adobe-plattformskontot (AWS eller Azure), vilket utlöser en anslutningsbegäran till kund-VPC.
+   - **Adobe** lägger till kundslutpunktstjänsten i Adobe-plattformskontot (AWS eller Azure), som utlöser en anslutningsbegäran till kund-VPC.
    - **Kunden** godkänner anslutningsbegäran från Adobe för att slutföra konfigurationen.
    - **Kunden** [verifierar anslutningen](#test-vpc-endpoint-service-connection) från Adobe VPC.
 
@@ -163,7 +166,7 @@ Du kan använda Telnet-programmet för att testa anslutningen till VPC slutpunkt
    Exempel på lyckat svar:
 
    ```
-   * Rebuilt URL to: telnet://vpce-007ffnb9qkcnjgult-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce.amazonaws.com:80
+   * Rebuilt URL to: telnet://vpce-007ffnb9qkcnjgult-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce. amazonaws.com:80
    * Connected to vpce-0088d56482571241d-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce. amazonaws.com (191.210.82.246) port 80 (#0)
    ```
 
@@ -202,10 +205,10 @@ Du kan använda Telnet-programmet för att testa anslutningen till VPC slutpunkt
 
 ## Ändra konfiguration för PrivateLink
 
-[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill ändra en befintlig PrivateLink-konfiguration. Du kan till exempel begära ändringar enligt följande:
+[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ändra en befintlig PrivateLink-konfiguration. Du kan till exempel begära ändringar enligt följande:
 
 - Ta bort PrivateLink-anslutningen från Adobe Commerce i molninfrastrukturen Pro Production eller Staging-miljön.
-- Ändra kundens Cloud-plattformskontonummer för åtkomst till slutpunktstjänsten i Adobe.
+- Ändra kundens Cloud-plattformskontonummer för åtkomst till Adobe slutpunktstjänst.
 - Lägg till eller ta bort PrivateLink-anslutningar från Adobe VPC till andra slutpunktstjänster som är tillgängliga i VPC-kundens miljö.
 
 ## Konfigurera för dubbelriktade PrivateLink-anslutningar
@@ -214,7 +217,7 @@ Kunden VPC måste ha tillgång till följande resurser för att stödja dubbelri
 
 - En NLB (Network Load Balancer)
 - En slutpunktstjänstkonfiguration som ger åtkomst till ett program eller en tjänst från kunden VPC
-- En [gränssnittsslutpunkt] (AWS) eller [privat slutpunkt] (Azure) som gör det möjligt för Adobe att ansluta till slutpunktstjänster på din VPC
+- En [gränssnittsslutpunkt] (AWS) eller [privat slutpunkt] (Azure) som gör att Adobe kan ansluta till slutpunktstjänster på din VPC
 
 Om dessa resurser inte är tillgängliga i kundens VPC måste du logga in på ditt molnplattformskonto för att lägga till konfigurationen.
 
