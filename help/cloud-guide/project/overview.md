@@ -2,9 +2,10 @@
 title: Molninfrastrukturprojekt
 description: Läs en översikt om Adobe Commerce i molninfrastrukturen [!DNL Cloud Console]  och lär dig hur du får åtkomst till kontoinställningarna.
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8eed04c7-6469-45a4-aa89-dc594c977264
+source-git-commit: 00b1b6578c226a304697963d17ba349ea17da260
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ I projektöversikten visas en sammanfattning av projektinformationen i förhands
 
 Och i huvudprojektöversikten:
 
-- Miljövyn visar en lista eller trädvy över ![aktiva grenar](../../assets/icon-active.png){width="32"} (active) and ![inactive branch](../../assets/icon-inactive.png){width="32"} (inaktiva) miljöer.
+- Miljövyn visar en lista eller trädvy över ![aktiv gren](../../assets/icon-active.png){width="32"} (aktiv) och ![inaktiv gren](../../assets/icon-inactive.png){width="32"} (inaktiv).
 - [Aktivitetsströmmen](activity-stream.md) visar pågående, väntande och senaste aktiviteter för projektet.
 <!-- - Apps & Services—Shows a topology of service containers -->
 
@@ -140,7 +141,7 @@ Klicka på **[!UICONTROL Environments]** och välj en specifik miljö i listan f
 
 >[!WARNING]
 >
->**Använd INTE** HTTP-åtkomstkontrollsmetoden för att skydda Pro Staging- och Production-miljöer. Det här avbryter cachelagring. Använd i stället funktionen [Blockera](../cdn/fastly-vcl-blocking.md) som finns i snabbnätverket för CDN för Adobe Commerce.
+>**Använd INTE** HTTP-åtkomstkontrollsmetoden för att skydda Pro Staging- och Production-miljöer. Det här avbryter cachelagring. Använd i stället funktionen [Blockera](../cdn/fastly-vcl-blocking.md) som finns i snabbnätverket för CDN för Adobe Commerce för att blockera åtkomst, eller implementera åtkomstkontroll med [Snabbt grundläggande autentisering](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md).
 
 ## Snabbt och New Relic
 
