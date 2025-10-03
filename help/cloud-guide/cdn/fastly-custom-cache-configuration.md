@@ -3,9 +3,9 @@ title: Anpassa cachekonfigurationen
 description: Lär dig hur du granskar och anpassar inställningarna för cachekonfigurationen när tjänsten Snabbt har installerats.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
+source-git-commit: a2f5e2f67c7739302a87eaa27df25a62fca1acb7
 workflow-type: tm+mt
-source-wordcount: '1953'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,11 @@ ht-degree: 0%
 
 Granska och anpassa inställningarna för cachekonfigurationen när du har konfigurerat och testat tjänsten Snabbt i dina miljö för staging och produktion. Du kan till exempel uppdatera inställningarna för att göra det möjligt för TLS att omdirigera HTTP-begäranden till Fast, uppdatera rensningsinställningar och aktivera grundläggande autentisering för att lösenordsskydda webbplatsen under utvecklingen.
 
-I följande avsnitt finns en översikt och instruktioner för hur du konfigurerar vissa cacheinställningar. Mer information om tillgängliga konfigurationsalternativ finns i dokumentationen för [Snabbt CDN-modul för Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation).
+I följande avsnitt finns en översikt och instruktioner för hur du konfigurerar vissa cacheinställningar.
+
+>[!IMPORTANT]
+>
+>Vilka administratörsalternativ som är tillgängliga för att konfigurera snabbcacheminnet beror på vilken version av Snabbt CDN-modulen för Magento 2 som är installerad. Adobe rekommenderar att du [uppgraderar modulen Snabbt](fastly-configuration.md#upgrade) i mellanlagrings- och produktionsmiljöerna till den senaste versionen. Den senaste informationen finns i [Versionsinformation för snabbuppdateringsnumret för Magento2-modulen](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md).
 
 ## Tvinga TLS
 
@@ -187,7 +191,7 @@ För både Starter- och Pro-projekt kan du använda alternativet [!UICONTROL Dom
 
 - För Starter-projekt går du till Project URL på fliken [!UICONTROL Domains] i [!DNL Cloud Console] för att lägga till din projekt-URL.
 
-- För Pro-projekt skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att lägga till domänen i din molnprojektskonfiguration. Supportteamet uppdaterar även kontokonfigurationen för Adobe Commerce Fast för att lägga till domänen.
+- För Pro-projekt skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att lägga till domänen i din molnprojektskonfiguration. Supportteamet uppdaterar även kontokonfigurationen för Adobe Commerce Fast för att lägga till domänen.
 
 **Så här hanterar du snabb domänkonfiguration från administratören**:
 

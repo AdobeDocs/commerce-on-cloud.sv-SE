@@ -2,7 +2,8 @@
 title: Snabbt felsökning
 description: Lär dig hur du felsöker och hanterar snabbuppdateringsmodulen och tjänsterna för Adobe Commerce.
 feature: Cloud, Configuration, Cache, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 69954ef9-9ece-411e-934e-814a56542290
+source-git-commit: f496a4a96936558e6808b3ce74eac32dfdb9db19
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # Snabbt felsökning
 
-Använd följande information för att felsöka och hantera snabbuppdateringsmodulen för CDN för Magento 2 i dina Adobe Commerce i miljöer med molninfrastrukturprojekt. Du kan till exempel undersöka svarshuvudets värden och cachningsbeteendet för att lösa problem med snabb service och prestanda.
+Använd följande information för att felsöka och hantera snabbuppdateringsmodulen för Magento 2 i dina Adobe Commerce i miljöer med molninfrastrukturprojekt. Du kan till exempel undersöka svarshuvudets värden och cachningsbeteendet för att lösa problem med snabb service och prestanda.
 
 I Pro Production- och Staging-miljöer kan du använda [New Relic-loggar](../monitor/log-management.md) för att visa och analysera snabbdata för CDN och WAF-loggdata för att felsöka fel och prestandaproblem.
 
@@ -39,11 +40,11 @@ Använd följande lista för att identifiera och felsöka problem som rör Snabb
 
 - **Butiksmenyn visas inte och fungerar inte**. Du kanske använder en länk eller en tillfällig länk direkt till den ursprungliga servern i stället för att använda den aktiva webbplatsens URL, eller så använde du `-H "host:URL"` i ett [cURL-kommando](#check-live-site-through-fastly). Om du snabbt kringgår den ursprungliga servern fungerar inte huvudmenyn och felaktiga rubriker visas som tillåter cachelagring på webbläsarsidan.
 
-- **Övre navigering fungerar inte**. Den översta navigeringen är beroende av ESI-bearbetning (Edge Side Includes), som aktiveras när du överför de förvalda VCL-kodfragmenten för Magento fast. Om navigeringen inte fungerar kan du [överföra snabbVCL](fastly-configuration.md#upload-vcl-to-fastly) och kontrollera webbplatsen igen.
+- **Övre navigering fungerar inte**. Den översta navigeringen är beroende av ESI-bearbetning (Edge Side Includes), som aktiveras när du överför Magento standardfragment för snabb VCL. Om navigeringen inte fungerar kan du [överföra snabbVCL](fastly-configuration.md#upload-vcl-to-fastly) och kontrollera webbplatsen igen.
 
-- **Geo-location/GeoIP fungerar inte**. Standardvärdet för VCL-kodfragment för Magento snabbt lägger till landskoden i URL:en. Om landskoden inte fungerar kan du [överföra snabbVCL](fastly-configuration.md#upload-vcl-to-fastly) och kontrollera webbplatsen igen.
+- **Geo-location/GeoIP fungerar inte** - Standardkodfragmentet för Magento Fast VCL lägger till landskoden i URL:en. Om landskoden inte fungerar kan du [överföra snabbVCL](fastly-configuration.md#upload-vcl-to-fastly) och kontrollera webbplatsen igen.
 
-- **Sidor cachelagras inte**. Som standard cachelagras inte sidor med sidhuvudet `Set-Cookies`. Adobe Commerce ställer in cookies även på cachebara sidor (TTL > 0). Med standardinställningen Magento-VCL raderas dessa cookies på cacheable-sidor. Om sidorna inte cachelagras kan du [överföra snabbVCL](fastly-configuration.md#upload-vcl-to-fastly) och kontrollera webbplatsen igen.
+- **Sidor cachelagras inte**. Som standard cachelagras inte sidor med sidhuvudet `Set-Cookies`. Adobe Commerce ställer in cookies även på cachebara sidor (TTL > 0). Standardvärdet för Magento Fast VCL är att de cookies som finns på cacheable-sidor rensas. Om sidorna inte cachelagras kan du [överföra snabbVCL](fastly-configuration.md#upload-vcl-to-fastly) och kontrollera webbplatsen igen.
 
   Detta kan även inträffa om ett sidblock i en mall markeras som oåtkomligt. I så fall beror problemet troligen på att en modul från tredje part eller ett tillägg blockerar eller tar bort Adobe Commerce-huvuden. Information om hur du löser problemet finns i [X-Cache innehåller endast MISS, inget HIT](#x-cache-contains-only-miss-no-hit).
 
@@ -153,7 +154,7 @@ API-begäranden skickas snabbt via tillägget Fast för att få svar från era u
 1. Verifiera [headers](#check-cache-hit-and-miss-response-headers) i svaret för att kontrollera att Fastly fungerar. Du bör se följande unika rubriker i svaret:
 
    ```http
-   < Fastly-Magento-VCL-Uploaded: yes
+   < Fastly-Magento-VCL-Uploaded: 1.2.222
    < X-Cache: HIT, MISS
    ```
 
@@ -278,7 +279,7 @@ Om problemet kvarstår är det troligt att ett annat tillägg återställer dess
 
 1. Klicka på **System** > **Verktyg** > **Cachehantering**.
 
-1. Klicka på **Rensa cachen i Magento**.
+1. Klicka på **Rensa Magento-cache**.
 
 1. Utför följande steg för varje tillägg som kan orsaka problem med snabbrubriker:
 
