@@ -3,20 +3,20 @@ title: Uppgradera Commerce
 description: Lär dig hur du uppgraderar Adobe Commerce-versionen i molninfrastrukturen.
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
-source-git-commit: 7f9aac358effdf200b59678098e6a1635612301b
+source-git-commit: fe1da39c1d00d74d3f116423e06d11cefd3c2659
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # Uppgradera Commerce
 
-Du kan uppgradera Adobe Commerce kodbas till en nyare version. Innan du uppgraderar miljön bör du läsa [Systemkraven](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _installationshandboken_ för att få information om de senaste versionskraven för programvaran.
+Du kan uppgradera Adobe Commerce kodbas till en nyare version. Innan du uppgraderar miljön bör du läsa [Systemkraven](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _installationshandboken_ för att få information om de senaste versionskraven för programvaran.
 
 Beroende på miljötyp (utveckling, mellanlagring eller produktion) kan din uppgradering innehålla följande:
 
-- Uppdatera filen `.magento/services.yaml` med nya versioner för MariaDB (MySQL), OpenSearch, RabbitMQ och Redis för kompatibilitet med nya Adobe Commerce-versioner.
+- Uppdatera filen `.magento/services.yaml` med nya versioner för MariaDB (MySQL), OpenSearch, RabbitMQ och Redis för kompatibilitet med nya Adobe Commerce-versioner. För Pro-projekt måste du skicka in en Adobe Commerce Support-biljett för att installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer.
 - Uppdatera filen `.magento.app.yaml` med nya inställningar för kopplingar och miljövariabler.
 - Uppgradera tillägg från tredje part till den senaste version som stöds.
 
@@ -128,7 +128,7 @@ Granska informationen om [tjänstversionerna](../services/services-yaml.md#servi
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. Om du använder B2B ska du uppdatera din `composer.json`-fil med den [version](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/product-availability#adobe-authored-extensions) som stöds för Commerce.
+1. Om du använder B2B ska du uppdatera din `composer.json`-fil med den [version](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions) som stöds för Commerce.
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -142,15 +142,15 @@ Granska informationen om [tjänstversionerna](../services/services-yaml.md#servi
 
 1. Granska de korrigeringar som används för närvarande:
 
-   - Om det finns korrigeringsfiler installerade i katalogen `m2-hotfixes` [skickar du en Adobe Commerce Support-anmälan](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) och arbetar med Adobe Commerce Support för att kontrollera vilka korrigeringsfiler som fortfarande kan användas i den nya versionen. Ta bort den eller de icke tillämpliga korrigeringarna från katalogen `m2-hotfixes`.
+   - Om det finns korrigeringsfiler installerade i katalogen `m2-hotfixes` [skickar du en Adobe Commerce Support-anmälan](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) och arbetar med Adobe Commerce Support för att kontrollera vilka korrigeringsfiler som fortfarande kan användas i den nya versionen. Ta bort den eller de icke tillämpliga korrigeringarna från katalogen `m2-hotfixes`.
 
    - Om [kvalitetsuppdateringar] används i filen `.magento.env.yaml` kontrollerar du om de fortfarande kan användas i den nya versionen. Ta bort den eller de korrigeringar som inte är tillämpliga från `QUALITY_PATCHES`-avsnittet i `.magento.env.yaml`-filen.
 
-   **Metod 1**: [Verifiera tillämpliga versioner i versionsinformationen för kvalitetspatchar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **Metod 1**: [Verifiera tillämpliga versioner i versionsinformationen för kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **Metod 2**: [Visa tillgängliga korrigeringar och status](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **Metod 2**: [Visa tillgängliga korrigeringar och status](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **Metod 3**: [Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE)
+   **Metod 3**: [Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
 
 
 1. Lägg till, implementera och push-ändra kod.
