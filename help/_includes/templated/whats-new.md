@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Tydligare operativsystem som stöds för <code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI-verktyget <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">installation</a>.</p>
+      <td><p>Tydligare operativsystem som stöds för <code class="language-plaintext highlighter-rouge">magento-cloud</code> CLI-verktyget <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview">installation</a>.</p>
 </td>
       <td>
         Feedback
@@ -45,7 +45,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Versionsinformation</a> har lagts till för Creative Cloud Patches-paketet v1.1.11.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Versionsinformation</a> har lagts till för Creative Cloud Patches-paketet v1.1.11.</p>
 </td>
       <td>
         Viktig uppdatering
