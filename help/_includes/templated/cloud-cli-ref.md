@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9166b44ae53e8cfc6b8022730a6b91406ba696c0
+source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
 workflow-type: tm+mt
-source-wordcount: '13341'
+source-wordcount: '13671'
 ht-degree: 0%
 
 ---
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**Version**: 1.46.1
+**Version**: 1.47.0
 
-Referensen innehåller 119 kommandon som är tillgängliga via kommandoradsverktyget `magento-cloud`.
+Referensen innehåller 123 kommandon som är tillgängliga via kommandoradsverktyget `magento-cloud`.
 Den inledande listan genereras automatiskt med kommandot `magento-cloud list` på Adobe Commerce i molninfrastrukturen.
 
 ## Allmänt
@@ -27,6 +27,13 @@ Visa det här hjälpmeddelandet
 - Standard: `false`
 - Accepterar inte ett värde
 
+#### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 #### `--verbose`, `-v|-vv|-vvv`
 
 Öka meddelandenas exakthet
@@ -34,9 +41,9 @@ Visa det här hjälpmeddelandet
 - Standard: `false`
 - Accepterar inte ett värde
 
-#### `--version`, `-V`
+#### `--quiet`, `-q`
 
-Visa den här programversionen
+Skriv bara ut nödvändiga utdata; utelämna andra meddelanden och fel. Detta betyder —ingen interaktion. Den ignoreras i detaljerat läge.
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -67,6 +74,44 @@ Rensa CLI-cachen
 ### Alternativ
 
 Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+
+## `console`
+
+```bash
+magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+Öppna projektet i konsolen
+
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--browser`
+
+Webbläsaren som ska användas för att öppna URL-adressen. Ange 0 som ingen.
+
+- Kräver ett värde
+
+#### `--pipe`
+
+Skriv ut URL-adressen som ska stoppas.
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+#### `--environment`, `-e`
+
+Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
+
+- Kräver ett värde
 
 
 ## `decode`
@@ -292,44 +337,6 @@ Invertera ordningen för projektalternativ
 
 - Standard: `false`
 - Accepterar inte ett värde
-
-
-## `web`
-
-```bash
-magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-Öppna projektet i webbgränssnittet
-
-### Alternativ
-
-Information om globala alternativ finns i [Globala alternativ](#global-options).
-
-#### `--browser`
-
-Webbläsaren som ska användas för att öppna URL-adressen. Ange 0 som ingen.
-
-- Kräver ett värde
-
-#### `--pipe`
-
-Skriv ut URL-adressen som ska stoppas.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-#### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-#### `--environment`, `-e`
-
-Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
-
-- Kräver ett värde
 
 
 ## `activity:cancel`
@@ -565,7 +572,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 #### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: id*, created*, description*, progress*, state*, result*, complete, environment, type (* = default columns). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id*, created*, description*, progress*, state*, result*, complete, environment, time_build, time_deploy, time_execute, time_wait, type (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -829,7 +836,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 ## `auth:browser-login`
 
 ```bash
-magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
+magento-cloud login [-f|--force] [--method METHOD] [--max-age MAX-AGE] [--browser BROWSER] [--pipe]
 ```
 
 Logga in på Magento Cloud via en webbläsare
@@ -860,6 +867,19 @@ Logga in igen, även om du redan är inloggad
 
 - Standard: `false`
 - Accepterar inte ett värde
+
+#### `--method`
+
+Kräv specifika autentiseringsmetoder
+
+- Standard: `[]`
+- Kräver ett värde
+
+#### `--max-age`
+
+Högsta ålder (i sekunder) för webbautentiseringssessionen
+
+- Kräver ett värde
 
 #### `--browser`
 
@@ -960,6 +980,156 @@ Logga ut från andra lokala sessioner
 
 - Standard: `false`
 - Accepterar inte ett värde
+
+
+## `autoscaling:get`
+
+```bash
+magento-cloud autoscaling [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+Visa konfigurationen för autoskalning av program och arbetare i en miljö
+
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+#### `--environment`, `-e`
+
+Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
+
+- Kräver ett värde
+
+#### `--format`
+
+Utdataformatet: table, csv, tsv eller plain
+
+- Standard: `table`
+- Kräver ett värde
+
+#### `--columns`, `-c`
+
+Kolumner att visa. Tillgängliga kolumner: service*, metrisk*, direction*, threshold*, duration*, enabled*, instance_count*, cooldown, max_instances, min_instances (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
+#### `--no-header`
+
+Skriv inte ut tabellrubriken
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `autoscaling:set`
+
+```bash
+magento-cloud autoscaling:set [-s|--service SERVICE] [-m|--metric METRIC] [--enabled ENABLED] [--threshold-up THRESHOLD-UP] [--duration-up DURATION-UP] [--cooldown-up COOLDOWN-UP] [--threshold-down THRESHOLD-DOWN] [--duration-down DURATION-DOWN] [--cooldown-down COOLDOWN-DOWN] [--instances-min INSTANCES-MIN] [--instances-max INSTANCES-MAX] [--dry-run] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+Ange konfiguration för autoskalning av program eller arbetare i en miljö
+
+```
+Configure automatic scaling for apps or workers in an environment.
+
+You can also configure resources statically by running: magento-cloud resources:set
+```
+
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--service`, `-s`
+
+Namn på programmet eller arbetaren som autoskalning ska konfigureras för
+
+- Kräver ett värde
+
+#### `--metric`, `-m`
+
+Namn på mätvärdet som ska användas för att aktivera autoskalning
+
+- Kräver ett värde
+
+#### `--enabled`
+
+Aktivera autoskalning baserat på givet mätvärde
+
+- Kräver ett värde
+
+#### `--threshold-up`
+
+Tröskelvärde som tjänsten ska skalas över
+
+- Kräver ett värde
+
+#### `--duration-up`
+
+Den varaktighet över vilken mätvärdet utvärderas mot tröskelvärdet för skalförändring uppåt
+
+- Kräver ett värde
+
+#### `--cooldown-up`
+
+Väntetid innan du försöker skala upp ytterligare efter en skalningshändelse
+
+- Kräver ett värde
+
+#### `--threshold-down`
+
+Tröskelvärde för nedskalning av tjänsten
+
+- Kräver ett värde
+
+#### `--duration-down`
+
+Den varaktighet över vilken mätvärdet utvärderas mot tröskelvärdet för nedskalning
+
+- Kräver ett värde
+
+#### `--cooldown-down`
+
+Väntetid innan du försöker skala ned ytterligare efter en skalningshändelse
+
+- Kräver ett värde
+
+#### `--instances-min`
+
+Minsta antal förekomster som ska skalas ned till
+
+- Kräver ett värde
+
+#### `--instances-max`
+
+Maximalt antal förekomster som ska skalas upp till
+
+- Kräver ett värde
+
+#### `--dry-run`
+
+Visa de ändringar som skulle ha gjorts, utan att ändra något
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+#### `--environment`, `-e`
+
+Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
+
+- Kräver ett värde
 
 
 ## `blackfire:setup`
@@ -1362,7 +1532,7 @@ Datumformatet (som en PHP-datumformatsträng)
 ## `db:dump`
 
 ```bash
-magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 Skapa en lokal dump av fjärrdatabasen
@@ -1461,101 +1631,11 @@ Den tjänstrelation som ska användas
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
-
-## `db:size`
-
-```bash
-magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
-```
-
-Beräkna diskanvändningen för en databas
-
-```
-This is an estimate of the database disk usage. The real size on disk is usually higher because of overhead.
-
-To see more accurate disk usage, run: magento-cloud disk
-```
-
-### Alternativ
-
-Information om globala alternativ finns i [Globala alternativ](#global-options).
-
-#### `--bytes`, `-B`
-
-Visa storlekar i byte.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-#### `--cleanup`, `-C`
-
-Kontrollera om tabeller kan rensas och visa rekommendationer (endast InnoDb).
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-#### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-#### `--environment`, `-e`
-
-Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
-
-- Kräver ett värde
-
-#### `--app`, `-A`
-
-Namnet på fjärrprogrammet
-
-- Kräver ett värde
-
-#### `--relationship`, `-r`
-
-Den tjänstrelation som ska användas
-
-- Kräver ett värde
-
-#### `--format`
-
-Utdataformatet: table, csv, tsv eller plain
-
-- Standard: `table`
-- Kräver ett värde
-
-#### `--columns`, `-c`
-
-Kolumner att visa. Tillgängliga kolumner: max, percent_used, used. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
-
-- Standard: `[]`
-- Kräver ett värde
-
-#### `--no-header`
-
-Skriv inte ut tabellrubriken
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `db:sql`
 
 ```bash
-magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
+magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--] [<query>]
 ```
 
 Kör SQL på fjärrdatabasen
@@ -1607,12 +1687,6 @@ Den tjänstrelation som ska användas
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `domain:add`
 
@@ -1636,19 +1710,19 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--cert`
 
-Sökvägen till certifikatfilen för domänen
+Sökvägen till en anpassad certifikatfil
 
 - Kräver ett värde
 
 #### `--key`
 
-Sökvägen till den privata nyckelfilen för det angivna certifikatet.
+Sökvägen till den privata nyckeln för det anpassade certifikatet
 
 - Kräver ett värde
 
 #### `--chain`
 
-Sökvägen till certifikatkedjefilen eller -filerna för det angivna certifikatet
+Sökvägen till kedjefilen/kedjefilerna för det anpassade certifikatet
 
 - Standard: `[]`
 - Kräver ett värde
@@ -1866,19 +1940,19 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--cert`
 
-Sökvägen till certifikatfilen för domänen
+Sökvägen till en anpassad certifikatfil
 
 - Kräver ett värde
 
 #### `--key`
 
-Sökvägen till den privata nyckelfilen för det angivna certifikatet.
+Sökvägen till den privata nyckeln för det anpassade certifikatet
 
 - Kräver ett värde
 
 #### `--chain`
 
-Sökvägen till certifikatkedjefilen eller -filerna för det angivna certifikatet
+Sökvägen till kedjefilen/kedjefilerna för det anpassade certifikatet
 
 - Standard: `[]`
 - Kräver ett värde
@@ -1967,7 +2041,7 @@ Vänta tills åtgärden har slutförts (standard)
 ## `environment:branch`
 
 ```bash
-magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
+magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [--no-checkout] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
 ```
 
 Gren och miljön
@@ -2006,6 +2080,13 @@ Klona inte den överordnade miljöns data
 - Standard: `false`
 - Accepterar inte ett värde
 
+#### `--no-checkout`
+
+Checka inte ut grenen lokalt
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 #### `--project`, `-p`
 
 Projekt-ID eller URL
@@ -2036,7 +2117,7 @@ Vänta tills åtgärden har slutförts (standard)
 ## `environment:checkout`
 
 ```bash
-magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
+magento-cloud checkout [<id>]
 ```
 
 Kolla in en miljö
@@ -2051,17 +2132,11 @@ ID för miljön som ska checkas ut. Exempel: &quot;sprint2&quot;
 
 Information om globala alternativ finns i [Globala alternativ](#global-options).
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `environment:delete`
 
 ```bash
-magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--status STATUS] [--only-status ONLY-STATUS] [--exclude-status EXCLUDE-STATUS] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 Ta bort en eller flera miljöer
@@ -2136,6 +2211,27 @@ Ta bort alla inaktiva miljöer (lägga till andra markerade)
 - Standard: `false`
 - Accepterar inte ett värde
 
+#### `--status`
+
+Ta bort alla miljöer med en status (som läggs till andra markerade) Värden kan delas upp med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
+#### `--only-status`
+
+Endast borttagningsmiljöer med en viss status Värden kan delas upp med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
+#### `--exclude-status`
+
+Miljöstatus(er) som inte ska tas bort kan delas upp med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
 #### `--merged`
 
 Ta bort alla sammanfogade miljöer (lägga till andra markerade)
@@ -2146,6 +2242,108 @@ Ta bort alla sammanfogade miljöer (lägga till andra markerade)
 #### `--allow-delete-parent`
 
 Tillåt att miljöer med underordnade tas bort
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+#### `--environment`, `-e`
+
+Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
+
+- Kräver ett värde
+
+#### `--no-wait`, `-W`
+
+Vänta inte tills åtgärden har slutförts
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--wait`
+
+Vänta tills åtgärden har slutförts (standard)
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `environment:deploy`
+
+```bash
+magento-cloud deploy [-s|--strategy STRATEGY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+```
+
+Distribuera en miljös mellanlagrade ändringar
+
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--strategy`, `-s`
+
+Distributionsstrategi, stoppstart (standard, omstart med en avstängning) eller rullande (noll driftavbrott)
+
+- Kräver ett värde
+
+#### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+#### `--environment`, `-e`
+
+Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
+
+- Kräver ett värde
+
+#### `--no-wait`, `-W`
+
+Vänta inte tills åtgärden har slutförts
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--wait`
+
+Vänta tills åtgärden har slutförts (standard)
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `environment:deploy:type`
+
+```bash
+magento-cloud environment:deploy:type [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<type>]
+```
+
+Visa eller ange miljödistributionstyp
+
+```
+Choose automatic (the default) if you want your changes to be deployed immediately as they are made.
+Choose manual to have changes staged until you trigger a deployment (including changes to code, variables, domains and settings).
+```
+
+### Argument
+
+#### `type`
+
+Typ av miljödistribution: automatiskt eller manuellt.
+
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--pipe`
+
+Skriv ut distributionstypen som ska stoppas
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2198,7 +2396,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--auth`
 
-HTTP Basic-autentiseringsuppgifter i formatet &quot;username:password&quot;. Använd 0 för att rensa alla autentiseringsuppgifter.
+Autentiseringsuppgifter för grundläggande HTTP-autentisering i formatet användarnamn :password. Använd 0 för att rensa alla autentiseringsuppgifter.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -2377,7 +2575,7 @@ Vänta tills åtgärden har slutförts (standard)
 ## `environment:list`
 
 ```bash
-magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud environments [-I|--no-inactive] [--status STATUS] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 Få en lista över miljöer
@@ -2392,6 +2590,13 @@ Visa inte inaktiva miljöer
 
 - Standard: `false`
 - Accepterar inte ett värde
+
+#### `--status`
+
+Filtrera miljöer efter status (aktiv, inaktiv, smutsig, pausad, borttagen). Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
 
 #### `--pipe`
 
@@ -2616,7 +2821,7 @@ Vänta tills åtgärden har slutförts (standard)
 ## `environment:push`
 
 ```bash
-magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
+magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<source>]
 ```
 
 Kodning i en miljö
@@ -2625,7 +2830,7 @@ Kodning i en miljö
 
 #### `source`
 
-Källreferens: ett grennamn eller en implementerad hash
+Git-källref, t.ex. ett grennamn eller en implementeringshash.
 
 - Standard: `HEAD`
 
@@ -2662,14 +2867,14 @@ Ange målmiljön som den överordnade för källgrenen. Detta anger även målpr
 
 #### `--activate`
 
-Aktivera miljön innan du trycker
+Aktivera miljön. Pausade miljöer återupptas. Detta garanterar att miljön är aktiv även om inga ändringar har skickats.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
 #### `--parent`
 
-Ange den nya miljön som överordnad (används endast med —activate)
+Ange den överordnade miljön (används endast med —activate)
 
 - Kräver ett värde
 
@@ -2709,12 +2914,6 @@ Projekt-ID eller URL
 #### `--environment`, `-e`
 
 Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
-
-- Kräver ett värde
-
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
 
 - Kräver ett värde
 
@@ -2761,7 +2960,7 @@ Vänta tills åtgärden har slutförts (standard)
 ## `environment:relationships`
 
 ```bash
-magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
+magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<environment>]
 ```
 
 Visa en miljös relationer
@@ -2804,12 +3003,6 @@ Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
 #### `--app`, `-A`
 
 Namnet på fjärrprogrammet
-
-- Kräver ett värde
-
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
 
 - Kräver ett värde
 
@@ -2856,7 +3049,7 @@ Vänta tills åtgärden har slutförts (standard)
 ## `environment:scp`
 
 ```bash
-magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
+magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<files>]...
 ```
 
 Kopiera filer till och från en miljö med scp
@@ -2911,17 +3104,11 @@ Ett instans-ID
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `environment:ssh`
 
 ```bash
-magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
+magento-cloud ssh [--pipe] [--all] [-o|--option OPTION] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<cmd>]...
 ```
 
 SSH till den aktuella miljön
@@ -2953,6 +3140,13 @@ Skriv ut alla SSH-URL:er (för alla program).
 - Standard: `false`
 - Accepterar inte ett värde
 
+#### `--option`, `-o`
+
+Skicka ett extra alternativ till SSH
+
+- Standard: `[]`
+- Kräver ett värde
+
 #### `--project`, `-p`
 
 Projekt-ID eller URL
@@ -2983,12 +3177,6 @@ Ett instans-ID
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `environment:synchronize`
 
@@ -3002,7 +3190,9 @@ Synkronisera en miljös kod och/eller data från dess överordnade
 This command synchronizes to a child environment from its parent environment.
 
 Synchronizing "code" means there will be a Git merge from the parent to the
-child. Synchronizing "data" means that all files in all services (including
+child.
+
+Synchronizing "data" means that all files in all services (including
 static files, databases, logs, search indices, etc.) will be copied from the
 parent to the child.
 ```
@@ -3102,7 +3292,7 @@ Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
 ## `environment:xdebug`
 
 ```bash
-magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 Öppna en tunnel för Xdebug i miljön
@@ -3145,12 +3335,6 @@ Ett arbetarnamn
 #### `--instance`, `-I`
 
 Ett instans-ID
-
-- Kräver ett värde
-
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
 
 - Kräver ett värde
 
@@ -3228,7 +3412,7 @@ Datumformatet (som en PHP-datumformatsträng)
 ## `integration:activity:list`
 
 ```bash
-magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud integration:activities [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 Få en lista över aktiviteter för en integrering
@@ -3299,7 +3483,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 #### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: id*, created*, description*, type*, state*, result*, complete (* = default columns). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id*, created*, description*, type*, state*, result*, complete, progress, time_build, time_deploy, time_execute, time_wait (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -3395,7 +3579,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--type`
 
-Integrationstypen (&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webkrok&#39;, &#39;health.email&#39;, &#39;health.pageruty&#39;, &#39;health.slack&#39;, &#39;health.webkrok&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;)
+Integrationstypen (&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webkrok&#39;, &#39;health.email&#39;, &#39;health.pageruty&#39;, &#39;health.slack&#39;, &#39;health.webkrok&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;, &#39;otlplog&#39;)
 
 - Kräver ett värde
 
@@ -3793,7 +3977,7 @@ Projekt-ID eller URL
 ## `integration:list`
 
 ```bash
-magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud integrations [-t|--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 Visa en lista över projektintegrering(ar)
@@ -3801,6 +3985,12 @@ Visa en lista över projektintegrering(ar)
 ### Alternativ
 
 Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--type`, `-t`
+
+Filtrera efter typ
+
+- Kräver ett värde
 
 #### `--format`
 
@@ -3850,7 +4040,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--type`
 
-Integrationstypen (&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webkrok&#39;, &#39;health.email&#39;, &#39;health.pageruty&#39;, &#39;health.slack&#39;, &#39;health.webkrok&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;)
+Integrationstypen (&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webkrok&#39;, &#39;health.email&#39;, &#39;health.pageruty&#39;, &#39;health.slack&#39;, &#39;health.webkrok&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;, &#39;otlplog&#39;)
 
 - Kräver ett värde
 
@@ -4341,7 +4531,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA Show CPU, disk- och minnesstatistik för en miljö
+Visa mått för CPU, disk och minne för en miljö
 
 ### Alternativ
 
@@ -4440,7 +4630,7 @@ Datumformatet (som en PHP-datumformatsträng)
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA Show CPU Usage of an environment
+Visa CPU användning av en miljö
 
 ### Alternativ
 
@@ -4638,7 +4828,7 @@ Datumformatet (som en PHP-datumformatsträng)
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA Visa minnesanvändning i en miljö
+Visa minnesanvändning i en miljö
 
 ### Alternativ
 
@@ -4734,7 +4924,7 @@ Datumformatet (som en PHP-datumformatsträng)
 ## `mount:download`
 
 ```bash
-magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 Hämta filer från en montering med hjälp av synkronisering
@@ -4827,12 +5017,6 @@ Ett instans-ID
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `mount:list`
 
@@ -4912,103 +5096,10 @@ Ett instans-ID
 - Kräver ett värde
 
 
-## `mount:size`
-
-```bash
-magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
-```
-
-Kontrollera diskanvändning av monteringar
-
-```
-Use this command to check the disk size and usage for an application's mounts.
-
-Mounts are directories mounted into the application from a persistent, writable
-filesystem. They are configured in the mounts key in the application configuration.
-
-The filesystem's total size is determined by the disk key in the same file.
-```
-
-### Alternativ
-
-Information om globala alternativ finns i [Globala alternativ](#global-options).
-
-#### `--bytes`, `-B`
-
-Visa storlekar i byte
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-#### `--refresh`
-
-Uppdatera cachen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-#### `--format`
-
-Utdataformatet: table, csv, tsv eller plain
-
-- Standard: `table`
-- Kräver ett värde
-
-#### `--columns`, `-c`
-
-Kolumner att visa. Tillgängliga kolumner: available, max, monts, percent_used, sizes, used. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
-
-- Standard: `[]`
-- Kräver ett värde
-
-#### `--no-header`
-
-Skriv inte ut tabellrubriken
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
-#### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-#### `--environment`, `-e`
-
-Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
-
-- Kräver ett värde
-
-#### `--app`, `-A`
-
-Namnet på fjärrprogrammet
-
-- Kräver ett värde
-
-#### `--worker`
-
-Ett arbetarnamn
-
-- Kräver ett värde
-
-#### `--instance`, `-I`
-
-Ett instans-ID
-
-- Kräver ett värde
-
-
 ## `mount:upload`
 
 ```bash
-magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 Överför filer till en plats med hjälp av synkronisering
@@ -5087,12 +5178,6 @@ Ett instans-ID
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `operation:list`
 
@@ -5100,7 +5185,7 @@ En SSH-identitet (privat nyckel) som ska användas
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
-Körningsåtgärder för Beta List i en miljö
+Visa körningsåtgärder i en miljö
 
 ### Alternativ
 
@@ -5165,7 +5250,7 @@ Skriv inte ut tabellrubriken
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
-BETA Köra en åtgärd i miljön
+Köra en åtgärd i miljön
 
 ### Argument
 
@@ -5238,7 +5323,7 @@ Projekt-ID eller URL
 ## `project:get`
 
 ```bash
-magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [--] [<project>] [<directory>]
 ```
 
 Klona ett projekt lokalt
@@ -5280,12 +5365,6 @@ Bygg projektet efter kloning
 #### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
 
 - Kräver ett värde
 
@@ -5449,7 +5528,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 #### `--columns`
 
-Kolumner att visa. Tillgängliga kolumner: id*, title*, region*, created_at, organization_id, organization_label, organization_name, status (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id*, title*, region*, created_at, organization_id, organization_label, organization_name, organization_type, status (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -5620,6 +5699,46 @@ Projekt-ID eller URL
 Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
 
 - Kräver ett värde
+
+
+## `resources:build:get`
+
+```bash
+magento-cloud build-resources:get [-p|--project PROJECT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+Visa byggresurserna för ett projekt
+
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+#### `--format`
+
+Utdataformatet: table, csv, tsv eller plain
+
+- Standard: `table`
+- Kräver ett värde
+
+#### `--columns`, `-c`
+
+Kolumner att visa. Tillgängliga kolumner: cpu, minne. Tecknen % och * kan användas som jokertecken. Värdena kan delas med kommatecken (t.ex. &quot;a,b,c&quot;) och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
+#### `--no-header`
+
+Skriv inte ut tabellrubriken
+
+- Standard: `false`
+- Accepterar inte ett värde
 
 
 ## `route:get`
@@ -5890,7 +6009,7 @@ Skriv inte ut tabellrubriken
 ## `service:mongo:dump`
 
 ```bash
-magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Skapa en binär arkivdump av data från MongoDB
@@ -5925,12 +6044,6 @@ Den tjänstrelation som ska användas
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 #### `--project`, `-p`
 
 Projekt-ID eller URL
@@ -5953,7 +6066,7 @@ Namnet på fjärrprogrammet
 ## `service:mongo:export`
 
 ```bash
-magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Exportera data från MongoDB
@@ -5994,12 +6107,6 @@ Den tjänstrelation som ska användas
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 #### `--project`, `-p`
 
 Projekt-ID eller URL
@@ -6022,7 +6129,7 @@ Namnet på fjärrprogrammet
 ## `service:mongo:restore`
 
 ```bash
-magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Återställa en binär arkivdump av data till MongoDB
@@ -6040,12 +6147,6 @@ Samlingen som ska återställas
 #### `--relationship`, `-r`
 
 Den tjänstrelation som ska användas
-
-- Kräver ett värde
-
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
 
 - Kräver ett värde
 
@@ -6071,7 +6172,7 @@ Namnet på fjärrprogrammet
 ## `service:mongo:shell`
 
 ```bash
-magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Använd MongoDB-skalet
@@ -6089,12 +6190,6 @@ Skicka ett JavaScript-fragment till skalet
 #### `--relationship`, `-r`
 
 Den tjänstrelation som ska användas
-
-- Kräver ett värde
-
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
 
 - Kräver ett värde
 
@@ -6120,7 +6215,7 @@ Namnet på fjärrprogrammet
 ## `service:redis-cli`
 
 ```bash
-magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
+magento-cloud redis [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
 ```
 
 Åtkomst till Redis CLI
@@ -6129,7 +6224,10 @@ magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTIT
 
 #### `args`
 
-Argument som ska läggas till i Redis-kommandot
+Argument som ska läggas till i kommandot redis-cli
+
+- Standard: `[]`
+- Array
 
 ### Alternativ
 
@@ -6141,9 +6239,49 @@ Den tjänstrelation som ska användas
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
+#### `--project`, `-p`
 
-En SSH-identitet (privat nyckel) som ska användas
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+#### `--environment`, `-e`
+
+Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
+
+- Kräver ett värde
+
+#### `--app`, `-A`
+
+Namnet på fjärrprogrammet
+
+- Kräver ett värde
+
+
+## `service:valkey-cli`
+
+```bash
+magento-cloud valkey [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
+```
+
+Åtkomst till Valkey CLI
+
+### Argument
+
+#### `args`
+
+Argument som ska läggas till i kommandot valkey-cli
+
+- Standard: `[]`
+- Array
+
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--relationship`, `-r`
+
+Den tjänstrelation som ska användas
 
 - Kräver ett värde
 
@@ -6186,7 +6324,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--live`
 
-Live-säkerhetskopiering: stoppa inte miljön. Om detta anges kommer miljön att vara igång och öppen för anslutningar under säkerhetskopieringen. Detta minskar driftstoppen och riskerar att data säkerhetskopieras i ett inkonsekvent tillstånd.
+Direktögonblicksbild: stoppa inte miljön. Om det är inställt kommer miljön att vara igång och öppen för anslutningar under ögonblicksbilden. Detta minskar driftstoppen och riskerar att data säkerhetskopieras i ett inkonsekvent tillstånd.
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6363,7 +6501,7 @@ Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
 ## `snapshot:restore`
 
 ```bash
-magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
+magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [--no-code] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
 ```
 
 Återställ en ögonblicksbild av miljön
@@ -6372,7 +6510,7 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 
 #### `snapshot`
 
-Namnet på ögonblicksbilden. Standardvärdet är den senaste
+ID för ögonblicksbilden. Standardvärdet är den senaste
 
 ### Alternativ
 
@@ -6389,6 +6527,13 @@ Den miljö som ska återställas till. Standardvärdet är ögonblicksbildens ak
 Om —target inte finns än, anger detta den överordnade för den nya miljön
 
 - Kräver ett värde
+
+#### `--no-code`
+
+Återställ inte kod, bara data.
+
+- Standard: `false`
+- Accepterar inte ett värde
 
 #### `--project`, `-p`
 
@@ -6490,7 +6635,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--variable`
 
-En variabel som ska anges under åtgärden, i formatet typ:name=value
+En variabel som ska anges under åtgärden, i formattypen :name=värde
 
 - Standard: `[]`
 - Kräver ett värde
@@ -6568,7 +6713,7 @@ Tvinga certifikatet att uppdateras
 
 #### `--new-key`
 
-[Inaktuell] Använd —ny i stället
+Tvinga ett nytt nyckelpar att skapas
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6890,7 +7035,7 @@ Skriv inte ut tabellrubriken
 ## `tunnel:open`
 
 ```bash
-magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Öppna SSH-tunnlar i en apps relationer
@@ -6937,17 +7082,11 @@ Namnet på fjärrprogrammet
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `tunnel:single`
 
 ```bash
-magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 Öppna en SSH-tunnel till en apprelation
@@ -6993,12 +7132,6 @@ Den tjänstrelation som ska användas
 
 - Kräver ett värde
 
-#### `--identity-file`, `-i`
-
-En SSH-identitet (privat nyckel) som ska användas
-
-- Kräver ett värde
-
 
 ## `user:add`
 
@@ -7020,7 +7153,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--role`, `-r`
 
-Användarens projektroll (admin eller viewer) eller miljötypsroll (t.ex. &#39;staging:contributor&#39; eller &#39;production:viewer&#39;). Om du vill ta bort en användare från en miljötyp anger du rollen som none. Tecknen % och * kan användas som jokertecken för miljötypen, t.ex. %:viewer, för att ge användaren rollen &#39;viewer&#39; för alla typer. Rollen kan förkortas, t.ex. &#39;production:v&#39;.
+Användarens projektroll (&#39;admin&#39; eller &#39;viewer&#39;) eller miljötypsroll (till exempel &#39;staging:contributor&#39; eller &#39;production:viewer&#39;). Om du vill ta bort en användare från en miljötyp anger du rollen som none. Tecknen % eller * kan användas som jokertecken för miljötypen, t.ex. %:viewer, för att ge användaren rollen &#39;viewer&#39; för alla typer. Rollen kan förkortas, t.ex. &#39;produktion:v&#39;.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -7153,7 +7286,7 @@ Vänta tills åtgärden har slutförts (standard)
 
 #### `--role`, `-r`
 
-[Inaktuell: använd användare:uppdatera för att ändra en användares roll(er)]
+[Föråldrad: använd användare:update för att ändra en användares roll(er)]
 
 - Kräver ett värde
 
@@ -7218,7 +7351,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--role`, `-r`
 
-Användarens projektroll (admin eller viewer) eller miljötypsroll (t.ex. &#39;staging:contributor&#39; eller &#39;production:viewer&#39;). Om du vill ta bort en användare från en miljötyp anger du rollen som none. Tecknen % och * kan användas som jokertecken för miljötypen, t.ex. %:viewer, för att ge användaren rollen &#39;viewer&#39; för alla typer. Rollen kan förkortas, t.ex. &#39;production:v&#39;.
+Användarens projektroll (&#39;admin&#39; eller &#39;viewer&#39;) eller miljötypsroll (till exempel &#39;staging:contributor&#39; eller &#39;production:viewer&#39;). Om du vill ta bort en användare från en miljötyp anger du rollen som none. Tecknen % eller * kan användas som jokertecken för miljötypen, t.ex. %:viewer, för att ge användaren rollen &#39;viewer&#39; för alla typer. Rollen kan förkortas, t.ex. &#39;produktion:v&#39;.
 
 - Standard: `[]`
 - Kräver ett värde
