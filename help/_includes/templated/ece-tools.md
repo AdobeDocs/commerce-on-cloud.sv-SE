@@ -1,5 +1,5 @@
 ---
-source-git-commit: 69b764a03e6c272498e57645dca40d29c4e79626
+source-git-commit: 11d0e86ad4633d9c4232474b9921ed491f285969
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 0%
@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # ece-tools
 
-**Version**: 2002.2.7
+**Version**: 2002.2.8
 
 Referensen innehåller 34 kommandon som är tillgängliga via kommandoradsverktyget `ece-tools`.
 Den inledande listan genereras automatiskt med kommandot `ece-tools list` på Adobe Commerce i molninfrastrukturen.
