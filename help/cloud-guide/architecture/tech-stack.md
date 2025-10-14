@@ -2,9 +2,10 @@
 title: Teknikstack
 description: Se vilken teknologi som utgör Commerce om Cloud-infrastrukturen.
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -17,10 +18,10 @@ Tänk dig Adobe Commerce i molninfrastrukturen som fem funktionella lager, vilke
 
 1. [**Molninfrastruktur**](pro-architecture.md): Välj antingen Amazon Web Services (AWS) eller Microsoft Azure som en IaaS-grund (Infrastructure as a Service) för dina Adobe Commerce-projekt i molninfrastrukturproffsprojekt.
 
-   Adobe analyserar rutinmässigt användningen av din virtuella datorresurs (vCPU) och allokerar automatiskt resurser för att optimera din långtidsanvändning och minska risken för att överskrida din högsta årliga daggräns för vCPU. Om du förväntar dig ökad webbplatstrafik under en viss tidsperiod måste du fortsätta att öppna en supportbiljett för att [begära en tillfällig uppstorlek](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=sv-SE).
+   Adobe analyserar rutinmässigt användningen av virtuella datorresurser (vCPU) och tilldelar automatiskt resurser för att optimera din långtidsanvändning och minska risken för att överskrida din högsta årliga dagtraktamenten för vCPU. Om du förväntar dig ökad webbplatstrafik under en viss tidsperiod måste du fortsätta att öppna en supportbiljett för att [begära en tillfällig uppstorlek](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html).
 
 1. [**Plattform som en tjänst**](cloud-architecture.md): Varje Adobe Commerce i molninfrastrukturprojekt tillhandahåller en plattformsintegreringsmiljö (PaaS) för utveckling, testning och integrering av tjänster.
-1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce i molninfrastruktur innehåller en företablerad infrastruktur som omfattar PHP, MySQL (MariaDB), Redis, [!DNL RabbitMQ] och sökmotortekniker som stöds.
+1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce i molninfrastruktur innehåller en företablerad infrastruktur som omfattar PHP, MySQL (MariaDB), Redis, meddelandekötjänster ([!DNL RabbitMQ] eller [!DNL ActiveMQ]) och sökmotortekniker som stöds.
 1. [**Prestandaverktyg**](../monitor/new-relic-service.md): Med New Relic prestandaverktyg kan du felsöka, övervaka och hantera program och infrastruktur genom att samla in, analysera och visa data från Adobe Commerce i molninfrastrukturprojekt.
 1. [**CDN (Content Delivery Network), Brandvägg för webbaserade program ([!DNL WAF]) och Bildoptimering (IO)**](../cdn/fastly.md):
 

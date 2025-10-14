@@ -2,9 +2,10 @@
 title: Konfigurera tjänster
 description: Lär dig hur du konfigurerar tjänster som används av Adobe Commerce i molninfrastruktur.
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -31,13 +32,14 @@ Om du ändrar en tjänstkonfiguration tillhandahålls miljön med de uppdaterade
 
 Molninfrastrukturen stöder och distribuerar följande tjänster:
 
+- [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
 - [Redis](redis.md)
-- [RabbitMQ](rabbitmq.md)
+- [KaninMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
-Du kan visa standardversioner och diskvärden i den aktuella [standardfilen `services.yaml`](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). I följande exempel visas tjänsterna `mysql`, `redis`, `opensearch` eller `elasticsearch` och `rabbitmq` som definieras i konfigurationsfilen `services.yaml`:
+Du kan visa standardversioner och diskvärden i den aktuella [standardfilen `services.yaml`](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). I följande exempel visas tjänsterna `mysql`, `redis`, `opensearch` eller `elasticsearch`, `rabbitmq` och `activemq-artemis` som definieras i konfigurationsfilen `services.yaml`:
 
 ```yaml
 mysql:
@@ -53,6 +55,10 @@ opensearch:
 
 rabbitmq:
     type: rabbitmq:3.9
+    disk: 1024
+
+activemq-artemis:
+    type: activemq-artemis:2.42
     disk: 1024
 ```
 
@@ -171,7 +177,7 @@ Du kan hämta konfigurationsdata för alla tjänstrelationer från miljövariabe
 
 ## Tjänstversioner
 
-Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras och testas i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _installationshandboken_ för en lista över tredjepartsprogramvaruberoenden som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source.
+Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras och testas i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _Installationshandboken_ för en lista över programberoenden från tredje part som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source.
 
 ### EOL-kontroller för programvara
 
