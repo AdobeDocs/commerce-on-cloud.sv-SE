@@ -23,7 +23,7 @@ Du måste ha en autentiseringsnyckel för att få tillgång till Adobe Commerce-
 
 Adobe rekommenderar att du använder metoden [för miljövariabel](#composer-auth-environment-variable) tillsammans med ditt molnprojekt för att förhindra oavsiktlig exponering av dina autentiseringsuppgifter.
 
-Autentiseringsfilmetoden är idealisk när du använder Cloud Docker för Commerce som ett lokalt utvecklingsverktyg, men du bör inte överföra filen `auth.json` till en offentlig Git-baserad databas. Du kan lägga till filen `auth.json` i filen [`.gitignore` ](../project/file-structure.md#ignoring-files).
+Autentiseringsfilmetoden är idealisk när du använder Cloud Docker för Commerce som ett lokalt utvecklingsverktyg, men du bör inte överföra filen `auth.json` till en offentlig Git-baserad databas. Du kan lägga till filen `auth.json` i filen [`.gitignore` &#x200B;](../project/file-structure.md#ignoring-files).
 
 >[!ENDSHADEBOX]
 

@@ -17,7 +17,7 @@ TTL-värdet för cache (time-to-live) för dina media och statiska filer anges i
 >
 >Innan du uppdaterar produktionsmiljön är det viktigt att du testar ändringarna i mellanlagringsmiljön. [Skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du behöver hjälp med att uppdatera konfigurationen i dessa miljöer.
 
-1. Ange TTL-tiden (i sekunder) i [`web`-egenskapen ](web-property.md) för filen `.magento.app.yaml`. Du kan lägga till nyckeln `expires` under `locations` eller under `"/media"` och `"/static"`.
+1. Ange TTL-tiden (i sekunder) i [`web`-egenskapen &#x200B;](web-property.md) för filen `.magento.app.yaml`. Du kan lägga till nyckeln `expires` under `locations` eller under `"/media"` och `"/static"`.
 
    Använd nyckelvärdepar `expires: -1` för att förhindra att cachen förfaller. Se följande exempel:
 

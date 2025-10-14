@@ -21,7 +21,7 @@ Fasen _build_ sätter ihop behållare för de tjänster som definierats i konfig
 
 ## ![Distributionsfas](../../assets/status-deploy.png) Distributionsfas
 
-Fasen _deploy_ placerar en temporär spärr på inkommande begäranden och överför platsen till [underhållsläge](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=sv-SE). Distributionsfasen använder de nya behållarna och när filsystemet har monterats öppnar nätverksanslutningar, aktiverar de tjänster som definierats i `relationships`-avsnittet i `.magento.app.yaml`-filen och kör de distributionskopplingar som definierats i `.magento.app.yaml`-filen. Allt är _skrivskyddat_, utom för kataloger som definieras i filen `.magento.app.yaml`. Som standard innehåller egenskapen [`mounts` ](../application/properties.md#mounts) följande kataloger:
+Fasen _deploy_ placerar en temporär spärr på inkommande begäranden och överför platsen till [underhållsläge](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=sv-SE). Distributionsfasen använder de nya behållarna och när filsystemet har monterats öppnar nätverksanslutningar, aktiverar de tjänster som definierats i `relationships`-avsnittet i `.magento.app.yaml`-filen och kör de distributionskopplingar som definierats i `.magento.app.yaml`-filen. Allt är _skrivskyddat_, utom för kataloger som definieras i filen `.magento.app.yaml`. Som standard innehåller egenskapen [`mounts` &#x200B;](../application/properties.md#mounts) följande kataloger:
 
 - `app/etc` - innehåller konfigurationsfilerna `env.php` och `config.php`
 - `pub/media` - innehåller alla mediedata, till exempel produkter eller kategorier

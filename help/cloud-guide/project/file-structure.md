@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # Projektstruktur
 
-Ett Adobe Commerce-projekt för molninfrastruktur innehåller viktiga filer för autentiseringsuppgifter och programkonfiguration. Dessa filer är tillgängliga i som mallar enligt Adobe Commerce-versionen. Se molnmallarna som baseras på Adobe Commerce-versionen i [`magento/magento-cloud` GitHub-databasen ](https://github.com/magento/magento-cloud).
+Ett Adobe Commerce-projekt för molninfrastruktur innehåller viktiga filer för autentiseringsuppgifter och programkonfiguration. Dessa filer är tillgängliga i som mallar enligt Adobe Commerce-versionen. Se molnmallarna som baseras på Adobe Commerce-versionen i [`magento/magento-cloud` GitHub-databasen &#x200B;](https://github.com/magento/magento-cloud).
 
 I följande tabell beskrivs filerna som ingår i ett molnprojekt:
 
@@ -21,7 +21,7 @@ I följande tabell beskrivs filerna som ingår i ett molnprojekt:
 | `/app` | Mappen `code` används för anpassade moduler. Mappen `design` används för [anpassade teman](../store/custom-theme.md). Mappen `etc` innehåller konfigurationsfiler för programmet. |
 | `/m2-hotfixes` | Används för anpassade patchar. |
 | `/update` | En tjänstmapp som används av supportmodulen. |
-| `.gitignore` | Ange vilka filer och kataloger som ska ignoreras. Se [`.gitignore` referens ](#ignoring-files). |
+| `.gitignore` | Ange vilka filer och kataloger som ska ignoreras. Se [`.gitignore` referens &#x200B;](#ignoring-files). |
 | `.magento.app.yaml` | En konfigurationsfil som definierar egenskaperna för att skapa programmet. Se [Konfigurera program](../application/configure-app-yaml.md). |
 | `.magento.env.yaml` | Konfigurationsfil för byggnings-, distributions- och postdistributionsfaserna. Paketet `ece-tools` innehåller ett exempel på filen. Se [Konfigurera miljöer](../environment/configure-env-yaml.md). |
 | `composer.json` | Hämtar Adobe Commerce och konfigurationsskripten för att förbereda programmet. Se [Obligatoriska paket](../development/overview.md#required-packages). |
@@ -59,7 +59,7 @@ Miljöerna för fjärrintegrering, mellanlagring och produktion är skrivskyddad
 
 ## Ignorera filer
 
-Det finns en `.gitignore`-basfil hos Adobe Commerce i molninfrastrukturens projektdatabas. Se den senaste [.gitignore-filen i magento-cloud-databasen ](https://github.com/magento/magento-cloud/blob/master/.gitignore). Om du vill lägga till en fil som finns i listan `.gitignore` kan du använda alternativet `-f` (force) när du mellanlagrar en implementering:
+Det finns en `.gitignore`-basfil hos Adobe Commerce i molninfrastrukturens projektdatabas. Se den senaste [.gitignore-filen i magento-cloud-databasen &#x200B;](https://github.com/magento/magento-cloud/blob/master/.gitignore). Om du vill lägga till en fil som finns i listan `.gitignore` kan du använda alternativet `-f` (force) när du mellanlagrar en implementering:
 
 ```bash
 git add <path/filename> -f

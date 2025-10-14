@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Konfigurera tjänsten MySQL
 
-Tjänsten `mysql` ger beständig datalagring baserat på [MariaDB](https://mariadb.com/), version 10.2 till 10.4, som stöder [ XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html) -lagringsmotorn och återimplementerade funktioner från MySQL 5.6 och 5.7.
+Tjänsten `mysql` ger beständig datalagring baserat på [MariaDB](https://mariadb.com/), version 10.2 till 10.4, som stöder [&#x200B; XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html) -lagringsmotorn och återimplementerade funktioner från MySQL 5.6 och 5.7.
 
 Omindexering av MariaDB 10.4 tar längre tid jämfört med andra versioner av MariaDB eller MySQL. Se [Indexerare](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=sv-SE#indexers) i guiden _Bästa metoder för prestanda_.
 
@@ -72,7 +72,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-`properties` i exemplet ovan ändrar standardinställningarna för `optimizer` enligt [rekommendationerna i guiden ](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=sv-SE#indexers) för bästa prestanda.
+`properties` i exemplet ovan ändrar standardinställningarna för `optimizer` enligt [rekommendationerna i guiden &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=sv-SE#indexers) för bästa prestanda.
 
 **MariaDB-konfigurationsalternativ**:
 

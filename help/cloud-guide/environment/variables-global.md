@@ -85,7 +85,7 @@ stage:
 
 Aktivera generering av statiskt innehåll när en användare begär det (SCD). Statiskt innehåll on demand är idealiskt för utvecklings- och testarbetsflöden eftersom det minskar driftsättningstiden.
 
-Om du läser in cachen i förväg med [`post_deploy`-kroken ](../application/hooks-property.md) minskas platsens drifttid. Cachevärmaren är bara tillgänglig för Pro-projekt som innehåller miljöer för mellanlagring och produktion i [!DNL Cloud Console] och för Starter-projekt. Lägg till miljövariabeln `SCD_ON_DEMAND` på scenen `global` i filen `.magento.env.yaml`:
+Om du läser in cachen i förväg med [`post_deploy`-kroken &#x200B;](../application/hooks-property.md) minskas platsens drifttid. Cachevärmaren är bara tillgänglig för Pro-projekt som innehåller miljöer för mellanlagring och produktion i [!DNL Cloud Console] och för Starter-projekt. Lägg till miljövariabeln `SCD_ON_DEMAND` på scenen `global` i filen `.magento.env.yaml`:
 
 ```yaml
 stage:

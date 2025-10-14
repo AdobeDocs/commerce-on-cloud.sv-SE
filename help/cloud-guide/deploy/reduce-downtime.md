@@ -27,7 +27,7 @@ Adobe Commerce i molninfrastrukturprojektet måste ha det senaste `ece-tools` -p
 
    >[!NOTE]
    >
-   >Även om det är en god vana att använda det senaste `ece-tools`-paketet fungerar distributionsmetoden utan driftstopp med `ece-tools` [ version 2002.0.13](../release-notes/cloud-release-archive.md#v2002013) och senare.
+   >Även om det är en god vana att använda det senaste `ece-tools`-paketet fungerar distributionsmetoden utan driftstopp med `ece-tools` [&#x200B; version 2002.0.13](../release-notes/cloud-release-archive.md#v2002013) och senare.
 
 1. [Konfigurera distribution av statiskt innehåll](static-content.md)
 Om statisk innehållsdistribution misslyckas i distributionsfasen fastnar platsen i underhållsläge. När ett fel inträffar under byggfasen undviker processen driftavbrott eftersom den aldrig påbörjar distributionsfasen. [Att generera statiskt innehåll under byggfasen med minifierad HTML](static-content.md#setting-the-scd-on-build), även kallat det idealiska läget, är den optimala konfigurationen för driftsättningar utan driftavbrott och _förhindrar_ driftavbrott om ett fel inträffar.

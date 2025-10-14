@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Uppdatera ECE-verktygspaketet
 
-En uppdatering av `ece-tools`-paketet uppdaterar även de andra [ Cloud Tools Suite för Commerce-paketen](../release-notes/cloud-tools-suite.md), som är beroenden för `ece-tools`. Därför måste du använda en version av Adobe Commerce i molninfrastrukturen som stöder paketet `ece-tools`.
+En uppdatering av `ece-tools`-paketet uppdaterar även de andra [&#x200B; Cloud Tools Suite för Commerce-paketen](../release-notes/cloud-tools-suite.md), som är beroenden för `ece-tools`. Därför måste du använda en version av Adobe Commerce i molninfrastrukturen som stöder paketet `ece-tools`.
 
 {{ece-tools-package}}
 

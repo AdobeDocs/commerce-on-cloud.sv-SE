@@ -221,7 +221,7 @@ Releasedatum: 12 augusti 2021
 
 Viktig patch för Adobe Commerce 2.4.3 och 2.3.7-p1:
 
-- **Problem med API-hastighetsbegränsning** - Den här korrigeringen åtgärdar en standardhastighetsgräns som förhindrar att webb-API:er bearbetar begäranden med mer än 20 objekt i en array. Den här korrigeringen höjer standardvärdet för hastighetsgränsen. Se versionsinformationen för Adobe Commerce [ 2.4.3](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **Problem med API-hastighetsbegränsning** - Den här korrigeringen åtgärdar en standardhastighetsgräns som förhindrar att webb-API:er bearbetar begäranden med mer än 20 objekt i en array. Den här korrigeringen höjer standardvärdet för hastighetsgränsen. Se versionsinformationen för Adobe Commerce [&#x200B; 2.4.3](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 

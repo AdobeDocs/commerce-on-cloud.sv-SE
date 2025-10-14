@@ -26,7 +26,7 @@ php ./vendor/bin/ece-tools list
 
 Paketet `ece-tools` innehåller kommandon för att utföra åtgärder för att skapa, distribuera och efterdistribuera stadier när du startar Adobe Commerce på molninfrastruktursprogrammet. Kommandot `php ./vendor/bin/ece-tools build` startar till exempel programbyggprocessen.
 
-Som standard finns dessa `ece-tools`-kommandon i [hooks-egenskapen ](../application/hooks-property.md) i konfigurationsfilen `.magento.app.yaml` .
+Som standard finns dessa `ece-tools`-kommandon i [hooks-egenskapen &#x200B;](../application/hooks-property.md) i konfigurationsfilen `.magento.app.yaml` .
 
 ## Dockningskonfigurationsgenerator
 

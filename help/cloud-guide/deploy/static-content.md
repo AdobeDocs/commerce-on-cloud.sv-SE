@@ -41,7 +41,7 @@ Att generera statiskt innehåll under byggfasen med minifierad HTML är den opti
 För att generera statiskt innehåll måste du ha tillgång till teman och språkområden. Adobe Commerce lagrar teman i filsystemet, som är tillgängligt under byggfasen, men i Adobe Commerce lagras språkinställningarna i databasen. Databasen är _inte_ tillgänglig under byggfasen. För att kunna generera det statiska innehållet under byggfasen måste du använda kommandot `config:dump` i paketet `ece-tools` för att flytta språkområden till filsystemet. Det läser språkinställningarna och sparar dem i filen `app/etc/config.php`.
 
 >[!NOTE]
->När du har kört kommandot `config:dump` i paketet `ece-tools` låses (nedtonas) de konfigurationer som dumpas i filen `config.php` [ på Admin Dashboard](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). Det enda sättet att uppdatera dessa konfigurationer i Admin är att ta bort dem från filen lokalt och distribuera om projektet.
+>När du har kört kommandot `config:dump` i paketet `ece-tools` låses (nedtonas) de konfigurationer som dumpas i filen `config.php` [&#x200B; på Admin Dashboard](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). Det enda sättet att uppdatera dessa konfigurationer i Admin är att ta bort dem från filen lokalt och distribuera om projektet.
 >&#x200B;>Varje gång du lägger till en ny butiks-/butiksgrupp/webbplats i din instans måste du dessutom köra kommandot `config:dump` för att vara säker på att databasen är synkroniserad. Du kan också välja [vilka konfigurationer som ska dumpas](https://experienceleague.adobe.com/sv/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) i `config.php`-filen.
 >&#x200B;>Om du tar bort konfigurationen av grupp/webbplats för butik/butik från filen `config.php` eftersom fälten är nedtonade men inte utför det här steget, tas de nya entiteterna som inte har dumpats bort från databasen vid nästa distribution.
 
@@ -54,7 +54,7 @@ För att generera statiskt innehåll måste du ha tillgång till teman och språ
    magento-cloud ssh
    ```
 
-1. Flytta språkinställningar till filsystemet och uppdatera sedan [`config.php`-filen ](../development/commerce-version.md#create-a-configphp-file).
+1. Flytta språkinställningar till filsystemet och uppdatera sedan [`config.php`-filen &#x200B;](../development/commerce-version.md#create-a-configphp-file).
 
 1. Konfigurationsfilen `.magento.env.yaml` ska innehålla följande värden:
 

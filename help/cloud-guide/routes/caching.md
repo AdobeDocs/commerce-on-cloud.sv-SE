@@ -76,7 +76,7 @@ Cachevaraktigheten bestäms av svarshuvudets värde `Cache-Control`. Om inget `C
 
 ## Cachenyckel
 
-För att bestämma hur ett svar ska cachelagras, skapar Adobe Commerce en cachenyckel som är beroende av flera faktorer och lagrar det svar som är associerat med den här nyckeln. När en begäran levereras med samma cachenyckel återanvänds svaret. Dess syfte liknar HTTP [`Vary`-huvudet ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44).
+För att bestämma hur ett svar ska cachelagras, skapar Adobe Commerce en cachenyckel som är beroende av flera faktorer och lagrar det svar som är associerat med den här nyckeln. När en begäran levereras med samma cachenyckel återanvänds svaret. Dess syfte liknar HTTP [`Vary`-huvudet &#x200B;](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44).
 
 Med parametrarna `headers` och `cookies` kan du ändra den här cachenyckeln.
 

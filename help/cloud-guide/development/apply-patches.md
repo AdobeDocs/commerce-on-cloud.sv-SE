@@ -239,7 +239,7 @@ Så här återställer eller avinstallerar du en tidigare tillämpad anpassad ko
 
 ## Tillämpa korrigeringar på ett icke-molnprojekt
 
-Använd [kvalitetsverktyget ](https://github.com/magento/quality-patches) för projekt i Magento Open Source och Adobe Commerce.
+Använd [kvalitetsverktyget &#x200B;](https://github.com/magento/quality-patches) för projekt i Magento Open Source och Adobe Commerce.
 
 ## Återställa en korrigering i en lokal miljö
 

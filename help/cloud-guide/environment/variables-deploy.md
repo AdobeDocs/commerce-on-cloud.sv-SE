@@ -443,7 +443,7 @@ stage:
 
 >[!NOTE]
 >
->Om du anger `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` som Redis-serverdelsmodell för att aktivera [ L2-cache](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE) genererar `ece-tools` cachekonfigurationen automatiskt. Se ett exempel på [konfigurationsfil](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE#configuration-example) i _Adobe Commerce Configuration Guide_. Om du vill åsidosätta den genererade cachekonfigurationen använder du distributionsvariabeln [CACHE_CONFIGURATION](#cache_configuration) .
+>Om du anger `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` som Redis-serverdelsmodell för att aktivera [&#x200B; L2-cache](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE) genererar `ece-tools` cachekonfigurationen automatiskt. Se ett exempel på [konfigurationsfil](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE#configuration-example) i _Adobe Commerce Configuration Guide_. Om du vill åsidosätta den genererade cachekonfigurationen använder du distributionsvariabeln [CACHE_CONFIGURATION](#cache_configuration) .
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -470,7 +470,7 @@ Du måste ha en Redis-tjänst konfigurerad i filen `.magento.app.yaml` och i fil
 
 [ECE-Tools version 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) och senare använder mer feltoleranta inställningar. Om Adobe Commerce inte kan läsa data från instansen Redis _slave_ läser den data från instansen Redis _master_.
 
-Den skrivskyddade anslutningen är inte tillgänglig för användning i integreringsmiljön eller om du använder variabeln [`CACHE_CONFIGURATION` ](#cache_configuration).
+Den skrivskyddade anslutningen är inte tillgänglig för användning i integreringsmiljön eller om du använder variabeln [`CACHE_CONFIGURATION` &#x200B;](#cache_configuration).
 
 ## `VALKEY_BACKEND`
 
@@ -496,7 +496,7 @@ stage:
 
 >[!NOTE]
 >
->Om du anger `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` som värdenhetens serverdelsmodell för att aktivera [ L2-cache](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE) genererar `ece-tools` cachekonfigurationen automatiskt. Se ett exempel på [konfigurationsfil](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE#configuration-example) i _Adobe Commerce Configuration Guide_. Om du vill åsidosätta den genererade cachekonfigurationen använder du distributionsvariabeln [CACHE_CONFIGURATION](#cache_configuration) .
+>Om du anger `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` som värdenhetens serverdelsmodell för att aktivera [&#x200B; L2-cache](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE) genererar `ece-tools` cachekonfigurationen automatiskt. Se ett exempel på [konfigurationsfil](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=sv-SE#configuration-example) i _Adobe Commerce Configuration Guide_. Om du vill åsidosätta den genererade cachekonfigurationen använder du distributionsvariabeln [CACHE_CONFIGURATION](#cache_configuration) .
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -523,7 +523,7 @@ Du måste ha en Redis-tjänst konfigurerad i filen `.magento.app.yaml` och i fil
 
 [ECE-Tools version 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) och senare använder mer feltoleranta inställningar. Om Adobe Commerce inte kan läsa data från Valkey-instansen _slave_ läser den data från Redis _master_-instansen.
 
-Den skrivskyddade anslutningen är inte tillgänglig för användning i integreringsmiljön eller om du använder variabeln [`CACHE_CONFIGURATION` ](#cache_configuration).
+Den skrivskyddade anslutningen är inte tillgänglig för användning i integreringsmiljön eller om du använder variabeln [`CACHE_CONFIGURATION` &#x200B;](#cache_configuration).
 
 ## `RESOURCE_CONFIGURATION`
 
