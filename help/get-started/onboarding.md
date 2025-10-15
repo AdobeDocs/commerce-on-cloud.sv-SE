@@ -52,6 +52,6 @@ Sidan innehåller en status för Adobe Commerce komponenter och tjänster följt
 
 <!-- link definitions -->
 
-[Försäljning]: https://business.adobe.com/products/magento/get-demo.html
+[Försäljning]: https://business.adobe.com/se/products/magento/get-demo.html
 [Delad åtkomst]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#shared-access
 [Statussida]: https://status.adobe.com/products/503473

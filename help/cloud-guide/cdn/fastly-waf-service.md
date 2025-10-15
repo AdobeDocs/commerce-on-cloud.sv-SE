@@ -26,7 +26,7 @@ WAF-tjänsten ger följande fördelar:
 
 >[!TIP]
 >
->Mer information om hur du underhåller PCI-kompatibilitet för din Adobe Commerce i molninfrastrukturbutiker finns i [PCI-kompatibilitet](https://business.adobe.com/products/magento/pci-compliance.html).
+>Mer information om hur du underhåller PCI-kompatibilitet för din Adobe Commerce i molninfrastrukturbutiker finns i [PCI-kompatibilitet](https://business.adobe.com/se/products/magento/pci-compliance.html).
 
 ## Aktivera WAF
 
