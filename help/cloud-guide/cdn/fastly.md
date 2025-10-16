@@ -44,7 +44,7 @@ Tillhandahåller snabbt följande tjänster för att optimera och skydda innehå
 
 - **Insvepning av ursprung** - Förhindrar att trafik kringgår Fastly WAF och döljer IP-adresserna för dina ursprungliga servrar för att skydda dem mot direkt åtkomst och DDoS-attacker.
 
-  Insvepning av ursprung är aktiverat som standard på Adobe Commerce i projekt för molninfrastruktur och Pro Production. Om du vill aktivera ursprungsinsvepning på Adobe Commerce i startproduktionsprojekt för molninfrastruktur skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Om du har trafik som inte kräver cachelagring kan du anpassa snabbtjänstkonfigurationen så att begäranden kan [kringgå snabbcachen](fastly-vcl-bypass-to-origin.md).
+  Insvepning av ursprung är aktiverat som standard på Adobe Commerce i projekt för molninfrastruktur och Pro Production. Om du vill aktivera ursprungsinsvepning på Adobe Commerce i startproduktionsprojekt för molninfrastruktur skickar du en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket). Om du har trafik som inte kräver cachelagring kan du anpassa snabbtjänstkonfigurationen så att begäranden kan [kringgå snabbcachen](fastly-vcl-bypass-to-origin.md).
 
 - **[Bildoptimering](fastly-image-optimization.md)** - Avlastar bildbearbetning och storleksändring från tjänsten Snabbt så att servrar kan bearbeta beställningar och konverteringar mer effektivt.
 
@@ -66,13 +66,13 @@ Under etableringen lägger Adobe till ditt projekt till snabbtjänstkontot för 
 
 ### Ändra snabbt API-token
 
-Skicka en Adobe Commerce Support-biljett för att utfärda en ny snabb API-tokenautentiseringsuppgift [om valideringen misslyckas/har upphört](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) eller om du tror att den har komprometterats.
+Skicka en Adobe Commerce Support-biljett för att utfärda en ny snabb API-tokenautentiseringsuppgift [om valideringen misslyckas/har upphört](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) eller om du tror att den har komprometterats.
 
 När du får en ny token uppdaterar du din förproduktionsmiljö så att den använder den nya token.
 
 **Så här ändrar du autentiseringsuppgifter för snabb API-token**:
 
-1. [Skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) och begär nya Snabb-API-autentiseringsuppgifter.
+1. [Skicka in en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) och begär nya Snabb-API-autentiseringsuppgifter.
 
    Inkludera ditt Adobe Commerce i projekt-ID för molninfrastruktur och miljöer som kräver nya autentiseringsuppgifter.
 
@@ -120,18 +120,18 @@ DDOS-skyddet är inbyggt i tjänsten Fast CDN. När du har aktiverat Snabba tjä
 
 >[!NOTE]
 >
->Skydd mot Layer 7-attacker omfattas inte av tjänsten Fastly CDN som är integrerad med Adobe Commerce. Tips om hur du skyddar mot Layer 7-attacker finns i [Leta efter DDoS-attacker](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli) och [Blockera skadliga attacker](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level) i *Adobe Commerce Knowledge Base*.
+>Skydd mot Layer 7-attacker omfattas inte av tjänsten Fastly CDN som är integrerad med Adobe Commerce. Tips om hur du skyddar mot Layer 7-attacker finns i [Leta efter DDoS-attacker](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli) och [Blockera skadliga attacker](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level) i *Adobe Commerce Knowledge Base*.
 
 <!--Link definitions-->
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=sv-SE
 
 [Snabb CDN-modul för Magento 2]: https://github.com/fastly/fastly-magento2
 
 [Snabbt supportärende]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
+[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=sv-SE
 
 [Arbeta med domäner]: https://docs.fastly.com/en/guides/working-with-domains
