@@ -78,7 +78,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >I Pro Staging- och Pro Production-miljöer aktiveras automatisk loggrotation, komprimering och borttagning för loggfiler med ett fast filnamn. Varje loggfilstyp har ett roterande mönster och en livstid.
 >Fullständig information om miljöns loggrotation och livslängd för komprimerade loggar finns i: `/etc/logrotate.conf` och `/etc/logrotate.d/<various>`.
->För Pro Staging- och Pro Production-miljöer måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att be om ändringar i loggrotationskonfigurationen.
+>För Pro Staging- och Pro Production-miljöer måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att be om ändringar i loggrotationskonfigurationen.
 
 >[!TIP]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-De flesta felmeddelanden innehåller en beskrivning och förslag på åtgärd. Använd [felmeddelandereferensen för ECE-verktyg](../dev-tools/error-reference.md) för att leta upp felkoden för ytterligare vägledning. Använd [felsökaren för Adobe Commerce-distribution](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) om du vill ha mer information.
+De flesta felmeddelanden innehåller en beskrivning och förslag på åtgärd. Använd [felmeddelandereferensen för ECE-verktyg](../dev-tools/error-reference.md) för att leta upp felkoden för ytterligare vägledning. Använd [felsökaren för Adobe Commerce-distribution](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=sv-SE) om du vill ha mer information.
 
 ## Programloggar
 
@@ -227,7 +227,7 @@ Programloggarna komprimeras och arkiveras en gång om dagen och sparas i **30 da
 
 De arkiverade loggfilerna sparas alltid i den katalog där originalfilen fanns före komprimeringen.
 
-Du kan [skicka in en supportanmälan](https://experienceleague.adobe.com/home?support-tab=home#support) om du vill begära ändringar av loggkvarhållningsperioden eller konfigurationen för logrotate. Du kan öka kvarhållningsperioden upp till högst 365 dagar, minska den för att spara lagringskvoten eller lägga till ytterligare loggsökvägar till logrotate-konfigurationen. Dessa ändringar är tillgängliga för Pro Staging- och Production-kluster.
+Du kan [skicka in en supportanmälan](https://experienceleague.adobe.com/home?lang=sv-SE&support-tab=home#support) om du vill begära ändringar av loggkvarhållningsperioden eller konfigurationen för logrotate. Du kan öka kvarhållningsperioden upp till högst 365 dagar, minska den för att spara lagringskvoten eller lägga till ytterligare loggsökvägar till logrotate-konfigurationen. Dessa ändringar är tillgängliga för Pro Staging- och Production-kluster.
 
 Om du till exempel skapar en anpassad sökväg för att lagra loggar i katalogen `var/log/mymodule` kan du begära loggrotation för den här sökvägen. Den aktuella infrastrukturen kräver emellertid konsekventa filnamn för Adobe för att konfigurera loggrotation korrekt. Adobe rekommenderar att loggnamnen är konsekventa för att undvika konfigurationsproblem.
 
