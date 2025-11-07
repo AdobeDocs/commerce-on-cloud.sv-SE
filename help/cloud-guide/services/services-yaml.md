@@ -3,9 +3,9 @@ title: Konfigurera tjänster
 description: Lär dig hur du konfigurerar tjänster som används av Adobe Commerce i molninfrastruktur.
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ Filen `services.yaml` definierar de tjänster som stöds och används av Adobe C
 >[!NOTE]
 >
 >Filen `.magento/services.yaml` hanteras lokalt i katalogen `.magento` i ditt projekt. Konfigurationen nås under byggprocessen för att endast definiera de tjänstversioner som krävs i integreringsmiljön och tas bort när distributionen har slutförts, så du kommer inte att hitta dem på servern.
-
 
 Distributionsskriptet använder konfigurationsfilerna i katalogen `.magento` för att etablera miljön med de konfigurerade tjänsterna. En tjänst blir tillgänglig för ditt program om den ingår i egenskapen [`relationships`](../application/properties.md#relationships) för filen `.magento.app.yaml`. Filen `services.yaml` innehåller värdena _type_ och _disk_. Tjänsttypen definierar tjänsten _name_ och _version_.
 
@@ -38,6 +37,10 @@ Molninfrastrukturen stöder och distribuerar följande tjänster:
 - [KaninMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
+
+>[!NOTE]
+>
+>När du har uppgraderat till en ny version av RabbitMQ kan du aktivera en fullständig distribution för att vara säker på att dina anpassade meddelandeköer återskapas i RabbitMQ.
 
 Du kan visa standardversioner och diskvärden i den aktuella [standardfilen `services.yaml`](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). I följande exempel visas tjänsterna `mysql`, `redis`, `opensearch` eller `elasticsearch`, `rabbitmq` och `activemq-artemis` som definieras i konfigurationsfilen `services.yaml`:
 
@@ -177,7 +180,7 @@ Du kan hämta konfigurationsdata för alla tjänstrelationer från miljövariabe
 
 ## Tjänstversioner
 
-Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras och testas i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _Installationshandboken_ för en lista över programberoenden från tredje part som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source.
+Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras och testas i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _Installationshandboken_ för en lista över programberoenden från tredje part som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source.
 
 ### EOL-kontroller för programvara
 
