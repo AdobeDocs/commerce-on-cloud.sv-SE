@@ -3,16 +3,16 @@ title: Konfigurera tjänsten RabbitMQ
 description: Lär dig hur du aktiverar tjänsten RabbitMQ för att hantera meddelandeköer för Adobe Commerce i molninfrastruktur.
 feature: Cloud, Services
 exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
-source-git-commit: 2df119f1c09b92e45ae30544e5c2ee0e0d21834c
+source-git-commit: 76a9721767cbd4328347311cc308810f0f7914c0
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
 
 # Konfigurera tjänsten [!DNL RabbitMQ]
 
-[MQF (Message Queue Framework)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=sv-SE) är ett system i Adobe Commerce som tillåter en [modul](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/glossary#module) att publicera meddelanden till köer. Det definierar också de konsumenter som tar emot meddelandena asynkront.
+[MQF (Message Queue Framework)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) är ett system i Adobe Commerce som tillåter en [modul](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) att publicera meddelanden till köer. Det definierar också de konsumenter som tar emot meddelandena asynkront.
 
 MQF använder [RabbitMQ](https://www.rabbitmq.com/) som meddelandeförmedlare, som tillhandahåller en skalbar plattform för att skicka och ta emot meddelanden. Den innehåller även en mekanism för att lagra olevererade meddelanden. [!DNL RabbitMQ] baseras på specifikationen Advanced Message Queuing Protocol (AMQP) 0.9.1.
 
@@ -149,3 +149,11 @@ När du loggar in på PHP-behållaren anger du ett `amqp-`-kommando som är till
 ### Anslut från ditt PHP-program
 
 Om du vill ansluta till RabbitMQ med ditt PHP-program lägger du till ett PHP-bibliotek i källträdet.
+
+## Felsökning av tjänsten [!DNL RabbitMQ]
+
+Se [Det går inte att ansluta till RabbitMQ i Adobe Commerce Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688).
+
+## Uppgraderar tjänsten [!DNL RabbitMQ]
+
+Uppgraderingsinstruktioner finns i [Ändra tjänstversion](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version).
