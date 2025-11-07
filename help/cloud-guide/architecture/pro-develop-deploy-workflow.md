@@ -3,9 +3,9 @@ title: Arbetsflöde för Pro-projekt
 description: Lär dig använda arbetsflödena för Pro-utveckling och -distribution.
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: 8aacac9ae721bc98cbe29e67ddf23d784e478e55
+source-git-commit: edff4efe0af54542321e887defc27dc96e6ae7f6
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,9 @@ file_put_contents(...): Failed to open stream: Read-only file system
 The disk hosting /app/<cluster_ID> is full
 ```
 
-Mer information finns i [Pro-arkitektur](pro-architecture.md) för en översikt över Pro-miljöer, och i [[!DNL Cloud Console]](../project/overview.md#cloud-console) finns en översikt över Pro-miljölistan i projektvyn.
+>[!NOTE]
+>
+>Den här begränsningen skyddar programmets integritet och säkerhet. Mappbehörigheter i dessa skrivskyddade filsystem kan inte ändras - inte ens supporten kan ändra dem. Alla ändringar måste göras från en gren i den lokala utvecklingsmiljön och skickas till programmiljön. Mer information finns i [Pro-arkitektur](pro-architecture.md) för en översikt över Pro-miljöer, och i [[!DNL Cloud Console]](../project/overview.md#cloud-console) finns en översikt över Pro-miljölistan i projektvyn.
 
 ## Arbetsflöde för utveckling
 
