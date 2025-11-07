@@ -3,9 +3,9 @@ title: Visa och hantera loggar
 description: Förstå vilka typer av loggfiler som finns i molninfrastrukturen och var de finns.
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: afdc6f2b72d53199634faff7f30fd87ff3b31f3f
+source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,37 @@ Systemloggarna lagras på följande platser:
 Värdet för `<project-ID>` beror på projektet och om miljön är Förproduktion eller Produktion. Med ett projekt-ID på `yw1unoukjcawe` är till exempel användaren i mellanlagringsmiljön `yw1unoukjcawe_stg` och användaren i produktionsmiljön är `yw1unoukjcawe`.
 
 Med det exemplet är distributionsloggen: `/var/log/platform/yw1unoukjcawe_stg/deploy.log`
+
+### Söka efter specifika felloggsposter
+
+När du stöter på ett fel med ett visst loggpostnummer (till exempel `475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9`) kan du hitta posten genom att fråga Commerce programserverns fjärrmiljöloggar på följande sätt:
+
+>[!NOTE]
+>
+>Instruktioner om hur du får åtkomst till fjärrmiljöloggar för ditt Commerce-program med Secure Shell (SSH) finns i [Säkra anslutningar till fjärrmiljöer](../development/secure-connections.md).
+
+#### Metod 1: Sök med grep
+
+```bash
+# Search for the specific error record in all log files
+magento-cloud ssh -e <environment-ID> "grep -r '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/"
+
+# Search in specific log files
+magento-cloud ssh -e <environment-ID> "grep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/exception.log"
+```
+
+#### Metod 2: Sök i arkiverade loggar
+
+Om felet uppstod tidigare bör du kontrollera arkiverade loggfiler:
+
+```bash
+# Search in compressed log files
+magento-cloud ssh -e <environment-ID> "find /var/log -name '*.gz' -exec zgrep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' {} \;"
+```
+
+#### Metod 3: Använd New Relic (Pro-miljöer)
+
+För Pro Production- och Staging-miljöer använder du New Relic Logs för att söka efter specifika felposter. Mer information finns i [New Relic logghantering](../monitor/log-management.md).
 
 ### Visa fjärrmiljöloggar
 
@@ -78,7 +109,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >I Pro Staging- och Pro Production-miljöer aktiveras automatisk loggrotation, komprimering och borttagning för loggfiler med ett fast filnamn. Varje loggfilstyp har ett roterande mönster och en livstid.
 >Fullständig information om miljöns loggrotation och livslängd för komprimerade loggar finns i: `/etc/logrotate.conf` och `/etc/logrotate.d/<various>`.
->För Pro Staging- och Pro Production-miljöer måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att be om ändringar i loggrotationskonfigurationen.
+>För Pro Staging- och Pro Production-miljöer måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att be om ändringar i loggrotationskonfigurationen.
 
 >[!TIP]
 >
@@ -143,7 +174,7 @@ Exempelsvar:
 ```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
 
-[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\n''.
+[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\\n''.
 
 [2023-04-24T18:58:04.129888+00:00] INFO: Starting scenario(s): scenario/deploy.xml (magento/ece-tools version: 2002.1.14, magento/magento2-base version: 2.4.6)
 [2023-04-24T18:58:04.364714+00:00] NOTICE: Starting pre-deploy.
@@ -189,7 +220,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-De flesta felmeddelanden innehåller en beskrivning och förslag på åtgärd. Använd [felmeddelandereferensen för ECE-verktyg](../dev-tools/error-reference.md) för att leta upp felkoden för ytterligare vägledning. Använd [felsökaren för Adobe Commerce-distribution](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=sv-SE) om du vill ha mer information.
+De flesta felmeddelanden innehåller en beskrivning och förslag på åtgärd. Använd [felmeddelandereferensen för ECE-verktyg](../dev-tools/error-reference.md) för att leta upp felkoden för ytterligare vägledning. Använd [felsökaren för Adobe Commerce-distribution](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) om du vill ha mer information.
 
 ## Programloggar
 
@@ -227,7 +258,7 @@ Programloggarna komprimeras och arkiveras en gång om dagen och sparas i **30 da
 
 De arkiverade loggfilerna sparas alltid i den katalog där originalfilen fanns före komprimeringen.
 
-Du kan [skicka in en supportanmälan](https://experienceleague.adobe.com/home?lang=sv-SE&support-tab=home#support) om du vill begära ändringar av loggkvarhållningsperioden eller konfigurationen för logrotate. Du kan öka kvarhållningsperioden upp till högst 365 dagar, minska den för att spara lagringskvoten eller lägga till ytterligare loggsökvägar till logrotate-konfigurationen. Dessa ändringar är tillgängliga för Pro Staging- och Production-kluster.
+Du kan [skicka in en supportanmälan](https://experienceleague.adobe.com/home?support-tab=home#support) om du vill begära ändringar av loggkvarhållningsperioden eller konfigurationen för logrotate. Du kan öka kvarhållningsperioden upp till högst 365 dagar, minska den för att spara lagringskvoten eller lägga till ytterligare loggsökvägar till logrotate-konfigurationen. Dessa ändringar är tillgängliga för Pro Staging- och Production-kluster.
 
 Om du till exempel skapar en anpassad sökväg för att lagra loggar i katalogen `var/log/mymodule` kan du begära loggrotation för den här sökvägen. Den aktuella infrastrukturen kräver emellertid konsekventa filnamn för Adobe för att konfigurera loggrotation korrekt. Adobe rekommenderar att loggnamnen är konsekventa för att undvika konfigurationsproblem.
 
