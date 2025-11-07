@@ -5,9 +5,10 @@ role: Admin
 feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 953593de-f675-49fd-988f-f11306f67fbd
+source-git-commit: c972d9f2029499cf53edc334c1d9a40b155a991d
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Du kan lägga till användare och tilldela roller med `magento-cloud` CLI eller 
 
 **Förutsättningar:**
 
-- En registrerad användare hos en Adobe ID. En användare måste [registrera sig för ett Adobe-konto](https://account.adobe.com) och sedan [initiera sitt molnkonto](https://console.adobecommerce.com) innan du kan lägga till dem i ett Cloud-projekt.
+- En registrerad användare hos en Adobe ID. En användare måste [registrera sig för ett Adobe-konto](https://account.adobe.com) och sedan initiera sitt [Cloud-konto](https://console.adobecommerce.com) genom att gå till [https://console.adobecommerce.com](https://console.adobecommerce.com) innan du kan lägga till dem i ett Cloud-projekt.
 - En användare som tilldelats rollen **Admin** kan inte hantera användare med CLI:n `magento-cloud`. Endast användare som har tilldelats rollen **Kontoägare** kan hantera användare.
 
 >[!ENDSHADEBOX]
@@ -95,7 +96,7 @@ I följande exempel används CLI:n `magento-cloud` för att lägga till en anvä
    Adding the user to the project
    ```
 
-   När du har lagt till användaren skickar Adobe ett e-postmeddelande till den angivna adressen med instruktioner om hur du får åtkomst till Adobe Commerce i molninfrastrukturprojektet.
+   När du har lagt till användaren skickar Adobe ett e-postmeddelande till den angivna adressen med instruktioner om hur du får tillgång till Adobe Commerce i molninfrastrukturprojektet.
 
 ### Visa en användares projektroll
 
@@ -142,9 +143,9 @@ Du kan använda [[!DNL Cloud Console]](../../get-started/cloud-console.md) för 
 
 1. Klicka på konfigurationsikonen i det övre högra hörnet på projektkontrollpanelen.
 
-1. Klicka på **[!UICONTROL Access]** under _Projektinställningar_.
+1. Klicka på _under_ Projektinställningar **[!UICONTROL Access]**.
 
-1. Klicka på **[!UICONTROL Add]** i vyn _Åtkomst_.
+1. Klicka på _i vyn_&#x200B;Åtkomst **[!UICONTROL Add]**.
 
 1. Fyll i formuläret _[!UICONTROL Add User]_:
 
@@ -166,7 +167,7 @@ Du kan använda [[!DNL Cloud Console]](../../get-started/cloud-console.md) för 
 
 1. Distribuera om alla miljöer för att tillämpa ändringarna när du har lagt till användare. När du lägger till en användare aktiveras inte distributionen automatiskt. Omdistribution är ett viktigt steg för att se till att användaren kan komma åt en miljö med SSH eller utföra administratörsuppgifter.
 
-När du har lagt till användaren skickar Adobe ett e-postmeddelande till den angivna adressen med instruktioner om hur du får åtkomst till Adobe Commerce i molninfrastrukturprojektet.
+När du har lagt till användaren skickar Adobe ett e-postmeddelande till den angivna adressen med instruktioner om hur du får tillgång till Adobe Commerce i molninfrastrukturprojektet.
 
 ## Krav för användarautentisering
 
@@ -201,7 +202,7 @@ Instruktioner för hur du installerar autentiseringsprogrammet och aktiverar TFA
 
 1. Klicka på **[!UICONTROL My Profile]** på den övre högra kontomenyn.
 
-1. Klicka på **[!UICONTROL Set up application]** på fliken _Säkerhet_.
+1. Klicka på _på fliken_ Säkerhet **[!UICONTROL Set up application]**.
 
 1. Om du inte har något godkänt autentiseringsprogram på din mobila enhet kan du installera ett med hjälp av de länkade instruktionerna.
 
@@ -231,7 +232,7 @@ Instruktioner för hur du installerar autentiseringsprogrammet och aktiverar TFA
 
      >[!WARNING]
      >
-     >Om du förlorar åtkomsten till ett konto med TFA och inte har återställningskodlistan, måste du kontakta projektadministratören eller [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att återställa TFA-programmet.
+     >Om du förlorar åtkomsten till ett konto med TFA och inte har återställningskodlistan, måste du kontakta projektadministratören eller [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att återställa TFA-programmet.
 
 1. När du är klar med TFA-konfigurationen klickar du på **Spara** för att uppdatera ditt konto.
 
@@ -249,7 +250,7 @@ Du kan hantera TFA-konfigurationen för ett Adobe Commerce-konto för molninfras
 
 1. Klicka på **[!UICONTROL My Profile]** på den övre högra kontomenyn.
 
-1. Klicka på fliken **[!UICONTROL Security]** på sidan _Min profil_.
+1. Klicka på fliken _på sidan_ Min profil **[!UICONTROL Security]**.
 
 1. Använd de tillgängliga länkarna för att uppdatera TFA-inställningarna för ditt Adobe Commerce-konto för molninfrastruktur:
 
@@ -266,7 +267,7 @@ I projekt där användningen av MFA är aktiverad måste du ha en API-token för
 
 >[!IMPORTANT]
 >
->Protect API-tokenvärden för ditt konto. Visa inte värdet i kodexempel, skärmdumpar eller osäker kommunikation mellan klient och server. Visa inte heller värdet i källkod som lagras i offentliga databaser.
+>Skydda API-tokenvärden för ditt konto. Visa inte värdet i kodexempel, skärmdumpar eller osäker kommunikation mellan klient och server. Visa inte heller värdet i källkod som lagras i offentliga databaser.
 
 **Så här skapar du en API-token**:
 
@@ -274,7 +275,7 @@ I projekt där användningen av MFA är aktiverad måste du ha en API-token för
 
 1. Klicka på **[!UICONTROL My Profile]** på den övre högra kontomenyn.
 
-1. Klicka på fliken **[!UICONTROL API tokens]** på sidan _Min profil_.
+1. Klicka på fliken _på sidan_ Min profil **[!UICONTROL API tokens]**.
 
 1. Klicka på **[!UICONTROL Create API token]** och ange ett namn, till exempel ett namn som matchar datoranvändaren eller den automatiska process som använder API-token.
 
