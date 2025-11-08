@@ -27,5 +27,5 @@ If you are fixing a GitHub issue, using the GitHub keyword format (https://help.
 
 `main` is the default branch. Merged pull requests to `main` go live on the site automatically. Any requested changes to content on the `main` branch must be related to the released codebase. Any content related to future releases goes in the `develop` branch.
 
-See Contribution guidelines (https://github.com/AdobeDocs/commerce-operations.en/blob/main/contributing.md) for more information.
+See Contribution guidelines (https://github.com/AdobeDocs/commerce-operations.sv-SE/blob/main/contributing.md) for more information.
 -->
