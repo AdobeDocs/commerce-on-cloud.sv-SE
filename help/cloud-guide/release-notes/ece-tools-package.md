@@ -17,7 +17,7 @@ Paketet [ece-tools](https://github.com/magento/ece-tools) är en uppsättning sk
 
 >[!NOTE]
 >
->Mer information om hur du uppdaterar till den senaste versionen av [-paketet finns i ](../dev-tools/update-package.md)Uppgradera ECE-verktyg`ece-tools` .
+>Mer information om hur du uppdaterar till den senaste versionen av [-paketet finns i &#x200B;](../dev-tools/update-package.md)Uppgradera ECE-verktyg`ece-tools` .
 
 Paketet `ece-tools` använder följande versionssekvens: `200<major>.<minor>.<patch>`
 
@@ -403,7 +403,7 @@ Releasedatum: 6 februari 2020
 
 - ![ny ikon](../../assets/new.svg) **Infrastrukturuppdateringar**—
 
-   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [ magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
+   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [&#x200B; magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
 
    - ![ny ikon](../../assets/new.svg) **Uppdaterade patchfunktioner** - har flyttat patchfunktionen från ECE-verktygspaketet till ett separat [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) -paket. Under distributionen använder `ece-tools` det nya paketet för att tillämpa korrigeringar. Se [Versionsinformation om molnpatchar](cloud-patches.md).<!--MAGECLOUD-4567-->
 
@@ -417,7 +417,7 @@ Releasedatum: 6 februari 2020
 
 >[!NOTE]
 >
->Granska [bakåt innan du uppdaterar till ECE-Tools version 2002.1.0   inkompatibla ändringar ](backward-incompatible-changes.md) om du vill veta mer om ändringar som kan kräva att du   uppdatera Adobe Commerce om projektkonfiguration eller processer för molninfrastruktur.
+>Granska [bakåt innan du uppdaterar till ECE-Tools version 2002.1.0   inkompatibla ändringar &#x200B;](backward-incompatible-changes.md) om du vill veta mer om ändringar som kan kräva att du   uppdatera Adobe Commerce om projektkonfiguration eller processer för molninfrastruktur.
 
 - ![ny ikon](../../assets/new.svg) **Tjänstuppdateringar**—
 
