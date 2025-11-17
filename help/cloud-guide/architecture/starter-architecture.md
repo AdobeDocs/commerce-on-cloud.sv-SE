@@ -2,9 +2,10 @@
 title: Startarkitektur
 description: Läs mer om de miljöer som stöds av Starter-arkitekturen.
 feature: Cloud, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
+source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,9 @@ Din Adobe Commerce på molninfrastruktur Starter-arkitektur stöder upp till **f
 
 Alla miljöer finns i PaaS-behållare (Platform as a service). Behållarna distribueras inuti mycket begränsade behållare på ett rutnät med servrar. De här miljöerna är skrivskyddade och godkänner distribuerade kodändringar från grenar som har skickats från den lokala arbetsytan. Varje miljö innehåller en databas- och webbserver.
 
-Du kan använda vilken utvecklings- och förgrenade metod du vill. Skapa en `staging`-miljö från miljön `master` när du får den första åtkomsten till ditt projekt. Skapa sedan miljön `integration` genom att förgrena från `staging`.
+>[!NOTE]
+>
+>Det går inte att ändra behörigheter för skrivskyddade mappar i någon av Starter-miljöerna. Den här begränsningen skyddar programmets integritet och säkerhet. Mappbehörigheter i dessa skrivskyddade filsystem kan inte ändras - inte ens supporten kan ändra dem. Alla ändringar måste göras från en gren i den lokala utvecklingsmiljön och skickas till programmiljön. Du kan använda vilken utvecklings- och förgrenade metod du vill. Skapa en `staging`-miljö från miljön `master` när du får den första åtkomsten till ditt projekt. Skapa sedan miljön `integration` genom att förgrena från `staging`.
 
 ## Arkitektur för startmiljö
 
@@ -29,7 +32,7 @@ Produktionsmiljön innehåller källkoden för att distribuera Adobe Commerce ti
 
 Eftersom miljön `production` är skrivskyddad kan du använda miljön `integration` för att göra kodändringar, distribuera över arkitekturen från `integration` till `staging` och slutligen till miljön `production`. Se [Distribuera din butik](../deploy/staging-production.md) och [Starta webbplatsen](../launch/overview.md).
 
-Adobe rekommenderar att du utför fullständig testning i din `staging`-gren innan du går till `master`-grenen, som distribueras till `production`-miljön.
+Adobe rekommenderar att du testar fullständigt i din `staging`-gren innan du går till `master`-grenen, som distribuerar till `production`-miljön.
 
 ## Mellanlagringsmiljö
 
@@ -89,7 +92,7 @@ Produktions- och staging-miljöerna omfattar följande tekniker. Du kan ändra o
 - Snabbt för HTTP-cachning och CDN
 - Nginx webbserver som talar till PHP-FPM, en instans med flera arbetare
 - Redis-server
-- Elasticsearch för katalogsökning i Adobe Commerce 2.2 till 2.4.3-p2
+- Elasticsearch for catalog search for Adobe Commerce 2.2 to 2.4.3-p2
 - OpenSearch - katalogsökning efter Adobe Commerce 2.3.7-p3, 2.4.3-p2 och 2.4.4 och senare
 - Tryckfiltrering (utgående brandvägg)
 
@@ -117,13 +120,13 @@ Adobe Commerce i molninfrastruktur använder operativsystemet Debian GNU/Linux o
 
 - [Redis](../services/redis.md)
 
-- [RabbitMQ](../services/rabbitmq.md)
+- [KaninMQ](../services/rabbitmq.md)
 
 - [Elasticsearch](../services/elasticsearch.md)
 
 - [OpenSearch](../services/opensearch.md)
 
-I testmiljöer och produktionsmiljöer använder du snabbt för CDN och cachning. Den senaste versionen av tillägget Snabbt CDN installeras när ditt projekt etableras. Du kan uppgradera tillägget för att få de senaste felkorrigeringarna och förbättringarna. Se [Snabbt CDN-modul för Magento 2](https://github.com/fastly/fastly-magento2). Du har även åtkomst till [New Relic](../monitor/account-management.md) för prestandaövervakning.
+I testmiljöer och produktionsmiljöer använder du snabbt för CDN och cachning. Den senaste versionen av tillägget Snabbt CDN installeras när ditt projekt etableras. Du kan uppgradera tillägget för att få de senaste felkorrigeringarna och förbättringarna. Se [Snabb CDN-modul för Magento 2](https://github.com/fastly/fastly-magento2). Du har även åtkomst till [New Relic](../monitor/account-management.md) för prestandaövervakning.
 
 Använd följande filer för att konfigurera de programversioner som du vill använda i implementeringen.
 

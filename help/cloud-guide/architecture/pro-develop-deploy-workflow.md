@@ -3,9 +3,9 @@ title: Arbetsflöde för Pro-projekt
 description: Lär dig använda arbetsflödena för Pro-utveckling och -distribution.
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: edff4efe0af54542321e887defc27dc96e6ae7f6
+source-git-commit: 7758ca69fc8232a8e1798c536410dc028c87fee6
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ The disk hosting /app/<cluster_ID> is full
 
 >[!NOTE]
 >
->Den här begränsningen skyddar programmets integritet och säkerhet. Mappbehörigheter i dessa skrivskyddade filsystem kan inte ändras - inte ens supporten kan ändra dem. Alla ändringar måste göras från en gren i den lokala utvecklingsmiljön och skickas till programmiljön. Mer information finns i [Pro-arkitektur](pro-architecture.md) för en översikt över Pro-miljöer, och i [[!DNL Cloud Console]](../project/overview.md#cloud-console) finns en översikt över Pro-miljölistan i projektvyn.
+>Det går inte att ändra behörigheter för skrivskyddade mappar i någon av Pro-miljöerna. Den här begränsningen skyddar programmets integritet och säkerhet. Mappbehörigheter i dessa skrivskyddade filsystem kan inte ändras - inte ens supporten kan ändra dem. Alla ändringar måste göras från en gren i den lokala utvecklingsmiljön och skickas till programmiljön. Mer information finns i [Pro-arkitektur](pro-architecture.md) för en översikt över Pro-miljöer, och i [[!DNL Cloud Console]](../project/overview.md#cloud-console) finns en översikt över Pro-miljölistan i projektvyn.
 
 ## Arbetsflöde för utveckling
 
