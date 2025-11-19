@@ -1,7 +1,7 @@
 ---
-source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
+source-git-commit: fddcfdb97aede07b2cd6ef12bda6d7998f941951
 workflow-type: tm+mt
-source-wordcount: '13671'
+source-wordcount: '13721'
 ht-degree: 0%
 
 ---
@@ -819,7 +819,7 @@ Logga in på Magento Cloud med en API-token
 Use this command to log in to your Magento Cloud account using an API token.
 
 You can create an account at:
-    https://business.adobe.com/se/products/magento/magento-commerce.html
+    https://business.adobe.com/products/magento/magento-commerce.html
 
 If you have an account, but you do not already have an API token, you can create one here:
     https://accounts.magento.cloud/user/api-tokens
@@ -1694,7 +1694,7 @@ Den tjänstrelation som ska användas
 magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATTACH] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-Lägg till en ny domän i projektet
+Lägg till en ny domän i projektet. Det här alternativet är inte tillgängligt för Cloud Pro-planprojekt.
 
 ### Argument
 
@@ -1766,7 +1766,7 @@ Vänta tills åtgärden har slutförts (standard)
 magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-Ta bort en domän från projektet
+Ta bort en domän från projektet. Det här alternativet är inte tillgängligt för Cloud Pro-planprojekt.
 
 ### Argument
 
@@ -1813,7 +1813,7 @@ Vänta tills åtgärden har slutförts (standard)
 magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
 ```
 
-Visa detaljerad information om en domän
+Visa detaljerad information för en domän. Det här alternativet är inte tillgängligt för Cloud Pro-planprojekt.
 
 ### Argument
 
@@ -1878,7 +1878,7 @@ Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
 magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
-Hämta en lista över alla domäner
+Hämta en lista över alla domäner. Det här alternativet är inte tillgängligt för Cloud Pro-planprojekt.
 
 ### Alternativ
 
@@ -1924,7 +1924,7 @@ Händelse-ID. Använd &quot;.&quot; för att välja projektets standardmiljö.
 magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-Uppdatera en domän
+Uppdatera en domän. Det här alternativet är inte tillgängligt för Cloud Pro-planprojekt.
 
 ### Argument
 
