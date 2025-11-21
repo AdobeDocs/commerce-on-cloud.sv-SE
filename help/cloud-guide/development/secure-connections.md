@@ -5,9 +5,9 @@ role: Developer
 feature: Cloud, Security
 topic: Security
 exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
-source-git-commit: c25e5b74ae8105995107860246ecb9ba45910bb1
+source-git-commit: 9c0b4bea11abb2ce5644556ab3dadd361f8ff449
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Skapa ett SSH-nyckelpar på alla datorer och arbetsytor som kräver åtkomst til
 
 ## Lägg till en offentlig SSH-nyckel till ditt konto
 
-När du har lagt till eller uppdaterat din offentliga SSH-nyckel till ditt Adobe Commerce-konto för molninfrastruktur kan du [omdistribuera alla aktiva miljöer](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) på ditt konto för att installera nyckeln.
+När du har lagt till eller uppdaterat din offentliga SSH-nyckel till ditt Adobe Commerce-konto för molninfrastruktur kan du [omdistribuera alla aktiva miljöer](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) på ditt konto för att installera nyckeln.
 
 Du kan lägga till SSH-nycklar till ditt konto på något av följande sätt: Cloud CLI eller [!DNL Cloud Console].
 
@@ -77,7 +77,7 @@ Du kan lägga till SSH-nycklar till ditt konto på något av följande sätt: Cl
 
 1. Klicka på **Min profil** på den övre högra kontomenyn.
 
-1. Klicka på **Lägg till offentlig nyckel** i vyn _SSH-nycklar_.
+1. Klicka på _Lägg till offentlig nyckel_ i vyn **SSH-nycklar**.
 
 1. I formuläret _Lägg till en SSH-nyckel_ ger du nyckeln namnet **Titel** och klistrar in den offentliga SSH-nyckeln i fältet **Nyckel**.
 
@@ -155,10 +155,10 @@ Beroende på klienten kan ytterligare alternativ behövas för att slutföra SSH
 
 För **startmiljöer och Pro-integreringsmiljöer** kan du också överväga att [lägga till en `mount`](../application/properties.md#mounts) för åtkomst till en viss katalog. Du skulle lägga till monteringen i din `.magento.app.yaml`-fil. En lista över skrivbara kataloger finns i [Projektstruktur](../project/file-structure.md). Den här monteringspunkten fungerar bara i dessa miljöer.
 
-Om du inte har SSH-åtkomst till miljön i **Pro-miljöer för mellanlagrings- och produktionsmiljöer** måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att begära sFTP-åtkomst och en monteringspunkt för åtkomst till den specifika mappen, t.ex. `pub/media`.
+Om du inte har SSH-åtkomst till miljön i **Pro-miljöer för mellanlagrings- och produktionsmiljöer** måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att begära sFTP-åtkomst och en monteringspunkt för åtkomst till den specifika mappen, t.ex. `pub/media`.
 
 >[!NOTE]
->Om sFTP-anslutningen för Pro Staging and Production är avsedd för en _generisk_-användare som **inte** behöver läggas till [i Cloud-projektet](../project/user-access.md) måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) med den bifogade **publika**-nyckeln. **Ange aldrig din privata SSH-nyckel.**
+>Om sFTP-anslutningen för Pro Staging and Production är avsedd för en _generisk_-användare som **inte** behöver läggas till [i Cloud-projektet](../project/user-access.md) måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med den bifogade **publika**-nyckeln. **Ange aldrig din privata SSH-nyckel.**
 
 ## SSH-tunnel
 
@@ -219,3 +219,7 @@ När du har skapat en SSH-tunnel kan du ansluta till tjänster som om de körs l
 ```bash
 mysql --host=127.0.0.1 --user='<database-username>' --pass='<user-password>' --database='<name>' --port='<port>'
 ```
+
+#### Hämta MySQL-autentiseringsuppgifter
+
+Hämta inloggningsuppgifterna för MySQL från egenskaperna `database` i miljövariabeln `$MAGENTO_CLOUD_RELATIONSHIPS`. Instruktioner om hur du hämtar information i en lokal miljö eller fjärrmiljö finns i [Tjänstrelationer](../services/services-yaml.md#service-relationships).
