@@ -3,9 +3,9 @@ title: Lägg till webbplatskarta och sökrobotar
 description: Lär dig hur du lägger till webbplatskartor och sökrobotar i Adobe Commerce i molninfrastruktur.
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
+source-git-commit: 1ecb820d55faa78e369d63996f11cd4d1d554e26
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ För detta krävs ECE-Tools version 2002.0.12 och senare med en uppdaterad `.mag
 
 1. Gå till Admin.
 1. På menyn _Marknadsföring_ klickar du på **Webbplatskarta** i avsnittet _SEO &amp; Search_ .
-1. Klicka på **Lägg till platskarta** i vyn _Platskarta_.
+1. Klicka på _Lägg till platskarta_ i vyn **Platskarta**.
 1. I vyn _Ny platskarta_ anger du följande värden:
 
    - **Filnamn**:`sitemap.xml`
@@ -40,16 +40,16 @@ För detta krävs ECE-Tools version 2002.0.12 och senare med en uppdaterad `.mag
 **Så här lägger du till innehåll i `robots.txt`-filen**:
 
 1. Gå till Admin.
-1. Klicka på **Konfiguration** i avsnittet _Design_ på menyn _Innehåll_.
+1. Klicka på _Konfiguration_ i avsnittet **Design** på menyn _Innehåll_.
 1. I vyn _Designkonfiguration_ klickar du på **Redigera** för webbplatsen i kolumnen _Åtgärd_ .
-1. Klicka på **Sökmotorrobotar** i vyn _Huvudwebbplats_.
+1. Klicka på _Sökmotorrobotar_ i vyn **Huvudwebbplats**.
 1. Uppdatera **Redigera anpassad instruktion för robots.txt**-fältet.
 1. Klicka på **Spara konfiguration**.
 1. Verifiera `<domain.your.project>/robots.txt`-filen eller `<domain.your.project>/robots`-URL:en i webbläsaren.
 
 >[!NOTE]
 >
->Om filen `<domain.your.project>/robots.txt` genererar en `404 error`, [skickar du en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att ta bort omdirigeringen från `/robots.txt` till `/media/robots.txt`.
+>Om filen `<domain.your.project>/robots.txt` genererar en `404 error`, [skickar du en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att ta bort omdirigeringen från `/robots.txt` till `/media/robots.txt`.
 
 ## Skriv om med snabbVCL-kodfragment
 
@@ -117,9 +117,16 @@ I administratörskonfigurationen för `sitemap` måste du ange filens plats med 
 
 ### Konfigurera indexering med sökmotor
 
-Om du vill aktivera `robots.txt` anpassningar i produktionen måste du aktivera alternativet **Indexering av sökmotorer är aktiverat för`<environment-name>`** i dina projektinställningar på molnkonsolen:
+Om du vill aktivera `robots.txt` anpassningar i produktionen aktiverar du indexering av sökmotorer för alternativet `<environment-name>`** i projektinställningarna på molnkonsolen:
 
-![Använd [!DNL Cloud Console] för att hantera miljöer](../../assets/robots-indexing-by-search-engine.png)
+- Äldre molnkonsol - URL:en följer mönstret `https://<region-id>.magento.cloud/projects/<project_id>`
+- Adobe Cloud Console - URL:en följer mönstret ``https://console.adobecommerce.com/<username>/<project_id>``
+
+1. Växla inställningen [!UICONTROL Indexing by search engines] till **På**.
+
+   ![Använd [!DNL Cloud Console] för att hantera miljöer](../../assets/robots-indexing-by-search-engine.png)
+
+1. Avmarkera inställningen [!UICONTROL Hide from search engines].
 
 Du kan även använda magento-cloud CLI för att uppdatera den här inställningen:
 
