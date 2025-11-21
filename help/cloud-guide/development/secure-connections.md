@@ -29,7 +29,7 @@ Skapa ett SSH-nyckelpar på alla datorer och arbetsytor som kräver åtkomst til
 
 ## Lägg till en offentlig SSH-nyckel till ditt konto
 
-När du har lagt till eller uppdaterat din offentliga SSH-nyckel till ditt Adobe Commerce-konto för molninfrastruktur kan du [omdistribuera alla aktiva miljöer](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) på ditt konto för att installera nyckeln.
+När du har lagt till eller uppdaterat din offentliga SSH-nyckel till ditt Adobe Commerce-konto för molninfrastruktur kan du [omdistribuera alla aktiva miljöer](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) på ditt konto för att installera nyckeln.
 
 Du kan lägga till SSH-nycklar till ditt konto på något av följande sätt: Cloud CLI eller [!DNL Cloud Console].
 
@@ -155,10 +155,10 @@ Beroende på klienten kan ytterligare alternativ behövas för att slutföra SSH
 
 För **startmiljöer och Pro-integreringsmiljöer** kan du också överväga att [lägga till en `mount`](../application/properties.md#mounts) för åtkomst till en viss katalog. Du skulle lägga till monteringen i din `.magento.app.yaml`-fil. En lista över skrivbara kataloger finns i [Projektstruktur](../project/file-structure.md). Den här monteringspunkten fungerar bara i dessa miljöer.
 
-Om du inte har SSH-åtkomst till miljön i **Pro-miljöer för mellanlagrings- och produktionsmiljöer** måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att begära sFTP-åtkomst och en monteringspunkt för åtkomst till den specifika mappen, t.ex. `pub/media`.
+Om du inte har SSH-åtkomst till miljön i **Pro-miljöer för mellanlagrings- och produktionsmiljöer** måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att begära sFTP-åtkomst och en monteringspunkt för åtkomst till den specifika mappen, t.ex. `pub/media`.
 
 >[!NOTE]
->Om sFTP-anslutningen för Pro Staging and Production är avsedd för en _generisk_-användare som **inte** behöver läggas till [i Cloud-projektet](../project/user-access.md) måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med den bifogade **publika**-nyckeln. **Ange aldrig din privata SSH-nyckel.**
+>Om sFTP-anslutningen för Pro Staging and Production är avsedd för en _generisk_-användare som **inte** behöver läggas till [i Cloud-projektet](../project/user-access.md) måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) med den bifogade **publika**-nyckeln. **Ange aldrig din privata SSH-nyckel.**
 
 ## SSH-tunnel
 
