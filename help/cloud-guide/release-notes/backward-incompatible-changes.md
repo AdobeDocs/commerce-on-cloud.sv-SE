@@ -58,7 +58,7 @@ I tidigare versioner av ECE-Tools kunde du använda kommandona `m2-ece-build` oc
 
 ## Ändringar av molnkorrigeringar
 
-- **Ta bort hämtade korrigeringsfiler**-Paketet `magento/magento-cloud-patches` paketerar alla korrigeringsfiler som är tillgängliga från sidan [programhämtningar](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) och tillämpar dem automatiskt när du distribuerar till molnet. För att förhindra korrigeringskonflikter efter uppgradering till ECE-Tools 2002.1.0 eller senare, tar du bort eventuella Adobe-patchar som du har laddat ned och lagt till i ditt projekt manuellt.
+- **Ta bort hämtade korrigeringsfiler**-Paketet `magento/magento-cloud-patches` paketerar alla korrigeringsfiler som är tillgängliga från sidan [programhämtningar](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=sv-SE) och tillämpar dem automatiskt när du distribuerar till molnet. För att förhindra korrigeringskonflikter efter uppgradering till ECE-Tools 2002.1.0 eller senare, tar du bort eventuella Adobe-patchar som du har laddat ned och lagt till i ditt projekt manuellt.
 
 - **Uppdaterar kommandot Tillämpa korrigeringar**-Vi har flyttat kommandot för att tillämpa korrigeringar från katalogen `vendor/bin/ece-tools` till katalogen `vendor/bin/ece-patches`. Om du använder det här kommandot för att tillämpa korrigeringar manuellt använder du den nya sökvägen.
 
