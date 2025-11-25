@@ -1,7 +1,8 @@
 ---
 title: Konfigurera [!DNL Xdebug]
 description: Lär dig hur du konfigurerar Xdebug-tillägget för felsökning av din Adobe Commerce när du utvecklar projekt för molninfrastruktur.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '1920'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Du kan konfigurera [!DNL Xdebug] så att den körs i Cloud Docker-miljön för lokal felsökning utan att ändra din projektkonfiguration för Adobe Commerce för molninfrastruktur. Se [Konfigurera Xdebug för Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/).
+>Du kan konfigurera [!DNL Xdebug] så att den körs i Cloud Docker-miljön för lokal felsökning utan att ändra din projektkonfiguration för Adobe Commerce för molninfrastruktur. Se [Konfigurera Xdebug för Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug).
 
 Om du vill aktivera [!DNL Xdebug] måste du konfigurera en fil i Git-databasen, konfigurera IDE och konfigurera portvidarebefordran. Du kan konfigurera vissa inställningar i filen `magento.app.yaml`. Efter redigering kan du aktivera [!DNL Xdebug] genom att överföra Git-ändringarna i alla Starter-miljöer och Pro-integreringsmiljöer. [!DNL Xdebug] är redan tillgängligt i Pro Staging &amp; Production-miljöer.
 
@@ -49,7 +50,7 @@ Om du vill aktivera [!DNL Xdebug] för ditt projekt lägger du till `xdebug` i a
 
 1. Öppna filen `.magento.app.yaml` i en textredigerare i din lokala terminal.
 
-1. Lägg till `xdebug` under `extensions` i avsnittet `runtime`. Exempel:
+1. Lägg till `runtime` under `extensions` i avsnittet `xdebug`. Exempel:
 
    ```yaml
    runtime:
@@ -92,7 +93,7 @@ IDE:n [PhpStorm](https://www.jetbrains.com/phpstorm/) måste vara konfigurerad f
    - _macOS_ - Välj **PhpStorm** > **Inställningar**.
    - _Windows/Linux_ - Välj **Arkiv** > **Inställningar**.
 
-1. Utöka avsnittet **PHP** på panelen _Inställningar_ och klicka på **Servrar**.
+1. Utöka avsnittet _PHP_ på panelen **Inställningar** och klicka på **Servrar**.
 
 1. Klicka på **+** för att lägga till en serverkonfiguration. Projektnamnet är grått högst upp.
 
@@ -132,7 +133,7 @@ Detta gör att programmet kan ha rätt felsökningsinställningar för att hante
    - Ange ett unikt, men identifierbart namn.
    - Markera kryssrutan [!UICONTROL Filter debug connection by IDE key]**.
    - Markera servern som du skapade i det [föregående avsnittet](#configure-phpstorm-server). Om du inte har skapat den än kan du skapa en nu, men se den delen av installationsguiden.
-   - Skriv `PHPSTORM` med versaler i textfältet **[!UICONTROL IDE key(session id)]**. Vi kommer att använda detta i andra delar av installationen, så det är viktigt att vi behåller detta. Om du väljer en annan sträng måste du komma ihåg att använda den någon annanstans i installations- och konfigurationsprocessen.
+   - Skriv **[!UICONTROL IDE key(session id)]** med versaler i textfältet `PHPSTORM`. Vi kommer att använda detta i andra delar av installationen, så det är viktigt att vi behåller detta. Om du väljer en annan sträng måste du komma ihåg att använda den någon annanstans i installations- och konfigurationsprocessen.
 
 1. Klicka på **[!UICONTROL Apply]** > **[!UICONTROL OK]**.
 
@@ -213,7 +214,7 @@ Om du vill konfigurera portvidarebefordran (SSH-tunnling) på Windows måste du 
 
    ![Konfigurera Putty](../../assets/xdebug/putty-session.png)
 
-1. Klicka på **Anslutning** > **SSH** > **Tunnlar** i rutan _Kategori_.
+1. Klicka på _Anslutning_ > **SSH** > **Tunnlar** i rutan **Kategori**.
 
 1. Ange följande information:
 
@@ -225,7 +226,7 @@ Om du vill konfigurera portvidarebefordran (SSH-tunnling) på Windows måste du 
 
    ![Skapa en SSH-tunnel i Putty](../../assets/xdebug/putty-tunnels.png)
 
-1. Klicka på **Session** i rutan _Kategori_.
+1. Klicka på _Session_ i rutan **Kategori**.
 
 1. Ange ett namn för den här SSH-tunneln i fältet **Sparade sessioner**.
 
@@ -368,7 +369,7 @@ Du kan lägga till körningsalternativ, till exempel:
 
 Följande steg hjälper dig att felsöka webbförfrågningar.
 
-1. Klicka på **Felsök** på menyn _Tillägg_ för att aktivera.
+1. Klicka på _Felsök_ på menyn **Tillägg** för att aktivera.
 
 1. Högerklicka, välj alternativmenyn och ställ in IDE-tangenten på **PHPSTORM**.
 
@@ -392,7 +393,7 @@ I det här avsnittet beskrivs hur du använder [!DNL Xdebug] i Chrome med hjälp
 
 1. Klicka på **Alternativ** på snabbmenyn.
 
-1. Klicka på **PhpStorm** i listan _IDE-nyckel_.
+1. Klicka på _PhpStorm_ i listan **IDE-nyckel**.
 
 1. Klicka på **Spara**.
 

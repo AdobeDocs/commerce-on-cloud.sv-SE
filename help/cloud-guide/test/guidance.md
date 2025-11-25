@@ -1,7 +1,8 @@
 ---
 title: Testvägledning
 description: Läs om testningstyper och de bästa sätten att starta Adobe Commerce på molninfrastrukturen.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 70fdfbbd-1763-4b1b-9ffd-9ffdc92f4f91
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -16,9 +17,9 @@ När du har konfigurerat och anpassat ditt Adobe Commerce i ett molninfrastruktu
 
 Under utvecklingen är det viktigt att du utför funktionstestning från början till slut på ditt Adobe Commerce i molninfrastrukturprojekt. Se följande riktlinjer för funktionstestning i Docker-miljön:
 
-- **Programtestning** - Använd [Magento Functional Testing Framework (MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/) för programtestning i Cloud Docker-miljö.
+- **Programtestning** - Använd [Magento Functional Testing Framework (MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing) för programtestning i Cloud Docker-miljö.
 
-- **Kodtestning** - Använd [ramverket för kodekationstestning för PHP](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/) för att validera kod som är avsedd att bidra till molnpaketets databaser.
+- **Kodtestning** - Använd [ramverket för kodekationstestning för PHP](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing) för att validera kod som är avsedd att bidra till molnpaketets databaser.
 
 ## Bästa tillvägagångssätt före lansering
 

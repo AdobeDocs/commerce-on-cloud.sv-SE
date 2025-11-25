@@ -3,7 +3,8 @@ title: Bakåtkompatibla ändringar
 description: Lär dig mer om bakåtkompatibilitet när du uppgraderar befintliga Cloud-projekt.
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
+source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 0%
@@ -57,7 +58,7 @@ I tidigare versioner av ECE-Tools kunde du använda kommandona `m2-ece-build` oc
 
 ## Ändringar av molnkorrigeringar
 
-- **Ta bort hämtade korrigeringsfiler**-Paketet `magento/magento-cloud-patches` paketerar alla korrigeringsfiler som är tillgängliga från sidan [programhämtningar](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=sv-SE) och tillämpar dem automatiskt när du distribuerar till molnet. För att förhindra korrigeringskonflikter efter uppgradering till ECE-Tools 2002.1.0 eller senare, tar du bort eventuella patchar som du laddat ned och lagt till manuellt i ditt projekt.
+- **Ta bort hämtade korrigeringsfiler**-Paketet `magento/magento-cloud-patches` paketerar alla korrigeringsfiler som är tillgängliga från sidan [programhämtningar](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) och tillämpar dem automatiskt när du distribuerar till molnet. För att förhindra korrigeringskonflikter efter uppgradering till ECE-Tools 2002.1.0 eller senare, tar du bort eventuella Adobe-patchar som du har laddat ned och lagt till i ditt projekt manuellt.
 
 - **Uppdaterar kommandot Tillämpa korrigeringar**-Vi har flyttat kommandot för att tillämpa korrigeringar från katalogen `vendor/bin/ece-tools` till katalogen `vendor/bin/ece-patches`. Om du använder det här kommandot för att tillämpa korrigeringar manuellt använder du den nya sökvägen.
 
@@ -83,7 +84,7 @@ I tidigare versioner av ECE-Tools kunde du använda kommandona `m2-ece-build` oc
 
    - **Uppdaterar Cloud-dispositionskommandona**-Vi har ändrat namn på sökvägen till kommandofilen från `./bin/docker` till `./bin/magento-docker`. Uppdatera skript och kommandon så att de använder den nya sökvägen.
 
-   - **Kronbehållaren ingår inte längre i standardkonfigurationen för Docker**-Now, du måste lägga till alternativet `--with-cron` i kommandot `ece-docker build:compose` för att kunna inkludera kronbehållaren i konfigurationen för Docker-miljön. Se [Hantera cron-jobb](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs/) i guiden _Cloud Docker för Commerce_.
+   - **Kronbehållaren ingår inte längre i standardkonfigurationen för Docker**-Now, du måste lägga till alternativet `--with-cron` i kommandot `ece-docker build:compose` för att kunna inkludera kronbehållaren i konfigurationen för Docker-miljön. Se [Hantera cron-jobb](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs) i guiden _Cloud Docker för Commerce_.
 
      Skript som tidigare genererade behållare med cron-jobb är nu utan cron-behållare.
 
