@@ -28,7 +28,7 @@ ht-degree: 0%
 
    - ![ny ikon](../../assets/new.svg) Uppdaterade filen `composer.json` för paketet `ece-tools` för att lägga till ett beroende för paketet `magento/magento-cloud-patches` v1.0.0.
 
-   - ![korrigeringsikonen](../../assets/fix.svg) Ett problem som orsakade att `ece-tools`-korrigeringsprocessen bröts när korrigeringsuppsättningar tillämpades ovanpå säkerhetsuppdateringar, med början i version 2.3.2-p2 och senare. Problemet uppstod med det nya versionshanteringsschemat som används för [patchar med endast säkerhet](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/overview).<!--MAGECLOUD-4661-->
+   - ![korrigeringsikonen](../../assets/fix.svg) Ett problem som orsakade att `ece-tools`-korrigeringsprocessen bröts när korrigeringsuppsättningar tillämpades ovanpå säkerhetsuppdateringar, med början i version 2.3.2-p2 och senare. Problemet uppstod med det nya versionshanteringsschemat som används för [patchar med endast säkerhet](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/security-patches/overview).<!--MAGECLOUD-4661-->
 
 - ![korrigeringsikon](../../assets/fix.svg) **Korrigerar och viktiga korrigeringar**-Uppdatera dina molnmiljöer med `ece-tools` version 2002.0.22 för att använda följande korrigeringar och viktiga korrigeringar. Dessa korrigeringar ingår i paketet `magento/magento-cloud-patches` v1.0.0.
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 - ![ny ikon](../../assets/new.svg) Stöd för RabitMQ version 3.8 har lagts till.<!-- MAGECLOUD-4674-->
 
-- ![ny ikon](../../assets/new.svg) Uppdaterade interaktiva valideringar för tjänstkompatibilitet för att återspegla vilka versioner som stöds i de nya versionerna av Adobe Commerce 2.3.3 och 2.2.10. Se [Systemkrav](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) i _Installationsguiden_ för rekommenderade versioner.<!-- MAGECLOUD-4018 -->
+- ![ny ikon](../../assets/new.svg) Uppdaterade interaktiva valideringar för tjänstkompatibilitet för att återspegla vilka versioner som stöds i de nya versionerna av Adobe Commerce 2.3.3 och 2.2.10. Se [Systemkrav](https://experienceleague.adobe.com/sv/docs/commerce-operations/installation-guide/system-requirements) i _Installationsguiden_ för rekommenderade versioner.<!-- MAGECLOUD-4018 -->
 
 - ![korrigeringsikon](../../assets/fix.svg) Förbättrade loggmeddelandet som returnerades när processen för hantering av cron-jobb i distributionsfasen försöker stoppa ett cron-jobb som redan har slutförts för att klargöra att problemet inte är ett fel. Loggnivån har ändrats från `INFO` till `DEBUG`.<!-- MAGECLOUD-3653-->
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
    - ![ny ikon](../../assets/new.svg) Du kan nu utföra funktionstestning med paketet `ece-tools` i Docker-miljön. Se [programtestning](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing).<!-- MAGECLOUD-3129/3684 -->
 
-   - ![ny ikon](../../assets/new.svg) Stöd för konfiguration av PHP-moduler har lagts till med filen `.magento.app.yaml`. Alla [PHP-tillägg som anges i `.magento.app.yaml` file](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions) blir tillgängliga i Docker PHP-behållare.<!-- MAGECLOUD-3357 -->
+   - ![ny ikon](../../assets/new.svg) Stöd för konfiguration av PHP-moduler har lagts till med filen `.magento.app.yaml`. Alla [PHP-tillägg som anges i `.magento.app.yaml` file](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions) blir tillgängliga i Docker PHP-behållare.<!-- MAGECLOUD-3357 -->
 
    - ![ny ikon](../../assets/new.svg) Det finns nya kommandon som förbättrar Docker-kommandoradsupplevelsen. Se avsnittet [`bin/magento-docker` i Docker-referensen &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
 
@@ -126,7 +126,7 @@ ht-degree: 0%
 
 - ![korrigeringsikon](../../assets/fix.svg) Ett problem som orsakade ett distributionsfel om bas-URL:en inte fanns i databasen har åtgärdats.<!-- MAGECLOUD-3075 -->
 
-- ![ny ikon](../../assets/new.svg) lade till ett nytt **`env:config:show`-kommando** i paketet `ece-tools` som visar miljötjänster, vägar eller variabler. Se [Tjänster, vägar och variabler](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/package-overview#services-routes-and-variables). [Funktionen har skickats in av Vladimir Kerkhoff](https://github.com/magento/ece-tools/pull/486).<!-- MAGECLOUD-3451 -->
+- ![ny ikon](../../assets/new.svg) lade till ett nytt **`env:config:show`-kommando** i paketet `ece-tools` som visar miljötjänster, vägar eller variabler. Se [Tjänster, vägar och variabler](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/package-overview#services-routes-and-variables). [Funktionen har skickats in av Vladimir Kerkhoff](https://github.com/magento/ece-tools/pull/486).<!-- MAGECLOUD-3451 -->
 
 - ![korrigeringsikonen](../../assets/fix.svg) Ett fel som orsakade ett kritiskt fel vid försök att installera Adobe Commerce 2.2.6 eller tidigare med `ece-tools` develop efter skalomfaktorisering har åtgärdats.<!-- MAGECLOUD-3665 -->
 
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 - ![ny ikon](../../assets/new.svg) **Docker Updates**—
 
-   - ![ny ikon](../../assets/new.svg) Nu har Docker-miljön stöd för den cron-konfiguration som definieras i egenskapen [crons i filen .magento.app.yaml](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property).<!-- MAGECLOUD-3150 -->
+   - ![ny ikon](../../assets/new.svg) Nu har Docker-miljön stöd för den cron-konfiguration som definieras i egenskapen [crons i filen .magento.app.yaml](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property).<!-- MAGECLOUD-3150 -->
 
    - ![ny ikon](../../assets/new.svg) **Ny dockningsbehållare** - En [TLS-termineringsproxybehållare](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container) har lagts till för att underlätta varnish SSL-avslutningen via HTTPS.<!-- MAGECLOUD-2890 -->
 
@@ -152,7 +152,7 @@ ht-degree: 0%
 
    - ![ny ikon](../../assets/new.svg) **Docker-bygglägen** - Nu kan du välja att starta Docker-miljön i [produktions- eller utvecklarläge](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode). Utvecklarläget stöder aktiv utveckling med fullständig, skrivbar behörighet för filsystemet.<!-- MAGECLOUD-3152/3511 -->
 
-   - ![korrigeringsikon](../../assets/fix.svg) Ett problem som orsakade att Docker-distributionen misslyckades med ett `Name or service not known`-fel om cachen är konfigurerad för en tjänst som inte är tillgänglig har åtgärdats. Nu kan du ta bort en tjänst från [`.magento/services.yaml`-filen &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml). Docker-konfigurationsgeneratorn uppdaterar tjänsten i filen `docker/config.php.dist` automatiskt.<!-- MAGECLOUD-3369 -->
+   - ![korrigeringsikon](../../assets/fix.svg) Ett problem som orsakade att Docker-distributionen misslyckades med ett `Name or service not known`-fel om cachen är konfigurerad för en tjänst som inte är tillgänglig har åtgärdats. Nu kan du ta bort en tjänst från [`.magento/services.yaml`-filen &#x200B;](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/service/services-yaml). Docker-konfigurationsgeneratorn uppdaterar tjänsten i filen `docker/config.php.dist` automatiskt.<!-- MAGECLOUD-3369 -->
 
    - ![ny ikon](../../assets/new.svg) har lagt till interaktiva valideringar för tjänstkompatibilitet. Om en begärd tjänst är inkompatibel med Adobe Commerce-versionen eller andra tjänster visar det _interaktiva läget_ ett meddelande och ett alternativ för att fortsätta. Se [Tjänstversionerna](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers) för Docker. Använd alternativet `-n` om du vill hoppa över interaktiviteten för CICD-syften.<!-- MAGECLOUD-3251 -->
 
@@ -216,15 +216,15 @@ ht-degree: 0%
 
    - Ett problem med webbtjänstbehörighet när filen `docker-compose.yml` genererades har korrigerats.<!-- MAGECLOUD-2883 -->
 
-- ![ny ikon](../../assets/new.svg) **Uppgraderingsförbättring** - Verifieringen har lagts till för att bekräfta att egenskapen `autoload` i filen `composer.json` innehåller nödvändiga konfigurationsändringar innan den uppgraderas till Adobe Commerce v2.3. Se [Uppgraderingsversion](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version).<!-- MAGECLOUD-2392 -->
+- ![ny ikon](../../assets/new.svg) **Uppgraderingsförbättring** - Verifieringen har lagts till för att bekräfta att egenskapen `autoload` i filen `composer.json` innehåller nödvändiga konfigurationsändringar innan den uppgraderas till Adobe Commerce v2.3. Se [Uppgraderingsversion](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version).<!-- MAGECLOUD-2392 -->
 
-- ![ny ikon](../../assets/new.svg) Komprimeringsprocessen vid distribuering av statiskt innehåll omfattar nu alla resurser - internt genererade eller anpassade - och inträffar under byggfasen i början av [`build:transfer` -avsnittet](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property). Tidigare inträffade komprimeringsprocessen innan anpassade miniatyrbilder och paketering av statiska resurser tillämpades. [Korrigering skickad av Rafael Garcia Lepper från Tryzens Limited](https://github.com/magento/ece-tools/pull/413).<!-- MAGECLOUD-3104 -->
+- ![ny ikon](../../assets/new.svg) Komprimeringsprocessen vid distribuering av statiskt innehåll omfattar nu alla resurser - internt genererade eller anpassade - och inträffar under byggfasen i början av [`build:transfer` -avsnittet](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property). Tidigare inträffade komprimeringsprocessen innan anpassade miniatyrbilder och paketering av statiska resurser tillämpades. [Korrigering skickad av Rafael Garcia Lepper från Tryzens Limited](https://github.com/magento/ece-tools/pull/413).<!-- MAGECLOUD-3104 -->
 
 - ![korrigeringsikon](../../assets/fix.svg) Ett databasanslutningsfel som inträffade under distributionen omedelbart efter konfigurering av en ytterligare databas- och tjänstrelation har åtgärdats. Den här korrigeringen åtgärdar också ett fel som uppstod under konfigurationsprocessen för Commerce Reporting för Starter. För Starter är den här uppgraderingen ett måste för att kunna använda Commerce Reporting.<!-- MAGECLOUD-3035 -->
 
 - ![korrigeringsikon](../../assets/fix.svg) Ett verifieringsfel med databaskonfigurationen som gjorde att distributionsprocessen misslyckades har åtgärdats.<!-- MAGECLOUD-3003 -->
 
-- ![korrigeringsikon](../../assets/fix.svg) Begränsningen uppdaterades med rätt version av `symfony/yaml`-paketet som ska användas med [PHP-konstanter](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants). Konstantparsning fungerar inte när en `symfony/yaml`-paketversion används tidigare än 3.2. [Korrigering från Vladimir Kerkhoff](https://github.com/magento/ece-tools/pull/404).<!-- MAGECLOUD-2956 -->
+- ![korrigeringsikon](../../assets/fix.svg) Begränsningen uppdaterades med rätt version av `symfony/yaml`-paketet som ska användas med [PHP-konstanter](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants). Konstantparsning fungerar inte när en `symfony/yaml`-paketversion används tidigare än 3.2. [Korrigering från Vladimir Kerkhoff](https://github.com/magento/ece-tools/pull/404).<!-- MAGECLOUD-2956 -->
 
 - ![ny ikon](../../assets/new.svg) **Miljökonfigurationskontroll** - Verifieringen har lagts till för att kontrollera PHP-versionen och varna användarna om de inte använder den senaste rekommenderade versionen.<!--MAGECLOUD-2903-->
 
@@ -258,7 +258,7 @@ ht-degree: 0%
 
    - **ADMIN-variabler**—<!-- MAGECLOUD-2573/MAGECLOUD-2848 -->
 
-      - Förbättrad säkerhet vid hantering av autentiseringsuppgifter för Admin-användaren med hjälp av systemvariabler. Du kan inte längre använda miljövariablerna ADMIN_EMAIL, ADMIN_USERNAME och ADMIN_PASSWORD för att åsidosätta administratörsautentiseringsuppgifter under uppgraderingar. Om du inte kan komma åt administratörspanelen använder du funktionen _Glömt lösenord_ eller kommandot `admin:user:create` CLI för att skapa en ny administratörsanvändare. Se [Öppna din administratörspanel](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/onboarding#admin).
+      - Förbättrad säkerhet vid hantering av autentiseringsuppgifter för Admin-användaren med hjälp av systemvariabler. Du kan inte längre använda miljövariablerna ADMIN_EMAIL, ADMIN_USERNAME och ADMIN_PASSWORD för att åsidosätta administratörsautentiseringsuppgifter under uppgraderingar. Om du inte kan komma åt administratörspanelen använder du funktionen _Glömt lösenord_ eller kommandot `admin:user:create` CLI för att skapa en ny administratörsanvändare. Se [Öppna din administratörspanel](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/start/onboarding#admin).
 
       - ADMIN_EMAIL behövs inte längre när du uppgraderar eller använder korrigeringsfiler.
 
@@ -280,7 +280,7 @@ ht-degree: 0%
 
       - Redis 3.2 och 4.0<!-- MAGECLOUD-2886 -->
 
-- ![ny ikon](../../assets/new.svg) **Konfigurera med PHP-konstanter** - Stöd för [PHP-konstanter](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants) har lagts till i konfigurationsfilen `.magento.env.yaml`.<!-- MAGECLOUD- 2575 -->
+- ![ny ikon](../../assets/new.svg) **Konfigurera med PHP-konstanter** - Stöd för [PHP-konstanter](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants) har lagts till i konfigurationsfilen `.magento.env.yaml`.<!-- MAGECLOUD- 2575 -->
 
 - ![ny ikon](../../assets/new.svg) **Ny miljövariabel** - Som standard är Google Analytics aktiverat endast i produktionsmiljön. Du kan aktivera Google Analytics i miljö för förproduktion och integrering med miljövariabeln [ENABLE_GOOGLE_ANALYTICS](../environment/variables-deploy.md#enable_google_analytics).<!--MAGECLOUD-2879-->
 
@@ -344,13 +344,13 @@ ht-degree: 0%
 
    - Nu har du DB-dumpfunktionen när du använder Cloud Docker [databasbehållare](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#database-container). Du kan också [dela filer](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#sharing-data-between-host-machine-and-container) mellan en värddator och en behållare med hjälp av katalogen `docker/mnt`.<!-- MAGECLOUD-2577 -->
 
-   - **Stöd för lack-tjänster** - En lack-bild som automatiskt distribueras till en Docker-behållare har lagts till. Efter distributionen kan du konfigurera lack manuellt enligt Adobe Commerce bästa praxis. Se [Konfigurera och använda engelska](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish).&lt;!—MAGECLOUD—2358—>
+   - **Stöd för lack-tjänster** - En lack-bild som automatiskt distribueras till en Docker-behållare har lagts till. Efter distributionen kan du konfigurera lack manuellt enligt Adobe Commerce bästa praxis. Se [Konfigurera och använda engelska](https://experienceleague.adobe.com/sv/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish).&lt;!—MAGECLOUD—2358—>
 
    - Säker åtkomst till webbplatser - SSL-stöd har lagts till för att du ska få åtkomst till Adobe Commerce Store och administratörspanelen.&lt;!—MAGECLOUD—2360—>
 
-- ![korrigeringsikon](../../assets/fix.svg) **Förbättrat stöd för Adobe Commerce i molninfrastrukturtillägg** - Minimiversionskravet för guzzlehttp/guzzle-paketet i Adobe Commerce i molninfrastrukturen [Composer.json-filen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/overview) har uppgraderats till version 6.2 så att `ece-tools`-paketet är kompatibelt med fler tillägg.<!--MAGECLOUD-2205-->
+- ![korrigeringsikon](../../assets/fix.svg) **Förbättrat stöd för Adobe Commerce i molninfrastrukturtillägg** - Minimiversionskravet för guzzlehttp/guzzle-paketet i Adobe Commerce i molninfrastrukturen [Composer.json-filen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/overview) har uppgraderats till version 6.2 så att `ece-tools`-paketet är kompatibelt med fler tillägg.<!--MAGECLOUD-2205-->
 
-- ![ny ikon](../../assets/new.svg) **Använd anpassade ändringar i ditt Adobe Commerce-program under byggfasen** - Vi delar upp byggfasen i två separata processer så att du kan använda krokar för att tillämpa anpassade ändringar i det genererade statiska innehållet innan du paketerar programmet för distribution. Processen _build :generate_genererar kod, tillämpar korrigeringar och genererar statiskt innehåll. Processen _build:transfer_ överför den genererade koden och det statiska innehållet till det slutliga målet. Se [Programkopplingar](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property).<!--MAGECLOUD-2363-->
+- ![ny ikon](../../assets/new.svg) **Använd anpassade ändringar i ditt Adobe Commerce-program under byggfasen** - Vi delar upp byggfasen i två separata processer så att du kan använda krokar för att tillämpa anpassade ändringar i det genererade statiska innehållet innan du paketerar programmet för distribution. Processen _build :generate_genererar kod, tillämpar korrigeringar och genererar statiskt innehåll. Processen _build:transfer_ överför den genererade koden och det statiska innehållet till det slutliga målet. Se [Programkopplingar](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property).<!--MAGECLOUD-2363-->
 
 - ![korrigeringsikon](../../assets/fix.svg) **Miljökonfigurationskontroller** - Förbättrad validering av miljökonfigurationen för att varna kunderna om versionsinkompatibilitet och konfigurationsfel innan Adobe Commerce byggs och distribueras i molninfrastrukturen.
 
@@ -358,7 +358,7 @@ ht-degree: 0%
 
    - En kompatibilitetskontroll för Elasticsearch har lagts till för att varna användare om Elasticsearch konfigurationsproblem. Distributionen misslyckas nu om Elasticsearch-tjänstversionen på servern inte är kompatibel med Adobe Commerce. Tidigare slutfördes distributionen även om Elasticsearch-versionen var inkompatibel, vilket orsakade problem med produktkatalogen efter webbplatsdistributionen.<!--MAGECLOUD-2389-->
 
-     Du kan lösa inkompatibiliteten genom att [skicka en supportanmälan](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices) för att uppgradera Elasticsearch till en kompatibel version, eller ändra Adobe Commerce-konfigurationen för att ange en kompatibel version av Elasticsearch PHP-klienten.
+     Du kan lösa inkompatibiliteten genom att [skicka en supportanmälan](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices) för att uppgradera Elasticsearch till en kompatibel version, eller ändra Adobe Commerce-konfigurationen för att ange en kompatibel version av Elasticsearch PHP-klienten.
 
       - För Adobe Commerce version 2.1.x till 2.2.2 uppgraderar du Elasticsearch till version 2.4.
 
@@ -394,7 +394,7 @@ ht-degree: 0%
 
 - ![korrigeringsikon](../../assets/fix.svg) Ett problem med den [statiska innehållskomprimeringsprocessen](../environment/variables-intro.md) (`gzip`) som orsakade `not overwritten`- och `no such file or directory`-fel när den komprimerade filen refererades under distributionsprocessen har åtgärdats.<!-- MAGECLOUD-2182-->
 
-- ![korrigeringsikonen](../../assets/fix.svg) Ett problem som hindrade kommandot `php ./vendor/bin/ece-tools config:dump` från att ta bort överflödiga avsnitt från filen `config.php` under dumpprocessen om lagringsspråket inte har angetts har åtgärdats. Nu kan du enkelt flytta konfigurationsfiler mellan miljöer. När du har uppdaterat till `ece-tools` v2002.0.13 kan du återskapa äldre `config.php`-filer med det förbättrade `config:dump`-kommandot. Se [Konfigurationshantering för butiksinställningar](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/store-settings).<!--MAGECLOUD-2444-->
+- ![korrigeringsikonen](../../assets/fix.svg) Ett problem som hindrade kommandot `php ./vendor/bin/ece-tools config:dump` från att ta bort överflödiga avsnitt från filen `config.php` under dumpprocessen om lagringsspråket inte har angetts har åtgärdats. Nu kan du enkelt flytta konfigurationsfiler mellan miljöer. När du har uppdaterat till `ece-tools` v2002.0.13 kan du återskapa äldre `config.php`-filer med det förbättrade `config:dump`-kommandot. Se [Konfigurationshantering för butiksinställningar](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure-store/store-settings).<!--MAGECLOUD-2444-->
 
 - ![korrigeringsikon](../../assets/fix.svg) Ett fel som orsakade ett fel under distributionsfasen har korrigerats om flödeskonfigurationen i filen `.magento/routes.yaml` dirigerar om från en [apex](https://blog.cloudflare.com/zone-apex-naked-domain-root-domain-cname-supp/)-domän till en `www`-domän.<!--MAGECLOUD-2556-->
 
@@ -562,7 +562,7 @@ ht-degree: 0%
 
 - **Nytt cron-kommando** - Nu kan du låsa upp specifika fastnade cron-jobb i stället för att stoppa och starta om alla med kommandot [`cron:unlock`](https://support.magento.com/hc/en-us/articles/360033099451). Inte tillgängligt i 2.1.<!-- MAGECLOUD-1367 -->
 
-- **Enhetlig konfigurationsfil** - Nu kan du konfigurera bygg- och distributionsfaser med hjälp av en [`.magento.env.yaml`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml)-fil.<!-- MAGECLOUD-1369 -->
+- **Enhetlig konfigurationsfil** - Nu kan du konfigurera bygg- och distributionsfaser med hjälp av en [`.magento.env.yaml`](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml)-fil.<!-- MAGECLOUD-1369 -->
 
 - **Säkerhetskopiera konfigurationsfiler** - Distributionsprocessen skapar nu automatiskt en säkerhetskopia av konfigurationsfilerna `app/etc/env.php` och `app/etc/config.php` efter distributionen. Vi lade också till ett [nytt CLI-kommando](https://support.magento.com/hc/en-us/articles/360033182871) för att återställa dessa konfigurationsfiler från en säkerhetskopia.<!-- MAGECLOUD-1372 -->
 
@@ -624,11 +624,11 @@ ht-degree: 0%
 
    - [Prestanda för statisk innehållsdistribution](../deploy/static-content.md)
 
-   - [Distributionsprocess](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)
+   - [Distributionsprocess](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)
 
-- **Konfigurationshantering** - Nu genereras en `app/etc/config.php`-fil automatiskt i Git-databasen under byggfasen om den inte redan finns. Den automatiskt genererade filen innehåller bara en lista med moduler och tillägg. Om filen redan finns fortsätter byggfasen som vanligt. Om du följer [Configuration Management](../store/store-settings.md) vid ett senare tillfälle uppdaterar kommandona filen utan att ytterligare steg krävs. Mer information finns i [Distributionsprocessen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices).
+- **Konfigurationshantering** - Nu genereras en `app/etc/config.php`-fil automatiskt i Git-databasen under byggfasen om den inte redan finns. Den automatiskt genererade filen innehåller bara en lista med moduler och tillägg. Om filen redan finns fortsätter byggfasen som vanligt. Om du följer [Configuration Management](../store/store-settings.md) vid ett senare tillfälle uppdaterar kommandona filen utan att ytterligare steg krävs. Mer information finns i [Distributionsprocessen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices).
 
-- **Databasdumpar** - Vi har lagt till ett `magento/ece-tools` CLI-kommando för att skapa databasdumpar i alla miljöer. I Pro-planproduktionsmiljöer dumpas det här kommandot endast från en av tre noder med hög tillgänglighet, vilket innebär att produktionsdata som skrivs till en annan nod under dumpningen inte kan kopieras. Vi rekommenderar att du sätter programmet i underhållsläge innan du gör en databasdump i produktionsmiljöer. Mer information finns i [Hantering av säkerhetskopiering](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/snapshots).
+- **Databasdumpar** - Vi har lagt till ett `magento/ece-tools` CLI-kommando för att skapa databasdumpar i alla miljöer. I Pro-planproduktionsmiljöer dumpas det här kommandot endast från en av tre noder med hög tillgänglighet, vilket innebär att produktionsdata som skrivs till en annan nod under dumpningen inte kan kopieras. Vi rekommenderar att du sätter programmet i underhållsläge innan du gör en databasdump i produktionsmiljöer. Mer information finns i [Hantering av säkerhetskopiering](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/storage/snapshots).
 
 - **Begränsningar för kroniskt intervall har hävts** - Standardvärdet för kroniskt intervall för alla miljöer som etablerats i områdena us-3, eu-3 och ap-3 är 1 minut. Standardkronidintervallet i alla andra regioner är 5 minuter för Pro Integration-miljöer och 1 minut för Pro Staging- och Production-miljöer. Om du vill ändra dina befintliga cron-jobb redigerar du inställningarna i `.magento.app.yaml` eller skapar en supportbiljett för produktions-/mellanlagringsmiljöer. Mer information finns i [Konfigurera cron-jobb](../application/crons-property.md#set-up-cron-jobs).
 
@@ -672,7 +672,7 @@ ht-degree: 0%
 
 **Nya funktioner:**
 
-- Adobe Commerce i molninfrastrukturen har nu stöd för omfattningar och [statiska strategier för innehållsdistribution](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy). Vi har lagt till parametern `–s` med standardinställningen `quick` för den statiska innehållsdistributionsstrategin. Du kan använda miljövariabeln [SCD_STRATEGY](../environment/variables-deploy.md) för att anpassa och använda dessa strategier med dina bygg- och distributionsåtgärder. Variabeln stöder alternativen `standard`, `quick` eller `compact`. Om du väljer `compact` åsidosätter vi värdet `STATIC_CONTENT_THREADS` med `1`, vilket kan göra distributionen långsammare, särskilt i produktionsmiljöer. Inte tillgängligt i 2.1.<!--- MAGECLOUD-1057 -->
+- Adobe Commerce i molninfrastrukturen har nu stöd för omfattningar och [statiska strategier för innehållsdistribution](https://experienceleague.adobe.com/sv/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy). Vi har lagt till parametern `–s` med standardinställningen `quick` för den statiska innehållsdistributionsstrategin. Du kan använda miljövariabeln [SCD_STRATEGY](../environment/variables-deploy.md) för att anpassa och använda dessa strategier med dina bygg- och distributionsåtgärder. Variabeln stöder alternativen `standard`, `quick` eller `compact`. Om du väljer `compact` åsidosätter vi värdet `STATIC_CONTENT_THREADS` med `1`, vilket kan göra distributionen långsammare, särskilt i produktionsmiljöer. Inte tillgängligt i 2.1.<!--- MAGECLOUD-1057 -->
 
 - Vi har skapat en loggfil över miljöer för att hämta in och kompilera bygg- och distributionsåtgärder. Filen `var/log/cloud.log` finns i programmets rotkatalog.<!--- MAGECLOUD-1014 & MAGECLOUD-1023 -->
 
