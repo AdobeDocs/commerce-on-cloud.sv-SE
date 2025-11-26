@@ -92,7 +92,7 @@ ht-degree: 0%
 
    - ![ny ikon](../../assets/new.svg) Stöd för konfiguration av PHP-moduler har lagts till med filen `.magento.app.yaml`. Alla [PHP-tillägg som anges i `.magento.app.yaml` file](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions) blir tillgängliga i Docker PHP-behållare.<!-- MAGECLOUD-3357 -->
 
-   - ![ny ikon](../../assets/new.svg) Det finns nya kommandon som förbättrar Docker-kommandoradsupplevelsen. Se avsnittet [`bin/magento-docker` i Docker-referensen ](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
+   - ![ny ikon](../../assets/new.svg) Det finns nya kommandon som förbättrar Docker-kommandoradsupplevelsen. Se avsnittet [`bin/magento-docker` i Docker-referensen &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
 
    - ![ny ikon](../../assets/new.svg) Lagt till möjligheten att använda Mutagen.io för att synkronisera filer under utvecklingen mellan den lokala värden och Docker.<!-- MAGECLOUD-3559 -->
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
    - ![korrigeringsikonen](../../assets/fix.svg) Åtgärdade ett problem med flertrådig SCD, som orsakade slumpmässiga fel vid distribution av statiskt innehåll. Den tillfälliga lösningen innebar att variabeln **SCD_THREADS** ställdes in på `1`. Nu kan du öka antalet efter behov. Se definitionerna i [distribuera variabler](../environment/variables-deploy.md#scd_threads) och [build-variablerna](../environment/variables-build.md#scd_threads).<!-- MAGECLOUD-3611 -->
 
-   - ![korrigeringsikon](../../assets/fix.svg) Du kan konfigurera miljövariabeln **WARM_UP_PAGES** så att den cachelagrar enstaka sidor, flera domäner och flera sidor. Se den utökade definitionen i [variabeln ](../environment/variables-post-deploy.md#warm_up_pages) efter distribution.<!-- MAGECLOUD-3258 -->
+   - ![korrigeringsikon](../../assets/fix.svg) Du kan konfigurera miljövariabeln **WARM_UP_PAGES** så att den cachelagrar enstaka sidor, flera domäner och flera sidor. Se den utökade definitionen i [variabeln &#x200B;](../environment/variables-post-deploy.md#warm_up_pages) efter distribution.<!-- MAGECLOUD-3258 -->
 
 - ![korrigeringsikonen](../../assets/fix.svg) har lagt till filen `pub/static/.htaccess` i exkluderingslistan. [Korrigering skickad av Björn Kraus på PHOENIX MEDIA GmbH](https://github.com/magento/ece-tools/pull/455).<!-- MAGECLOUD-3545/Github#455 -->
 
@@ -152,7 +152,7 @@ ht-degree: 0%
 
    - ![ny ikon](../../assets/new.svg) **Docker-bygglägen** - Nu kan du välja att starta Docker-miljön i [produktions- eller utvecklarläge](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode). Utvecklarläget stöder aktiv utveckling med fullständig, skrivbar behörighet för filsystemet.<!-- MAGECLOUD-3152/3511 -->
 
-   - ![korrigeringsikon](../../assets/fix.svg) Ett problem som orsakade att Docker-distributionen misslyckades med ett `Name or service not known`-fel om cachen är konfigurerad för en tjänst som inte är tillgänglig har åtgärdats. Nu kan du ta bort en tjänst från [`.magento/services.yaml`-filen ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml). Docker-konfigurationsgeneratorn uppdaterar tjänsten i filen `docker/config.php.dist` automatiskt.<!-- MAGECLOUD-3369 -->
+   - ![korrigeringsikon](../../assets/fix.svg) Ett problem som orsakade att Docker-distributionen misslyckades med ett `Name or service not known`-fel om cachen är konfigurerad för en tjänst som inte är tillgänglig har åtgärdats. Nu kan du ta bort en tjänst från [`.magento/services.yaml`-filen &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml). Docker-konfigurationsgeneratorn uppdaterar tjänsten i filen `docker/config.php.dist` automatiskt.<!-- MAGECLOUD-3369 -->
 
    - ![ny ikon](../../assets/new.svg) har lagt till interaktiva valideringar för tjänstkompatibilitet. Om en begärd tjänst är inkompatibel med Adobe Commerce-versionen eller andra tjänster visar det _interaktiva läget_ ett meddelande och ett alternativ för att fortsätta. Se [Tjänstversionerna](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers) för Docker. Använd alternativet `-n` om du vill hoppa över interaktiviteten för CICD-syften.<!-- MAGECLOUD-3251 -->
 
@@ -410,7 +410,7 @@ ht-degree: 0%
 
 - ![ny ikon](../../assets/new.svg) <!-- MAGECLOU-1998 -->**Webbplatskarta och robotar** - Skapade ett [arbetsflöde](../store/robots-sitemap.md) för att lägga till en `robots.txt`-fil och generera en `sitemap.xml`-fil för en enskild domänkonfiguration utan att infrastrukturen behöver ändras.
 
-- ![ny ikon](../../assets/new.svg) **Guider** - Två [guider ](../deploy/smart-wizards.md) har lagts till som hjälp för molnkonfigurationen:<!-- MAGECLOUD-1910 -->
+- ![ny ikon](../../assets/new.svg) **Guider** - Två [guider &#x200B;](../deploy/smart-wizards.md) har lagts till som hjälp för molnkonfigurationen:<!-- MAGECLOUD-1910 -->
 
    - `ideal-state` - konfigurera det idealiska läget för minimal driftsättning under driftstopp
 
