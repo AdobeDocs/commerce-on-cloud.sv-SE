@@ -1,7 +1,8 @@
 ---
 title: Testning av mellanlagring och produktion
 description: Lär dig hur du testar i miljö för förproduktion och produktion.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -211,7 +212,7 @@ Använd följande verktyg för bästa resultat:
 
 ## Funktionstestning
 
-Du kan använda Magento Functional Testing Framework (MFTF) för att slutföra funktionstestningen för Adobe Commerce från Cloud Docker-miljön. Se [Programtestning](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/) i guiden _Cloud Docker för Commerce_.
+Du kan använda Magento Functional Testing Framework (MFTF) för att slutföra funktionstestning för Adobe Commerce från Cloud Docker-miljön. Se [Programtestning](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing) i guiden _Cloud Docker för Commerce_.
 
 ## Konfigurera verktyget för säkerhetsgenomsökning
 

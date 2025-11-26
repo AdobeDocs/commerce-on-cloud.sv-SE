@@ -6,7 +6,7 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
-source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Huvudpaketen i det här metapaketet är följande:
 
 Du kan använda verktyget Cloud Docker för Commerce för att emulera Adobe Commerce i molninfrastruktursproduktions- och utvecklingsmiljöer för lokal utveckling. För Cloud Docker för Commerce krävs inte att PHP och Composer installeras lokalt.
 
-- [Lokal utveckling med Cloud Docker](https://developer.adobe.com/commerce/cloud-tools/docker/setup) på Adobe Developer webbplats
+- [Lokal utveckling med Cloud Docker](https://developer.adobe.com/commerce/cloud-tools/docker/setup/) på Adobe Developer webbplats
 - [Dockningsarkitektur och vanliga kommandon](../dev-tools/cloud-docker.md)
 - [Versionsinformation om Cloud Docker](../release-notes/cloud-docker.md)
 

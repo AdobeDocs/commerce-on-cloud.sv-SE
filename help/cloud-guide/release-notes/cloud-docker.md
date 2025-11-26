@@ -5,7 +5,7 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: bbf11023474cb6ac6b3b881c40897c3260542de9
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '3806'
 ht-degree: 0%
@@ -87,7 +87,7 @@ Releasedatum: 8 april 2024
 Releasedatum: 31 juli 2023
 
 - ![ny ikon](../../assets/new.svg) **Lagt till ny tjänstversion** - OpenSearch 2.5.
-- ![ny ikon](../../assets/new.svg) **Aktivera cacheminnet för disposition** - Nu kan du utöka Docker-konfigurationen för att aktivera rensningscache för disposition när du startar Docker-behållaren. Se [Utöka dockningskonfigurationen](https://developer.adobe.com/commerce/cloud-tools/docker/configure) i guiden _Cloud Docker för Commerce_.
+- ![ny ikon](../../assets/new.svg) **Aktivera cacheminnet för disposition** - Nu kan du utöka Docker-konfigurationen för att aktivera rensningscache för disposition när du startar Docker-behållaren. Se [Utöka dockningskonfigurationen](https://developer.adobe.com/commerce/cloud-tools/docker/configure/) i guiden _Cloud Docker för Commerce_.
 
 ## v1.3.5
 
@@ -241,7 +241,7 @@ Releasedatum: 9 november 2020
 
    - ![korrigeringsikon](../../assets/fix.svg) **TLS-behållare** - Nu baseras [TLS-behållaren](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#tls-container) på `https://hub.docker.com/r/magento/magento-cloud-docker-nginx` Docker-bilden i stället för CentOS-bilden. Den här ändringen åtgärdar problem som orsakade fel när HTTPS-begäranden skickas mellan behållare i Cloud Docker-miljön.<!--MCLOUD-6469-->
 
-   - ![ny ikon](../../assets/new.svg) **Testbehållare** - En testbehållare för programtestning har lagts till och alternativet `--with-test` har lagts till i Docker `build:compose`-kommandot för att skapa behållaren endast vid testning i Docker-miljön. Se [programtestning](https://developer.adobe.com/commerce/cloud-tools/docker/test-application-testing).<!--MCLOUD-6394-->
+   - ![ny ikon](../../assets/new.svg) **Testbehållare** - En testbehållare för programtestning har lagts till och alternativet `--with-test` har lagts till i Docker `build:compose`-kommandot för att skapa behållaren endast vid testning i Docker-miljön. Se [programtestning](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing).<!--MCLOUD-6394-->
 
    - ![ny ikon](../../assets/new.svg) **FPM-XDEBUG-behållare**
 
@@ -251,7 +251,7 @@ Releasedatum: 9 november 2020
 
 - ![ny ikon](../../assets/new.svg) **Konfigurationsändringar för Docker**
 
-   - **MailHog-konfiguration** - Nu kan du använda följande `ece-docker build:compose` kommandoalternativ för att inaktivera MailHog och ange portar: `--no-mailhog`, `--mailhog-http-port` och `--mailhog-smtp-port`. Se [Konfigurera e-post](https://developer.adobe.com/commerce/cloud-tools/docker/configure#set-up-email).<!--MCLOUD-6898, MCLOUD-6660-->
+   - **MailHog-konfiguration** - Nu kan du använda följande `ece-docker build:compose` kommandoalternativ för att inaktivera MailHog och ange portar: `--no-mailhog`, `--mailhog-http-port` och `--mailhog-smtp-port`. Se [Konfigurera e-post](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#set-up-email).<!--MCLOUD-6898, MCLOUD-6660-->
 
    - För Cloud Docker för Commerce 1.2.0 och senare innehåller Adobe nu Docker-bilder för varje patch-version, och Docker-konfigurationsgeneratorn skapar Docker-konfigurationen med en angiven patch-version i stället för att använda den senaste. Tidigare byggde Docker-konfigurationsgeneratorn konfigurationen med den senaste korrigeringsversionen som kunde bryta Cloud Docker för Commerce-miljöer som byggts med en tidigare version.<!--MCLOUD-7093-->
 
@@ -427,7 +427,7 @@ Releasedatum: 5 feb 2020
 
    - ![ny ikon](../../assets/new.svg) **Stöd för nätverksbryggläge** - Stöd har lagts till för nätverksbryggläge för att aktivera anslutningar mellan Docker-behållare i det lokala nätverket.<!--MAGECLOUD-4165-->
 
-   - ![ny ikon](../../assets/new.svg) **Cron-behållaren inaktiverad som standard** - För att förbättra prestanda är Cron-behållaren inte längre konfigurerad som standard när du skapar Docker-miljön. Du kan använda alternativet `--with-cron` i Docker-byggkommandot för att lägga till en Cron-behållare i miljön. Se [Hantera cron-jobb](https://developer.adobe.com/commerce/cloud-tools/docker/configure#manage-cron-jobs).<!--MAGECLOUD-5181-->
+   - ![ny ikon](../../assets/new.svg) **Cron-behållaren inaktiverad som standard** - För att förbättra prestanda är Cron-behållaren inte längre konfigurerad som standard när du skapar Docker-miljön. Du kan använda alternativet `--with-cron` i Docker-byggkommandot för att lägga till en Cron-behållare i miljön. Se [Hantera cron-jobb](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#manage-cron-jobs).<!--MAGECLOUD-5181-->
 
    - ![ny ikon](../../assets/new.svg) **Stoppa synkronisering av stora säkerhetskopior** - Lagt till databasdumpar och arkivfiler - ZIP, SQL, GZ och BZ2 - i exkluderingslistan i `dist/docker-sync.yml` - och `dist/mutagen.sh`-filerna. Synkronisering av stora filer (>1 GB) kan orsaka en viss inaktivitet och säkerhetskopieringsfiler kräver normalt inte synkronisering eftersom du kan återskapa dem.<!--MAGECLOUD-3979-->
 
