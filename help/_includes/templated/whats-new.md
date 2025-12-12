@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterar versionsinformationen för <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12</a> så att den innehåller en korrigering för"Checkout fails when JS minification and bundling are enabled: issue.</p>
+      <td><p>Uppdaterar versionsinformationen för <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12</a> så att den innehåller en korrigering för"Checkout fails when JS minification and bundling are enabled: issue.</p>
 </td>
       <td>
         Teknisk
@@ -31,7 +31,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> efter ECE-Tools-versionen, v2002.2.9.</p>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> efter ECE-Tools-versionen, v2002.2.9.</p>
 </td>
       <td>
         Teknisk
@@ -53,7 +53,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Lagringsperioden för arkiverade loggfiler för Commerce i molnprojekt är nu 30 dagar. Se <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/log-locations">Visa och hantera loggar</a> i handboken för Commerce on Cloud.</p>
+      <td><p>Lagringsperioden för arkiverade loggfiler för Commerce i molnprojekt är nu 30 dagar. Se <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/test/log-locations">Visa och hantera loggar</a> i handboken för Commerce on Cloud.</p>
 </td>
       <td>
         Teknik, feedback
