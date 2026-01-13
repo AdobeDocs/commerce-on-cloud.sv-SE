@@ -3,16 +3,16 @@ title: Konfigurera OpenSearch-tjänsten
 description: Lär dig hur du aktiverar OpenSearch-tjänsten för Adobe Commerce i molninfrastruktur.
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-source-git-commit: 5a190471f4ccc23eb1c311f3082af1948cf1c68d
+source-git-commit: 3a81c8ef2024341e60f4767bdd6616df26f8045f
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
 
 # Konfigurera OpenSearch-tjänsten
 
-Tjänsten [OpenSearch](https://www.opensearch.org) är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter licensändringarna för Elasticsearch. Se [OpenSource-projektet](https://github.com/opensearch-project) i GitHub.
+Tjänsten [OpenSearch](https://www.opensearch.org) är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter licensändringarna för Elasticsearch. Se [OpenSource-projektet](https://github.com/opensearch-project) i GitHub. [Systemkrav](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) visar vilken version som stöds.
 
 {{elasticsearch-support}}
 
@@ -27,19 +27,19 @@ Med OpenSearch kan du hämta data från alla källor, alla format och söka och 
 
 >[!TIP]
 >
->För Adobe Commerce-projekt i molninfrastrukturprojekt som inte använder [Live Search](https://experienceleague.adobe.com/sv/docs/commerce/live-search/overview) rekommenderar Adobe att du konfigurerar [!DNL OpenSearch] så att det finns ett reservalternativ för sökverktyg från tredje part. [!DNL OpenSearch] och [!DNL Live Search] kan dock inte båda vara aktiverade på samma Commerce-instans.
+>För Adobe Commerce-projekt i molninfrastrukturprojekt som inte använder [Live Search](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview) rekommenderar Adobe att du konfigurerar [!DNL OpenSearch] så att det finns ett reservalternativ för sökverktyg från tredje part. [!DNL OpenSearch] och [!DNL Live Search] kan dock inte båda vara aktiverade på samma Commerce-instans.
 
 **Så här aktiverar du OpenSearch**:
 
-1. För integreringsmiljöer lägger du till tjänsten `opensearch` i filen `.magento/services.yaml` med rätt version och allokerat diskutrymme i MB. I det här fallet är version 2 lämplig. Den mindre versionen är inte obligatorisk.
+1. För integreringsmiljöer lägger du till tjänsten `opensearch` i filen `.magento/services.yaml` med rätt version och allokerat diskutrymme i MB. I det här fallet är version 3 lämplig. Den mindre versionen är inte obligatorisk.
 
    ```yaml
    opensearch:
-       type: opensearch:2
+       type: opensearch:3
        disk: 1024
    ```
 
-   För Pro-projekt måste du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna ändra OpenSearch-versionen i mellanlagrings- och produktionsmiljöer.
+   För Pro-projekt måste du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att kunna ändra OpenSearch-versionen i mellanlagrings- och produktionsmiljöer.
 
 1. Ange eller verifiera egenskapen `relationships` i filen `.magento.app.yaml`.
 
@@ -92,7 +92,7 @@ När du installerar eller uppgraderar din Adobe Commerce i ett molninfrastruktur
 
 - **Projektuppgradering**-Kontrollera att PHP-klienten för OpenSearch i den nya programversionen är kompatibel med OpenSearch-tjänstversionen som är installerad i molninfrastrukturen.
 
-Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har testats och distribuerats i molninfrastrukturen, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. En lista över vilka versioner som stöds finns i [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _installationshandboken_.
+Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har testats och distribuerats i molninfrastrukturen, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. En lista över vilka versioner som stöds finns i [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _installationshandboken_.
 
 **Så här verifierar du OpenSearch-programkompatibilitet**:
 
@@ -135,7 +135,7 @@ Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har test
    | path                                     | null                                                   |
    | query                                    |                                                        |
    | password                                 | null                                                   |
-   | type                                     | opensearch:2                                           |
+   | type                                     | opensearch:3                                           |
    | public                                   | false                                                  |
    | host_mapped                              | false                                                  |
    ```
@@ -153,7 +153,7 @@ Tjänstversionen och kompatibilitetsstödet bestäms av versionerna som har test
       "cluster_uuid" : "_yzaae6-ywSEW1MaAF8ZPWyQ",
       "version" : {
         "distribution" : "opensearch",
-        "number" : "2.5.0",
+        "number" : "3.1.0",
         "build_type" : "deb",
         "build_hash" : "aaaaaaa",
         "build_date" : "2023-01-23T12:07:18.760675Z",
@@ -184,7 +184,7 @@ Du kan också lägga till plugin-program för OpenSearch genom att lägga till a
 
 >[!NOTE]
 >
->Detta gäller endast för integrerings- och startmiljöer. [Skicka en supportförfrågan](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) om du vill installera plugin-programmen i ett Pro Staging- eller Production-kluster.
+>Detta gäller endast för integrerings- och startmiljöer. [Skicka en supportförfrågan](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) om du vill installera plugin-programmen i ett Pro Staging- eller Production-kluster.
 
 
 ```yaml
@@ -208,7 +208,7 @@ Om du tar bort plugin-posterna från avsnittet `opensearch:` i filen `.magento/s
 
 >[!NOTE]
 >
->Den här ändringen gäller endast för integrerings- och startmiljöer. Du måste [skicka en supportanmälan](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) för att ta bort plugin-programmet i ett Pro Staging- eller Production-kluster.
+>Den här ändringen gäller endast för integrerings- och startmiljöer. Du måste [skicka en supportanmälan](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) för att ta bort plugin-programmet i ett Pro Staging- eller Production-kluster.
 
 1. Ta bort OpenSearch-pluginposterna från filen `.magento/services.yaml`.
 1. Lägg till, implementera och push-överföra kodändringar.
