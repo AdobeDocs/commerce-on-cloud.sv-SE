@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: c5e52c70c121aa3650acfba8a98b743834a95428
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 Den här sidan innehåller de ändringar som har gjorts under de senaste 60 dagarna. Vi utelämnar alla mindre uppdateringar, som kopieringsredigering, från den här listan.
 
-### 17 november 2025
+### 13 januari 2026
 
 <table style="table-layout:auto;">
   <thead>
@@ -23,20 +23,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterar versionsinformationen för <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12</a> så att den innehåller en korrigering för"Checkout fails when JS minification and bundling are enabled: issue.</p>
+      <td><p>Versionen av exemplen i <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Konfigurera OpenSearch-tjänsten</a> har uppdaterats.</p>
 </td>
       <td>
-        Teknisk
+        Feedback
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">bekräfta</a></td>
-    </tr>
-    <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI-referens</a> efter ECE-Tools-versionen, v2002.2.9.</p>
-</td>
-      <td>
-        Teknisk
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/5f088df3e7bc35cc1d7fa93d06b5fa9968802572">bekräfta</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f5d325dbb14e5e524c89b41c4d5b82383b5b1ac7">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
