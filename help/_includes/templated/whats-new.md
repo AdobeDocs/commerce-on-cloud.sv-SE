@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Versionen av exemplen i <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Konfigurera OpenSearch-tjänsten</a> har uppdaterats.</p>
+      <td><p>Versionen av exemplen i <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Konfigurera OpenSearch-tjänsten</a> har uppdaterats.</p>
 </td>
       <td>
         Feedback
