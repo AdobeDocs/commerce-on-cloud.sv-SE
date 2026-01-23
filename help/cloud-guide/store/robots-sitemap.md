@@ -3,9 +3,9 @@ title: Lägg till webbplatskarta och sökrobotar
 description: Lär dig hur du lägger till webbplatskartor och sökrobotar i Adobe Commerce i molninfrastruktur.
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 1ecb820d55faa78e369d63996f11cd4d1d554e26
+source-git-commit: 1d52481fb6874f3a9ba14b0ff4fe39dc7d564938
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ För detta krävs ECE-Tools version 2002.0.12 och senare med en uppdaterad `.mag
 
 >[!NOTE]
 >
->Om filen `<domain.your.project>/robots.txt` genererar en `404 error`, [skickar du en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att ta bort omdirigeringen från `/robots.txt` till `/media/robots.txt`.
+>Om filen `<domain.your.project>/robots.txt` genererar en `404 error`, [skickar du en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att ta bort omdirigeringen från `/robots.txt` till `/media/robots.txt`.
 
 ## Skriv om med snabbVCL-kodfragment
 
@@ -117,22 +117,23 @@ I administratörskonfigurationen för `sitemap` måste du ange filens plats med 
 
 ### Konfigurera indexering med sökmotor
 
-Om du vill aktivera `robots.txt` anpassningar i produktionen aktiverar du indexering av sökmotorer för alternativet `<environment-name>`** i projektinställningarna på molnkonsolen:
+Om du vill aktivera `robots.txt` anpassningar i produktionen aktiverar du indexering av sökmotorer för alternativet `<environment-name>` i projektinställningarna på molnkonsolen:
 
 - Äldre molnkonsol - URL:en följer mönstret `https://<region-id>.magento.cloud/projects/<project_id>`
+
+  Växla inställningen [!UICONTROL Indexing by search engines] (äldre konsol) [!UICONTROL Hide from search engines] (Adobe Console) till **På**.
+
+  ![Använd [!DNL Cloud Console] för att hantera miljöer](../../assets/robots-indexing-by-search-engine.png)
+
 - Adobe Cloud Console - URL:en följer mönstret ``https://console.adobecommerce.com/<username>/<project_id>``
 
-1. Växla inställningen [!UICONTROL Indexing by search engines] till **På**.
+  Avmarkera inställningen [!UICONTROL Hide from search engines].
 
-   ![Använd [!DNL Cloud Console] för att hantera miljöer](../../assets/robots-indexing-by-search-engine.png)
+- Du kan även använda magento-cloud CLI för att uppdatera den här inställningen:
 
-1. Avmarkera inställningen [!UICONTROL Hide from search engines].
-
-Du kan även använda magento-cloud CLI för att uppdatera den här inställningen:
-
-```bash
-magento-cloud environment:info -p <project_id> -e production restrict_robots false
-```
+  ```bash
+  magento-cloud environment:info -p <project_id> -e production restrict_robots false
+  ```
 
 >[!NOTE]
 >
