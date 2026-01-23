@@ -2,16 +2,17 @@
 title: Distribuera till mellanlagring och produktion
 description: Lär dig hur du distribuerar din Adobe Commerce på molninfrastrukturkod till miljöer för stapling och produktion för ytterligare testning.
 feature: Cloud, Console, Deploy, SCD, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
+source-git-commit: fe634412c6de8325faa36c07e9769cde0eb76c48
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
 
 # Distribuera till mellanlagring och produktion
 
-Processen för att distribuera och publicera börjar med utveckling, fortsätter till Förproduktion och slutar med att publicera i Produktion. Adobe är en totallösning för hela miljön som ger enhetliga konfigurationer. Alla miljöer har stöd för direkt URL-åtkomst till butiken och administratörs- och SSH-åtkomst för CLI-kommandon.
+Processen för att distribuera och publicera börjar med utveckling, fortsätter till Förproduktion och slutar med att publicera i Produktion. Adobe är en totallösning för miljön som ger enhetliga konfigurationer. Alla miljöer har stöd för direkt URL-åtkomst till butiken och administratörs- och SSH-åtkomst för CLI-kommandon.
 
 När du är redo att distribuera din butik måste du slutföra distributionen och testningen i mellanlagringsmiljön innan du distribuerar till Production. I det här avsnittet finns detaljerade anvisningar och information om bygg- och distributionsprocessen, migrering av data och innehåll samt testning.
 
@@ -23,7 +24,7 @@ Du kan även aktivera [Spåra distributioner med New Relic](../monitor/track-dep
 
 ## Startdistributionsflöde
 
-Adobe rekommenderar att du skapar en `staging`-gren från `master`-grenen för att få bästa möjliga stöd för utveckling och distribution av Starter-planen. Sedan har du två av dina fyra aktiva miljöer klara: `master` för produktion och `staging` för mellanlagring.
+Adobe rekommenderar att du skapar en `staging`-gren från grenen `master` för att få bästa möjliga stöd för utveckling och distribution av Starter-planen. Sedan har du två av dina fyra aktiva miljöer klara: `master` för produktion och `staging` för mellanlagring.
 
 Mer information om processen finns i [Arbetsflöde för att utveckla och distribuera start](../architecture/starter-develop-deploy-workflow.md).
 
@@ -35,7 +36,7 @@ Mer information om processen finns i [Arbetsflödet Framkalla och distribuera i 
 
 ## Distribuera kod till mellanlagring
 
-I mellanlagringsmiljön finns en nästan produktionsmiljö som innehåller en databas, webbserver och alla tjänster, inklusive Fastly och New Relic. Du kan överföra, sammanfoga och distribuera fullständigt via [[!DNL Cloud Console]](../project/overview.md)- eller [&#x200B; Cloud CLI-kommandona](../dev-tools/cloud-cli-overview.md) via ett terminalprogram.
+I mellanlagringsmiljön finns en nästan produktionsmiljö som innehåller en databas, webbserver och alla tjänster, inklusive Fastly och New Relic. Du kan överföra, sammanfoga och distribuera fullständigt via [[!DNL Cloud Console]](../project/overview.md)- eller [ Cloud CLI-kommandona](../dev-tools/cloud-cli-overview.md) via ett terminalprogram.
 
 ### Distribuera kod med [!DNL Cloud Console]
 
@@ -139,7 +140,7 @@ Cloud CLI innehåller kommandon för att distribuera kod. Du behöver SSH- och G
 
 ## Migrera statiska filer
 
-[Statiska filer](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/glossary) lagras i `mounts`. Det finns två metoder för att migrera filer från en källmonteringsplats, till exempel din lokala miljö, till en målmonteringsplats. Båda metoderna använder verktyget `rsync`, men Adobe rekommenderar att du använder CLI `magento-cloud` för att flytta filer mellan den lokala miljön och fjärrmiljön. Och Adobe rekommenderar att du använder metoden `rsync` när du flyttar filer från en fjärrkälla till en annan fjärrplats.
+[Statiska filer](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) lagras i `mounts`. Det finns två metoder för att migrera filer från en källmonteringsplats, till exempel din lokala miljö, till en målmonteringsplats. Båda metoderna använder verktyget `rsync`, men Adobe rekommenderar att du använder CLI `magento-cloud` för att flytta filer mellan den lokala miljön och fjärrmiljön. Adobe rekommenderar att du använder metoden `rsync` när du flyttar filer från en fjärrkälla till en annan fjärrplats.
 
 ### Migrera filer med CLI
 
@@ -245,7 +246,7 @@ Se hjälpen för [rsync](https://linux.die.net/man/1/rsync).
 >
 >Integreringsmiljödatabasen är endast till för utvecklingstestning och kan innehålla data som du inte vill migrera till Förproduktion och Produktion.
 
-Adobe **rekommenderar inte** att migrera data från integrering till mellanlagring och produktion för kontinuerlig integrering. Du kan skicka testdata eller skriva över viktiga data. Viktiga konfigurationer skickas med kommandot [konfigurationsfilen](../store/store-settings.md) och `setup:upgrade` under bygget och distributionen.
+För kontinuerliga integreringsdistributioner rekommenderar inte Adobe **att** migrerar data från integrering till mellanlagring och produktion. Du kan skicka testdata eller skriva över viktiga data. Viktiga konfigurationer skickas med kommandot [konfigurationsfilen](../store/store-settings.md) och `setup:upgrade` under bygget och distributionen.
 
 >[!ENDSHADEBOX]
 
@@ -319,16 +320,10 @@ När du importerar data måste du släppa och skapa en databas.
    drop database main;
    ```
 
-   För produktion:
+   För produktions- och mellanlagringsmiljöer:
 
    ```shell
-   drop database <cluster-id>;
-   ```
-
-   För mellanlagring:
-
-   ```shell
-   drop database <cluster-ID_stg>;
+   drop database <database_name>;
    ```
 
 1. Återskapa databasen.
