@@ -36,7 +36,7 @@ Mer information om processen finns i [Arbetsflödet Framkalla och distribuera i 
 
 ## Distribuera kod till mellanlagring
 
-I mellanlagringsmiljön finns en nästan produktionsmiljö som innehåller en databas, webbserver och alla tjänster, inklusive Fastly och New Relic. Du kan överföra, sammanfoga och distribuera fullständigt via [[!DNL Cloud Console]](../project/overview.md)- eller [ Cloud CLI-kommandona](../dev-tools/cloud-cli-overview.md) via ett terminalprogram.
+I mellanlagringsmiljön finns en nästan produktionsmiljö som innehåller en databas, webbserver och alla tjänster, inklusive Fastly och New Relic. Du kan överföra, sammanfoga och distribuera fullständigt via [[!DNL Cloud Console]](../project/overview.md)- eller [&#x200B; Cloud CLI-kommandona](../dev-tools/cloud-cli-overview.md) via ett terminalprogram.
 
 ### Distribuera kod med [!DNL Cloud Console]
 
