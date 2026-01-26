@@ -21,7 +21,7 @@ Om du snabbt vill komma igång med ditt projekt, så att du kan börja utveckla 
 
 ## Registrera dig för ett molnkonto
 
-Om du inte har något Adobe Commerce-konto för molninfrastruktur kontaktar du [Försäljning](https://business.adobe.com/products/magento/get-demo.html). När du registrerar dig skapar Adobe ditt konto och skickar ett välkomstmeddelande med instruktioner om hur du kommer åt projektgränssnittet. E-postmeddelandet innehåller en länk så att du kan logga in på ditt konto och slutföra den första projektkonfigurationen.
+Om du inte har något Adobe Commerce-konto för molninfrastruktur kontaktar du [Försäljning](https://business.adobe.com/se/products/magento/get-demo.html). När du registrerar dig skapar Adobe ditt konto och skickar ett välkomstmeddelande med instruktioner om hur du kommer åt projektgränssnittet. E-postmeddelandet innehåller en länk så att du kan logga in på ditt konto och slutföra den första projektkonfigurationen.
 
 ## Få åtkomst till projekt och lägg till användare
 
@@ -33,7 +33,7 @@ Du kan bara lägga till registrerade användare i Adobe Commerce i projekt och m
 
 ### Åtkomst till delat konto
 
-Licensägaren kan konfigurera delad åtkomst för kontot. Med delad åtkomst kan betrodda medarbetare och tjänsteleverantörer använda Help center för att skicka och spåra supportärenden som rör din Adobe Commerce i molninfrastrukturprojekt. Instruktioner finns i artikeln [Delad åtkomst](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access) i hjälpcentret.
+Licensägaren kan konfigurera delad åtkomst för kontot. Med delad åtkomst kan betrodda medarbetare och tjänsteleverantörer använda Help center för att skicka och spåra supportärenden som rör din Adobe Commerce i molninfrastrukturprojekt. Instruktioner finns i artikeln [Delad åtkomst](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#shared-access) i hjälpcentret.
 
 ### [!DNL Cloud Console]
 
