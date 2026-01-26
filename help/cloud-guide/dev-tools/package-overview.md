@@ -27,7 +27,7 @@ php ./vendor/bin/ece-tools list
 
 Paketet `ece-tools` innehåller kommandon för att utföra åtgärder för att skapa, distribuera och efterdistribuera stadier när du startar Adobe Commerce på molninfrastruktursprogrammet. Kommandot `php ./vendor/bin/ece-tools build` startar till exempel programbyggprocessen.
 
-Som standard finns dessa `ece-tools`-kommandon i [hooks-egenskapen ](../application/hooks-property.md) i konfigurationsfilen `.magento.app.yaml` .
+Som standard finns dessa `ece-tools`-kommandon i [hooks-egenskapen &#x200B;](../application/hooks-property.md) i konfigurationsfilen `.magento.app.yaml` .
 
 ## Dockningskonfigurationsgenerator
 
@@ -93,5 +93,5 @@ Se [Versionsinformation för verktygen](../release-notes/cloud-tools-suite.md).
 
 ## Adobe patchar och anpassade patchar
 
-Paketet `ece-tools` innehåller ett beroende för paketet [ magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches) som innehåller Adobe-korrigeringar och snabbkorrigeringar som förbättrar integreringen av alla Adobe Commerce-versioner med molnmiljöer och stöder snabb leverans av viktiga korrigeringar. &quot;Levererar även anpassade korrigeringsfiler som du lägger till i ditt Adobe Commerce i molninfrastrukturprojekt. Se [Tillämpa korrigeringar](../development/apply-patches.md).
+Paketet `ece-tools` innehåller ett beroende för paketet [&#x200B; magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches) som innehåller Adobe-korrigeringar och snabbkorrigeringar som förbättrar integreringen av alla Adobe Commerce-versioner med molnmiljöer och stöder snabb leverans av viktiga korrigeringar. &quot;Levererar även anpassade korrigeringsfiler som du lägger till i ditt Adobe Commerce i molninfrastrukturprojekt. Se [Tillämpa korrigeringar](../development/apply-patches.md).
 
