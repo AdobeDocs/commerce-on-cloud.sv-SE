@@ -3,7 +3,7 @@ title: Konfigurera flera webbplatser eller butiker
 description: Lär dig hur du konfigurerar flera webbplatser eller butiker för Adobe Commerce i molninfrastrukturen.
 feature: Cloud, Configuration, Routes, Site Navigation
 exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
-source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
+source-git-commit: db34528be490f92cc61c609ca143c01ef3284157
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 0%
@@ -36,7 +36,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->Om du vill lägga till en butiksvy i webbplatsens bas-URL behöver du inte skapa flera kataloger. Se [Lägg till lagringskoden i bas-URL:en](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=sv-SE) i _konfigurationshandboken_.
+>Om du vill lägga till en butiksvy i webbplatsens bas-URL behöver du inte skapa flera kataloger. Se [Lägg till lagringskoden i bas-URL:en](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html) i _konfigurationshandboken_.
 
 ## Lägg till domäner
 
@@ -46,15 +46,15 @@ Hur du lägger till en domän beror på typen av molnkonto:
 
 - För Pro Staging and Production
 
-  Lägg till den nya domänen i Snabb, se [Hantera domäner](../cdn/fastly-custom-cache-configuration.md#manage-domains) eller öppna en supportbiljett för att begära hjälp. Dessutom måste du [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att begära att nya domäner läggs till i ett kluster.
+  Lägg till den nya domänen i Snabb, se [Hantera domäner](../cdn/fastly-custom-cache-configuration.md#manage-domains) eller öppna en supportbiljett för att begära hjälp. Dessutom måste du [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att begära att nya domäner läggs till i ett kluster.
 
 - Endast för startproduktion
 
-  Lägg till den nya domänen i Snabb, se [Hantera domäner](../cdn/fastly-custom-cache-configuration.md#manage-domains) eller [Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att få hjälp. Dessutom måste du lägga till den nya domänen på fliken **Domäner** i [!DNL Cloud Console]: `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  Lägg till den nya domänen i Snabb, se [Hantera domäner](../cdn/fastly-custom-cache-configuration.md#manage-domains) eller [Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att få hjälp. Dessutom måste du lägga till den nya domänen på fliken **Domäner** i [!DNL Cloud Console]: `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## Konfigurera lokal installation
 
-Mer information om hur du konfigurerar din lokala installation så att du kan använda flera butiker finns i [Flera webbplatser eller butiker][config-multiweb] i _Konfigurationshandboken_.
+Mer information om hur du konfigurerar din lokala installation så att du kan använda flera butiker finns i [Flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html) i _Konfigurationshandboken_.
 
 När du har skapat och testat den lokala installationen för att kunna använda flera butiker måste du förbereda din integreringsmiljö:
 
@@ -213,7 +213,7 @@ Där routningskonfigurationen definierar hur URL-adresserna behandlas, definiera
 
 ### Konfigurera webbplatser, butiker och butiksvyer
 
-Konfigurera dina _webbplatser_, **Store** och **Store-vyer** i **administratörsgränssnittet**. Se [Konfigurera flera webbplatser, butiker och butiksvyer i Admin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=sv-SE) i _Konfigurationshandboken_.
+Konfigurera dina _webbplatser_, **Store** och **Store-vyer** i **administratörsgränssnittet**. Se [Konfigurera flera webbplatser, butiker och butiksvyer i Admin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html) i _Konfigurationshandboken_.
 
 Det är viktigt att du använder samma namn och kod för dina webbplatser, butiker och butiksvyer från din administratör när du konfigurerar din lokala installation. Du behöver dessa värden när du uppdaterar filen `magento-vars.php`.
 
@@ -351,6 +351,3 @@ Följ distributionsprocessen för [distribution till Förproduktion och produkti
 
 Adobe rekommenderar att du testar fullt ut i mellanlagringsmiljön innan du går vidare till produktionsmiljön. Gör kodändringar i integreringsmiljön och börja distribuera i olika miljöer igen.
 
-<!-- link definitions -->
-
-[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=sv-SE
