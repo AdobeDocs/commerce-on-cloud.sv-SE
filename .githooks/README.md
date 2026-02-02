@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: ee2ed3a78939af36572f0baa6672b2e9f9a2557f
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ Den här katalogen innehåller förimplementerade kopplingar som automatiskt opt
 
 ## Vad krokarna gör
 
-- **Identifiera** mellanlagrade bildfiler automatiskt (PNG, JPG, JPEG, GIF, SVG)
+- **Identifiera** mellanlagrade bildfiler automatiskt (PNG, JPG, JPEG, GIF)
 - **Kör`image_optim`** för att komprimera och optimera bilder
 - **Ordna om optimerade bilder** automatiskt
 - **Kontrollera att alla implementerade bilder** är korrekt optimerade
@@ -85,11 +85,11 @@ Image optimization complete!
 ## Bildriktlinjer
 
 - **PNG**: Används för skärmbilder och gränssnittselement (optimeras automatiskt)
-- **SVG**: Använd för ikoner och enkel grafik (optimering inaktiverat som standard)
 - **JPEG**: Används för foton (optimeras automatiskt)
 - **GIF**: Används för animeringar (optimeras automatiskt)
+- **SVG**: Använd för ikoner och enkel grafik (inte bearbetad av krokar, använd som den är)
 
-De förimplementerade böckerna optimerar automatiskt alla bilder vid implementering.
+De förimplementerade hookarna optimerar automatiskt PNG-, JPEG- och GIF-bilder vid implementering.
 
 ## Manuell optimering
 
@@ -107,7 +107,7 @@ Hokarna använder konfigurationsfilen `_jekyll/.image_optim.yml` för att anpass
 - **PNG**: Använder `advpng`, `optipng` och `pngquant`
 - **JPEG**: Använder `jhead`, `jpegoptim` och `jpegtran`
 - **GIF**: Använder `gifsicle`
-- **SVG**: SVG-optimering är inaktiverat som standard (kan bryta komplex vektorgrafik och animeringar)
+- **SVG**: Inte bearbetad (exkluderad från identifiering för att bevara vektorgrafik och animeringar)
 
 ## Felsökning
 
@@ -141,7 +141,7 @@ Hokarna använder konfigurationsfilen `_jekyll/.image_optim.yml` för att anpass
 - **PNG** (`.png`) - förlustfri och förstörande komprimering
 - **JPEG** (`.jpg`, `.jpeg`) - Förstörande komprimering med rensning av metadata
 - **GIF** (`.gif`) - Animering och statisk optimering
-- **SVG** (`.svg`) - Vektoroptimering (inaktiverad som standard)
+- **SVG** (`.svg`) - Bearbetas inte av krokar (spara i befintligt skick för att bevara kvaliteten)
 
 ## God praxis
 
