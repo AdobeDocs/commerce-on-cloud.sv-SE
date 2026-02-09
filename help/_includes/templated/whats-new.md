@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Följande information om ursprungsinsvepning har lagts till i <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Översikt över snabbtjänster</a>.<br />- Definition och trafikflöde<br /> - Aktiveringsstatus (aktiverad för alla molnprojekt sedan 2021) Exempel på blockerade URL-adresser <br /> - Exempel på användning av REST API</p>
+      <td><p>Följande information om ursprungsinsvepning har lagts till i <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/cdn/fastly">Översikt över snabbtjänster</a>.<br />- Definition och trafikflöde<br /> - Aktiveringsstatus (aktiverad för alla molnprojekt sedan 2021) Exempel på blockerade URL-adresser <br /> - Exempel på användning av REST API</p>
 </td>
       <td>
         Teknisk
@@ -45,7 +45,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Versionen av exemplen i <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Konfigurera OpenSearch-tjänsten</a> har uppdaterats.</p>
+      <td><p>Versionen av exemplen i <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Konfigurera OpenSearch-tjänsten</a> har uppdaterats.</p>
 </td>
       <td>
         Feedback
