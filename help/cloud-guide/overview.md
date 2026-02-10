@@ -23,7 +23,7 @@ Adobe Commerce i molninfrastruktur erbjuder en automatiserad värdplattform med 
 
 >[!NOTE]
 >
->Mer information om säkerhet finns i [checklistan för säkerhetsuppdatering](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Mer information om säkerhet finns i [checklistan för säkerhetsuppdatering](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Visa [Teknikstacken](architecture/tech-stack.md) i detalj eller läs mer om specifika funktioner och produkter som stöds i [Cloud-arkitekturen för Commerce](architecture/cloud-architecture.md).
 
@@ -60,7 +60,7 @@ I guiden för infrastruktur i molnet förutsätts det att du har en viss arbetsk
 
 - [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs/) (Adobe Developer webbplats) - Utveckla, anpassa, integrera, utöka och använda avancerade funktioner
 
-- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) - Planera, implementera, använda, uppgradera och underhålla dina [!DNL Commerce]-projekt
+- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html?lang=sv-SE) (Adobe Experience League) - Planera, implementera, använda, uppgradera och underhålla dina [!DNL Commerce]-projekt
 
 {{$include /help/_includes/templated/whats-new.md}}
 
