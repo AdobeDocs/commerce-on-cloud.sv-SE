@@ -1,9 +1,10 @@
 ---
 title: Öppna checklista
 description: Granska checklisteobjekt för att starta webbplatsen.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
+source-git-commit: ca2d94364787695398b2b8af559733fe52ec2949
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Se [Testa distributionen](../test/staging-and-production.md) för att testa alla
 
 ## TLS och snabbt
 
-Adobe tillhandahåller ett SSL-/TLS-certifikat för kryptering för varje miljö. Det här certifikatet krävs för att snabbt kunna leverera säker trafik via HTTPS.
+Adobe tillhandahåller ett Låt&#39;s Encrypt SSL/TLS-certifikat för varje miljö. Det här certifikatet krävs för att snabbt kunna leverera säker trafik via HTTPS.
 
 Om du vill använda det här certifikatet måste du uppdatera din DNS-konfiguration så att Adobe kan slutföra domänvalidering och tillämpa certifikatet i din miljö. Varje miljö har ett unikt certifikat som omfattar domänerna för Adobe Commerce på molninfrastrukturplatser som distribueras i den miljön. Vi rekommenderar att du slutför och konfigurerar uppdateringarna under [Snabbt konfigureringsprocessen](../cdn/fastly-configuration.md).
 
@@ -38,7 +39,7 @@ När du är redo att starta webbplatsen måste du uppdatera DNS-konfigurationen 
 
 - SSL/TLS-certifikat för dina produktionsmiljöer.
 
-  Om du lade till ACME-utmaningsposter för dina produktionsdomäner under snabbkonfigurationsprocessen, överför Adobe SSL-/TLS-certifikatet till din produktionsmiljö automatiskt när du uppdaterar DNS-konfigurationen för att dirigera trafik till tjänsten Snabbt. Om du inte har etablerat certifikatet i förväg eller om du har uppdaterat dina domäner måste Adobe slutföra domänvalidering och distribuera certifikatet, vilket kan ta upp till 12 timmar.
+  Om du lade till ACME-utmaningsposter för dina produktionsdomäner under snabbkonfigurationsprocessen, överför Adobe SSL-/TLS-certifikatet till din produktionsmiljö automatiskt när du uppdaterar DNS-konfigurationen för att dirigera trafik till tjänsten Snabbt. Om du inte har företablerat certifikatet eller om du har uppdaterat dina domäner måste Adobe slutföra domänvalidering och tillhandahålla certifikatet, vilket kan ta upp till 12 timmar.
 
 ### Så här uppdaterar du DNS-konfigurationen för webbplatsstart:
 
@@ -60,14 +61,14 @@ När du är redo att starta webbplatsen måste du uppdatera DNS-konfigurationen 
    | `www.<domain-name>.com` | prod.magentocloud.map.fastly.net |
    | `mystore.<domain-name>.com` | prod.magentocloud.map.fastly.net |
 
-1. Om det behövs lägger du till A-poster för att mappa den överordnade domänen (`<domain-name>.com`) till följande fasta IP-adresser:
+1. Om det behövs lägger du till A- och AAAA-poster för att mappa den överordnade domänen (`<domain-name>.com`) till följande fasta IP-adresser:
 
-   | Apex-domän | ANAME |
-   | --------------- | ----------------- |
-   | `<domain-name>.com` | `151.101.1.124` |
-   | `<domain-name>.com` | `151.101.65.124` |
-   | `<domain-name>.com` | `151.101.129.124` |
-   | `<domain-name>.com` | `151.101.193.124` |
+   | Apex-domän | ANAME | AAANAME |
+   | --------------- | ----------------- | -------- |
+   | `<domain-name>.com` | `151.101.1.124` | 2a04:4e42:200::380 |
+   | `<domain-name>.com` | `151.101.65.124` | 2a04:4e42:400::380 |
+   | `<domain-name>.com` | `151.101.129.124` | 2a04:4e42:600::380 |
+   | `<domain-name>.com` | `151.101.193.124` | 2a04:4e42::380 |
 
 >[!IMPORTANT]
 >
@@ -90,7 +91,7 @@ När du är redo att starta webbplatsen måste du uppdatera DNS-konfigurationen 
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **OBS!**: Du kan även uppdatera bas-URL:en från administratören. Se [Lagra URL:er](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=sv-SE) i _Adobe Commerce Store och Köp Experience Guide_.
+   **OBS!**: Du kan även uppdatera bas-URL:en från administratören. Se [Lagra URL:er](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) i _Adobe Commerce Store och Köp Experience Guide_.
 
 1. Vänta några minuter tills webbplatsen har uppdaterats.
 
@@ -104,7 +105,7 @@ Följande är rekommenderade ändringar och kontroller:
 
 - [Utgående e-posttestning har slutförts](../project/outgoing-emails.md)
 
-- [Säker konfiguration för administratörsautentiseringsuppgifter och bas-admin-URL](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-admin)
+- [Säker konfiguration för administratörsautentiseringsuppgifter och bas-admin-URL](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [Optimera alla bilder för webben](../cdn/fastly-image-optimization.md)
 
@@ -136,9 +137,9 @@ Du kan också testa med följande alternativ från tredje part:
 
 - [Konfigurera säkerhetsgenomsökning](overview.md#set-up-the-security-scan-tool)
 
-- [Säker konfiguration för administratörsanvändare](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-admin)
+- [Säker konfiguration för administratörsanvändare](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- [Säker konfiguration för Admin URL](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [Säker konfiguration för Admin URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [Ta bort användare som inte längre använder Adobe Commerce i molninfrastrukturprojektet](../project/user-access.md)
 
