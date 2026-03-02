@@ -1,12 +1,12 @@
 ---
-user-guide-title: Användarhandbok om Commerce i molnet
+user-guide-title: Commerce on Cloud-guide
 user-guide-description: Lär dig hur du hanterar Adobe Commerce-programmet i molninfrastrukturen.
 product: magento
 feature: Cloud
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 2311b8e5c0216c01d0189c8f8e669dcddfcd1dcc
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 4%
+source-wordcount: '387'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
    + [Arbetsflöde för Pro](architecture/pro-develop-deploy-workflow.md)
    + [Skalbar arkitektur](architecture/scaled-architecture.md)
    + [Automatisk skalning](architecture/autoscaling.md)
-+ [Kom igång](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=sv-SE)
++ [Kom igång](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Versionsinformation {#release-notes}
    + [Cloud Tools Suite](release-notes/cloud-tools-suite.md)
    + [ECE-verktygspaket](release-notes/ece-tools-package.md)
@@ -77,7 +77,7 @@ ht-degree: 4%
       + [Smarta guider](deploy/smart-wizards.md)
       + [Distribuera till mellanlagring och produktion](deploy/staging-production.md)
       + [Återställning efter komponentfel](deploy/recover-failed-deployment.md)
-   + Testa {#test}
+   + Test {#test}
       + [Testvägledning](test/guidance.md)
       + [Loggar](test/log-locations.md)
       + [Xdebug](test/debug.md)
@@ -89,6 +89,7 @@ ht-degree: 4%
    + [Återställningsmiljö](development/restore-environment.md)
    + Lagring {#storage}
       + [Hantera diskutrymme](storage/manage-disk-space.md)
+      + [Kontrollera diskutrymmesgränsen för Adobe Commerce i molninfrastrukturen](storage/check-disk-space-limit-on-cloud.md)
       + [Profildatabasfrågor](storage/profile-database-queries.md)
       + [Säkerhetskopiera databasen](storage/database-dump.md)
       + [Hantering av säkerhetskopiering](storage/snapshots.md)
@@ -106,7 +107,7 @@ ht-degree: 4%
          + [Kroner](application/crons-property.md)
          + [Brandvägg (endast Starter)](application/firewall-property.md)
          + [Hooks](application/hooks-property.md)
-         + [Variabel](application/variables-property.md)
+         + [Variabler](application/variables-property.md)
          + [Webb](application/web-property.md)
          + [Arbetare](application/workers-property.md)
       + [Ange cache för statiska filer](application/set-cache.md)
