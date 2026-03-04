@@ -3,9 +3,10 @@ title: ADMIN-variabler
 description: Se en lista över miljövariabler som används vid installation av Adobe Commerce i molninfrastruktur.
 feature: Cloud, Configuration, Install, Roles/Permissions
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: d2746185-bc59-4d30-a088-73df1bd2c0b2
+source-git-commit: 4e751f02b92f954cd41d5523237da295a068661a
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Användare som har administratörsbehörighet för Adobe Commerce i molninfrastr
 
 Du kan åsidosätta administratörens inloggningsuppgifter under Commerce-installationen med ADMIN-variablerna i följande tabell.
 
-Om du vill ändra värdena efter installationen ansluter du till miljön med SSH och använder Adobe Commerce CLI [`admin:user`-kommandot &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=sv-SE) för att skapa eller redigera administratörens inloggningsuppgifter.
+Om du vill ändra värdena efter installationen ansluter du till miljön med SSH och använder Adobe Commerce CLI [`admin:user`-kommandot ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) för att skapa eller redigera administratörens inloggningsuppgifter.
 
 | Variabel | Standard | Beskrivning |
 | -------------- | --------------------------- | ----------- |
@@ -29,43 +30,62 @@ Om du vill ändra värdena efter installationen ansluter du till miljön med SSH
 
 ## Admin-URL
 
-Använd följande miljövariabel för att skydda åtkomsten till ditt administratörsgränssnitt. Om det här värdet anges åsidosätts standardwebbadressen under installationen.
+Använd följande miljövariabel för att skydda åtkomsten till ditt administratörsgränssnitt. Om det här värdet anges åsidosätts standardwebbadressen under installationen. I [!DNL Adobe Commerce] för molninfrastruktur måste du ange eller ändra Admin URL med variabeln `ADMIN_URL` i ([!DNL Cloud Console] eller [!DNL Cloud CLI]). Inställningen från [!DNL Admin] kan bara ändras för lokala installationer.
 
-`ADMIN_URL` - Den relativa URL-adressen för åtkomst till administratörsgränssnittet. Standardwebbadressen är `/admin`. Av säkerhetsskäl rekommenderar Adobe att du ändrar standardvärdet till en unik, anpassad Admin-URL som inte är enkel att gissa sig till.
+`ADMIN_URL` - Den relativa URL-adressen för åtkomst till administratörsgränssnittet. Standardwebbadressen är `/admin`.
 
 ### Ändra Admin-URL
 
-Adobe rekommenderar att du ändrar miljönivåvariabeln för Admin URL efter installationen. Konfigurera den här inställningen av säkerhetsskäl innan du förgrenar dig från den klonade `master`-miljön. Alla grenar som skapats från grenen `master` ärver miljönivåvariablerna och deras värden.
+Som standard är URL:en för [Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html) inställd på *&lt;domain_name>/admin*. Av säkerhetsskäl rekommenderar Adobe att du ändrar den till en unik, anpassad administratörs-URL som inte är enkel att gissa sig till.
 
-Använd kommandot `magento-cloud variable:update` för att uppdatera variabelvärdet. (Kommandot `variable:set` har tagits bort och är inte tillgängligt.) I följande exempel uppdateras ADMIN_URL till `newAdmin_A8v10`:
+**I [!DNL Adobe Commerce] i molninfrastrukturen** måste du ändra Admin-URL:en med hjälp av miljövariabeln `ADMIN_URL` i ([!DNL Cloud Console] eller [!DNL Cloud CLI]). Inställningen från [!DNL Admin] kan bara ändras för lokala installationer. För lokala installationer följer du [använd en anpassad administratörs-URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html#use-a-custom-admin-url).
+
+Adobe rekommenderar att du ändrar miljönivåvariabeln för Admin URL efter installationen. Konfigurera den här inställningen av säkerhetsskäl innan du förgrenar dig från den klonade `master`-miljön. Alla grenar som skapas från grenen `master` ärver miljönivåvariablerna och deras värden om du inte anger arv som false.
+
+Använd antingen [!DNL Cloud Console] eller [!DNL Cloud CLI] för att ställa in eller uppdatera `ADMIN_URL`.
+
+#### Alternativ A: Ändra Admin-URL med [!DNL Cloud Console]
+
+##### Integreringsmiljö
+
+Lägg till en ny variabel med [Cloud Console](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html):
+
+- **Namn:** `ADMIN_URL`
+- **Värde:** Din nya Admin URL (till exempel `magento_A8v10`)
+
+- Mer information finns i [Lägga till miljövariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-environment) eller [miljövariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html) i utvecklardokumentationen.
+
+##### Ange Admin-URL i [!DNL Cloud Console]
+
+1. Logga in på [molnkonsolen](https://console.adobecommerce.com/).
+2. Välj ett projekt i listan **[!UICONTROL All projects]**.
+3. I projektöversikten markerar du miljön och klickar på konfigurationsikonen.
+4. Välj fliken **[!UICONTROL Variables]**.
+5. Klicka på **[!UICONTROL Create Variable]** (eller redigera den befintliga `ADMIN_URL`-variabeln om den finns).
+6. Ange följande:
+   - **Variabelnamn:** `ADMIN_URL`
+   - **Värde:** Din nya administratörssökväg (till exempel `magento_A8v10`).
+
+   Som standard är **[!UICONTROL Available during runtime]** och **[!UICONTROL Make inheritable]** markerade. Om du vill förhindra att underordnade miljöer ärver det här värdet rensar du **[!UICONTROL Make inheritable]** för den här variabeln.
+7. Klicka på **[!UICONTROL Create variable]** (eller **[!UICONTROL Save]**) och vänta tills distributionen har slutförts. Knappen visas bara när de obligatoriska fälten innehåller värden.
+
+##### När mellanlagring och produktion inte är tillgängliga i [!DNL Cloud Console]
+
+[Skicka en supportanmälan](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) som begär att få lägga till variabeln `ADMIN_URL` för din mellanlagrings- eller produktionsmiljö. Om Förproduktion och Förproduktion är tillgängliga från [!DNL Cloud Console] lägger du till variabeln enligt beskrivningen i [Integreringsmiljö](#integration-environment).
+
+#### Alternativ B: Ändra Admin-URL med [!DNL Cloud CLI]
+
+Uppdatera variabeln med kommandot `magento-cloud variable:update`. (Kommandot `variable:set` har tagits bort och är inte tillgängligt.)
+
+I följande exempel uppdateras `master`-miljön `ADMIN_URL` till `newAdmin_A8v10` och underordnade miljöer kan inte ärva värdet:
 
 ```bash
-magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master
+magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master --inheritable false
 ```
+
+- **Omdistribution:** Om du ändrar variabeln `ADMIN_URL` i [!DNL Cloud CLI] utlöses en omdistribution av miljön.
+- **Arv:** Variabler kan ärvas som standard. Använd alternativet `--inheritable false` så som visas för att förhindra att värdet ärvs av underordnade miljöer. Mer information finns i [Synlighet på variabelnivå](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html#visibility).
 
 >[!NOTE]
 >
->Värdet `ADMIN_URL` accepterar bokstäver (a-z eller A-Z), siffror (0-9) och understreck (_) för en anpassad administratörssökväg. Blanksteg eller andra tecken **accepteras inte**.
-
-**Så här ändrar du URL-adressen med[!DNL Cloud Console]**:
-
-1. Logga in på [[!DNL Cloud Console]](https://console.adobecommerce.com).
-
-1. Välj ett projekt i listan _Alla projekt_.
-
-1. I projektöversikten markerar du miljön och klickar på konfigurationsikonen.
-
-   ![Projektkonfiguration](../../assets/icon-configure.png){width="36"}
-
-1. Välj fliken **Variabler**.
-
-1. Klicka på **Skapa variabel**.
-
-1. Ange följande:
-
-   - **Variabelnamn** = `ADMIN_URL`
-   - **värde** = Ny URL. Ange till exempel Admin URL till `magento_A8v10`.
-
-   Som standard är `Available during runtime` och `Make inheritable` markerade.
-
-1. Klicka på **Skapa variabel** och vänta tills distributionen har slutförts. Den här knappen visas bara när de obligatoriska fälten innehåller värden.
+>Värdet `ADMIN_URL` accepterar bokstäver (a-z, A-Z), siffror (0-9) och understreck (_). Blanksteg och andra tecken accepteras inte.
