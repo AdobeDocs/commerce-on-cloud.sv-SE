@@ -4,9 +4,9 @@ description: Se en lista med de senaste förbättringarna av Cloud Components-pa
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
+source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,13 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v1.1.3 {#latest}
+## v1.1.4 {#latest}
+
+Releasedatum: 5 mars 2026
+
+- ![ny ikon](../../assets/new.svg) **PHP 8.5** - Stöd för PHP 8.5 har lagts till.<!-- MCLOUD-14182-->
+
+## v1.1.3
 
 Releasedatum: 7 augusti 2025
 
@@ -67,7 +73,7 @@ Releasedatum: 10 mars 2023
 
 Releasedatum: 13 september 2022
 
-- ![korrigeringsikon](../../assets/fix.svg) **Fel vid varning** - Korrigerade ett fel som försökte [varma](../environment/variables-post-deploy.md#warm_up_pages) när sidsynligheten är inställd på [**Inte synlig enskilt**](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) i administratören, vilket resulterade i `ERROR: Warming up failed: <link to page>` fel i distributionsloggen.<!-- MCLOUD-9134 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Fel vid varning** - Korrigerade ett fel som försökte [varma](../environment/variables-post-deploy.md#warm_up_pages) när sidsynligheten är inställd på [**Inte synlig enskilt**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) i administratören, vilket resulterade i `ERROR: Warming up failed: <link to page>` fel i distributionsloggen.<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

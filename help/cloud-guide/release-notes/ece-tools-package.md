@@ -4,9 +4,9 @@ description: Se en lista över de senaste förbättringarna av ECE-verktygspaket
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 16d5577da8841c2f65f9b5298beaa7fb84a1ab47
+source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3491'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Paketet [ece-tools](https://github.com/magento/ece-tools) är en uppsättning sk
 
 >[!NOTE]
 >
->Mer information om hur du uppdaterar till den senaste versionen av [-paketet finns i &#x200B;](../dev-tools/update-package.md)Uppgradera ECE-verktyg`ece-tools` .
+>Mer information om hur du uppdaterar till den senaste versionen av `ece-tools`-paketet finns i [Uppgradera ECE-verktyg](../dev-tools/update-package.md) .
 
 Paketet `ece-tools` använder följande versionssekvens: `200<major>.<minor>.<patch>`
 
@@ -28,7 +28,16 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v2002.2.9 {#latest}
+## v2002.2.10 {#latest}
+
+Releasedatum: 5 mars 2026
+
+- ![ny ikon](../../assets/new.svg) **PHP 8.5** - Stöd för PHP 8.5 har lagts till.<!-- MCLOUD-14179 -->
+- ![fix-ikon](../../assets/fix.svg) **Uppdaterat funktionstest**-Uppdaterat test av Valkey 8.1, 8,2 och Redis 8.4<!-- MCLOUD-13983 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Uppdaterade MariaDB-, PHP- och OpenSearch-validerare**-Valideringsskriptet har uppdaterats.<!-- MCLOUD-14574/MCLOUD-14466 -->
+- ![korrigeringsikon](../../assets/fix.svg) **EOL-valideraren**-Uppdaterade EOL-tjänstdatum (End of Life).<!-- MCLOUD-14272 -->
+
+## v2002.2.9
 
 Releasedatum: 13 november 2025
 
@@ -144,7 +153,7 @@ Releasedatum: 16 oktober 2023
 Releasedatum: 31 juli 2023
 
 - ![korrigeringsikon](../../assets/fix.svg) **Felkoder** - Uppdaterat felkodsschema och dokumentgenerator för felkod.
-- ![korrigeringsikon](../../assets/fix.svg) **Validerare för anpassad Redis-modell**-Uppdaterade valideraren för anpassade Redis-backend-modeller. [Se exemplet för cachekonfiguration](../environment/variables-deploy.md#cache_configuration).
+- ![korrigeringsikon](../../assets/fix.svg) **Validerare för anpassad Redis-modell**-Uppdaterade valideraren för anpassade Redis-backend-modeller. [Se exemplet för cachekonfigurationen ](../environment/variables-deploy.md#cache_configuration).
 - ![korrigeringsikon](../../assets/fix.svg) **Validator för RabbitMQ**-Added support for RabbitMQ 3.11
 - ![korrigeringsikon](../../assets/fix.svg) **Korrigerade fel länk**-Korrigerade fel länk till startdokumentationen i välkomstmallen.
 
@@ -177,7 +186,7 @@ Releasedatum: 4 augusti 2022
 
 - ![korrigeringsikon](../../assets/fix.svg) **ElasticSuite-validerare och OpenSearch** - Ett problem med integritetskontrollen för ElasticSuite när OpenSearch är installerat har åtgärdats.<!-- MCLOUD-8767 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Returtyper för distributionskommandon** - Korrigerade returtyper för distributionskommandon.<!-- AC-3208 -->
-- ![korrigeringsikon](../../assets/fix.svg) **[!DNL RabbitMQ]problem med installation av nya Commerce 2.4.5** - Korrigerat [!DNL RabbitMQ] kraschproblem vid installation av nya Commerce 2.4.5.<!-- MCLOUD-9059 -->
+- ![korrigeringsikon](../../assets/fix.svg) **[!DNL RabbitMQ]problem med installation av nya Commerce 2.4.5** - Korrigerat [!DNL RabbitMQ] kraschproblem i nya Commerce 2.4.5. installation.<!-- MCLOUD-9059 -->
 
 ## v2002.1.10
 
@@ -361,7 +370,7 @@ Releasedatum: 25 juni 2020
 
    - ![ny ikon](../../assets/new.svg) **Kompatibilitetskontroller för Elasticsearch 7.x** - Uppdaterad Elasticsearch-validering för kompatibilitetskontroller för Elasticsearch 7.x.<!--MCLOUD-5542-->
 
-   - ![ny ikon](../../assets/new.svg) **Uppdaterad tjänstversion och EOL-valideringskontroller** - Uppdaterad validering för att kontrollera installerade tjänstversioner mot Adobe Commerce 2.4.0-kraven.<!--MCLOUD-6144-->
+   - ![ny ikon](../../assets/new.svg) **Uppdaterad tjänstversion och EOL-valideringskontroller** - Uppdaterad validering för att kontrollera installerade tjänstversioner mot Adobe Commerce 2.4. krav.<!--MCLOUD-6144-->
 
    - ![korrigeringsikon](../../assets/fix.svg) Ett valideringsfel har korrigerats så att följande varningsmeddelande efter distributionen bara visas om den `post-deploy`-krokkonfigurationen saknas i filen `.magento.app.yaml`:
 
@@ -403,7 +412,7 @@ Releasedatum: 6 februari 2020
 
 - ![ny ikon](../../assets/new.svg) **Infrastrukturuppdateringar**—
 
-   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [&#x200B; magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
+   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [ magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
 
    - ![ny ikon](../../assets/new.svg) **Uppdaterade patchfunktioner** - har flyttat patchfunktionen från ECE-verktygspaketet till ett separat [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) -paket. Under distributionen använder `ece-tools` det nya paketet för att tillämpa korrigeringar. Se [Versionsinformation om molnpatchar](cloud-patches.md).<!--MAGECLOUD-4567-->
 
@@ -417,7 +426,7 @@ Releasedatum: 6 februari 2020
 
 >[!NOTE]
 >
->Granska [bakåt innan du uppdaterar till ECE-Tools version 2002.1.0   inkompatibla ändringar &#x200B;](backward-incompatible-changes.md) om du vill veta mer om ändringar som kan kräva att du   uppdatera Adobe Commerce om projektkonfiguration eller processer för molninfrastruktur.
+>Granska [bakåt innan du uppdaterar till ECE-Tools version 2002.1.0   inkompatibla ändringar ](backward-incompatible-changes.md) om du vill veta mer om ändringar som kan kräva att du   uppdatera Adobe Commerce om projektkonfiguration eller processer för molninfrastruktur.
 
 - ![ny ikon](../../assets/new.svg) **Tjänstuppdateringar**—
 
