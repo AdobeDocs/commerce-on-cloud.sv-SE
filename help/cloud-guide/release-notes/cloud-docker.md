@@ -170,7 +170,7 @@ Releasedatum: 14 juni 2021
 
 - ![ny ikon](../../assets/new.svg) **Lade till PHP 8.0** - Uppdaterade PHP till version 8.0, så att du kan utnyttja alla nya funktioner och optimeringar som PHP 8.0 inkluderar.<!--MCLOUD-7941-->
 - ![ny ikon](../../assets/new.svg) **Uppdaterad till lack 6.6 och Elasticsearch 7.1.2** - Följande länkar innehåller versionsinformation om [Varnish Cache 6.6](https://varnish-cache.org/releases/rel6.6.0.html#rel6-6-0) och Elasticsearch 7.11.2.<!--MCLOUD-7921-->
-- ![ny ikon](../../assets/new.svg) **Tillägget `ioncube` för PHP 7.4-bilden** har lagts till på nytt i PHP 7.4-bilden efter att först ha undantagits från uppgraderingen av PHP 7.3 till PHP 7.4. `ioncube` *[Skickat av projektionsytan ](https://github.com/magento/magento-cloud-docker/pull/314).*<!--PR #314-->
+- ![ny ikon](../../assets/new.svg) **Tillägget `ioncube` för PHP 7.4-bilden** har lagts till på nytt i PHP 7.4-bilden efter att först ha undantagits från uppgraderingen av PHP 7.3 till PHP 7.4. `ioncube` *[Skickat av projektionsytan &#x200B;](https://github.com/magento/magento-cloud-docker/pull/314).*<!--PR #314-->
 - ![ny ikon](../../assets/new.svg) **Lagt till ett filsynkroniseringsalternativ:`manual-native`** - Filsynkroniseringsalternativet `manual-native` ger manuell kontroll över synkroniseringen, vilket ger bästa prestanda i macOS- och Windows-miljöer. Läs om hur du använder alternativet `manual-native` i [utvecklarläget](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/developer-mode) och [Synkroniserar data i en Docker-utvecklingsmiljö](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data#file-synchronization-options).<!--MCLOUD-7977-->
 - ![ny ikon](../../assets/new.svg) **Tog bort volymborttagningar från `up` och `down` kommandon** - alternativet `--volume` togs bort från kommandona `bin/magento-docker up` och `bin/magento-docker down` och ersattes av det nya kommandot `bin/magento-docker init` med en varning om dataförlust. Den här ändringen förhindrar dataförlust av misstag. *[Skickat av joeshelton-wagento](https://github.com/magento/magento-cloud-docker/pull/319).*<!--PR #319-->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdaterat `CN`-värde för det genererade certifikatet** - Det hårdkodade `CN`-värdet har tagits bort från Docker-filen. Det här värdet skapade ett certifikatfel (`NET::ERR_CERT_INVALID`) som gjorde att alternativet `--host` för kommandot `ece-docker build:compose` ignorerades.<!--MCLOUD-7934-->
@@ -181,7 +181,7 @@ Releasedatum: 20 april 2021
 
 - ![ny ikon](../../assets/new.svg) **Uppdaterad `host.docker.internal` för att vara plattformsoberoende** - Nu kan du skapa samma Docker Compose-skript för Ubuntu, Windows och macOS. Xdebug på Ubuntu kräver inte längre en separat miljövariabel. [Korrigering har skickats av Igor Vitol](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #298-->
 - ![ny ikon](../../assets/new.svg) **Uppdaterad init-docker.sh** - `mounts`-objektet har lagts till i miljövariabeln `MAGENTO_CLOUD_APPLICATION`. [Korrigering har skickats av Chiranjeevi](https://github.com/magento/magento-cloud-docker/pull/299).<!--Issue #299-->
-- ![ny ikon](../../assets/new.svg) **Uppdaterad init-docker.sh** - `init-docker.sh`-skriptet har uppdaterats med versionerna PHP 7.4 och Cloud Docker 1.2.1. [Korrigering har skickats av Adarsh Manickam ](https://github.com/magento/magento-cloud-docker/pull/300).<!--Issue #300-->
+- ![ny ikon](../../assets/new.svg) **Uppdaterad init-docker.sh** - `init-docker.sh`-skriptet har uppdaterats med versionerna PHP 7.4 och Cloud Docker 1.2.1. [Korrigering har skickats av Adarsh Manickam &#x200B;](https://github.com/magento/magento-cloud-docker/pull/300).<!--Issue #300-->
 - ![ny ikon](../../assets/new.svg) **Natrium är aktiverat som standard** - PHP-tillägget `sodium` är aktiverat som standard i PHP Docker-bilder.<!--MCLOUD-7548-->
 - ![ny ikon](../../assets/new.svg) **`custom-registry`option** - lade till ett `--custom-registry`-alternativ i `php ./vendor/bin/ece-docker build:compose`-kommandot för att använda ditt eget bildregister.<!--MCLOUD-7476-->
 
@@ -221,7 +221,7 @@ Releasedatum: 21 december 2020
 
 - ![korrigeringsikon](../../assets/fix.svg) **Ogiltig volymnamngivning** - Korrigerade ett fel med ogiltig volymnamngivning i utvecklarläge.<!--MCLOUD-7442-->
 
-- ![korrigeringsikon](../../assets/fix.svg) **NGINX uppströms port** - Docker NGINX 1.19-bilden har uppdaterats så att port 8080 används för att undvika en oändlig slinga. [Korrigering har skickats av Adarsh Manickam ](https://github.com/magento/magento-cloud-docker/pull/296).<!--Issue 295-->
+- ![korrigeringsikon](../../assets/fix.svg) **NGINX uppströms port** - Docker NGINX 1.19-bilden har uppdaterats så att port 8080 används för att undvika en oändlig slinga. [Korrigering har skickats av Adarsh Manickam &#x200B;](https://github.com/magento/magento-cloud-docker/pull/296).<!--Issue 295-->
 
 ## v1.2.0
 
@@ -229,7 +229,7 @@ Releasedatum: 9 november 2020
 
 - ![ny ikon](../../assets/new.svg) **Uppdateringar för behållare—**
 
-   - ![ny ikon](../../assets/new.svg) **PHP-FPM-behållare** - Stöd för gnupg-PHP-tillägget har lagts till. [Korrigering har skickats av G Arvind från Zilker-tekniken ](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->
+   - ![ny ikon](../../assets/new.svg) **PHP-FPM-behållare** - Stöd för gnupg-PHP-tillägget har lagts till. [Korrigering har skickats av G Arvind från Zilker-tekniken &#x200B;](https://github.com/magento/magento-cloud-docker/pull/210).<!--MCLOUD-5981-->
 
    - ![korrigeringsikon](../../assets/fix.svg) **Databasbehållare** - Åtgärdade hälsokontrollen för databasbehållaren genom att lägga till det obligatoriska databaslösenordet till hälsokontrollskommandot.<!--MCLOUD-7122-->
 
@@ -243,7 +243,7 @@ Releasedatum: 9 november 2020
 
    - ![ny ikon](../../assets/new.svg) **CLI-behållare**
 
-      - **Kör kommandon i PHP-behållare för Docker** - Nu kan du använda Cloud Docker CLI för att köra kommandon i PHP-behållare i Docker-miljön utan att behöva installera PHP på värden. Följande kommando skapar till exempel konfigurationen: `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose`. Se [Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli). [Korrigering har skickats av G Arvind från Zilker-tekniken ](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->
+      - **Kör kommandon i PHP-behållare för Docker** - Nu kan du använda Cloud Docker CLI för att köra kommandon i PHP-behållare i Docker-miljön utan att behöva installera PHP på värden. Följande kommando skapar till exempel konfigurationen: `./bin/magento-docker php 7.3 vendor/bin/ece-docker build:compose`. Se [Cloud Docker CLI](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference#cloud-docker-cli). [Korrigering har skickats av G Arvind från Zilker-tekniken &#x200B;](https://github.com/magento/magento-cloud-docker/pull/209).<!--MCLOUD-5982-->
 
       - OpenSSH-klienten har lagts till i PHP CLI-behållare. Nu kan du använda Ssh-agent-vidarebefordran för Composer om filen `composer.json` innehåller privata Git-databaser som kräver att en SSH-klient använder Composer-kommandon.<!--MCLOUD-6008-->
 
@@ -255,7 +255,7 @@ Releasedatum: 9 november 2020
 
       - ![ny ikon](../../assets/new.svg) **Konfigurera Xdebug i Linux** - alternativet `--set-docker-host` har lagts till i kommandot `ece-docker build:compose` för att konfigurera värdet `host.docker.internal` i Xdebug-behållaren. Det här alternativet krävs för att använda Xdebug på Linux-system. Se [Konfigurera Xdebug för Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug).<!--MCLOUD-6430-->
 
-      - ![korrigeringsikonen](../../assets/fix.svg) Åtgärdade Xdebug-variabelkonfigurationen för Docker ENTRYPOINT för att åtgärda `uninitialized "with_xdebug" variable` fel i loggarna. [Korrigering från Florent Olivaud ](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
+      - ![korrigeringsikonen](../../assets/fix.svg) Åtgärdade Xdebug-variabelkonfigurationen för Docker ENTRYPOINT för att åtgärda `uninitialized "with_xdebug" variable` fel i loggarna. [Korrigering från Florent Olivaud &#x200B;](https://github.com/magento/magento-cloud-docker/pull/218)<!--MCLOUD-6043-->
 
 - ![ny ikon](../../assets/new.svg) **Konfigurationsändringar för Docker**
 
@@ -306,7 +306,7 @@ Releasedatum: 25 juni 2020
 
 - ![ny ikon](../../assets/new.svg) **Stöd för Adobe Commerce- och Magento Open Source-distribution** - Nu kan du använda Cloud Docker för Commerce för att distribuera en lokal utvecklingsmiljö för projekt som inte ligger på Adobe Commerce i molninfrastrukturen.<!--MCLOUD-5667-->
 
-- ![ny ikon](../../assets/new.svg) **Stöd för Blackfire.io** - Stöd har lagts till för att använda tillägget [Blackfire.io](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire) för automatisk prestandatestning. [Korrigering har skickats av Adarsh Manickam från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
+- ![ny ikon](../../assets/new.svg) **Stöd för Blackfire.io** - Stöd har lagts till för att använda tillägget [Blackfire.io](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire) för automatisk prestandatestning. [Korrigering har skickats av Adarsh Manickam från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
 
 - ![ny ikon](../../assets/new.svg) **Uppdateringar för behållare**
 
@@ -322,13 +322,13 @@ Releasedatum: 25 juni 2020
 
    - ![ny ikon](../../assets/new.svg) **PHP-FPM**
 
-      - Stöd för PHP 7.4 har lagts till. [Korrigering har skickats av Mohanela Murugan från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
+      - Stöd för PHP 7.4 har lagts till. [Korrigering har skickats av Mohanela Murugan från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
 
-      - Lagt till möjlighet att kopiera en `php.ini`-fil i rotprojektkatalogen till Cloud Docker-miljön och tillämpa anpassade PHP-inställningar på PHP-FPM- och CLI-behållarna. Se [Anpassa PHP-inställningar](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings). [Korrigering har skickats av Mathew Beane från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
+      - Lagt till möjlighet att kopiera en `php.ini`-fil i rotprojektkatalogen till Cloud Docker-miljön och tillämpa anpassade PHP-inställningar på PHP-FPM- och CLI-behållarna. Se [Anpassa PHP-inställningar](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings). [Korrigering har skickats av Mathew Beane från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
 
-      - En hälsokontroll för behållare har lagts till. [Korrigering har skickats av Visanth Sampath från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
+      - En hälsokontroll för behållare har lagts till. [Korrigering har skickats av Visanth Sampath från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
 
-   - ![korrigeringsikon](../../assets/fix.svg) **Node.js** - Uppdaterade standardversionen av Node.js från version 8 till version 10 för att förbättra säkerheten. Node.js version 8 är inaktuell och inte längre uppdaterad med felkorrigeringar eller säkerhetspatchar. [Korrigering har skickats av Mohan Elamurgan från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->
+   - ![korrigeringsikon](../../assets/fix.svg) **Node.js** - Uppdaterade standardversionen av Node.js från version 8 till version 10 för att förbättra säkerheten. Node.js version 8 är inaktuell och inte längre uppdaterad med felkorrigeringar eller säkerhetspatchar. [Korrigering har skickats av Mohan Elamurgan från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->
 
    - ![ny ikon](../../assets/new.svg) **Elasticsearch**
 
@@ -350,7 +350,7 @@ Releasedatum: 25 juni 2020
 
    - Förbättrade möjligheter att hantera stora svar från PHP-FPM-behållaren uppströms genom att öka värdet `fastcgi_buffers` för Nginx-servern.<!--MCLOUD-5980-->
 
-   - Förbättrade prestanda för synkronisering av mutagena filer genom att lägga till en andra synkroniseringssession för att synkronisera filer i katalogen `vendor`. Den här ändringen förhindrar att mutagen fastnar under filsynkroniseringsprocessen. [Korrigering har skickats av Mathew Beane från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
+   - Förbättrade prestanda för synkronisering av mutagena filer genom att lägga till en andra synkroniseringssession för att synkronisera filer i katalogen `vendor`. Den här ändringen förhindrar att mutagen fastnar under filsynkroniseringsprocessen. [Korrigering har skickats av Mathew Beane från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
 
    - ![ny ikon](../../assets/new.svg) **CLI-kommandouppdateringar**
 
@@ -365,17 +365,17 @@ Releasedatum: 25 juni 2020
 | Ange anpassad bas-URL | `./vendor/bin/ece-docker build:compose --host=<hostname> --port=<port-number>`<!--MCLOUD-3063--> |
 | [Lägg till behållare för Xdebug-konfiguration](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug) | `.vendor/bin/ece-docker build:compose --mode developer --sync-engine native --with-xdebug`<!--MCLOUD-4098--> |
 
-- ![korrigeringsikon](../../assets/fix.svg) Konfigurationen av synkronisering av mutagenfiler har korrigerats för att förhindra att mutagen skapar inaktuella sessioner. [Korrigering har skickats av Mathew Beane från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
+- ![korrigeringsikon](../../assets/fix.svg) Konfigurationen av synkronisering av mutagenfiler har korrigerats för att förhindra att mutagen skapar inaktuella sessioner. [Korrigering har skickats av Mathew Beane från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
 
-- ![korrigeringsikon](../../assets/fix.svg) Ett konfigurationsproblem som orsakade syntaxfel i dispositionsloggen för Docker när PHP-FPM-behållaren startades har åtgärdats. [Korrigering har skickats av Mathew Beane från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/129)<!--MCLOUD-3958-->
+- ![korrigeringsikon](../../assets/fix.svg) Ett konfigurationsproblem som orsakade syntaxfel i dispositionsloggen för Docker när PHP-FPM-behållaren startades har åtgärdats. [Korrigering har skickats av Mathew Beane från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/129)<!--MCLOUD-3958-->
 
-- ![korrigeringsikon](../../assets/fix.svg) Åtgärdade volymkonfliktsfel som ibland uppstod när flera Docker-miljöer användes. [Korrigering har skickats av G Arvind från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/168).
+- ![korrigeringsikon](../../assets/fix.svg) Åtgärdade volymkonfliktsfel som ibland uppstod när flera Docker-miljöer användes. [Korrigering har skickats av G Arvind från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/168).
 
-- ![korrigeringsikonen](../../assets/fix.svg) Korrigerade ett fel som gjorde att kommandot `ece-docker build:compose` misslyckades om konfigurationen innehöll Blackfire.io. [Korrigering har skickats av G Arvind från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/199). <!--MCLOUD-5797-->
+- ![korrigeringsikonen](../../assets/fix.svg) Korrigerade ett fel som gjorde att kommandot `ece-docker build:compose` misslyckades om konfigurationen innehöll Blackfire.io. [Korrigering har skickats av G Arvind från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/199). <!--MCLOUD-5797-->
 
 - ![korrigeringsikon](../../assets/fix.svg) PHP CLI-bildkonfigurationen har uppdaterats för att förhindra fel av typen slut på minne som inträffar när flera paket installeras med Cloud Docker för Commerce. [Korrigering har skickats av Mohan Elamurgan från Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/197).*<!--MCLOUD-5818-->
 
-- ![korrigeringsikon](../../assets/fix.svg) Stöd har lagts till för flera MySQL-användare i Cloud Docker-miljön. I tidigare versioner misslyckades åtgärden `build:compose` om filen `magento.app.yaml` angav flera databasanvändare. [Korrigering har skickats av G Arvind från Zilker-tekniken ](https://github.com/magento/magento-cloud-docker/pull/181).<!--MCLOUD-5670-->
+- ![korrigeringsikon](../../assets/fix.svg) Stöd har lagts till för flera MySQL-användare i Cloud Docker-miljön. I tidigare versioner misslyckades åtgärden `build:compose` om filen `magento.app.yaml` angav flera databasanvändare. [Korrigering har skickats av G Arvind från Zilker-tekniken &#x200B;](https://github.com/magento/magento-cloud-docker/pull/181).<!--MCLOUD-5670-->
 
 - ![korrigeringsikonen](../../assets/fix.svg) Borttagen `rsyslog` från molndockningsprogrammet för Commerce PHP-behållare för att lösa kompatibilitetsproblem som orsakade varningsmeddelanden under distributionen. Cloud Docker använder inte rsyslog-verktyget.<!--MCLOUD-6173-->
 
@@ -419,15 +419,15 @@ Releasedatum: 5 feb 2020
 
          - **`RewriteLocation`** - Avgör om Pound-proxyn skriver om platsen till begärande-URL som standard. Standardvärdet är `0` för att förhindra att omskrivningen avbryter omdirigeringar till externa webbplatser som en extern SSO-plats. [Korrigering har skickats av Sorin Sugar](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
 
-      - ![ny ikon](../../assets/new.svg) Ökade timeoutvärdet i TLS-behållarkonfigurationen från 15 till 300 sekunder. [Korrigering har skickats av Mathew Beane från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+      - ![ny ikon](../../assets/new.svg) Ökade timeoutvärdet i TLS-behållarkonfigurationen från 15 till 300 sekunder. [Korrigering har skickats av Mathew Beane från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
    - ![ny ikon](../../assets/new.svg) **Varnish-behållare**—
 
       - ![ny ikon](../../assets/new.svg) **Behållarbasbilden har uppdaterats så att den officiella bilden används** - [Cloud lack-behållaren](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container) baseras nu på den officiella `centos` Docker-bilden.<!--MAGECLOUD-4163-->
 
-      - ![ny ikon](../../assets/new.svg) **Förbättrad standardtimeoutkonfiguration**-Added `.first_byte_timeout` och `.between_bytes_timeout` konfiguration till behållaren Varnish. Båda timeout-värdena är som standard `300s` (5 minuter). [Korrigering har skickats av Mathew Beane från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+      - ![ny ikon](../../assets/new.svg) **Förbättrad standardtimeoutkonfiguration**-Added `.first_byte_timeout` och `.between_bytes_timeout` konfiguration till behållaren Varnish. Båda timeout-värdena är som standard `300s` (5 minuter). [Korrigering har skickats av Mathew Beane från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
-      - ![korrigeringsikon](../../assets/fix.svg) **Hoppa över lack under Xdebug-sessioner** - Uppdaterade konfigurationen för behållaren i engelska så att den returnerar `pass` på begäranden som tas emot när Xdebug är aktiverat. I tidigare versioner gick det inte att använda Xdebug om Docker-miljön innehöll lack. [Korrigering har skickats av Mathew Beane från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
+      - ![korrigeringsikon](../../assets/fix.svg) **Hoppa över lack under Xdebug-sessioner** - Uppdaterade konfigurationen för behållaren i engelska så att den returnerar `pass` på begäranden som tas emot när Xdebug är aktiverat. I tidigare versioner gick det inte att använda Xdebug om Docker-miljön innehöll lack. [Korrigering har skickats av Mathew Beane från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
 
 - ![ny ikon](../../assets/new.svg) **Konfigurationsändringar för Docker**—
 
@@ -453,7 +453,7 @@ Releasedatum: 5 feb 2020
 
       - ![ny ikon](../../assets/new.svg) lade till alternativet `--sync-engine="native"` i kommandot `docker-build` för att inaktivera filsynkronisering när du genererar konfigurationsfilen för Docker Compose i utvecklarläge. Använd det här alternativet när du utvecklar på Linux-system, som inte kräver filsynkronisering för lokal Docker-utveckling. Se [Synkronisera data i Docker-miljön](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data).<!--MCLOUD-3231, MCLOUD-3890-->
 
-   - ![ny ikon](../../assets/new.svg) Ändrade standardinställningen för filsynkronisering från `docker-sync` till `native`. [Korrigering har skickats av Mathew Beane från Zilker Technology ](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
+   - ![ny ikon](../../assets/new.svg) Ändrade standardinställningen för filsynkronisering från `docker-sync` till `native`. [Korrigering har skickats av Mathew Beane från Zilker Technology &#x200B;](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
 
 - ![ny ikon](../../assets/new.svg) **Valideringsförbättringar**—
 
