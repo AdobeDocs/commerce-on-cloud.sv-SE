@@ -1,7 +1,7 @@
 ---
-source-git-commit: d7d8be211f07363c31ec558382f7adc38f6a46c6
+source-git-commit: 8ee3ad7754340d3bc095abd2f744549a0d39b379
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a> version, v2002.2.10.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a> version, v2002.2.10.</p>
 </td>
       <td>
         Teknisk
@@ -45,7 +45,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Ett förtydligande har lagts till om hur du <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">ändrar administratörs-URL:en</a> i Adobe Commerce i molnet i stället för lokalt.</p>
+      <td><p>Ett förtydligande har lagts till om hur du <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">ändrar administratörs-URL:en</a> i Adobe Commerce i molnet i stället för lokalt.</p>
 </td>
       <td>
         Större uppdatering, feedback
@@ -67,7 +67,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Lagt till dokumentation för <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">kontroll av diskutrymmesgränsen för Adobe Commerce i molnprojekt</a> från molnkonsolen.</p>
+      <td><p>Lagt till dokumentation för <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">kontroll av diskutrymmesgränsen för Adobe Commerce i molnprojekt</a> från molnkonsolen.</p>
 </td>
       <td>
         Nytt ämne, tekniskt
@@ -89,7 +89,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/launch/checklist">Startchecklistan</a> för Commerce i molnprojekt för att lägga till Fast AAAA-poster i DNS-konfigurationsinstruktionerna.</p>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">Startchecklistan</a> för Commerce i molnprojekt för att lägga till Fast AAAA-poster i DNS-konfigurationsinstruktionerna.</p>
 </td>
       <td>
         Feedback
@@ -111,7 +111,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Instruktioner har lagts till för <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">att ändra New Relic-kontoägaren</a> till <em>Commerce on Cloud Infrastructure Guide</em>.</p>
+      <td><p>Instruktioner har lagts till för <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">att ändra New Relic-kontoägaren</a> till <em>Commerce on Cloud Infrastructure Guide</em>.</p>
 </td>
       <td>
         Teknisk
@@ -133,34 +133,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Följande information om ursprungsinsvepning har lagts till i <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/cdn/fastly">Översikt över snabbtjänster</a>.<br />- Definition och trafikflöde<br />- Aktiveringsstatus (aktiverad för alla molnprojekt sedan 2021) Exempel på blockerad ursprungs-URL<br /> - Exempel på användning av REST API</p>
+      <td><p>Följande information om ursprungsinsvepning har lagts till i <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Översikt över snabbtjänster</a>.<br />- Definition och trafikflöde<br />- Aktiveringsstatus (aktiverad för alla molnprojekt sedan 2021) Exempel på blockerad ursprungs-URL<br /> - Exempel på användning av REST API</p>
 </td>
       <td>
         Teknisk
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/e367fd9c565d4d6d2bbc15b0289768dc38dcf7a9">bekräfta</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 13 januari 2026
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Versionen av exemplen i <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Konfigurera OpenSearch-tjänsten</a> har uppdaterats.</p>
-</td>
-      <td>
-        Feedback
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f5d325dbb14e5e524c89b41c4d5b82383b5b1ac7">bekräfta</a></td>
     </tr>
   </tbody>
 </table>
