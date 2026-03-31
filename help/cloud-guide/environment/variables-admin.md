@@ -19,7 +19,7 @@ Användare som har administratörsbehörighet för Adobe Commerce i molninfrastr
 
 Du kan åsidosätta administratörens inloggningsuppgifter under Commerce-installationen med ADMIN-variablerna i följande tabell.
 
-Om du vill ändra värdena efter installationen ansluter du till miljön med SSH och använder Adobe Commerce CLI [`admin:user`-kommandot &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) för att skapa eller redigera administratörens inloggningsuppgifter.
+Om du vill ändra värdena efter installationen ansluter du till miljön med SSH och använder Adobe Commerce CLI [`admin:user`-kommandot &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=sv-SE) för att skapa eller redigera administratörens inloggningsuppgifter.
 
 | Variabel | Standard | Beskrivning |
 | -------------- | --------------------------- | ----------- |
@@ -38,9 +38,9 @@ Använd följande miljövariabel för att skydda åtkomsten till ditt administra
 
 ### Ändra Admin-URL
 
-Som standard är URL:en för [Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html) inställd på *&lt;domain_name>/admin*. Av säkerhetsskäl rekommenderar Adobe att du ändrar den till en unik, anpassad administratörs-URL som inte är enkel att gissa sig till.
+Som standard är URL:en för [Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html?lang=sv-SE) inställd på *&lt;domain_name>/admin*. Av säkerhetsskäl rekommenderar Adobe att du ändrar den till en unik, anpassad administratörs-URL som inte är enkel att gissa sig till.
 
-**I [!DNL Adobe Commerce] i molninfrastrukturen** måste du ändra Admin-URL:en med hjälp av miljövariabeln `ADMIN_URL` i ([!DNL Cloud Console] eller [!DNL Cloud CLI]). Inställningen från [!DNL Admin] kan bara ändras för lokala installationer. För lokala installationer följer du [använd en anpassad administratörs-URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html#use-a-custom-admin-url).
+**I [!DNL Adobe Commerce] i molninfrastrukturen** måste du ändra Admin-URL:en med hjälp av miljövariabeln `ADMIN_URL` i ([!DNL Cloud Console] eller [!DNL Cloud CLI]). Inställningen från [!DNL Admin] kan bara ändras för lokala installationer. För lokala installationer följer du [använd en anpassad administratörs-URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=sv-SE#use-a-custom-admin-url).
 
 Adobe rekommenderar att du ändrar miljönivåvariabeln för Admin URL efter installationen. Konfigurera den här inställningen av säkerhetsskäl innan du förgrenar dig från den klonade `master`-miljön. Alla grenar som skapas från grenen `master` ärver miljönivåvariablerna och deras värden om du inte anger arv som false.
 
@@ -50,12 +50,12 @@ Använd antingen [!DNL Cloud Console] eller [!DNL Cloud CLI] för att ställa in
 
 ##### Integreringsmiljö
 
-Lägg till en ny variabel med [Cloud Console](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html):
+Lägg till en ny variabel med [Cloud Console](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=sv-SE):
 
 - **Namn:** `ADMIN_URL`
 - **Värde:** Din nya Admin URL (till exempel `magento_A8v10`)
 
-- Mer information finns i [Lägga till miljövariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-environment) eller [miljövariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html) i utvecklardokumentationen.
+- Mer information finns i [Lägga till miljövariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=sv-SE#configure-environment) eller [miljövariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=sv-SE) i utvecklardokumentationen.
 
 ##### Ange Admin-URL i [!DNL Cloud Console]
 
@@ -73,7 +73,7 @@ Lägg till en ny variabel med [Cloud Console](https://experienceleague.adobe.com
 
 ##### När mellanlagring och produktion inte är tillgängliga i [!DNL Cloud Console]
 
-[Skicka en supportanmälan](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) som begär att få lägga till variabeln `ADMIN_URL` för din mellanlagrings- eller produktionsmiljö. Om Förproduktion och Förproduktion är tillgängliga från [!DNL Cloud Console] lägger du till variabeln enligt beskrivningen i [Integreringsmiljö](#integration-environment).
+[Skicka en supportanmälan](https://experienceleague.adobe.com/sv/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) som begär att få lägga till variabeln `ADMIN_URL` för din mellanlagrings- eller produktionsmiljö. Om Förproduktion och Förproduktion är tillgängliga från [!DNL Cloud Console] lägger du till variabeln enligt beskrivningen i [Integreringsmiljö](#integration-environment).
 
 #### Alternativ B: Ändra Admin-URL med [!DNL Cloud CLI]
 
@@ -86,7 +86,7 @@ magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master --inher
 ```
 
 - **Omdistribution:** Om du ändrar variabeln `ADMIN_URL` i [!DNL Cloud CLI] utlöses en omdistribution av miljön.
-- **Arv:** Variabler kan ärvas som standard. Använd alternativet `--inheritable false` så som visas för att förhindra att värdet ärvs av underordnade miljöer. Mer information finns i [Synlighet på variabelnivå](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html#visibility).
+- **Arv:** Variabler kan ärvas som standard. Använd alternativet `--inheritable false` så som visas för att förhindra att värdet ärvs av underordnade miljöer. Mer information finns i [Synlighet på variabelnivå](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=sv-SE#visibility).
 
 >[!NOTE]
 >
