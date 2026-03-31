@@ -3,9 +3,10 @@ title: New Relic
 description: Läs mer om New Relic-tjänsten som finns i ditt Adobe Commerce i molninfrastrukturprojekt.
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 10966241-311d-4b68-804d-4c9569bf933d
+source-git-commit: 3784e7b2ddc8f6ae20fd2c6fd557f2408d870cf2
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -23,6 +24,8 @@ Följande New Relic-funktioner kan användas i produktions- och mellanlagringsmi
 >[!INFO]
 >
 >Andra New Relic-funktioner är inte tillgängliga i Adobe Commerce-projekt.
+>
+>Adobe Commerce på Cloud-kunder kan inte integrera eller skicka data från externa servrar direkt till sina New Relic-konton. New Relic-tjänsten är begränsad till att övervaka Commerce Cloud programmiljö. Endast tredjepartstjänster som anropas av själva programmet (till exempel externa API:er eller tjänster som anropas under körning) kan spåras och övervakas i New Relic.
 
 ## NEW RELIC APM
 
