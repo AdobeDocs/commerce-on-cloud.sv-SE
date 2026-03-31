@@ -19,7 +19,7 @@ Användare som har administratörsbehörighet för Adobe Commerce i molninfrastr
 
 Du kan åsidosätta administratörens inloggningsuppgifter under Commerce-installationen med ADMIN-variablerna i följande tabell.
 
-Om du vill ändra värdena efter installationen ansluter du till miljön med SSH och använder Adobe Commerce CLI [`admin:user`-kommandot ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) för att skapa eller redigera administratörens inloggningsuppgifter.
+Om du vill ändra värdena efter installationen ansluter du till miljön med SSH och använder Adobe Commerce CLI [`admin:user`-kommandot &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) för att skapa eller redigera administratörens inloggningsuppgifter.
 
 | Variabel | Standard | Beskrivning |
 | -------------- | --------------------------- | ----------- |
