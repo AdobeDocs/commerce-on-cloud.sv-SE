@@ -39,7 +39,7 @@ Molninfrastrukturen stöder och distribuerar följande tjänster:
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->Du måste [uppgradera RabbitMQ sekventiellt mellan tillgängliga versioner](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Du kan till exempel inte uppgradera från 3.9 direkt till 4.1
+>Du måste [uppgradera RabbitMQ sekventiellt mellan tillgängliga versioner](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Du kan till exempel inte uppgradera från 3.9 direkt till 4.1
 >
 >När du har uppgraderat till en ny version av RabbitMQ kan du aktivera en fullständig distribution för att vara säker på att dina anpassade meddelandeköer återskapas i RabbitMQ.
 
@@ -181,7 +181,7 @@ Du kan hämta konfigurationsdata för alla tjänstrelationer från miljövariabe
 
 ## Tjänstversioner
 
-Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras och testas i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _Installationshandboken_ för en lista över programberoenden från tredje part som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source.
+Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras och testas i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _Installationshandboken_ för en lista över programberoenden från tredje part som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source.
 
 ### EOL-kontroller för programvara
 
