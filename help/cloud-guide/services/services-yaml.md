@@ -3,9 +3,9 @@ title: Konfigurera tjänster
 description: Lär dig hur du konfigurerar tjänster som används av Adobe Commerce i molninfrastruktur.
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
+source-git-commit: 4ea85b008e2ea9d1c9ab623c413ff9c3c3aaffd2
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ Molninfrastrukturen stöder och distribuerar följande tjänster:
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
+>Du måste [uppgradera RabbitMQ sekventiellt mellan tillgängliga versioner](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Du kan till exempel inte uppgradera från 3.9 direkt till 4.1
 >
 >När du har uppgraderat till en ny version av RabbitMQ kan du aktivera en fullständig distribution för att vara säker på att dina anpassade meddelandeköer återskapas i RabbitMQ.
 
@@ -105,7 +106,7 @@ Om du byter namn på en tjänst i `services.yaml`-filen **tas följande bort per
 
 ### `type`
 
-Värdet `type` anger tjänstens namn och version. Exempel:
+Värdet `type` anger tjänstens namn och version. Till exempel:
 
 ```yaml
 mysql:
@@ -180,7 +181,7 @@ Du kan hämta konfigurationsdata för alla tjänstrelationer från miljövariabe
 
 ## Tjänstversioner
 
-Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras och testas i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) i _Installationshandboken_ för en lista över programberoenden från tredje part som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source.
+Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras och testas i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Systemkrav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) i _Installationshandboken_ för en lista över programberoenden från tredje part som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source.
 
 ### EOL-kontroller för programvara
 
