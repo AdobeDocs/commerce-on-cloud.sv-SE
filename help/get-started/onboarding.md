@@ -41,7 +41,7 @@ Du kan använda [[!DNL Cloud Console]](cloud-console.md) för att hantera ditt p
 
 ## Registrera dig för Adobe
 
-Hämta uppdateringar om Adobe Commerce för plattformsmiljöer för molninfrastruktur och relaterade tjänster från [statussidan](https://status.adobe.com/products/503473).
+Hämta uppdateringar om Adobe Commerce för plattformsmiljöer för molninfrastruktur och relaterade tjänster från [statussidan](https://status.adobe.com/se/products/503473).
 
 Sidan innehåller en status för Adobe Commerce komponenter och tjänster följt av meddelanden om incidentrapporter, serviceuppgraderingar, planerade driftavbrott och planerat underhåll. Alla som arbetar med ditt projekt kan prenumerera på Adobe Commerce statuswebbplats för att få händelseaviseringar och uppdateringar via e-post eller Slack. Du kan anpassa din Adobe-statusprenumeration för att spåra specifika produkter per region och händelse.
 
