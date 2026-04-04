@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Projekt som etablerades före den 5 juni 2020 hade flera mindre integreringsmiljöer. Om du behöver en större integreringsmiljö för testning och utveckling kan du begära en uppgradering till förbättrade integreringsmiljöer. Mer information finns i artikeln [Integreringsmiljöbegäran](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) i _Adobe Commerce Help Center_.
+>Projekt som etablerades före den 5 juni 2020 hade flera mindre integreringsmiljöer. Om du behöver en större integreringsmiljö för testning och utveckling kan du begära en uppgradering till förbättrade integreringsmiljöer. Mer information finns i artikeln [Integreringsmiljöbegäran](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=sv-SE) i _Adobe Commerce Help Center_.
 
 ## Sammanfogningsalternativ {#merge-options}
 
@@ -41,15 +41,15 @@ Ställ in alternativet `_merge` på något av följande:
 >Vissa **Pro-projekt** behöver hjälp av Adobe Support för att kunna uppdatera vägkonfigurationerna i filen `routes.yaml` och seriekonfigurationerna i filen `.magento.app.yaml`. Adobe rekommenderar att du först gör och validerar alla ändringar i YAML-konfigurationen i en integreringsmiljö och sedan distribuerar dem till mellanlagringsmiljön.
 >
 >
->Om dina ändringar inte återspeglas på mellanlagringswebbplatserna efter omdistributionen och inga relaterade felmeddelanden visas i loggen **måste** [du skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Beskriv tydligt de konfigurationsändringar du försökte göra i biljetten och bifoga eventuella uppdaterade YAML-konfigurationsfiler i biljetten.
+>Om dina ändringar inte återspeglas på mellanlagringswebbplatserna efter omdistributionen och inga relaterade felmeddelanden visas i loggen **måste** [du skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket). Beskriv tydligt de konfigurationsändringar du försökte göra i biljetten och bifoga eventuella uppdaterade YAML-konfigurationsfiler i biljetten.
 
 ## Support för Pro services {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- För Pro-projekt måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du bara vill installera eller uppdatera [tjänster](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html) i `Staging`- och `Production`-miljöer.
+- För Pro-projekt måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du bara vill installera eller uppdatera [tjänster](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=sv-SE) i `Staging`- och `Production`-miljöer.
 
-- Ange vilka tjänständringar som krävs, inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och ange PHP-versionen i biljetten. Om du vill göra ändringar i PHP-version, tillägg eller miljöinställningar för självbetjäning läser du [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html) i _Programkonfiguration_.
+- Ange vilka tjänständringar som krävs, inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och ange PHP-versionen i biljetten. Om du vill göra ändringar i PHP-version, tillägg eller miljöinställningar för självbetjäning läser du [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=sv-SE) i _Programkonfiguration_.
 
   >[!IMPORTANT]
   >
@@ -78,9 +78,9 @@ Uppgraderingen anses inte vara schemalagd förrän infrastrukturteamet har lämn
 
 >[!TIP]
 >
->I Pro Staging- och Production-miljöer måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att hämta en specifik säkerhetskopia med information om datum, tid och tidszon i biljetten.
+>I Pro Staging- och Production-miljöer måste du [skicka en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att hämta en specifik säkerhetskopia med information om datum, tid och tidszon i biljetten.
 >
->Adobe återställer **inte** miljöer från en automatisk säkerhetskopiering. Se [Återställ en DB-ögonblicksbild från mellanlagring eller produktion](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html) om du behöver hjälp med att välja en metod för att återställa en ögonblicksbild av mellanlagring eller produktion.
+>Adobe återställer **inte** miljöer från en automatisk säkerhetskopiering. Se [Återställ en DB-ögonblicksbild från mellanlagring eller produktion](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=sv-SE) om du behöver hjälp med att välja en metod för att återställa en ögonblicksbild av mellanlagring eller produktion.
 
 ## Återdistribuera varning {#redeploy-warning}
 
@@ -118,7 +118,7 @@ Använd följande instruktioner för tjänstkonfiguration i Pro Integration-milj
 
 >[!NOTE]
 >
->[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ändra tjänstkonfigurationen i Pro Production- och mellanlagringsmiljöer.
+>[Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill ändra tjänstkonfigurationen i Pro Production- och mellanlagringsmiljöer.
 
 ## Tjänständring {#service-change-tip}
 
@@ -130,7 +130,7 @@ Använd följande instruktioner för tjänstkonfiguration i Pro Integration-milj
 
 >[!TIP]
 >
->Använd [Adobe Commerce felsökare för distribution](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) i _Commerce Help Center_ om du behöver hjälp med fastlagda distributioner.
+>Använd [Adobe Commerce felsökare för distribution](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=sv-SE) i _Commerce Help Center_ om du behöver hjälp med fastlagda distributioner.
 
 ## Uppdatera till ECE-verktyg {#ece-tools-package}
 
