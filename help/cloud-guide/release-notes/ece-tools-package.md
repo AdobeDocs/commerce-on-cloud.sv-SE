@@ -4,9 +4,9 @@ description: Se en lista över de senaste förbättringarna av ECE-verktygspaket
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
+source-git-commit: b3d634838e562ceba4221a69e87eda377d8f9363
 workflow-type: tm+mt
-source-wordcount: '3491'
+source-wordcount: '3485'
 ht-degree: 0%
 
 ---
@@ -85,18 +85,14 @@ Releasedatum: 27 maj 2025
 
 Releasedatum: 24 april 2025
 
-- ![korrigeringsikon](../../assets/fix.svg) **OpenSearch2 for 2.4.4/2.4.5** - Korrigerade ett problem med stöd för `opensearch2` i Adobe Commerce-versioner 2.4.4/2.4.5.<!-- MCLOUD-13607 -->
+- ![korrigeringsikon](../../assets/fix.svg) **OpenSearch2 for 2.4.4/2.4.5** - Korrigerade ett problem med stöd för `opensearch2` i Adobe Commerce version 2.4.4/2.4.5. <!-- MCLOUD-13607 -->
 
 ## v2002.2.3
 
 Releasedatum: 9 april 2025
 
-- ![korrigeringsikon](../../assets/fix.svg) **Korrigera Valkey** Ett problem med anpassad nyckelkonfiguration har korrigerats.<!-- MCLOUD-13569 -->
-- ![korrigeringsikon](../../assets/fix.svg) **Korrigera validerare**-Fast validerare för RabbitMQ 4.0.<!-- MCLOUD-13560 -->
-
-## v2002.2.2
-
-Releasedatum: 7 april 2025
+- ![korrigeringsikon](../../assets/fix.svg) **Korrigera Valkey** Ett problem med anpassad nyckelkonfiguration har korrigerats. <!-- MCLOUD-13569 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Korrigera validerare**-Fast validerare för RabbitMQ 4.0. <!-- MCLOUD-13560 -->
 
 ## v2002.2.2
 
@@ -153,7 +149,7 @@ Releasedatum: 16 oktober 2023
 Releasedatum: 31 juli 2023
 
 - ![korrigeringsikon](../../assets/fix.svg) **Felkoder** - Uppdaterat felkodsschema och dokumentgenerator för felkod.
-- ![korrigeringsikon](../../assets/fix.svg) **Validerare för anpassad Redis-modell**-Uppdaterade valideraren för anpassade Redis-backend-modeller. [Se exemplet för cachekonfigurationen &#x200B;](../environment/variables-deploy.md#cache_configuration).
+- ![korrigeringsikon](../../assets/fix.svg) **Validerare för anpassad Redis-modell**-Uppdaterade valideraren för anpassade Redis-backend-modeller. [Se exemplet för cachekonfiguration](../environment/variables-deploy.md#cache_configuration).
 - ![korrigeringsikon](../../assets/fix.svg) **Validator för RabbitMQ**-Added support for RabbitMQ 3.11
 - ![korrigeringsikon](../../assets/fix.svg) **Korrigerade fel länk**-Korrigerade fel länk till startdokumentationen i välkomstmallen.
 
@@ -412,7 +408,7 @@ Releasedatum: 6 februari 2020
 
 - ![ny ikon](../../assets/new.svg) **Infrastrukturuppdateringar**—
 
-   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [&#x200B; magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
+   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [ magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
 
    - ![ny ikon](../../assets/new.svg) **Uppdaterade patchfunktioner** - har flyttat patchfunktionen från ECE-verktygspaketet till ett separat [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) -paket. Under distributionen använder `ece-tools` det nya paketet för att tillämpa korrigeringar. Se [Versionsinformation om molnpatchar](cloud-patches.md).<!--MAGECLOUD-4567-->
 
@@ -426,7 +422,7 @@ Releasedatum: 6 februari 2020
 
 >[!NOTE]
 >
->Granska [bakåt innan du uppdaterar till ECE-Tools version 2002.1.0   inkompatibla ändringar &#x200B;](backward-incompatible-changes.md) om du vill veta mer om ändringar som kan kräva att du   uppdatera Adobe Commerce om projektkonfiguration eller processer för molninfrastruktur.
+>Granska [bakåt innan du uppdaterar till ECE-Tools version 2002.1.0   inkompatibla ändringar ](backward-incompatible-changes.md) om du vill veta mer om ändringar som kan kräva att du   uppdatera Adobe Commerce om projektkonfiguration eller processer för molninfrastruktur.
 
 - ![ny ikon](../../assets/new.svg) **Tjänstuppdateringar**—
 
