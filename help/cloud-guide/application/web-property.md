@@ -2,9 +2,10 @@
 title: Webbegenskap
 description: Se exempel på hur du konfigurerar egenskapen web i  [!DNL Commerce] programkonfigurationsfilen.
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
+source-git-commit: 94a7748348ba590bb4fed740df658c5bac4c31e9
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -31,14 +32,18 @@ Du kan finjustera din `locations`-konfiguration med följande nyckelvärden för
 | `rules` | Ange åsidosättningar för en plats. Använd ett reguljärt uttryck för att matcha en begäran. Om en inkommande begäran matchar regeln åsidosätts den vanliga hanteringen av begäran av nycklarna som används i regeln. |
 | `passthru` | Ange den URL som används om en statisk fil eller PHP-fil inte kan hittas. Vanligtvis är den här URL-adressen den främre kontrollenheten för dina program, till exempel `/index.php` eller `/app.php`. |
 | `root` | Ange sökvägen i förhållande till roten för programmet som visas på webben. Den offentliga katalogen (plats &quot;/&quot;) för ett Cloud-projekt är som standard inställd på &quot;pub&quot;. |
-| `scripts` | Tillåt inläsning av skript på den här platsen. Ange värdet till `true` om du vill tillåta skript. |
+| `scripts` | Tillåt inläsning av skript på den här platsen. Ange värdet till `true` om du vill tillåta skript. För katalogerna `pub/media` och `pub/static` är standardkonfigurationen `scripts: false` för att förhindra körning av överförda filer. |
+
+>[!IMPORTANT]
+>
+>**Säkerhetsanteckning:** Standardegenskapskonfigurationen `web` för Adobe Commerce i molnet anger `scripts: false` för mediaplatser för att förhindra körning av överförda filer. Åsidosätt inte den här inställningen om du inte är helt insatt i hur implementeringen påverkar säkerheten.
 
 Standardkonfigurationen tillåter följande:
 
 - Från rotsökvägen (`/`) går det bara att komma åt webb och media
-- Från sökvägarna `~/pub/static` och `~/pub/media` kan du komma åt alla filer
+- Från sökvägarna `~/pub/media` och `~/pub/static` kan du komma åt alla filer
 
-I följande exempel visas standardkonfigurationen i filen `.magento.app.yaml` för en uppsättning webbtillgängliga platser som är associerade med en post i egenskapen [`mounts`: &#x200B;](properties.md#mounts)
+I följande exempel visas standardkonfigurationen i filen `.magento.app.yaml` för en uppsättning webbtillgängliga platser som är associerade med en post i egenskapen [`mounts`: ](properties.md#mounts)
 
 ```yaml
  # The configuration of app when it is exposed to the web.
