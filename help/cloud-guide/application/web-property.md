@@ -43,7 +43,7 @@ Standardkonfigurationen tillåter följande:
 - Från rotsökvägen (`/`) går det bara att komma åt webb och media
 - Från sökvägarna `~/pub/media` och `~/pub/static` kan du komma åt alla filer
 
-I följande exempel visas standardkonfigurationen i filen `.magento.app.yaml` för en uppsättning webbtillgängliga platser som är associerade med en post i egenskapen [`mounts`: ](properties.md#mounts)
+I följande exempel visas standardkonfigurationen i filen `.magento.app.yaml` för en uppsättning webbtillgängliga platser som är associerade med en post i egenskapen [`mounts`: &#x200B;](properties.md#mounts)
 
 ```yaml
  # The configuration of app when it is exposed to the web.
