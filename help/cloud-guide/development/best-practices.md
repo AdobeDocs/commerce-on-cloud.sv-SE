@@ -50,10 +50,10 @@ Följ vedertagna standarder för byggen och distribution och använd arbetsflöd
 
    - Använd SSH för att logga in på fjärrservern och verifiera följande:
 
-      - Kontrollera indexerarens status och indexera om det behövs. Se [Hantera indexerare](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html) i _Konfigurationsguiden_.
+      - Kontrollera indexerarens status och indexera om det behövs. Se [Hantera indexerare](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=sv-SE) i _Konfigurationsguiden_.
 
       - Kontrollera `cron`-loggarna och `cron_schedule`-tabellen i Adobe Commerce-databasen för att verifiera kron-status och kör kron-jobb igen efter behov.
-Se [Loggning](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging) i _Konfigurationshandboken_.
+Se [Loggning](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=sv-SE#logging) i _Konfigurationshandboken_.
 
    - Slutför UAT-testet (User Acceptance Testing UAT) efter uppgraderingen och åtgärda eventuella problem som rör uppgraderingar från tredje part och anpassade tillägg.
 
@@ -67,7 +67,7 @@ Kör uppgraderingskompatibilitetsverktyget (UCT) som en del av föruppgraderings
 
 Information om inställningar och användning finns i:
 
-- [Översikt över verktyget Kompatibilitet för uppgradering](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
-- [Kör verktyget Kompatibilitet för uppgradering](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+- [Översikt över verktyget Kompatibilitet för uppgradering](https://experienceleague.adobe.com/sv/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [Kör verktyget Kompatibilitet för uppgradering](https://experienceleague.adobe.com/sv/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
-För molnhandlare som använder Site-Wide Analysis Tool kan du även utlösa UCT från kontrollpanelen och hämta HTML-rapporten direkt från widgeten. Se Integrera [webbplatsövergripande analysverktyg](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool).
+För molnhandlare som använder Site-Wide Analysis Tool kan du även utlösa UCT från kontrollpanelen och hämta HTML-rapporten direkt från widgeten. Se Integrera [webbplatsövergripande analysverktyg](https://experienceleague.adobe.com/sv/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool).
