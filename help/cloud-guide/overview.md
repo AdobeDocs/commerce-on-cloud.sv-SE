@@ -2,7 +2,7 @@
 title: Commerce on Cloud Infrastructure
 description: Lär dig hur du bygger, distribuerar och hanterar Commerce i molninfrastrukturen.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 603e8365fb20c90e9d54cb8c809cc51b5cd0ce9a
+source-git-commit: 7bbda734fbaccca9366c11b03e38b30513908cfe
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe Commerce i molninfrastruktur erbjuder en automatiserad värdplattform med 
 
 >[!NOTE]
 >
->Mer information om säkerhet finns i [checklistan för säkerhetsuppdatering](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Mer information om säkerhet finns i [checklistan för säkerhetsuppdatering](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Visa [Teknikstacken](architecture/tech-stack.md) i detalj eller läs mer om specifika funktioner och produkter som stöds i [Cloud-arkitekturen för Commerce](architecture/cloud-architecture.md).
 
@@ -46,7 +46,7 @@ Följande avsnitt innehåller information om de olika AWS- och Azure-regionerna 
 >
 > Endast lokalt i Kina och Ryssland.
 
-## Azure-regioner
+## Azure
 
 ![Diagram som visar Azure-regioner](../assets/azure-regions.svg){zoomable="yes"}
 
@@ -60,9 +60,9 @@ I guiden för infrastruktur i molnet förutsätts det att du har en viss arbetsk
 
 - [Adobe Commerce Developer Documentation](https://developer.adobe.com/commerce/docs/) (Adobe Developer webbplats) - Utveckla, anpassa, integrera, utöka och använda avancerade funktioner
 
-- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html?lang=sv-SE) (Adobe Experience League) - Planera, implementera, använda, uppgradera och underhålla dina [!DNL Commerce]-projekt
+- [Adobe Commerce Documentation](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League) - Planera, implementera, använda, uppgradera och underhålla dina [!DNL Commerce]-projekt
 
 {{$include /help/_includes/templated/whats-new.md}}
 
 
-<!-- Last updated from includes: 2026-02-27 23:49:32 -->
+<!-- Last updated from includes: 2026-04-19 20:38:08 -->
