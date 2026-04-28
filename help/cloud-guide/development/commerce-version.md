@@ -148,11 +148,11 @@ Granska informationen om [tjänstversionerna](../services/services-yaml.md#servi
 
    - Om [kvalitetsuppdateringar] används i filen `.magento.env.yaml` kontrollerar du om de fortfarande kan användas i den nya versionen. Ta bort den eller de korrigeringar som inte är tillämpliga från `QUALITY_PATCHES`-avsnittet i `.magento.env.yaml`-filen.
 
-   **Metod 1**: [Verifiera tillämpliga versioner i versionsinformationen för kvalitetspatchar ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **Metod 1**: [Verifiera tillämpliga versioner i versionsinformationen för kvalitetspatchar &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **Metod 2**: [Visa tillgängliga korrigeringar och status ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **Metod 2**: [Visa tillgängliga korrigeringar och status &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **Metod 3**: [Sök efter patchar ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
+   **Metod 3**: [Sök efter patchar &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
 
 
 1. Lägg till, implementera och push-ändra kod.
