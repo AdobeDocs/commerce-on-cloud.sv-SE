@@ -1,12 +1,14 @@
 ---
+cloud: Experience Cloud
+solution-title: Commerce
 user-guide-title: Commerce on Cloud-guide
 user-guide-description: Lär dig hur du hanterar Adobe Commerce-programmet i molninfrastrukturen.
 product: magento
 feature: Cloud
-source-git-commit: 2311b8e5c0216c01d0189c8f8e669dcddfcd1dcc
+source-git-commit: 14964492bc82a50b1eea0636d01b8f7f2583755b
 workflow-type: tm+mt
 source-wordcount: '387'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -24,7 +26,7 @@ ht-degree: 2%
    + [Arbetsflöde för Pro](architecture/pro-develop-deploy-workflow.md)
    + [Skalbar arkitektur](architecture/scaled-architecture.md)
    + [Automatisk skalning](architecture/autoscaling.md)
-+ [Kom igång](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=sv-SE)
++ [Kom igång](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Versionsinformation {#release-notes}
    + [Cloud Tools Suite](release-notes/cloud-tools-suite.md)
    + [ECE-verktygspaket](release-notes/ece-tools-package.md)
@@ -45,7 +47,7 @@ ht-degree: 2%
    + [Konsolgrenhantering](project/console-branches.md)
    + [Regionala IP-adresser](project/regional-ip-addresses.md)
 + Utvecklarverktyg {#dev-tools}
-   + [Ökning](dev-tools/overview.md)
+   + [Översikt](dev-tools/overview.md)
    + Cloud CLI {#cloud-cli}
       + [CLI - översikt](dev-tools/cloud-cli-overview.md)
       + [CLI-referens](dev-tools/cloud-cli-reference.md)
@@ -57,13 +59,13 @@ ht-degree: 2%
       + [CLI-referens](dev-tools/ece-tools-cli-reference.md)
       + [Felreferens](dev-tools/error-reference.md)
    + Integreringar {#integrations}
-      + [Ökning](integrations/overview.md)
+      + [Översikt](integrations/overview.md)
       + [Bitbucket](integrations/bitbucket.md)
       + [GitHub](integrations/github.md)
       + [GitLab](integrations/gitlab.md)
       + [Hälsoaviseringar](integrations/health-notifications.md)
 + Utveckling {#develop}
-   + [Ökning](development/overview.md)
+   + [Översikt](development/overview.md)
    + [Autentiseringsnycklar](development/authentication-keys.md)
    + [Filialhantering i CLI](development/cli-branches.md)
    + [Säkra anslutningar](development/secure-connections.md)
@@ -98,7 +100,7 @@ ht-degree: 2%
       + [Uppgradera Commerce](development/commerce-version.md)
       + [Tillämpa patchar](development/apply-patches.md)
 + Konfiguration {#configure}
-   + [Ökning](environment/overview.md)
+   + [Översikt](environment/overview.md)
    + Program {#app}
       + [Konfigurera programdistribution](application/configure-app-yaml.md)
       + [PHP-inställningar](application/php-settings.md)
@@ -140,7 +142,7 @@ ht-degree: 2%
       + [Redis](services/redis.md)
       + [Valkey](services/valkey.md)
 + Snabba tjänster {#cdn}
-   + [Ökning](cdn/fastly.md)
+   + [Översikt](cdn/fastly.md)
    + Snabbinstallation {#setup-fastly}
       + [Konfigurera snabbfunktioner](cdn/fastly-configuration.md)
       + [Anpassa cachekonfigurationen](cdn/fastly-custom-cache-configuration.md)
@@ -156,7 +158,7 @@ ht-degree: 2%
       + [Kringgå snabbcache](cdn/fastly-vcl-bypass-to-origin.md)
    + [Snabbt felsökning](cdn/fastly-troubleshooting.md)
 + Lagringsinställningar {#configure-store}
-   + [Ökning](store/overview.md)
+   + [Översikt](store/overview.md)
    + [God praxis](store/best-practices.md)
    + [Eget tema](store/custom-theme.md)
    + [Tillägg](store/extensions.md)
@@ -166,7 +168,7 @@ ht-degree: 2%
    + [Betalningsmetoder för PayPal](store/paypal.md)
    + [Konfigurationshantering](store/store-settings.md)
 + Starta webbplatsen {#launch}
-   + [Ökning](launch/overview.md)
+   + [Översikt](launch/overview.md)
    + [Öppna checklista](launch/checklist.md)
    + [Starta steg](launch/steps.md)
 + Övervaka webbplats {#monitor}
