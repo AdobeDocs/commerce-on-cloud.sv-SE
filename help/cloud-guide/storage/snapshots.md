@@ -154,7 +154,7 @@ Du måste ha [administratörsåtkomst](../project/user-access.md) till miljön. 
 
 ## Återställningskod
 
-Säkerhetskopior och ögonblicksbilder innehåller _inte_ en kopia av koden. Koden lagras redan i den Git-baserade databasen, så du kan använda Git-baserade kommandon för att återställa (återställa) kod. Använd till exempel `git log --oneline` för att bläddra igenom tidigare implementeringar; Använd sedan [`git revert` ](https://git-scm.com/docs/git-revert) för att återställa kod från en specifik implementering.
+Säkerhetskopior och ögonblicksbilder innehåller _inte_ en kopia av koden. Koden lagras redan i den Git-baserade databasen, så du kan använda Git-baserade kommandon för att återställa (återställa) kod. Använd till exempel `git log --oneline` för att bläddra igenom tidigare implementeringar; Använd sedan [`git revert` &#x200B;](https://git-scm.com/docs/git-revert) för att återställa kod från en specifik implementering.
 
 Du kan också välja att lagra kod i en _inaktiv_-gren. Använd Git-kommandon för att skapa en gren i stället för att använda `magento-cloud`-kommandon. Läs mer om [Git-kommandon](../dev-tools/cloud-cli-overview.md#git-commands) i Cloud CLI-avsnittet.
 

@@ -207,7 +207,7 @@ Utgivningsdatum: 10 mars 2022
 
 Utgivningsdatum: 25 oktober 2021
 
-- ![ny ikon](../../assets/new.svg) **Alternativ dumpplats** - alternativet `--dump-directory` har lagts till så att du kan välja en målkatalog för en DB-dump. `/app/var/dump-main` är nu standardmålkatalog för en DB-dump. Se [Hantering av säkerhetskopiering: Dumpa databasen ](../storage/database-dump.md)<!-- MCLOUD-8063 -->
+- ![ny ikon](../../assets/new.svg) **Alternativ dumpplats** - alternativet `--dump-directory` har lagts till så att du kan välja en målkatalog för en DB-dump. `/app/var/dump-main` är nu standardmålkatalog för en DB-dump. Se [Hantering av säkerhetskopiering: Dumpa databasen &#x200B;](../storage/database-dump.md)<!-- MCLOUD-8063 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdatera Monolog** - Uppdaterade minimiversionen som krävs för paketet `monolog` till `^2.3`.<!-- ACMP-1263 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdatera Symfony** - Symfony-beroendena har uppdaterats så att de är kompatibla med Adobe Commerce 2.4.4.<!-- ACMP-1533 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Funktion/lös automatisk inläsning** - Korrigerade ett fel vid distribution till en integreringsmiljö och `CRITICAL: [9] Required configuration is missed in autoload section of composer.json file.`-felet visades.<!-- https://github.com/magento/ece-tools/pull/799 -->
@@ -410,7 +410,7 @@ Utgivningsdatum: 6 februari 2020
 
 - ![ny ikon](../../assets/new.svg) **Infrastrukturuppdateringar**—
 
-   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [ magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
+   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [&#x200B; magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
 
    - ![ny ikon](../../assets/new.svg) **Uppdaterade patchfunktioner** - har flyttat patchfunktionen från ECE-verktygspaketet till ett separat [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) -paket. Under distributionen använder `ece-tools` det nya paketet för att tillämpa korrigeringar. Se [Versionsinformation om molnpatchar](cloud-patches.md).<!--MAGECLOUD-4567-->
 

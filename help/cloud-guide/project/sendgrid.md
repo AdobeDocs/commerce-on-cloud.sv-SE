@@ -75,7 +75,7 @@ För att SendGrid ska kunna skicka transaktionsmeddelanden för din räkning fr�
 
 >[!TIP]
 >
->Kontrollera att du har konfigurerat **[!UICONTROLSStore-e-postadresserna]** med rätt domän i **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**. Domänautentiseringen utförs på avsändarens e-postadress. Om standardinställningen (`example.com`) är konfigurerad blockeras e-postmeddelanden från `example.com` av Sendgrid.
+>Kontrollera att du har konfigurerat **[!UICONTROL SStore-e-postadresserna]** med rätt domän i **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**. Domänautentiseringen utförs på avsändarens e-postadress. Om standardinställningen (`example.com`) är konfigurerad blockeras e-postmeddelanden från `example.com` av Sendgrid.
 
 **Så här aktiverar du domänautentisering**:
 
