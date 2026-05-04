@@ -4,7 +4,7 @@ description: Se en lista över de senaste förbättringarna av ECE-verktygspaket
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: b3d634838e562ceba4221a69e87eda377d8f9363
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
 source-wordcount: '3485'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Versionsinformationen innehåller:
 
 ## v2002.2.10 {#latest}
 
-Releasedatum: 5 mars 2026
+Utgivningsdatum: 5 mars 2026
 
 - ![ny ikon](../../assets/new.svg) **PHP 8.5** - Stöd för PHP 8.5 har lagts till.<!-- MCLOUD-14179 -->
 - ![fix-ikon](../../assets/fix.svg) **Uppdaterat funktionstest**-Uppdaterat test av Valkey 8.1, 8,2 och Redis 8.4<!-- MCLOUD-13983 -->
@@ -39,14 +39,14 @@ Releasedatum: 5 mars 2026
 
 ## v2002.2.9
 
-Releasedatum: 13 november 2025
+Utgivningsdatum: 13 november 2025
 
 - ![korrigeringsikon](../../assets/fix.svg) **Symfoni-paket** - Stöd för de senaste YAML-symbolpaketen har lagts till.<!-- MCLOUD-14020 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Åtgärdad cacherengöring för aktiva tjänster** - Lagt till aktiv tjänstvalidering.<!-- MCLOUD-14166 -->
 
 ## v2002.2.8
 
-Releasedatum: 8 oktober 2025
+Utgivningsdatum: 8 oktober 2025
 
 - ![ny ikon](../../assets/new.svg) **ActiveMQ**-Added support for ActiveMQ.<!-- MCLOUD-13770 -->
 - ![ny ikon](../../assets/new.svg) **ActiveMQ**-Added function tests.<!-- MCLOUD-13813 -->
@@ -54,7 +54,7 @@ Releasedatum: 8 oktober 2025
 
 ## v2002.2.7
 
-Releasedatum: 7 augusti 2025
+Utgivningsdatum: 7 augusti 2025
 
 - ![korrigeringsikon](../../assets/fix.svg) **PHP 8.4 korrigerar** - Typkompatibilitet tillagd.<!-- MCLOUD-13965 -->
 - ![korrigeringsikon](../../assets/fix.svg) **EOL-valideraren**-Uppdaterade EOL-tjänstdatum (End of Life).<!-- MCLOUD-13929 -->
@@ -68,13 +68,13 @@ Releasedatum: 7 augusti 2025
 
 ## v2002.2.6
 
-Releasedatum: 3 juni 2025
+Utgivningsdatum: 3 juni 2025
 
 - ![fix-ikon](../../assets/fix.svg) **Förbättrad kompatibilitet med 2.4.8**-uppdaterade tredjepartsbibliotek för bättre kompatibilitet med 2.4.8<!-- MCLOUD-13707 -->
 
 ## v2002.2.5
 
-Releasedatum: 27 maj 2025
+Utgivningsdatum: 27 maj 2025
 
 - ![ny ikon](../../assets/new.svg) **Utökad Valkey-kompatibilitet**-utökad Valkey-kompatibilitet i Adobe Commerce.<!-- MCLOUD-13595 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdaterad RabbitMQ-validerare**-Uppdaterad validerare för RabbitMQ.<!-- MCLOUD-13589 -->
@@ -83,34 +83,34 @@ Releasedatum: 27 maj 2025
 
 ## v2002.2.4
 
-Releasedatum: 24 april 2025
+Utgivningsdatum: 24 april 2025
 
 - ![korrigeringsikon](../../assets/fix.svg) **OpenSearch2 for 2.4.4/2.4.5** - Korrigerade ett problem med stöd för `opensearch2` i Adobe Commerce version 2.4.4/2.4.5. <!-- MCLOUD-13607 -->
 
 ## v2002.2.3
 
-Releasedatum: 9 april 2025
+Utgivningsdatum: 9 april 2025
 
 - ![korrigeringsikon](../../assets/fix.svg) **Korrigera Valkey** Ett problem med anpassad nyckelkonfiguration har korrigerats. <!-- MCLOUD-13569 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Korrigera validerare**-Fast validerare för RabbitMQ 4.0. <!-- MCLOUD-13560 -->
 
 ## v2002.2.2
 
-Releasedatum: 7 april 2025
+Utgivningsdatum: 7 april 2025
 
 - ![ny ikon](../../assets/new.svg) **Valkey** - Stöd har lagts till för en ny tjänst (Valkey), som ersätter Redis.<!-- MCLOUD-13455 -->
 - ![korrigeringsikon](../../assets/fix.svg) **OpenSearch2 for 2.4.4/2.4.5**—Added support for `opensearch2` in Adobe Commerce versions 2.4.4/2.4.5.<!-- MCLOUD-13493 -->
 
 ## v2002.2.1
 
-Releasedatum: 6 februari 2024
+Utgivningsdatum: 6 februari 2024
 
 - ![ny ikon](../../assets/new.svg) **PHP 8.4** - Stöd för PHP 8.4 har lagts till.<!-- MCLOUD-13145 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Valideraren för OpenSearch**-Korrigerade valideraren som gav upphov till ett missvisande meddelande om fel version av tjänsten.<!-- MCLOUD-13184 -->
 
 ## v2002.2.0
 
-Releasedatum: 7 oktober 2024
+Utgivningsdatum: 7 oktober 2024
 
 - ![ny ikon](../../assets/new.svg) **MariaDB 11.4** - Stöd för MariaDB 11.4 har lagts till.
 - ![korrigeringsikon](../../assets/fix.svg) **Refererad kod**-Borttaget stöd för äldre PHP-versioner 7.4, 7.3, 7.2 och relaterade bibliotek.<!-- MCLOUD-9278 -->
@@ -119,34 +119,34 @@ Releasedatum: 7 oktober 2024
 
 ## v2002.1.19
 
-Releasedatum: 21 maj 2024
+Utgivningsdatum: 21 maj 2024
 
 - ![ny ikon](../../assets/new.svg) **Lua** - Alternativet useLua för CACHE_CONFIGURATION har lagts till.
 - ![korrigeringsikon](../../assets/fix.svg) **Validator** - Uppdaterade validerare för nya versioner av Redis och RabbitMQ.
 
 ## v2002.1.18
 
-Releasedatum: 8 april 2024
+Utgivningsdatum: 8 april 2024
 
 - ![ny ikon](../../assets/new.svg) **PHP** - Stöd för PHP 8.3 har lagts till.
 - ![korrigeringsikon](../../assets/fix.svg) **Validator** - Uppdaterad EOL-validerare.
 
 ## v2002.1.17
 
-Releasedatum: 16 januari 2024
+Utgivningsdatum: 16 januari 2024
 
 - ![korrigeringsikon](../../assets/fix.svg) **Validerare för Elasticsearch &amp; OpenSearch** - Korrigerade valideraren som gav upphov till ett felande meddelande om att installera en söktjänst när LiveSearch är aktiverat.<!-- MCLOUD-10167 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Distributionsvarning** - Ett problem som resulterade i distributionsvarningar för mappar som inte är tomma har korrigerats.<!-- MCLOUD-8958 -->
 
 ## v2002.1.16
 
-Releasedatum: 16 oktober 2023
+Utgivningsdatum: 16 oktober 2023
 
 - ![ny ikon](../../assets/new.svg) **ENABLE_WEBHOOKS global miljövariabel** - har lagt till den globala variabeln [ENABLE_WEBHOOKS](../environment/variables-global.md#enable_webhooks) som kan användas med Commerce-webbhooks för att ansluta till en extern slutpunkt, till exempel App Builder runtime-åtgärd eller ett lagerhanteringssystem från tredje part.
 
 ## v2002.1.15
 
-Releasedatum: 31 juli 2023
+Utgivningsdatum: 31 juli 2023
 
 - ![korrigeringsikon](../../assets/fix.svg) **Felkoder** - Uppdaterat felkodsschema och dokumentgenerator för felkod.
 - ![korrigeringsikon](../../assets/fix.svg) **Validerare för anpassad Redis-modell**-Uppdaterade valideraren för anpassade Redis-backend-modeller. [Se exemplet för cachekonfiguration](../environment/variables-deploy.md#cache_configuration).
@@ -155,15 +155,15 @@ Releasedatum: 31 juli 2023
 
 ## v2002.1.14
 
-Releasedatum: 10 mars 2023
+Utgivningsdatum: 10 mars 2023
 
 - ![ny ikon](../../assets/new.svg) **PHP** - Stöd för PHP 8.2 har lagts till.
-- ![ny ikon](../../assets/new.svg) **Validerare for Services** - Uppdaterade validerare för Commerce 2.4.6 som krävs: MariaDB 10.6, Redis 7.0, PHP 8.2, OpenSearch 2.x och RabbitMQ 3.9.
+- ![ny ikon](../../assets/new.svg) **Validerare for Services** - Uppdaterade validerare för obligatoriska tjänster i Commerce 2.4.6: MariaDB 10.6, Redis 7.0, PHP 8.2, OpenSearch 2.x och RabbitMQ 3.9.
 - ![korrigeringsikon](../../assets/fix.svg) **ece-tools db-dump** - Korrigerade ett fel som gjorde att `db-dump`-åtgärden stoppades för tidigt.
 
 ## v2002.1.13
 
-Releasedatum: 27 oktober 2022
+Utgivningsdatum: 27 oktober 2022
 
 - ![ny ikon](../../assets/new.svg) **Stöd för Adobe I/O Events för Adobe Commerce har lagts till**. Tilläggsutvecklare kan nu använda [Adobe I/O Events](https://developer.adobe.com/events/docs/)-ramverket för att skicka Commerce-händelseinformation från molninstanser till sina program skrivna för [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/). Adobe I/O Events för Adobe Commerce finns i Partner Preview.<!-- CEXT-932 -->
 - ![ny ikon](../../assets/new.svg) **Validator för OPCache-konfiguration** - En validerare har lagts till för att kontrollera om konfigurationen för OPCache innehåller uteslutna sökvägar.<!-- MCLOUD-9485 -->
@@ -171,14 +171,14 @@ Releasedatum: 27 oktober 2022
 
 ## v2002.1.12
 
-Releasedatum: 13 september 2022
+Utgivningsdatum: 13 september 2022
 
 - ![ny ikon](../../assets/new.svg) **Aktivera`synchronous_replication`**—ECE-Tools anger `synchronous_replication=>true` i filen `app/etc/env.php` när `MYSQL_USE_SLAVE_CONNECTION` är aktiverat. Den här konfigurationen påverkar bara Commerce 2.4.6+. Se variabelbeskrivningen `MYSQL_USE_SLAVE_CONNECTION` i [Distribuera variabler](../environment/variables-deploy.md#mysql_use_slave_connection).<!-- MCLOUD-9142 -->
 - ![ny ikon](../../assets/new.svg) **OpenSearch** - Funktioner för att konfigurera och ställa in `opensearch`-motorn för nästa version av Adobe Commerce 2.4.6 har lagts till. Se [Konfigurera OpenSearch-tjänsten](../services/opensearch.md).<!-- MCLOUD-9236 -->
 
 ## v2002.1.11
 
-Releasedatum: 4 augusti 2022
+Utgivningsdatum: 4 augusti 2022
 
 - ![korrigeringsikon](../../assets/fix.svg) **ElasticSuite-validerare och OpenSearch** - Ett problem med integritetskontrollen för ElasticSuite när OpenSearch är installerat har åtgärdats.<!-- MCLOUD-8767 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Returtyper för distributionskommandon** - Korrigerade returtyper för distributionskommandon.<!-- AC-3208 -->
@@ -186,13 +186,13 @@ Releasedatum: 4 augusti 2022
 
 ## v2002.1.10
 
-Releasedatum: 31 mars 2022
+Utgivningsdatum: 31 mars 2022
 
 - ![korrigeringsikon](../../assets/fix.svg) **Elasticsearch 7.10** - Uppdaterade validerare med stöd för version 7.10 av Elasticsearch.<!-- MCLOUD-8548 -->
 
 ## v2002.1.9
 
-Releasedatum: 10 mars 2022
+Utgivningsdatum: 10 mars 2022
 
 - ![ny ikon](../../assets/new.svg) **OpenSearch** - Stöd för OpenSearch i Adobe Commerce version 2.4.4, 2.4.3-p2 och 2.3.7-p3 har lagts till.<!-- MCLOUD-8296 -->
 - ![ny ikon](../../assets/new.svg) **PHP** - Stöd för PHP 8.1 har lagts till.
@@ -205,16 +205,16 @@ Releasedatum: 10 mars 2022
 
 ## v2002.1.8
 
-Releasedatum: 25 oktober 2021
+Utgivningsdatum: 25 oktober 2021
 
-- ![ny ikon](../../assets/new.svg) **Alternativ dumpplats** - alternativet `--dump-directory` har lagts till så att du kan välja en målkatalog för en DB-dump. `/app/var/dump-main` är nu standardmålkatalog för en DB-dump. Se [Hantering av säkerhetskopiering: Dumpa databasen](../storage/database-dump.md)<!-- MCLOUD-8063 -->
+- ![ny ikon](../../assets/new.svg) **Alternativ dumpplats** - alternativet `--dump-directory` har lagts till så att du kan välja en målkatalog för en DB-dump. `/app/var/dump-main` är nu standardmålkatalog för en DB-dump. Se [Hantering av säkerhetskopiering: Dumpa databasen ](../storage/database-dump.md)<!-- MCLOUD-8063 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdatera Monolog** - Uppdaterade minimiversionen som krävs för paketet `monolog` till `^2.3`.<!-- ACMP-1263 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdatera Symfony** - Symfony-beroendena har uppdaterats så att de är kompatibla med Adobe Commerce 2.4.4.<!-- ACMP-1533 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Funktion/lös automatisk inläsning** - Korrigerade ett fel vid distribution till en integreringsmiljö och `CRITICAL: [9] Required configuration is missed in autoload section of composer.json file.`-felet visades.<!-- https://github.com/magento/ece-tools/pull/799 -->
 
 ## v2002.1.7
 
-Releasedatum: 29 juli 2021
+Utgivningsdatum: 29 juli 2021
 
 **Konfigurationsuppdateringar**—
 
@@ -226,7 +226,7 @@ Releasedatum: 29 juli 2021
 
 ## v2002.1.6
 
-Releasedatum: 20 april 2021
+Utgivningsdatum: 20 april 2021
 
 - ![ny ikon](../../assets/new.svg) **Redis-autentiseringsuppgifter** - Lagt till möjlighet att läsa Redis-autentiseringsuppgifter från egenskapen `relationships` under distributionsfasen.<!--MCLOUD-7694-->
 
@@ -238,13 +238,13 @@ Releasedatum: 20 april 2021
 
 - ![korrigeringsikon](../../assets/fix.svg) **Elasticsearch-version från relationer** - Korrigerad tjänstverifierare för att hämta rätt version av Elasticsearch från `relationships` -egenskaperna i Cloud Docker- och integreringsmiljöer.<!--MCLOUD-7572-->
 
-- ![korrigeringsikon](../../assets/fix.svg) **Flexibel Redis-portvalidering** - Redis kan nu validera porten i en anpassad cacheanslutning från URL:en `server`. Du kan t.ex. lägga till ditt portnummer till serverns URL enligt följande: `server: 'tcp://rfs-store-simple-page-cache:26379'`. Detta förhindrar valideringsfel där alternativet `port` antingen saknas eller är felaktigt.<!--MCLOUD-7722-->
+- ![korrigeringsikon](../../assets/fix.svg) **Flexibel Redis-portvalidering** - Redis kan nu validera porten i en anpassad cacheanslutning från URL:en `server`. Du kan t.ex. lägga till ditt portnummer till serverns URL-adress på följande sätt: `server: 'tcp://rfs-store-simple-page-cache:26379'`. Detta förhindrar valideringsfel där alternativet `port` antingen saknas eller är felaktigt.<!--MCLOUD-7722-->
 
 - ![korrigeringsikon](../../assets/fix.svg) **Uppgraderar till Adobe Commerce 2.4.2** - Korrigerade ett problem som innebar att användare måste köra `bin/magento setup:upgrade` manuellt för att kunna använda sina webbplatser efter uppgradering till Adobe Commerce 2.4.2.<!--MCLOUD-7776-->
 
 ## v2002.1.5
 
-Releasedatum: 1 februari 2021
+Utgivningsdatum: 1 februari 2021
 
 - ![ny ikon](../../assets/new.svg) **Fjärrlagring** - Miljövariabeln `REMOTE_STORAGE` har lagts till för att aktivera molnprojekt för fjärrlagring av mediefiler med hjälp av en lagringstjänst, till exempel AWS S3. Det här konfigurationsalternativet är en del av ECE-verktygspaketet, men stöds inte på Adobe Commerce i molninfrastrukturen.<!--MCLOUD-7153-->
 
@@ -256,7 +256,9 @@ Releasedatum: 1 februari 2021
 
 - ![ny ikon](../../assets/new.svg) **Ny miljövariabel för SCD_NO_PARENT** - lade till miljövariabeln `SCD_NO_PARENT` (för Adobe Commerce >=2.4.2) för att hantera genereringen av statiskt innehåll för överordnade teman.<!--MCLOUD-7284-->
 
-- ![korrigeringsikon](../../assets/fix.svg) **Minnesbegränsningar och kommandon** - Korrigerade ett fel där `php vendor/bin/ece-tools`-kommandon inte fungerade om storleken på `cloud.log`-filen överskred PHP-minnesgränsen. I stället för att läsa in hela `cloud.log`-filen i minnet läser vi nu bara en mindre delmängd av data från loggfilen.<!--MCLOUD-7275--><!--MCLOUD-7400-->
+- ![korrigeringsikon](../../assets/fix.svg) **Minnesbegränsningar och kommandon** - Korrigerade ett fel där `php vendor/bin/ece-tools`-kommandon inte fungerade om storleken på `cloud.log`-filen överskred PHP-minnesgränsen. I stället för att läsa hela `cloud.log`-filen i minnet läser vi nu bara en mindre delmängd av data från loggfilen.
+  <!--MCLOUD-7275-->
+  <!--MCLOUD-7400-->
 
 - ![korrigeringsikon](../../assets/fix.svg) **Anpassade databasanslutningar** - Korrigerade ett `.magento.env.yaml`-konfigurationsproblem där anpassade databasanslutningar som definierats för `DATABASE_CONFIGURATION` inte användes. Anslutningsinställningarna lades inte till i `app/etc/env.php`.<!--MCLOUD-7426-->
 
@@ -268,13 +270,13 @@ Releasedatum: 1 februari 2021
 
 ## v2002.1.4
 
-Releasedatum: 19 november 2020
+Utgivningsdatum: 19 november 2020
 
 - ![korrigeringsikon](../../assets/fix.svg) Ett problem som orsakade ett distributionsfel när sökmotorn som anges i miljövariabeln `SEARCH_CONFIGURATION` har ett annat värde än `elasticsearch` har åtgärdats.<!--MCLOUD-7283-->
 
 ## v2002.1.3
 
-Releasedatum: 9 november 2020
+Utgivningsdatum: 9 november 2020
 
 **Infrastrukturuppdateringar**—
 
@@ -308,7 +310,7 @@ Releasedatum: 9 november 2020
 
 ## v2002.1.2
 
-Releasedatum: 5 augusti 2020
+Utgivningsdatum: 5 augusti 2020
 
 **Förbättringar av validering och logg**—
 
@@ -328,7 +330,7 @@ Releasedatum: 5 augusti 2020
 
 ## v2002.1.1
 
-Releasedatum: 25 juni 2020
+Utgivningsdatum: 25 juni 2020
 
 - ![ny ikon](../../assets/new.svg) **Infrastrukturuppdateringar**—
 
@@ -404,11 +406,11 @@ Releasedatum: 25 juni 2020
 
 ## v2002.1.0
 
-Releasedatum: 6 februari 2020
+Utgivningsdatum: 6 februari 2020
 
 - ![ny ikon](../../assets/new.svg) **Infrastrukturuppdateringar**—
 
-   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [&#x200B; magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
+   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [ magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
 
    - ![ny ikon](../../assets/new.svg) **Uppdaterade patchfunktioner** - har flyttat patchfunktionen från ECE-verktygspaketet till ett separat [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) -paket. Under distributionen använder `ece-tools` det nya paketet för att tillämpa korrigeringar. Se [Versionsinformation om molnpatchar](cloud-patches.md).<!--MAGECLOUD-4567-->
 
@@ -422,7 +424,7 @@ Releasedatum: 6 februari 2020
 
 >[!NOTE]
 >
->Granska [bakåt innan du uppdaterar till ECE-Tools version 2002.1.0   inkompatibla ändringar &#x200B;](backward-incompatible-changes.md) om du vill veta mer om ändringar som kan kräva att du   uppdatera Adobe Commerce om projektkonfiguration eller processer för molninfrastruktur.
+>Innan du uppdaterar till ECE-Tools version 2002.1.0 bör du granska de [bakåtkompatibla ändringarna](backward-incompatible-changes.md) för att få reda på vilka ändringar som kan kräva att du uppdaterar Adobe Commerce för projektkonfigurationen eller processerna i molnet.
 
 - ![ny ikon](../../assets/new.svg) **Tjänstuppdateringar**—
 
@@ -454,7 +456,7 @@ Releasedatum: 6 februari 2020
 
    - ![ny ikon](../../assets/new.svg) **Förbättrad felrapportering** - Förbättrad loggning har lagts till för CLI-kommandofel som inträffar under ECE-verktygsbearbetning.<!--MAGECLOUD-4849-->
 
-   - ![ny ikon](../../assets/new.svg) **Ta bort inaktuella byggkommandon**- Följande byggkommandon har tagits bort: `m2-ece-build`, `m2-ece-deploy`, `m2-ece-scd-dump` och `ece-tools docker`-kommandon har bytt namn till `ece-docker`. Se [Inkompatibla ändringar bakåt](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->
+   - ![ny ikon](../../assets/new.svg) **Ta bort inaktuella byggkommandon**— Följande byggkommandon har tagits bort: `m2-ece-build` -, `m2-ece-deploy` -, `m2-ece-scd-dump` - och döpte om `ece-tools docker` -kommandon till `ece-docker`. Se [Inkompatibla ändringar bakåt](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->
 
 - ![ny ikon](../../assets/new.svg) Borttagen den borttagna `build_options.ini`-filen och tillagda valideringen för att misslyckas med bygget om filen finns. Använd filen [.magento.env.yaml](../environment/configure-env-yaml.md) för att konfigurera byggalternativ.
 
@@ -462,7 +464,7 @@ Releasedatum: 6 februari 2020
 
 ## 2002.0.23
 
-Releasedatum: 27 februari 2020
+Utgivningsdatum: 27 februari 2020
 
 - ![korrigeringsikon](../../assets/fix.svg) Ett kompatibilitetsproblem med `ece-tools` 2002.0.x-versioner som förhindrar att statiskt innehåll genereras korrekt vid behov i produktionsläge har åtgärdats.
 

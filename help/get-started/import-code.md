@@ -4,7 +4,7 @@ description: Lär dig hur du importerar befintlig Commerce-kod till ett nytt mol
 hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: bdbb6e21c8d7af1c2726382333ec5184b87ac7b7
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%

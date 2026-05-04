@@ -1,23 +1,27 @@
 ---
-source-git-commit: 50e1a864dcde1148f5ed036b55815442c5986eaf
+source-git-commit: bd353c3d100dee7fd0a1846b582a8af44448ff1b
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '3168'
 ht-degree: 0%
 
 ---
 # Molnpaket för Adobe Commerce
 
-<!-- The 'packages' variable contains the 'packages' node of the '_data/codebase/cloud/composer_lock.json' file
- -->
+<!--
+The 'packages' variable contains the 'packages' node of the '_data/codebase/cloud/composer_lock.json' file
+-->
 
-<!-- The 'packages-dev' variable contains the 'packages-dev' node of the '_data/codebase/cloud/composer_lock.json' file
- -->
+<!--
+The 'packages-dev' variable contains the 'packages-dev' node of the '_data/codebase/cloud/composer_lock.json' file
+-->
 
-<!-- The 'product' variable contains data of the 'magento/magento-cloud-metapackage' package
- -->
+<!--
+The 'product' variable contains data of the 'magento/magento-cloud-metapackage' package
+-->
 
-<!-- The edition variable contains `cloud` value from the _data/names.yml file
- -->
+<!--
+The edition variable contains `cloud` value from the _data/names.yml file
+-->
 
 Adobe Commerce i molninfrastruktur använder Composer för att hantera PHP-paket.
 
@@ -474,7 +478,7 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
       <a href="https://github.com/paragonie/sodium_compat.git">paragonie/natrium_compat</a>
     </td>
     <td>bibliotek</td>
-    <td>Ren PHP-implementering av libnatrium; använder PHP-tillägget om det finns</td>
+    <td>Ren PHP-implementering av libnatrium. använder PHP-tillägget om det finns</td>
   </tr>
   </tbody>
 </table>
@@ -908,7 +912,7 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
       <a href="https://github.com/php-fig/http-factory.git">psr/http-factory</a>
     </td>
     <td>bibliotek</td>
-    <td>PSR-17: Vanliga gränssnitt för PSR-7 HTTP-meddelandefabriker</td>
+    <td>PSR-17: Gemensamma gränssnitt för PSR-7 HTTP-meddelandefabriker</td>
   </tr>
   <tr>
     <td>
