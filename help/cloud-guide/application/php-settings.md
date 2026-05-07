@@ -3,16 +3,16 @@ title: PHP-inställningar
 description: Läs om de optimala PHP-inställningarna för Commerce-programkonfiguration i molninfrastrukturen.
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
-source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
+source-git-commit: eff03e0955ae067eb509c7d49eb59f64b3bb1c6a
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
 
 # PHP-inställningar
 
-Du kan välja vilken [version av PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE) som ska köras i `.magento.app.yaml`-filen:
+Du kan välja vilken [version av PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) som ska köras i `.magento.app.yaml`-filen:
 
 ```yaml
 name: mymagento
@@ -21,7 +21,7 @@ type: php:<version>
 
 >[!TIP]
 >
->Om du uppgraderar till PHP 8.1 och senare tar du bort JSON från egenskapen [`runtime: extensions:` &#x200B;](properties.md#runtime) i filen `.magento.app.yaml` och distribuerar om. JSON-tillägget installeras i molnmiljön sedan PHP 8.0.
+>Om du uppgraderar till PHP 8.1 och senare tar du bort JSON från egenskapen [`runtime: extensions:` ](properties.md#runtime) i filen `.magento.app.yaml` och distribuerar om. JSON-tillägget installeras i molnmiljön sedan PHP 8.0.
 
 ## Konfigurera PHP
 
@@ -63,7 +63,7 @@ Med de här inställningarna kan PHP-processer cachelagra sökvägar till filer 
 
 >[!NOTE]
 >
->En lista med rekommenderade PHP-konfigurationsinställningar finns i [Nödvändiga PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=sv-SE) i _installationshandboken_.
+>En lista med rekommenderade PHP-konfigurationsinställningar finns i [Nödvändiga PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html) i _installationshandboken_.
 
 ### Kontrollera anpassade PHP-inställningar
 
@@ -118,7 +118,7 @@ Följande tabell visar vilka PHP-tillägg som stöds när du distribuerar Adobe 
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP-modulkraven är knutna till Adobe Commerce-versionen. Se [PHP-krav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=sv-SE).
+PHP-modulkraven är knutna till Adobe Commerce-versionen. Se [PHP-krav](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html).
 
 ### Stöd för tillägg
 
@@ -136,10 +136,10 @@ sourceguardian.restrict_unencoded = "1"
 
 Se [avsnitt 3.5 i SourceGuardian-dokumentationen](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _Det här är en länk till en PDF_.
 
-[Skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) om du vill ha hjälp med att installera dessa PHP-tillägg i alla produktionsmiljöer och Pro Staging-miljöer. Inkludera din uppdaterade `.magento/services.yaml`-fil, `.magento.app.yaml`-fil med den uppdaterade PHP-versionen och eventuella ytterligare PHP-tillägg. Om du vill ändra en produktionsmiljö måste du ange minst 48 timmars varsel. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt.
+[Skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ha hjälp med att installera dessa PHP-tillägg i alla produktionsmiljöer och Pro Staging-miljöer. Inkludera din uppdaterade `.magento/services.yaml`-fil, `.magento.app.yaml`-fil med den uppdaterade PHP-versionen och eventuella ytterligare PHP-tillägg. Om du vill ändra en produktionsmiljö måste du ange minst 48 timmars varsel. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt.
 
 >[!WARNING]
 >
 >PHP som kompilerats med felsökning stöds inte och avsökningen kan hamna i konflikt med [!DNL XDebug] eller [!DNL XHProf]. Inaktivera dessa tillägg när du aktiverar avsökningen. Avsökningen står i konflikt med vissa PHP-tillägg som [!DNL Pinba] eller IonCube.
 
-<!-- Last updated from includes: 2025-04-14 09:39:27 -->
+<!-- Last updated from includes: 2026-04-24 14:50:02 -->

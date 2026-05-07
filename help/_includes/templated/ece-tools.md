@@ -1,5 +1,5 @@
 ---
-source-git-commit: 603e8365fb20c90e9d54cb8c809cc51b5cd0ce9a
+source-git-commit: eff03e0955ae067eb509c7d49eb59f64b3bb1c6a
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # ece-tools
 
-**Version**: 2002.2.10
+**Version**: 2002.2.11
 
 Referensen innehåller 34 kommandon som är tillgängliga via kommandoradsverktyget `ece-tools`.
 Den inledande listan genereras automatiskt med kommandot `ece-tools list` på Adobe Commerce i molninfrastrukturen.
@@ -41,7 +41,7 @@ Endast fel visas. Alla andra utdata inaktiveras
 
 #### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -171,7 +171,7 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
 
 #### `shell`
 
-Gränssnittstypen (t.ex. &quot;bash&quot;), värdet för &quot;$SHELL&quot; env var, används om detta inte anges
+Skaltypen (t.ex. &quot;bash&quot;) används värdet för &quot;$SHELL&quot; env var om det inte anges
 
 ### Alternativ
 
@@ -618,7 +618,7 @@ Visa miljövariabler för kodad molnkonfiguration.
 
 #### `variable`
 
-Miljövariabler som ska visas, möjliga alternativ: tjänster, flöden, variabler
+Miljövariabler som ska visas, möjliga alternativ: tjänster,flöden,variabler
 
 - Standard: `[]`
 - Array
