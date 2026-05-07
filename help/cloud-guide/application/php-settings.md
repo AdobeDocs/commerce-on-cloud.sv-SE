@@ -21,7 +21,7 @@ type: php:<version>
 
 >[!TIP]
 >
->Om du uppgraderar till PHP 8.1 och senare tar du bort JSON från egenskapen [`runtime: extensions:` ](properties.md#runtime) i filen `.magento.app.yaml` och distribuerar om. JSON-tillägget installeras i molnmiljön sedan PHP 8.0.
+>Om du uppgraderar till PHP 8.1 och senare tar du bort JSON från egenskapen [`runtime: extensions:` &#x200B;](properties.md#runtime) i filen `.magento.app.yaml` och distribuerar om. JSON-tillägget installeras i molnmiljön sedan PHP 8.0.
 
 ## Konfigurera PHP
 
