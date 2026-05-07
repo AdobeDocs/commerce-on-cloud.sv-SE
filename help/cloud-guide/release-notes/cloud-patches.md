@@ -35,7 +35,7 @@ Utgivningsdatum: 6 maj 2026
 
 - ![korrigeringsikon](../../assets/fix.svg) **Synlighet för korrigeringsversion**-Fast synlighet för molnkorrigeringsversion i molnmiljöer.<!--MCLOUD-14221 -->
 - ![korrigeringsikon](../../assets/fix.svg) **PHPUnit-rensning**-fasta PHPUnit-meddelanden<!--MCLOUD-14717 -->
-- ![ny ikon ](../../assets/new.svg)**Kosmetiska korrigeringar** - kosmetiska förbättringar har lagts till.<!--MCLOUD-14686 -->
+- ![ny ikon &#x200B;](../../assets/new.svg)**Kosmetiska korrigeringar** - kosmetiska förbättringar har lagts till.<!--MCLOUD-14686 -->
 
 ## v1.1.13
 
@@ -244,7 +244,7 @@ Utgivningsdatum: 12 augusti 2021
 
 Viktig patch för Adobe Commerce 2.4.3 och 2.3.7-p1:
 
-- **Problem med API-hastighetsbegränsning** - Den här korrigeringen åtgärdar en standardhastighetsgräns som förhindrar att webb-API:er bearbetar begäranden med mer än 20 objekt i en array. Den här korrigeringen höjer standardvärdet för hastighetsgränsen. Se versionsinformationen för Adobe Commerce [ 2.4.3](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **Problem med API-hastighetsbegränsning** - Den här korrigeringen åtgärdar en standardhastighetsgräns som förhindrar att webb-API:er bearbetar begäranden med mer än 20 objekt i en array. Den här korrigeringen höjer standardvärdet för hastighetsgränsen. Se versionsinformationen för Adobe Commerce [&#x200B; 2.4.3](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
