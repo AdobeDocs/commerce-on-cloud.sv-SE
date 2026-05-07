@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En säkerhetsanteckning har lagts till i referensen <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Webbegenskapskonfiguration</a> för Adobe Commerce i molninfrastruktur för att klargöra att standardkonfigurationen för webbegenskapen använder <code class="language-plaintext highlighter-rouge">scripts:false</code> för mediaplatser för att förhindra körning av överförda filer.</p>
+      <td><p>En säkerhetsanteckning har lagts till i referensen <a href="https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Webbegenskapskonfiguration</a> för Adobe Commerce i molninfrastruktur för att klargöra att standardkonfigurationen för webbegenskapen använder <code class="language-plaintext highlighter-rouge">scripts:false</code> för mediaplatser för att förhindra körning av överförda filer.</p>
 </td>
       <td>
         Teknik, feedback
