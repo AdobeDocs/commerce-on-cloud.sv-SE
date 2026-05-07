@@ -4,9 +4,9 @@ description: Se en lista över de senaste förbättringarna av Cloud Patches-pak
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 2ba9fb2b8e4bc95502bba164d046ad577999addd
+source-git-commit: f7cd58edb0a3c06420a698287536112ecc9f3ba0
 workflow-type: tm+mt
-source-wordcount: '2857'
+source-wordcount: '2889'
 ht-degree: 0%
 
 ---
@@ -29,91 +29,99 @@ Paketet `magento/magento-cloud-patches` använder följande versionssekvens: `<m
 
 <!--Add release notes below-->
 
-## v1.1.13 {#latest}
+## v1.1.14 {#latest}
 
-Releasedatum: 5 mars 2026
+Utgivningsdatum: 6 maj 2026
+
+- ![korrigeringsikon](../../assets/fix.svg) **Synlighet för korrigeringsversion**-Fast synlighet för molnkorrigeringsversion i molnmiljöer.<!--MCLOUD-14221 -->
+- ![korrigeringsikon](../../assets/fix.svg) **PHPUnit-rensning**-fasta PHPUnit-meddelanden<!--MCLOUD-14717 -->
+- ![ny ikon ](../../assets/new.svg)**Kosmetiska korrigeringar** - kosmetiska förbättringar har lagts till.<!--MCLOUD-14686 -->
+
+## v1.1.13
+
+Utgivningsdatum: 5 mars 2026
 
 - ![ny ikon](../../assets/new.svg) **PHP 8.5** - Stöd för PHP 8.5 har lagts till.<!-- MCLOUD-14181 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdaterade funktionstester för PHP 8.x** - Tog bort äldre PHP 7.x-tester, lade till PHP 8.1 och 8.2 ny testtäckning och uppdaterade Adobe Commerce-versioner.<!-- MCLOUD-14203 -->
 
 ## v1.1.12
 
-Releasedatum: 13 november 2025
+Utgivningsdatum: 13 november 2025
 
 - ![korrigeringsikon](../../assets/fix.svg) **Symfoni-paket** - Stöd för de senaste YAML-symbolpaketen har lagts till.<!-- MCLOUD-14020 -->
-- ![korrigeringsikon](../../assets/fix.svg) **Laga** - Korrigera [utcheckningen misslyckas när JS-minification och paketering är aktiverade](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-27997), vilket beskrivs i *Commerce Knowledgebase* .
-- ![korrigeringsikon](../../assets/fix.svg) **Förbättrad kategorivy** - MCLOUD-13752: Förbättra kategorivy.<!-- MCLOUD-13752 | MCLOUD-14139  -->
+- ![korrigeringsikon](../../assets/fix.svg) **Laga** - Korrigera [utcheckningen misslyckas när JS-minification och paketering är aktiverade](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997), vilket beskrivs i *Commerce Knowledgebase* .
+- ![korrigeringsikon](../../assets/fix.svg) **Förbättrad kategorivy** - MCLOUD-13752: Förbättra kategorivyn.<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
 
-Releasedatum: 9 september 2025
+Utgivningsdatum: 9 september 2025
 
 - ![korrigeringsikon](../../assets/fix.svg) **WebAPI**-Fix för CVE-2025-54236.<!-- MCLOUD-14016 -->
 
 ## v1.1.10
 
-Releasedatum: 7 augusti 2025
+Utgivningsdatum: 7 augusti 2025
 
 - ![ny ikon](../../assets/new.svg) **PHP 8.4** - Lagt till funktionstester.<!-- MCLOUD-13312 -->
 
 ## v1.1.9
 
-Releasedatum: 9 juni 2025
+Utgivningsdatum: 9 juni 2025
 
 - ![korrigeringsikon](../../assets/fix.svg) **Förbättrad kategorivy** - Förbättra kategorivy.<!-- MCLOUD-13752	 - -->
 - ![korrigeringsikon](../../assets/fix.svg) **Förbättrad administratörscache**-Improve-admin-cache-efficient CVE-2025-47110.<!-- MCLOUD-13753	 - -->
 
 ## v1.1.8
 
-Releasedatum: 3 juni 2025
+Utgivningsdatum: 3 juni 2025
 
 - ![fix-ikon](../../assets/fix.svg) **Förbättrad kompatibilitet med 2.4.8**-uppdaterade tredjepartsbibliotek för bättre kompatibilitet med 2.4.8<!-- MCLOUD-13707	 - -->
 
 ## v1.1.7
 
-Releasedatum: 5 maj 2025
+Utgivningsdatum: 5 maj 2025
 
-- ![ny ikon](../../assets/new.svg) **Uppdaterad patch för Commerce 2.4.4 till 2.4.8** - Det här är en uppdaterad patch för [CVE-2025-24434](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch) som släpptes i 1.1.7<!-- MCLOUD-13619 -->
+- ![ny ikon](../../assets/new.svg) **Uppdaterad patch för Commerce 2.4.4 till 2.4.8** - Det här är en uppdaterad patch för [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch) som släpptes i 1.1.7<!-- MCLOUD-13619 -->
 
 ## v1.1.6
 
-Releasedatum: 24 april 2025
+Utgivningsdatum: 24 april 2025
 
-- ![ny ikon](../../assets/new.svg) **Uppdaterad patch för Commerce 2.4.4 till 2.4.7** - Det här är en uppdaterad patch för [CVE-2025-24434](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08) som släpptes i 1.1.4<!-- MCLOUD-13240 -->
+- ![ny ikon](../../assets/new.svg) **Uppdaterad patch för Commerce 2.4.4 till 2.4.7** - Det här är en uppdaterad patch för [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08) som släpptes i 1.1.4<!-- MCLOUD-13240 -->
 
 ## v1.1.5
 
-Releasedatum: 15 april 2025
+Utgivningsdatum: 15 april 2025
 
 - ![ny ikon](../../assets/new.svg) **Lagt till patch för B2B 1.5.2** - Korrigera problemet AVS2E-3833 med B2B-modulen 1.5.2 och MariaDB 10.6<!-- MCLOUD-13605	-->
 
 ## v1.1.4
 
-Releasedatum: 13 februari 2025
+Utgivningsdatum: 13 februari 2025
 
-- ![ny ikon](../../assets/new.svg) **Lagt till patch för Commerce 2.4.4 till 2.4.7** - Uppdateringspatchar [CVE-2025-24434](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+- ![ny ikon](../../assets/new.svg) **Lagt till patch för Commerce 2.4.4 till 2.4.7** - Uppdateringspatchar [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
 
 ## v1.1.3
 
-Releasedatum: 6 februari 2025
+Utgivningsdatum: 6 februari 2025
 
 - ![ny ikon](../../assets/new.svg) **PHP 8.4** - Stöd för PHP 8.4 har lagts till.<!-- MCLOUD-13149	 - -->
 
 ## v1.1.2
 
-Releasedatum: 5 november 2024
+Utgivningsdatum: 5 november 2024
 
-- ![korrigeringsikon](../../assets/fix.svg) **Lagt till korrigering för Commerce 2.4.4 till 2.4.7** - Den här uppdateringen åtgärdar en allvarlig [CVE-2024-45115](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) -säkerhetslucka för Adobe Commerce när B2B-modulen används.<!-- MCLOUD-12980 - -->
+- ![korrigeringsikon](../../assets/fix.svg) **Lagt till korrigering för Commerce 2.4.4 till 2.4.7** - Den här uppdateringen åtgärdar en allvarlig [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) -säkerhetslucka för Adobe Commerce när B2B-modulen används.<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
-Releasedatum: 5 november 2024
+Utgivningsdatum: 5 november 2024
 
-- ![korrigeringsikon](../../assets/fix.svg) **Lagt till korrigering för Commerce 2.4.4 till 2.4.7** - Den här uppdateringen åtgärdar ett kritiskt [CVE-2024-34102](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting-problem.<!-- MCLOUD-12980 - -->
+- ![korrigeringsikon](../../assets/fix.svg) **Lagt till korrigering för Commerce 2.4.4 till 2.4.7** - Den här uppdateringen åtgärdar ett kritiskt [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting-problem.<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
-Releasedatum: 7 oktober 2024
+Utgivningsdatum: 7 oktober 2024
 
 - ![korrigeringsikon](../../assets/fix.svg) **Refererad kod** - Stödet för tidigare PHP-versioner (7.4, 7.3, 7.2) och relaterade bibliotek har tagits bort.<!-- MCLOUD-9278 - -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppgraderad Monolog-version** - Stöd för monolog 3.6 har lagts till.<!-- MCLOUD-12855 - -->
@@ -121,38 +129,38 @@ Releasedatum: 7 oktober 2024
 
 ## v1.0.27
 
-Releasedatum: 21 maj 2024
+Utgivningsdatum: 21 maj 2024
 
 - **Stöd för PHP 8.3** - Den här korrigeringen åtgärdar kompatibilitetsfel mellan PHP 8.3 och Composer-paketets version.
 
 ## v1.0.26
 
-Releasedatum: 8 april 2024
+Utgivningsdatum: 8 april 2024
 
 - ![ny ikon](../../assets/new.svg) **PHP** - Stöd för PHP 8.3 har lagts till.
 
 ## v1.0.25
 
-Releasedatum: 16 januari 2024
+Utgivningsdatum: 16 januari 2024
 
 - **Cacheförbättringar**-Den här korrigeringen förbättrar effektiviteten i layoutcachen och minskar minnesanvändningen avsevärt för Adobe Commerce version 2.4.4 och senare.<!-- MCLOUD-11514 -->
 - **Förbättringar av CRON-jobb**-Den här korrigeringen åtgärdar ett problem där missade jobb i onödan väntar på cron-jobblocks för Adobe Commerce version 2.4.4 och senare.<!-- MCLOUD-11329 -->
 
 ## v1.0.24
 
-Releasedatum: 15 september 2023
+Utgivningsdatum: 15 september 2023
 
 - **Prestandaförbättring**- Den här korrigeringen åtgärdar ett problem som påverkar prestandan genom att minska antalet gånger som samma distributionskonfigurationer läses in för Adobe Commerce 2.4.6 till 2.4.6-p1<!-- MCLOUD-10604 -->
 
 ## v1.0.23
 
-Releasedatum: 31 juli 2023
+Utgivningsdatum: 31 juli 2023
 
 - **Korrigeringen MCLOUD-10604 har tagits bort**-Den här korrigeringen har flyttats till QPT.<!-- MCLOUD-10736 -->
 
 ## v1.0.22
 
-Releasedatum: 19 juni 2023
+Utgivningsdatum: 19 juni 2023
 
 - **Förbättrad QPT CLI-guide/utdata** - En varning har lagts till i QPT CLI-guiden/utdata som påminner dig om att verifiera korrigeringsinformation och -krav om det finns beroenden.<!-- ACP2E-1963 -->
 - **Lagt till patchar för Commerce 2.4.6:**
@@ -163,68 +171,68 @@ Releasedatum: 19 juni 2023
 
 ## v1.0.21
 
-Releasedatum: 10 mars 2023
+Utgivningsdatum: 10 mars 2023
 
 - **Utökat stöd för PHP 8.2** - Korrigerade kompatibilitetsproblem med vissa PHP 8.2.x-versioner som stöder Commerce 2.4.6.
 
 ## v1.0.20
 
-Releasedatum: 27 oktober 2022
+Utgivningsdatum: 27 oktober 2022
 
 - **Lagt till förbättringar av L2-cache** - Den här korrigeringen åtgärdar ett problem med tömning av den lokala L2-cachen för Commerce version 2.4.0 och 2.4.1.<!-- MCLOUD-7845 -->
 
 ## v1.0.19
 
-Releasedatum: 13 september 2022
+Utgivningsdatum: 13 september 2022
 
 - **Utökat stöd för PHP 8.1** - Korrigerade kompatibilitetsproblem med vissa PHP 8.1.x-versioner.
 
 ## v1.0.18
 
-Releasedatum: 11 augusti 2022
+Utgivningsdatum: 11 augusti 2022
 
 Viktig patch för Adobe Commerce 2.4.5:
 
 - **Problem med beställningar med Braintree-betalningar** - Korrigeringen åtgärdar ett kritiskt problem som förhindrar administratörer från att göra nya beställningar eller beställningar.<!-- MCLOUD-9137 -->
 
-Se [Administratören kan inte skapa en order/ändra ordning när Braintree-betalning är aktiverad](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html?lang=sv-SE).
+Se [Administratören kan inte skapa en order/ändra ordning när Braintree-betalning är aktiverad](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
 
 ## v1.0.17
 
-Releasedatum: 24 maj 2022
+Utgivningsdatum: 24 maj 2022
 
 Åtgärdade begränsningar för säkerhetsuppdateringar i filen `patches.json`.
 
 ## v1.0.16
 
-Releasedatum: 31 mars 2022
+Utgivningsdatum: 31 mars 2022
 
 Viktig patch för Adobe Commerce 2.3.3-p1 och senare:
 
 Uppdaterade patchar för att lösa en **kritisk** -sårbarhet som resulterar i oautentiserad fjärrexekvering av kod.<!-- MCLOUD-8479 -->
 
-Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/se/security/products/magento/apsb22-12.html).
+Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## v1.0.15
 
-Releasedatum: 10 mars 2022
+Utgivningsdatum: 10 mars 2022
 
 - **Stöd för PHP 8.1** - Stöd för PHP 8.1 har lagts till och stödet för PHP 7.0 och 7.1 har tagits bort.
 - **Lagt till korrigering för Adobe Commerce 2.3.3** - Fast valuta som visas på produktsidan.
 
 ## v1.0.14
 
-Releasedatum: 13 februari 2022
+Utgivningsdatum: 13 februari 2022
 
 Viktig patch för Adobe Commerce 2.3.3-p1 och senare:
 
 En korrigering har lagts till för att åtgärda en **kritisk** -sårbarhet som resulterar i oautentiserad fjärrexekvering av kod.<!-- MCLOUD-8461 -->
 
-Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/se/security/products/magento/apsb22-12.html).
+Se [Adobe säkerhetsbulletin APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## v1.0.13
 
-Releasedatum: 25 oktober 2021
+Utgivningsdatum: 25 oktober 2021
 
 - **Uppdatera Monolog** - Uppdaterade minimiversionen som krävs för paketet `monolog` till `^2.3`.<!-- ACMP-1263 -->
 - **Inkompatibel PHP-metod** - Korrigerad inkompatibel PHP-metod för Adobe Commerce version 2.4.3 och 2.3.7-p1.<!-- AC-384 -->
@@ -232,15 +240,15 @@ Releasedatum: 25 oktober 2021
 
 ## v1.0.12
 
-Releasedatum: 12 augusti 2021
+Utgivningsdatum: 12 augusti 2021
 
 Viktig patch för Adobe Commerce 2.4.3 och 2.3.7-p1:
 
-- **Problem med API-hastighetsbegränsning** - Den här korrigeringen åtgärdar en standardhastighetsgräns som förhindrar att webb-API:er bearbetar begäranden med mer än 20 objekt i en array. Den här korrigeringen höjer standardvärdet för hastighetsgränsen. Se versionsinformationen för Adobe Commerce [&#x200B; 2.4.3](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **Problem med API-hastighetsbegränsning** - Den här korrigeringen åtgärdar en standardhastighetsgräns som förhindrar att webb-API:er bearbetar begäranden med mer än 20 objekt i en array. Den här korrigeringen höjer standardvärdet för hastighetsgränsen. Se versionsinformationen för Adobe Commerce [ 2.4.3](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## v1.0.11
 
-Releasedatum: 29 juli 2021
+Utgivningsdatum: 29 juli 2021
 
 - **Korrigerat ett problem som orsakats av användning av navigeringsrutan i B2B-lager** - För kunder som har använt navigeringsrutan i B2B-lager åtgärdar den här korrigeringen ett `Undefined offset` -fel som visas på söksidan efter att butiksvyn har växlats.<!--MCLOUD-5287-->
 
@@ -250,7 +258,7 @@ Releasedatum: 29 juli 2021
 
 ## v1.0.10
 
-Releasedatum: 10 maj 2021
+Utgivningsdatum: 10 maj 2021
 
 - **Kompatibilitet med Adobe Commerce 2.3.7** - Konflikt för matchade dispositionsberoenden vid installation i Adobe Commerce 2.3.7.<!--MC-42131-->
 - **Korrigerade ett problem som orsakats av att en paketerad korrigering har använts flera gånger**. Om en paketerad korrigering (en som innehåller andra borttagna korrigeringsfiler) används flera gånger kan de inkluderade borttagna paketen återställas. Alla patchar används nu bara en gång. Om du försöker tillämpa samma paket igen visas ett meddelande om att korrigeringen redan har tillämpats.<!--MC-41912-->
@@ -258,7 +266,7 @@ Releasedatum: 10 maj 2021
 
 ## v1.0.9
 
-Releasedatum: 1 februari 2021
+Utgivningsdatum: 1 februari 2021
 
 - **Navigeringskorrigering i B2B-lager** - Korrigerade problemet som hindrade navigering i lager från att visa alla produktalternativ när den delade B2B-katalogen var aktiverad.<!--MCLOUD-6923-->
 - **Kompatibilitet med PHP 7.4** - Korrigerade ett kompatibilitetsproblem med molnkorrigeringar med PHP 7.4.<!--MCLOUD-7367-->
@@ -267,13 +275,13 @@ Releasedatum: 1 februari 2021
 
 ## v1.0.8
 
-Releasedatum: 14 oktober 2020
+Utgivningsdatum: 14 oktober 2020
 
 - **Kompatibilitetsuppdateringar för magento/magento-cloud-patches** - Uppdaterade `symfony` och `semver` versionsbegränsningarna i `composer.json`-filen för kompatibilitet med Adobe Commerce 2.4.1 och senare versioner.<!--MCLOUD-7111-->
 
 ## v1.0.7
 
-Releasedatum: 14 oktober 2020
+Utgivningsdatum: 14 oktober 2020
 
 - **Redis-korrigeringar för Adobe Commerce 2.3.0 till 2.3.5, 2.4.0** - Redis-korrigeringarna har uppdaterats för att ge stöd för att lägga till produkter i en kategori när en nivå 2-cache implementerades. <!--MCLOUD-6659-->
 
@@ -295,14 +303,14 @@ Utgivningsdatum:
    - Åtgärda implementeringen av cache-låset för att förhindra oändliga lås
    - Förbättra den nuvarande låsmekanismen
    - Implementera signerade lås för att förhindra upplåsning från parallella förfrågningar
-   - Åtgärda följande fel som inträffar vid Redis-skrivåtgärden: `OOM command not allowed when used memory > maxmemory`
+   - Åtgärda följande fel som inträffar vid Redis-skrivåtgärd: `OOM command not allowed when used memory > maxmemory`
    - Korrigera bearbetning av rensad cache med taggen `cat_p` som körs under produktuppdateringar <!--MCLOUD-6110-->
 
 - Korrigerade ett problem som orsakade ett fel när den nödvändiga `amzn/amazon-pay-module`-korrigeringen tillämpades på Adobe Commerce i molninfrastrukturprojekt med Adobe Commerce v2.2.6 eller 2.3.5, som inte innehåller den här modulen. Korrigeringsprocessen hoppar över korrigeringen `amzn/amazon-pay-module` om modulen inte är installerad.<!--MCLOUD-6588-->
 
 ## v1.0.5
 
-Releasedatum: 26 juni 2020
+Utgivningsdatum: 26 juni 2020
 
 - **Prestandaförbättringar för Redis** - Lägger till optimeringsfunktioner för Redis i Adobe Commerce version 2.3.3 och 2.3.4. Dessa korrigeringar ingick i Adobe Commerce version 2.3.5.<!--MCLOUD-5771-->
 
@@ -310,7 +318,7 @@ Releasedatum: 26 juni 2020
 
 ## v1.0.4
 
-Releasedatum: 12 maj 2020
+Utgivningsdatum: 12 maj 2020
 
 - **Amazon Pay-utcheckning** - Åtgärdar ett problem med Amazon Pay-betalningswidgeten som förhindrade kunder från att ändra betalningsmetod i steget _Granska och betalningar_ under utcheckningsprocessen.<!--MCLOUD-5930-->
 
@@ -328,13 +336,13 @@ Releasedatum: 12 maj 2020
 
 ## v1.0.3
 
-Releasedatum: 28 april 2020
+Utgivningsdatum: 28 april 2020
 
 - Korrigering för korrigeringen &quot;FPC håller på att inaktiveras under distributioner&quot; som stöd för Adobe Commerce 2.3.5 har lagts till.
 
 ## v1.0.2
 
-Releasedatum: 27 februari 2020
+Utgivningsdatum: 27 februari 2020
 
 Den här versionen innehåller följande korrigeringar och viktiga korrigeringar:
 
@@ -352,7 +360,7 @@ Den här versionen innehåller följande korrigeringar och viktiga korrigeringar
 
 ## v1.0.1
 
-Releasedatum: 6 februari 2020
+Utgivningsdatum: 6 februari 2020
 
 Vi har tagit med alla Magento Open Source 2.x-patchar från programvarunedladdningssidan i magento/magento-cloud-patches v1.0.1. Om du har kopierat korrigeringar till ditt projekt tidigare bör du ta bort dem för att undvika konflikter.
 
@@ -374,7 +382,7 @@ Den här versionen innehåller följande korrigeringar och viktiga korrigeringar
 
 ## v1.0.0
 
-Releasedatum: 14 november 2019
+Utgivningsdatum: 14 november 2019
 
 Detta är den första versionen av paketet [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches), som är ett nytt beroende för den version av paketet `ece-tools` som är version 2002.0.22 eller senare.
 

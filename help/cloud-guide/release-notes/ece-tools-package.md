@@ -2,11 +2,11 @@
 title: Versionsinformation för ECE-verktyg
 description: Se en lista över de senaste förbättringarna av ECE-verktygspaketet.
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-08-07T00:00:00Z
+last-substantial-update: 2026-05-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+source-git-commit: 0781fdfe8b0dbc6312848572ff4b996e51270a3f
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3563'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,18 @@ Versionsinformationen innehåller:
 
 <!--Add release notes below-->
 
-## v2002.2.10 {#latest}
+## v2002.2.11 {#latest}
+
+Utgivningsdatum: 6 maj 2026
+
+- ![ny ikon](../../assets/new.svg) **RabbitMQ** - Stöd för RabbitMQ 4.2 har lagts till.<!-- MCLOUD-14374 -->
+- ![ny ikon](../../assets/new.svg) **OpenSearch** - Stöd för OpenSearch 2.19 och 3.5 har lagts till för flera Magento-versioner. <!-- MCLOUD-14682 -->
+- ![ny ikon](../../assets/new.svg) **Valkey**—Added Valkey 8.1 and 9 support.<!-- MCLOUD-14784/MCLOUD-14625 -->
+- ![ny ikon](../../assets/new.svg) **ActiveMQ**—Added ActiveMQ 2.5.1 support.<!-- MCLOUD-14683 -->
+- ![ny ikon](../../assets/new.svg) **MariaDB**—Added MariaDB 11.8 and 12.2 support.<!-- MCLOUD-14628 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Konfiguration och distribution** - Åtgärdade molndistributionsvarningar, uppdaterade borttagningar av Composer-tester och korrigerade ECE-verktygens versionssynlighet vid distributionen.<!-- MCLOUD-14822 -->
+
+## v2002.2.10
 
 Utgivningsdatum: 5 mars 2026
 
@@ -85,14 +96,18 @@ Utgivningsdatum: 27 maj 2025
 
 Utgivningsdatum: 24 april 2025
 
-- ![korrigeringsikon](../../assets/fix.svg) **OpenSearch2 for 2.4.4/2.4.5** - Korrigerade ett problem med stöd för `opensearch2` i Adobe Commerce version 2.4.4/2.4.5. <!-- MCLOUD-13607 -->
+- ![korrigeringsikon](../../assets/fix.svg) **OpenSearch2 for 2.4.4/2.4.5** - Korrigerade ett problem med stöd för `opensearch2` i Adobe Commerce-versioner 2.4.4/2.4.5.<!-- MCLOUD-13607 -->
 
 ## v2002.2.3
 
 Utgivningsdatum: 9 april 2025
 
-- ![korrigeringsikon](../../assets/fix.svg) **Korrigera Valkey** Ett problem med anpassad nyckelkonfiguration har korrigerats. <!-- MCLOUD-13569 -->
-- ![korrigeringsikon](../../assets/fix.svg) **Korrigera validerare**-Fast validerare för RabbitMQ 4.0. <!-- MCLOUD-13560 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Korrigera Valkey** Ett problem med anpassad nyckelkonfiguration har korrigerats.<!-- MCLOUD-13569 -->
+- ![korrigeringsikon](../../assets/fix.svg) **Korrigera validerare**-Fast validerare för RabbitMQ 4.0.<!-- MCLOUD-13560 -->
+
+## v2002.2.2
+
+Utgivningsdatum: 7 april 2025
 
 ## v2002.2.2
 
@@ -207,7 +222,7 @@ Utgivningsdatum: 10 mars 2022
 
 Utgivningsdatum: 25 oktober 2021
 
-- ![ny ikon](../../assets/new.svg) **Alternativ dumpplats** - alternativet `--dump-directory` har lagts till så att du kan välja en målkatalog för en DB-dump. `/app/var/dump-main` är nu standardmålkatalog för en DB-dump. Se [Hantering av säkerhetskopiering: Dumpa databasen &#x200B;](../storage/database-dump.md)<!-- MCLOUD-8063 -->
+- ![ny ikon](../../assets/new.svg) **Alternativ dumpplats** - alternativet `--dump-directory` har lagts till så att du kan välja en målkatalog för en DB-dump. `/app/var/dump-main` är nu standardmålkatalog för en DB-dump. Se [Hantering av säkerhetskopiering: Dumpa databasen ](../storage/database-dump.md)<!-- MCLOUD-8063 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdatera Monolog** - Uppdaterade minimiversionen som krävs för paketet `monolog` till `^2.3`.<!-- ACMP-1263 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Uppdatera Symfony** - Symfony-beroendena har uppdaterats så att de är kompatibla med Adobe Commerce 2.4.4.<!-- ACMP-1533 -->
 - ![korrigeringsikon](../../assets/fix.svg) **Funktion/lös automatisk inläsning** - Korrigerade ett fel vid distribution till en integreringsmiljö och `CRITICAL: [9] Required configuration is missed in autoload section of composer.json file.`-felet visades.<!-- https://github.com/magento/ece-tools/pull/799 -->
@@ -256,9 +271,7 @@ Utgivningsdatum: 1 februari 2021
 
 - ![ny ikon](../../assets/new.svg) **Ny miljövariabel för SCD_NO_PARENT** - lade till miljövariabeln `SCD_NO_PARENT` (för Adobe Commerce >=2.4.2) för att hantera genereringen av statiskt innehåll för överordnade teman.<!--MCLOUD-7284-->
 
-- ![korrigeringsikon](../../assets/fix.svg) **Minnesbegränsningar och kommandon** - Korrigerade ett fel där `php vendor/bin/ece-tools`-kommandon inte fungerade om storleken på `cloud.log`-filen överskred PHP-minnesgränsen. I stället för att läsa hela `cloud.log`-filen i minnet läser vi nu bara en mindre delmängd av data från loggfilen.
-  <!--MCLOUD-7275-->
-  <!--MCLOUD-7400-->
+- ![korrigeringsikon](../../assets/fix.svg) **Minnesbegränsningar och kommandon** - Korrigerade ett fel där `php vendor/bin/ece-tools`-kommandon inte fungerade om storleken på `cloud.log`-filen överskred PHP-minnesgränsen. I stället för att läsa in hela `cloud.log`-filen i minnet läser vi nu bara en mindre delmängd av data från loggfilen.<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
 - ![korrigeringsikon](../../assets/fix.svg) **Anpassade databasanslutningar** - Korrigerade ett `.magento.env.yaml`-konfigurationsproblem där anpassade databasanslutningar som definierats för `DATABASE_CONFIGURATION` inte användes. Anslutningsinställningarna lades inte till i `app/etc/env.php`.<!--MCLOUD-7426-->
 
@@ -410,7 +423,7 @@ Utgivningsdatum: 6 februari 2020
 
 - ![ny ikon](../../assets/new.svg) **Infrastrukturuppdateringar**—
 
-   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [&#x200B; magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
+   - ![ny ikon](../../assets/new.svg) **Lagt till separat paket för Cloud Docker för Commerce** - Docker-paketet kopplades från `ece-tools`-paketet för att upprätthålla kodkvaliteten och tillhandahålla oberoende releaser. Uppdateringar och korrigeringar relaterade till `ece-tools` hanteras från GitHub-databasen [ magento-cloud-docker](https://github.com/magento/magento-cloud-docker).<!--MAGECLOUD-2927-->
 
    - ![ny ikon](../../assets/new.svg) **Uppdaterade patchfunktioner** - har flyttat patchfunktionen från ECE-verktygspaketet till ett separat [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) -paket. Under distributionen använder `ece-tools` det nya paketet för att tillämpa korrigeringar. Se [Versionsinformation om molnpatchar](cloud-patches.md).<!--MAGECLOUD-4567-->
 
