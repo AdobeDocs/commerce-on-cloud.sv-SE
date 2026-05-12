@@ -89,7 +89,7 @@ Följande scenarier hanteras bäst med befintliga skydd:
 
 | Scenario | Rekommenderad metod |
 |---|---|
-| En enda IP-adress eller en liten uppsättning identifierbara IP-adresser flödar din webbplats med förfrågningar | Blockera IP-adresserna med Commerce Admin eller Fast API. Använd det inbyggda [Layer 3/4 DDoS-skyddet](./fastly.md#ddos-protection) och befintliga VCL-fragment för [IP blockeringslista ](./fastly-vcl-blocking.md). |
+| En enda IP-adress eller en liten uppsättning identifierbara IP-adresser flödar din webbplats med förfrågningar | Blockera IP-adresserna med Commerce Admin eller Fast API. Använd det inbyggda [Layer 3/4 DDoS-skyddet](./fastly.md#ddos-protection) och befintliga VCL-fragment för [IP blockeringslista &#x200B;](./fastly-vcl-blocking.md). |
 | Du måste blockera SQL-injektion, XSS-skriptning (cross-site scripting) eller andra hot från OWASP Top Ten | Den medföljande [WAF-tjänsten](./fastly-waf-service.md) blockerar dessa hot automatiskt. |
 | Dina DDoS-attackmönster kan kontrolleras med grundläggande VCL-blockeringsregler | Använd de befintliga [anpassade VCL-fragment](./fastly-vcl-custom-snippets.md) som redan finns i Adobe Commerce. |
 
