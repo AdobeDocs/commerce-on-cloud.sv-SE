@@ -5,9 +5,9 @@ user-guide-title: Commerce on Cloud-guide
 user-guide-description: Lär dig hur du hanterar Adobe Commerce-programmet i molninfrastrukturen.
 product: magento
 feature: Cloud
-source-git-commit: 14964492bc82a50b1eea0636d01b8f7f2583755b
+source-git-commit: 5475b65cb9606b200ff6ac3096ed0d0cf3168cf9
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '389'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 4%
    + [Arbetsflöde för Pro](architecture/pro-develop-deploy-workflow.md)
    + [Skalbar arkitektur](architecture/scaled-architecture.md)
    + [Automatisk skalning](architecture/autoscaling.md)
-+ [Kom igång](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=sv-SE)
++ [Kom igång](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Versionsinformation {#release-notes}
    + [Cloud Tools Suite](release-notes/cloud-tools-suite.md)
    + [ECE-verktygspaket](release-notes/ece-tools-package.md)
@@ -148,6 +148,7 @@ ht-degree: 4%
       + [Anpassa cachekonfigurationen](cdn/fastly-custom-cache-configuration.md)
       + [Anpassa fel- och underhållssidor](cdn/fastly-custom-response.md)
    + [Brandvägg för webbaserade program](cdn/fastly-waf-service.md)
+   + [Avancerad säkerhet](cdn/advanced-security.md)
    + [Bildoptimering](cdn/fastly-image-optimization.md)
    + Anpassa med VCL {#custom-vcl-snippets}
       + [Kom igång](cdn/fastly-vcl-custom-snippets.md)
