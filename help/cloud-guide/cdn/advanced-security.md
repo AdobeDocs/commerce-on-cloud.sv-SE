@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!DNL Adobe Commerce Advanced Security] är en produkt som fungerar med [!DNL Adobe Commerce on Cloud Infrastructure] för att din onlinebutik ska vara snabb, tillgänglig och säker. Detta kan hjälpa till att skydda intäkterna, minska driftstoppen och upprätthålla kundens förtroende vid trafiktoppar och automatiska attacker.
 
-[!DNL Adobe Commerce on Cloud Infrastructure] innehåller inbyggt [Layer 3- och 4-DDoS-skydd](./fastly.md#ddos-protection) och en [Brandvägg för webbaserade program (WAF)](./fastly-waf-service.md). Under den [delade ansvarsmodellen](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility) är DoS-identifiering för Layer 7, robotskydd och proaktiv IP-blockering handlaransvar, som [!DNL Adobe Commerce Advanced Security] är utformat för att åtgärda.
+[!DNL Adobe Commerce on Cloud Infrastructure] innehåller inbyggt [Layer 3- och 4-DDoS-skydd](./fastly.md#ddos-protection) och en [Brandvägg för webbaserade program (WAF)](./fastly-waf-service.md). Under den [delade ansvarsmodellen](https://experienceleague.adobe.com/sv/docs/commerce-operations/security-and-compliance/shared-responsibility) är DoS-identifiering för Layer 7, robotskydd och proaktiv IP-blockering handlaransvar, som [!DNL Adobe Commerce Advanced Security] är utformat för att åtgärda.
 
 [!DNL Advanced Security] utökar skyddet för butiksservrar genom säkerhetsfunktionerna i Fasttoner, som ger både hantering och avancerade hastighetsbegränsningar samt Layer 7 DDoS-skydd som en del av en enastående plattform som kombinerar skalbarhet, prestanda och säkerhet i nätverkets utkant.
 
@@ -141,7 +141,7 @@ Följande scenarier är bäst åtgärdade med alternativa skydd som kan komplett
 - **Efterlevnadsverktyg** - PCI-skanning, SOC-kompatibilitetsrapportering och verktyg för lagstadgad revision.
 - **Härdning på programnivå** - Tokenbaserad API-autentisering, frågeparameternormalisering och utformning av cachelagringsstrategi.
 
-En fullständig översikt över säkerhetsansvar för Adobe och kunder finns i [modellen för delat ansvar](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility).
+En fullständig översikt över säkerhetsansvar för Adobe och kunder finns i [modellen för delat ansvar](https://experienceleague.adobe.com/sv/docs/commerce-operations/security-and-compliance/shared-responsibility).
 
 ## Vanliga attackmönster och skydd
 
@@ -179,7 +179,7 @@ Så här begär du [!DNL Advanced Security]:
 
 1. Kontakta ditt Adobe-kontoteam eller Adobe säljare för att diskutera [!DNL Advanced Security] för ditt projekt.
 
-1. När du har köpt [!DNL Advanced Security] [skickar du en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med begäran om [!DNL Advanced Security] aktivering. Inkludera ditt projekt-ID för [!DNL Adobe Commerce on Cloud Infrastructure] och miljöer som kräver aktivering (till exempel produktion och mellanlagring).
+1. När du har köpt [!DNL Advanced Security] [skickar du en Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) med begäran om [!DNL Advanced Security] aktivering. Inkludera ditt projekt-ID för [!DNL Adobe Commerce on Cloud Infrastructure] och miljöer som kräver aktivering (till exempel produktion och mellanlagring).
 
 1. Adobe aktiverar [!DNL Advanced Security] på tjänsten Snabbt och konfigurerar de ursprungliga skyddsprofilerna. Aktiveringen slutförs vanligtvis inom några arbetsdagar efter att biljetten skickats in.
 
@@ -187,7 +187,7 @@ Så här begär du [!DNL Advanced Security]:
 
 >[!NOTE]
 >
->Konfigurationsändringar för [!DNL Advanced Security] kräver för närvarande [att en supportanmälan skickas](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Självbetjäningskonfiguration via administratörsgränssnittet planeras för en framtida version.
+>Konfigurationsändringar för [!DNL Advanced Security] kräver för närvarande [att en supportanmälan skickas](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket). Självbetjäningskonfiguration via administratörsgränssnittet planeras för en framtida version.
 
 ## Begränsningar
 
